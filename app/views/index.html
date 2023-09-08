@@ -1,41 +1,23 @@
-<!-- Use this page as the index for your project -->
-
-<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title -->
 {% block pageTitle %}
   NHS App redesign work
 {% endblock %}
 
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
 {% endblock %}
 
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 {% endblock %}
 
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
       <h1>NHS App redesign work</h1>
 
       <p class="nhsuk-lede-text">
-        Prototyping and testing components for the NHS App.
+        Prototyping and testing design patterns and components for the NHS App.
       </p>
 
       <h2>Components</h2>
@@ -65,8 +47,6 @@
         <li>Account and settings</li>
         <li>Messages</li>
       </ul>
-
-      <!-- End of content -->
 
     </div>
   </div>

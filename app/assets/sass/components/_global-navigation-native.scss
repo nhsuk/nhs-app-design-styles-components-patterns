@@ -1,0 +1,40 @@
+// ==========================================================================
+// COMPONENTS / #GLOBAL NAVIGATION NATIVE
+// ==========================================================================
+
+.app-global-navigation-native__nav {
+  background-color: #f0f4f5;
+  position: fixed;
+  width: 100%;
+}
+
+.app-global-navigation-native__nav {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px;
+}
+
+.app-global-navigation-native__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0 -12px 0 0;
+  padding: 0;
+}
+
+.app-global-navigation-native__nav-item {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.app-global-navigation-native__nav-link {
+  display: block;
+  padding: 12px;
+}
+
+.app-global-navigation-native__nav-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}

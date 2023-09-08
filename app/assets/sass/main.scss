@@ -5,7 +5,162 @@
 @import 'components/list-border';
 @import 'components/related-nav';
 
+// Components that are custom to the NHS App
+@import 'components/app-bottom-navigation';
+@import 'components/dynamic-heading';
+@import 'components/global-navigation-native';
+
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+// App main wrapper
+
+.app-main-wrapper {
+  padding-top: 88px;
+}
   
+// Header link CSS - from NHS App
+
+.HeaderLink_header-link_hc7Ob[data-v-0837c6cc] {
+  margin: 0
+}
+
+.HeaderLink_header-link_hc7Ob a[data-v-0837c6cc] {
+  display: block;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  padding: .5em
+}
+
+.HeaderLink_header-link_hc7Ob a[data-v-0837c6cc]:active,.HeaderLink_header-link_hc7Ob a[data-v-0837c6cc]:visited {
+  color: #fff
+}
+
+.HeaderLink_header-link_hc7Ob a[data-v-0837c6cc]:hover {
+  background: #003d78!important;
+  box-shadow: none!important;
+  color: #fff!important;
+  text-decoration: underline!important
+}
+
+.HeaderLink_header-link_hc7Ob b[data-v-0837c6cc] {
+  display: block;
+  display: inline-block;
+  color: #fff
+}
+
+.HeaderLinks_header-links_Sx73j[data-v-3e6c377a] {
+  float: right;
+  display: none
+}
+
+.HeaderLinks_header-links_Sx73j[data-v-3e6c377a] :focus {
+  outline-color: #ffeb3b;
+  box-shadow: inset 0 0 0 4px #ffeb3b;
+  outline-offset: -5px
+}
+
+@media(min-width: 990px) {
+  .HeaderLinks_header-links_Sx73j[data-v-3e6c377a] {
+      display:inline-block
+  }
+}
+
+// Header nav CSS - taken from NHS App
+
+nav[data-v-13bcd11a] {
+  overflow: hidden;
+  height: auto;
+  display: none
+}
+
+nav[data-v-13bcd11a] :focus {
+  box-shadow: inset 0 0 0 4px #ffeb3b
+}
+
+nav .HeaderMenu_menu-nojs-caption_GZHaZ[data-v-13bcd11a] {
+  display: none
+}
+
+@media(min-width: 990px) {
+  nav[data-v-13bcd11a] {
+      display:block
+  }
+
+  nav .HeaderMenu_additionalMenuItem_dDTZi[data-v-13bcd11a] {
+      display: none
+  }
+
+  nav div>ul[data-v-13bcd11a] {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none
+  }
+
+  nav div>ul li[data-v-13bcd11a] {
+      display: inline-block;
+      margin: 0;
+      color: #fff;
+      flex-grow: 1;
+      text-align: center
+  }
+
+  nav div>ul li[data-v-13bcd11a] :focus {
+      outline-color: #ffeb3b;
+      box-shadow: inset 0 0 0 4px #ffeb3b;
+      outline-offset: -5px
+  }
+
+  nav div>ul li a[data-v-13bcd11a] {
+      display: block;
+      color: #212b32;
+      color: #fff
+  }
+
+  nav div>ul li a[data-v-13bcd11a]:active,nav div>ul li a[data-v-13bcd11a]:visited {
+      color: #fff
+  }
+
+  nav div>ul li a[data-v-13bcd11a]:hover {
+      background: #003d78!important;
+      box-shadow: none!important;
+      color: #fff!important;
+      text-decoration: underline!important
+  }
+
+  nav div>ul li a[data-v-13bcd11a]:focus {
+      margin-bottom: 4px;
+      padding-bottom: 12px
+  }
+}
+
+nav a.HeaderMenu_mini-menu-close-button_l0xjC[data-v-13bcd11a] {
+  display: none
+}
+
+nav a.HeaderMenu_mini-menu-close-button_l0xjC[data-v-13bcd11a] :focus {
+  outline-color: #ffeb3b;
+  box-shadow: inset 0 0 0 4px #ffeb3b;
+  outline-offset: -5px
+}
+
+@media(max-width: 641px) {
+  nav[data-v-13bcd11a] {
+      background:#fff
+  }
+
+  nav hr[data-v-13bcd11a] {
+      display: none
+  }
+
+  nav .HeaderMenu_menu-nojs-caption_GZHaZ[data-v-13bcd11a] {
+      padding: 1em .8em 1em 1em;
+      display: block;
+      border-bottom: 1px solid #f0f4f5;
+      color: #212b32;
+      cursor: pointer;
+      cursor: default
+  }
+}

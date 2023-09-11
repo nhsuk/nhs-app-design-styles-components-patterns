@@ -1,0 +1,52 @@
+// ==========================================================================
+// COMPONENTS / #PANEL LINK CARD
+// ==========================================================================
+
+.app-panel-link-card {
+  @include nhsuk-responsive-margin(7, "bottom");
+
+  background-color: white;
+  border: $card-border-width solid $card-border-color;
+  list-style: none;
+  padding: 0;
+}
+
+.app-panel-link-card__item {
+  @include top-and-bottom();
+
+  border-bottom: $card-border-width solid $card-border-color;
+  margin: 0 16px;
+  padding: 20px 0;
+  position: relative;
+
+  &:last-child {
+    border: none;
+  }
+
+}
+
+.app-panel-link-card__link {
+  margin-bottom: 0;
+  padding-right: 32px;
+  text-decoration: none;
+
+  &::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.app-panel-link-card__description {
+  margin: 8px 0 0;
+}
+
+.app-panel-link-card__chevron {
+  position: absolute;
+  right: -4px;
+  top: calc(50% - 12px);
+}

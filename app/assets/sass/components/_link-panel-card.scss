@@ -50,3 +50,14 @@
   right: -4px;
   top: calc(50% - 12px);
 }
+
+// Variant with icon
+
+.app-panel-link-card__item--with-icon {
+  padding-left: 40px;
+}
+
+.app-panel-link-card__icon {
+  position: absolute;
+  left: 0;
+}

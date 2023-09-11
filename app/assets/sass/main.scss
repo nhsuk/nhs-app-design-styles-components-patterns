@@ -17,8 +17,12 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
-// App main wrapper
+// HTM background colour
+.html {
+  background-color: #f0f4f5; // change it to match page background colour
+}
 
+// App main wrapper
 .app-main-wrapper {
   padding-top: 88px; // to give correct spacing for sticky header - need to test for desktop
 }

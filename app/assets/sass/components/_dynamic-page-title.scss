@@ -9,8 +9,8 @@
     @include nhsuk-responsive-margin(1, "bottom");
 
     @include mq($from: tablet) {
-      height: 33px;
-      width: 81px;
+      height: 32px;
+      width: 80px;
     }
   }
 }
@@ -20,6 +20,6 @@
 }
 
 .app-dynamic-page-title__nhs-number {
-  color: #005eb8;
+  color: $nhsuk-link-color;
 }
 

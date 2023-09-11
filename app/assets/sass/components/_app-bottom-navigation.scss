@@ -4,15 +4,10 @@
 
 .app-bottom-navigation {
   background-color: $nhsuk-link-color;
-  position: fixed;
   bottom: 0;
+  position: fixed;
   left: 0;
   width: 100%;
-}
-
-.app-bottom-navigation__nav {
-  display: flex;
-  justify-content: space-around;
 }
 
 .app-bottom-navigation__list {
@@ -32,11 +27,11 @@
 }
 
 .app-bottom-navigation__link {
-  display: flex;
-  padding: 12px 0 20px;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+  padding: 12px 0 20px;
   text-decoration: none;
 }
 

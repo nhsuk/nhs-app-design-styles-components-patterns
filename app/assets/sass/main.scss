@@ -18,11 +18,20 @@
 ///////////////////////////////////////////
 
 // HTM background colour
-.html {
+html {
   background-color: #f0f4f5; // change it to match page background colour
 }
 
 // App main wrapper
 .app-main-wrapper {
   padding-top: 88px; // to give correct spacing for sticky header - need to test for desktop
+}
+
+// Badge component
+.app-badge {
+  background-color: $nhsuk-error-color;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  padding: 0 8px;
 }

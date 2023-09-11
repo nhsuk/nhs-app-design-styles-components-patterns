@@ -1,0 +1,25 @@
+// ==========================================================================
+// COMPONENTS / #DYNAMIC HEADING
+// ==========================================================================
+
+.app-dynamic-page-title {
+  @include nhsuk-responsive-margin(7, "bottom");
+
+  .nhsuk-logo{
+    @include nhsuk-responsive-margin(1, "bottom");
+
+    @include mq($from: tablet) {
+      height: 33px;
+      width: 81px;
+    }
+  }
+}
+
+.app-dynamic-page-title__heading {
+  @include nhsuk-responsive-margin(3, "bottom");
+}
+
+.app-dynamic-page-title__nhs-number {
+  color: #005eb8;
+}
+

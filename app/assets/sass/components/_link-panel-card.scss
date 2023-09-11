@@ -41,7 +41,7 @@
 }
 
 .app-panel-link-card__description {
-  margin: 8px 0 0;
+  margin: 4px 0 0;
 }
 
 .app-panel-link-card__chevron {
@@ -59,6 +59,10 @@
 .app-panel-link-card__icon {
   position: absolute;
   left: 0;
+
+  @include mq($from: tablet) {
+    margin-top: 4px;
+  }
 }
 
 // Variant with badge

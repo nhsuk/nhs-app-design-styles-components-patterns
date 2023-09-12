@@ -81,5 +81,9 @@
     position: absolute;
     right: 32px;
     top: calc(50% - 12px);
+
+    @include mq($from: tablet) {
+      top: calc(50% - 14px);
+    }
   }
 }

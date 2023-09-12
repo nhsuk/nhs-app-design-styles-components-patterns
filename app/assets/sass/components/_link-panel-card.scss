@@ -12,10 +12,17 @@
 }
 
 .app-panel-link-card__item {
+  @include nhsuk-responsive-margin(4, "left");
+  @include nhsuk-responsive-margin(4, "right");
+
   border-bottom: $card-border-width solid $card-border-color;
-  margin: 0 16px;
+  margin-bottom: 0;
   padding: 20px 0;
   position: relative;
+
+  @include mq($from: tablet) {
+    padding: 24px 0;
+  }
 
   &:last-child {
     border: none;
@@ -48,24 +55,38 @@
   margin: 4px 0 0;
 }
 
+// Chevron
+
 .app-panel-link-card__chevron {
   position: absolute;
+  height: 24px;
   right: -4px;
   top: calc(50% - 12px);
+  width: 24px;
+
+  @include mq($from: tablet) {
+    height: 28px;
+    right: -2px;
+    top: calc(50% - 14px);
+    width: 28px;
+  }
 }
 
 // Variant with icon
 
 .app-panel-link-card__item--with-icon {
-  padding-left: 40px;
+  @include nhsuk-responsive-padding(7, "left");
 }
 
 .app-panel-link-card__icon {
+  height: 24px;
   position: absolute;
   left: 0;
+  height: 24px;
 
   @include mq($from: tablet) {
-    margin-top: 4px;
+    height: 28px;
+    width: 28px;
   }
 }
 
@@ -75,6 +96,10 @@
 
   .app-panel-link-card__link {
     margin-right: 72px;
+
+    @include mq($from: tablet) {
+      margin-right: 96px;
+    }
   }
 
   .app-badge {
@@ -83,6 +108,7 @@
     top: calc(50% - 12px);
 
     @include mq($from: tablet) {
+      right: 48px;
       top: calc(50% - 14px);
     }
   }

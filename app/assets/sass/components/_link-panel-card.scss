@@ -38,6 +38,10 @@
     top: 0;
   }
 
+  &:hover {
+    text-decoration: underline;
+  }
+
 }
 
 .app-panel-link-card__description {

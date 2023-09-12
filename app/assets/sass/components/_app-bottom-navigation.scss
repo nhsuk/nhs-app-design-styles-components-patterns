@@ -33,9 +33,22 @@
   gap: 8px;
   padding: 12px 0 20px;
   text-decoration: none;
+
+  &:focus {
+
+    .app-bottom-navigation__icon {
+      fill: $nhsuk-focus-text-color;
+    }
+
+    .app-bottom-navigation__label {
+      color: $nhsuk-focus-text-color;
+    }
+
+  }
 }
 
 .app-bottom-navigation__icon {
+  fill: white;
   height: 24px;
   width: 24px;
 }
@@ -47,4 +60,8 @@
 .app-bottom-navigation__label {
   color: white;
   font-size: 12px;
+}
+
+.app-bottom-navigation__label--active {
+  font-weight: bold;
 }

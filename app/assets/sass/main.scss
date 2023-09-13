@@ -25,7 +25,7 @@ html {
 
 // App main wrapper
 .app-main-wrapper {
-  padding: 88px 0; // to give correct spacing for sticky header - need to test for desktop
+  padding: 88px 0 80px; // to give correct spacing for sticky header - need to test for desktop
 }
 
 // Badge component
@@ -41,4 +41,25 @@ html {
 .app-button {
   padding-bottom: 12px;
   padding-top: 12px;
+}
+
+// Link with an icon
+.app-link--with-icon {
+  @include nhsuk-responsive-margin(7, "bottom");
+
+  padding-left: 40px;
+  position: relative;
+
+  .app-icon {
+    fill: $nhsuk-link-color;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    width: 24px;
+
+    @include mq($from: tablet) {
+      height: 28px;
+      width: 28px;
+    }
+  }
 }

@@ -7,6 +7,7 @@
 
 // Components that are custom to the NHS App
 @import 'components/app-bottom-navigation';
+@import 'components/campaign-card';
 @import 'components/dynamic-page-title';
 @import 'components/global-navigation-native';
 @import 'components/global-navigation-web';
@@ -34,4 +35,10 @@ html {
   color: white;
   font-weight: bold;
   padding: 0 8px;
+}
+
+// Button
+.app-button {
+  padding-bottom: 12px;
+  padding-top: 12px;
 }

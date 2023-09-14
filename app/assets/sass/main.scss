@@ -74,3 +74,10 @@
 .app-u-full-width-desktop {
   @include full-width-break-container()
 }
+
+// Button styling override
+.nhsuk-button--reverse {
+  &:visited, &:active, &:hover {
+    color: #212b32;
+  }
+}

@@ -23,7 +23,7 @@
 
 // App main wrapper
 .app-main-wrapper {
-  padding: 88px 0 80px; // to give correct spacing for sticky header - need to test for desktop
+  padding: 88px 0 120px; // to give correct spacing for sticky header - need to test for desktop
 }
 
 // App main wrapper
@@ -33,8 +33,6 @@
 
 // Link with an icon
 .app-link--with-icon {
-  @include nhsuk-responsive-margin(7, "bottom");
-
   padding-left: 40px;
   position: relative;
 

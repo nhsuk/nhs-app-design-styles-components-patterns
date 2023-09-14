@@ -7,12 +7,15 @@
 
 // Components that are custom to the NHS App
 @import 'components/app-bottom-navigation';
-@import 'components/campaign-card';
+@import 'components/badge';
+@import 'components/buttons';
+@import 'components/card';
 @import 'components/dynamic-page-title';
 @import 'components/global-navigation-native';
 @import 'components/global-navigation-web';
 @import 'components/link-panel-card';
 @import 'components/section-title';
+@import 'components/switch-profile-banner';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
@@ -23,19 +26,9 @@
   padding: 88px 0 80px; // to give correct spacing for sticky header - need to test for desktop
 }
 
-// Badge component
-.app-badge {
-  background-color: $nhsuk-error-color;
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-  padding: 0 8px;
-}
-
-// Button
-.app-button {
-  padding-bottom: 12px;
-  padding-top: 12px;
+// App main wrapper
+.app-main-wrapper--linked-profile {
+  padding-top: 60px; // reduces main top padding for linked profile banner
 }
 
 // Link with an icon
@@ -57,4 +50,27 @@
       width: 28px;
     }
   }
+}
+
+// Full width component
+// Utility class to make a component full width screen, breaking container
+
+@mixin full-width-break-container() {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.app-u-full-width-mobile {
+  @include mq($until: tablet) {
+    @include full-width-break-container()
+  }
+}
+
+.app-u-full-width-desktop {
+  @include full-width-break-container()
 }

@@ -1,5 +1,5 @@
 // ==========================================================================
-// COMPONENTS / #CAMPAIGN CARD
+// COMPONENTS / #CARD
 // ==========================================================================
 
 .app-card--blue {
@@ -8,18 +8,10 @@
   color: white;
 }
 
-.app-card--full-width {
-
-  @include mq($until: tablet) {
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    max-width: 100vw;
-    position: relative;
-    right: 50%;
-    width: 100vw;
-  }
-
+.app-card--dark-blue {
+  background-color: #002f5c;
+  border: 0;
+  color: white;
 }
 
 .app-card__content {
@@ -29,6 +21,10 @@
   @include nhsuk-responsive-padding(5, "top");
 
   .app-button {
-    width: 50%;
+    width: 100%;
+
+    @include mq($from: tablet) {
+      width: 50%;
+    }
   }
 }

@@ -142,3 +142,94 @@ nav a.HeaderMenu_mini-menu-close-button_l0xjC[data-v-13bcd11a] :focus {
       cursor: default
   }
 }
+
+header[data-v-2907a3a6] {
+  background: #005eb8;
+  color: #fff;
+  position: relative;
+  height: auto;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  box-sizing: border-box;
+  min-width: 300px
+}
+
+header .WebHeader_header-content_pzc7e[data-v-2907a3a6] {
+  display: block
+}
+
+header .WebHeader_header-content_pzc7e .WebHeader_nhsLogo_H3x6R a.WebHeader_anchor-icon_M8AGY[data-v-2907a3a6],header .WebHeader_header-content_pzc7e .WebHeader_nhsLogo_H3x6R[data-v-2907a3a6] {
+  color: #fff;
+  display: inline-block
+}
+
+header .WebHeader_header-content_pzc7e a.WebHeader_mini-menu-toggler_iFxcZ[data-v-2907a3a6] {
+  display: none
+}
+
+header .WebHeader_header-content_pzc7e a.WebHeader_mini-menu-toggler_iFxcZ[data-v-2907a3a6] :focus {
+  background-color: transparent;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 0 3px #ffeb3b
+}
+
+header .WebHeader_menuButton_DYQ_7[data-v-2907a3a6] {
+  margin-right: 0;
+  right: auto
+}
+
+@media(max-width: 989px) {
+  header .WebHeader_menuButton_DYQ_7[data-v-2907a3a6] {
+      display:inline
+  }
+}
+
+@media(min-width: 641px) {
+  header .WebHeader_menuButton_DYQ_7[data-v-2907a3a6] {
+      margin-right:0
+  }
+}
+
+@media(max-width: 641px) {
+  header .WebHeader_header-content_pzc7e a.WebHeader_mini-menu-toggler_iFxcZ[data-v-2907a3a6] {
+      float:right;
+      margin-top: .8em;
+      display: inline-block;
+      font-family: FrutigerLTW01-55Roman,sans-serif,Arial;
+      font-weight: 700;
+      line-height: 2em;
+      color: #fff;
+      font-size: 1.125em;
+      border: 1px solid #fff;
+      border-radius: .5em;
+      padding: .125em .8em;
+      margin-left: 1em;
+      cursor: pointer
+  }
+
+  header .WebHeader_header-content_pzc7e a.WebHeader_mini-menu-toggler_iFxcZ[data-v-2907a3a6]:focus {
+      box-shadow: 0 0 0 4px #ffeb3b
+  }
+
+  header .WebHeader_header-content_pzc7e a.WebHeader_mini-menu-toggler_iFxcZ[data-v-2907a3a6]:hover {
+      background: #003d78;
+      box-shadow: 0 0 0 4px #ffeb3b;
+      text-decoration: none
+  }
+}
+
+// Overrides
+
+@media (min-width: 61.875em) {
+  .nhsuk-header__navigation-list {
+      justify-content: flex-start;
+      gap: 32px;
+  }
+
+  nav div > ul li[data-v-13bcd11a] {
+    flex-grow: 0;
+  }
+}

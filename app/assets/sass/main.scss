@@ -31,6 +31,11 @@
   padding-top: 60px; // reduces main top padding for linked profile banner
 }
 
+// Web main wrapper if linked profile
+.app-main-wrapper--no-top-padding {
+  padding-top: 0;
+}
+
 // Link with an icon
 .app-link--with-icon {
   padding-left: 40px;

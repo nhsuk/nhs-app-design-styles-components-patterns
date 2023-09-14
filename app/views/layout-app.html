@@ -2,7 +2,11 @@
 
 <!-- ADDS CUSTOM CLASSES ON MAIN TO GIVE CORRECT SPACING FOR NATIVE PAGES -->
 {% if web === true %} 
-{% else %}
+  {% if linkedProfile === true %}
+      {% set mainClasses = "app-main-wrapper--no-top-padding" %}
+    {% else %}
+    {% endif %} 
+  {% else %}
   {% if linkedProfile === true %}
     {% set mainClasses = "app-main-wrapper app-main-wrapper--linked-profile" %}
   {% else %}
@@ -15,16 +19,16 @@
 {% endblock %}
 
 <!-- CHANGES HTML BACKGROUND COLOUR IF VARIABLE 'WEB' ON PAGE IS TRUE -->
-{% if web === true %} 
-  {% block head %}
-  <style>
-    html {
-      background-color: #f0f4f5;
-    }
-  </style>
-  {% endblock %}
-{% else %}
-{% endif %}
+{% block head %}
+  {% if web === true %} 
+  {% else %}
+    <style>
+      html {
+        background-color: #f0f4f5;
+      }
+    </style>
+  {% endif %}
+{% endblock %}
 
 <!-- HEADER -->
 {% block header %}

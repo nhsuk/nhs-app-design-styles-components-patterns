@@ -104,6 +104,8 @@
   }
 
   .app-badge {
+    @include nhsuk-typography-responsive(19);
+    
     position: absolute;
     right: 32px;
     top: calc(50% - 12px);

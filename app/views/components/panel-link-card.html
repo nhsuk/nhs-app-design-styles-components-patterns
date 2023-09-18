@@ -1,0 +1,168 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Panel Link card" %}
+
+{% block pageTitle %}
+  Panel Link card - Component
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">
+          Component
+          <span class="nhsuk-u-visually-hidden"> - </span>
+        </span>
+        {{ pageHeading }}
+      </h1>
+
+      <h2 class="nhsuk-heading-m">Variants</h2>
+
+      <h3 class="nhsuk-heading-xs">Single</h3>
+        
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item">
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="nhsuk-heading-xs">Multiple</h3>
+        
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item">
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+        </li>
+        <li class="app-panel-link-card__item">
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="nhsuk-heading-xs">With supporting text</h3>
+        
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item">
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+          <p class="app-panel-link-card__description">Supporting text</p>
+        </li>
+        <li class="app-panel-link-card__item">
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+          <p class="app-panel-link-card__description">Supporting text</p>
+        </li>
+      </ul>
+
+      <h3 class="nhsuk-heading-xs">With icon</h3>
+
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item app-panel-link-card__item--with-icon">
+          <svg class="app-panel-link-card__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8.24992 8.88C6.82992 8.88 5.66992 10.04 5.66992 11.46C5.66992 12.88 6.82992 14.04 8.24992 14.04C9.66992 14.04 10.8299 12.88 10.8299 11.46C10.8299 10.04 9.66992 8.88 8.24992 8.88Z" fill="#005EB8"/>
+            <path d="M15.33 12.62C17.1912 12.62 18.7 11.1112 18.7 9.25C18.7 7.38881 17.1912 5.88 15.33 5.88C13.4688 5.88 11.96 7.38881 11.96 9.25C11.96 11.1112 13.4688 12.62 15.33 12.62Z" fill="#005EB8"/>
+            <path d="M12.0298 2.26001C6.67982 2.26001 2.31982 6.63001 2.31982 12.01C2.31982 17.39 6.66982 21.77 12.0298 21.77C17.3898 21.77 21.7398 17.39 21.7398 12.01C21.7398 6.63001 17.3798 2.26001 12.0298 2.26001ZM19.7198 14.32C19.0798 13.62 18.0798 13.18 17.1598 13.18H13.8698C12.6798 13.18 11.6398 13.74 10.9398 14.59C10.5298 15.27 10.2798 16.11 10.2798 16.88V20.94C10.2798 21 10.2498 21.04 10.2298 21.09C9.90982 21.03 9.58982 20.95 9.27982 20.85V16.88C9.27982 16.07 9.48982 15.22 9.84982 14.48C9.69982 14.46 9.56982 14.44 9.44982 14.44H6.86982C5.75982 14.44 4.51982 15.39 3.87982 16.34C3.19982 15.05 2.80982 13.58 2.80982 12.01C2.81982 6.90001 6.94982 2.76001 12.0298 2.76001C17.1098 2.76001 21.2398 6.90001 21.2398 12.02C21.2398 13.37 20.9398 14.65 20.4298 15.81C20.3598 15.27 20.1298 14.76 19.7198 14.32Z" fill="#005EB8"/>
+            <path d="M12.0298 21.27C17.1164 21.27 21.2398 17.1242 21.2398 12.01C21.2398 6.89584 17.1164 2.75 12.0298 2.75C6.94328 2.75 2.81982 6.89584 2.81982 12.01C2.81982 17.1242 6.94328 21.27 12.0298 21.27Z" stroke="#005EB8" stroke-width="1.5" stroke-miterlimit="10"/>
+          </svg>
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="nhsuk-heading-xs">With icon and supporting text</h3>
+
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item app-panel-link-card__item--with-icon">
+          <svg class="app-panel-link-card__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8.24992 8.88C6.82992 8.88 5.66992 10.04 5.66992 11.46C5.66992 12.88 6.82992 14.04 8.24992 14.04C9.66992 14.04 10.8299 12.88 10.8299 11.46C10.8299 10.04 9.66992 8.88 8.24992 8.88Z" fill="#005EB8"/>
+            <path d="M15.33 12.62C17.1912 12.62 18.7 11.1112 18.7 9.25C18.7 7.38881 17.1912 5.88 15.33 5.88C13.4688 5.88 11.96 7.38881 11.96 9.25C11.96 11.1112 13.4688 12.62 15.33 12.62Z" fill="#005EB8"/>
+            <path d="M12.0298 2.26001C6.67982 2.26001 2.31982 6.63001 2.31982 12.01C2.31982 17.39 6.66982 21.77 12.0298 21.77C17.3898 21.77 21.7398 17.39 21.7398 12.01C21.7398 6.63001 17.3798 2.26001 12.0298 2.26001ZM19.7198 14.32C19.0798 13.62 18.0798 13.18 17.1598 13.18H13.8698C12.6798 13.18 11.6398 13.74 10.9398 14.59C10.5298 15.27 10.2798 16.11 10.2798 16.88V20.94C10.2798 21 10.2498 21.04 10.2298 21.09C9.90982 21.03 9.58982 20.95 9.27982 20.85V16.88C9.27982 16.07 9.48982 15.22 9.84982 14.48C9.69982 14.46 9.56982 14.44 9.44982 14.44H6.86982C5.75982 14.44 4.51982 15.39 3.87982 16.34C3.19982 15.05 2.80982 13.58 2.80982 12.01C2.81982 6.90001 6.94982 2.76001 12.0298 2.76001C17.1098 2.76001 21.2398 6.90001 21.2398 12.02C21.2398 13.37 20.9398 14.65 20.4298 15.81C20.3598 15.27 20.1298 14.76 19.7198 14.32Z" fill="#005EB8"/>
+            <path d="M12.0298 21.27C17.1164 21.27 21.2398 17.1242 21.2398 12.01C21.2398 6.89584 17.1164 2.75 12.0298 2.75C6.94328 2.75 2.81982 6.89584 2.81982 12.01C2.81982 17.1242 6.94328 21.27 12.0298 21.27Z" stroke="#005EB8" stroke-width="1.5" stroke-miterlimit="10"/>
+          </svg>
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            Panel link title
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+          </a>
+          <p class="app-panel-link-card__description">Supporting text</p>
+        </li>
+      </ul>
+
+      <h3 class="nhsuk-heading-xs">With icon and badge</h3>
+
+      <ul class="app-panel-link-card">
+        <li class="app-panel-link-card__item  app-panel-link-card__item--with-icon app-panel-link-card__item--with-badge">
+          <svg class="app-panel-link-card__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M21.7499 11.38C21.5399 11.24 21.2799 11.21 21.0499 11.3L20.8899 11.36V4.98001C20.8899 4.57001 20.5499 4.23001 20.1399 4.23001H4.04991C3.63991 4.23001 3.29991 4.57001 3.29991 4.98001V11.44L2.93991 11.29C2.70991 11.2 2.44991 11.23 2.23991 11.37C2.02991 11.51 1.90991 11.74 1.90991 11.99V21.26C1.90991 21.67 2.24991 22.01 2.65991 22.01h31.3299C21.7399 22.01 22.0799 21.67 22.0799 21.26V11.99C22.0799 11.74 21.9599 11.51 21.7499 11.37V11.38ZM4.79991 5.74001H19.3899V11.98L11.9999 14.95L4.79991 12.06V5.74001ZM20.5799 20.52H3.40991V13.11L3.76991 13.26L11.7199 16.45C11.8999 16.52 12.0999 16.52 12.2799 16.45L20.4199 13.18L20.5799 13.12V20.53V20.52Z" fill="#005EB8"/>
+            <path d="M17.0401 1.98001C14.3001 1.98001 12.0601 4.21001 12.0601 6.96001C12.0601 9.71001 14.2901 11.93 17.0401 11.93C19.7901 11.93 22.0201 9.70001 22.0201 6.96001C22.0201 4.22001 19.7901 1.98001 17.0401 1.98001Z" fill="#D5281B"/>
+          </svg>
+          <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+            View your messages
+            <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
+            </svg>
+            <span class="nhsuk-u-visually-hidden">
+              You have
+            </span>
+            <span class="app-badge">
+              9+
+            </span>
+            <span class="nhsuk-u-visually-hidden">
+              unread messages
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <h2 class="nhsuk-heading-m">Examples in context</h2>
+
+      <ul clas="nhsuk-list">
+        <li>
+          <a href="/pages/home">Homepage - P9</a>
+        </li>
+      </ul>
+
+    </div>  
+
+  </div>
+{% endblock %}

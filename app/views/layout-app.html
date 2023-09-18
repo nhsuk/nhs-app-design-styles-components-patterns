@@ -2,16 +2,20 @@
 
 <!-- ADDS CUSTOM CLASSES ON MAIN TO GIVE CORRECT SPACING FOR NATIVE PAGES -->
 {% if web === true %} 
+
   {% if linkedProfile === true %}
-      {% set mainClasses = "app-main-wrapper--no-top-padding" %}
-    {% else %}
-    {% endif %} 
+    {% set mainClasses = "app-main-wrapper--no-top-padding" %}
   {% else %}
+  {% endif %} 
+
+{% else %}
+
   {% if linkedProfile === true %}
     {% set mainClasses = "app-main-wrapper app-main-wrapper--linked-profile" %}
   {% else %}
     {% set mainClasses = "app-main-wrapper" %}
   {% endif %} 
+
 {% endif %}
 
 {% block pageTitle %}

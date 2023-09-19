@@ -19,13 +19,22 @@
       {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        logo: true,
-        linkedProfile: {
-          name: linkedProfileName,
-          age: linkedProfileAge
-        }
-      })}}
+      {% if data['web'] === "yes" %}
+        {{ dynamicPageTitle({
+          linkedProfile: {
+            name: linkedProfileName,
+            age: linkedProfileAge
+          }
+        })}}
+      {% else %}
+        {{ dynamicPageTitle({
+          logo: true,
+          linkedProfile: {
+            name: linkedProfileName,
+            age: linkedProfileAge
+          }
+        })}}
+      {% endif %}
 
       <!-- SECTION TITLE - SERVICES -->
       {{ sectionTitle({

@@ -12,11 +12,18 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        logo: "true",
-        greetingName: "Hamish",
-        nhsNumber: "123 456 7890"
-      })}}
+      {% if data['web'] === "yes" %}
+        {{ dynamicPageTitle({
+          greetingName: "Hamish",
+          nhsNumber: "123 456 7890"
+        })}}
+      {% else %}
+        {{ dynamicPageTitle({
+          logo: "true",
+          greetingName: "Hamish",
+          nhsNumber: "123 456 7890"
+        })}}
+      {% endif %}
 
       <!-- INTERRUPTION CARD -->
       {% include "includes/components/interruption-card.html" %}

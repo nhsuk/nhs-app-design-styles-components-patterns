@@ -16,45 +16,6 @@
 
       <h1>NHS App redesign work</h1>
 
-      <div class="nhsuk-form-group">
-
-      <form method="post" action="/" novalidate="novalidate">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Would you like to see the web or mobile version?
-            </h1>
-          </legend>
-
-          <div class="nhsuk-radios">
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="web-1" name="web" type="radio" value="yes" {{ checked("web", "yes") }}>
-              <label class="nhsuk-label nhsuk-radios__label" for="web-1">
-                Web
-              </label>
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="web-2" name="web" type="radio" value="no" {{ checked("web", "no") }}>
-              <label class="nhsuk-label nhsuk-radios__label" for="web-2">
-                Mobile
-              </label>
-            </div>
-
-          </div>
-        </fieldset>
-
-        <div class="nhsuk-form-group">
-          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-            Save
-          </button>
-        </div>
-      </form>
-
-
-      </div>
-
       <p class="nhsuk-lede-text">
         A prototype to test new design components and patterns for the NHS App.
       </p>
@@ -80,6 +41,37 @@
 
       <h2>Example pages</h2>
 
+      <form method="post" action="/" novalidate="novalidate">
+
+        {{ radios({
+          "idPrefix": "web",
+          "name": "web",
+          "fieldset": {
+            "legend": {
+              "text": "View pages for web or native?",
+              "classes": "nhsuk-fieldset__legend--s"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Web",
+              checked: checked("web", "yes")
+            },
+            {
+              "value": "no",
+              "text": "Native",
+              checked: checked("web", "no")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Save"
+        }) }}
+
+      </form>
+
       <h3 class="nhsuk-heading-xs">Homepage</h2>
 
       <ul clas="nhsuk-list">
@@ -91,15 +83,6 @@
         </li>
         <li>
           <a href="/pages/home-linked-profiles">Homepage - Linked profiles</a>
-        </li>
-        <li>
-          <a href="/pages/home-p9-web">Homepage - P9 (Web)</a>
-        </li>
-        <li>
-          <a href="/pages/home-p5-web">Homepage - P5 (Web)</a>
-        </li>
-        <li>
-          <a href="/pages/home-linked-profiles-web">Homepage - Linked profiles (Web)</a>
         </li>
       </ul>
 

@@ -4,8 +4,8 @@
 
 .app-badge {
   background-color: $nhsuk-error-color;
-  border-radius: 4px;
-  color: white;
+  border-radius: nhsuk-spacing(1);
+  color: $color_nhsuk-white;
   font-weight: bold;
-  padding: 0 8px;
+  padding: 0 nhsuk-spacing(2);
 }

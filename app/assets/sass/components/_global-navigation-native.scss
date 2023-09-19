@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .app-global-navigation-native {
-  background-color: #f0f4f5;
+  background-color: $color_nhsuk-grey-5;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -35,7 +35,7 @@
 }
 
 .app-global-navigation-native__nav-icon {
-  fill: #212B32;
+  fill: $nhsuk-focus-text-color;
   flex-shrink: 0;
   height: 32px;
   width: 32px;

@@ -4,5 +4,5 @@
 
 .nhsuk-list--border li {
   border-bottom: 1px solid $color_nhsuk-grey-4;
-  padding: 8px 0 16px;
+  padding: nhsuk-spacing(2) 0 nhsuk-spacing(3);
 }

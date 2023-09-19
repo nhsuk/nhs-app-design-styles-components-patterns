@@ -5,7 +5,7 @@
 .app-panel-link-card {
   @include nhsuk-responsive-margin(7, "bottom");
 
-  background-color: white;
+  background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
   list-style: none;
   padding: 0;
@@ -21,7 +21,7 @@
   position: relative;
 
   @include mq($from: tablet) {
-    padding: 24px 0;
+    padding: nhsuk-spacing(4) 0;
   }
 
   &:last-child {
@@ -33,7 +33,7 @@
 .app-panel-link-card__link {
   display: inline-block;
   margin-bottom: 0;
-  margin-right: 32px;
+  margin-right: nhsuk-spacing(5);
   text-decoration: none;
 
   &::after {
@@ -53,17 +53,17 @@
 }
 
 .app-panel-link-card__description {
-  margin: 4px 0 0;
+  margin: nhsuk-spacing(1) 0 0;
 }
 
 // Chevron
 
 .app-panel-link-card__chevron {
   position: absolute;
-  height: 24px;
-  right: -4px;
+  height: nhsuk-spacing(4);
+  right: - nhsuk-spacing(1);
   top: calc(50% - 12px);
-  width: 24px;
+  width: nhsuk-spacing(4);
 
   @include mq($from: tablet) {
     height: 28px;
@@ -80,10 +80,10 @@
 }
 
 .app-panel-link-card__icon {
-  height: 24px;
+  height: nhsuk-spacing(4);
   position: absolute;
   left: 0;
-  height: 24px;
+  height: nhsuk-spacing(4);
 
   @include mq($from: tablet) {
     height: 28px;
@@ -107,11 +107,11 @@
     @include nhsuk-typography-responsive(19);
     
     position: absolute;
-    right: 32px;
+    right: nhsuk-spacing(5);
     top: calc(50% - 12px);
 
     @include mq($from: tablet) {
-      right: 48px;
+      right: nhsuk-spacing(7);
       top: calc(50% - 14px);
     }
   }

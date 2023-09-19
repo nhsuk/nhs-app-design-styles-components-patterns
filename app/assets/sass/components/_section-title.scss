@@ -3,8 +3,9 @@
 // ==========================================================================
 
 .app-section-title {
+  @include nhsuk-responsive-margin(3, "bottom");
+
   position: relative;
-  margin-bottom: 12px;
 }
 
 .app-section-title__heading {

@@ -5,13 +5,13 @@
 .app-card--blue {
   background-color: $nhsuk-link-color;
   border: 0;
-  color: white;
+  color: $color_nhsuk-white;
 }
 
 .app-card--dark-blue {
-  background-color: #002f5c;
+  background-color: $nhsuk-link-active-color;
   border: 0;
-  color: white;
+  color: $color_nhsuk-white;
 }
 
 .app-card__content {

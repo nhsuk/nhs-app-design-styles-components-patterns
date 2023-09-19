@@ -10,6 +10,6 @@
 // Button styling override
 .nhsuk-button--reverse {
   &:visited, &:active, &:hover {
-    color: #212b32;
+    color: $nhsuk-focus-text-color;
   }
 }

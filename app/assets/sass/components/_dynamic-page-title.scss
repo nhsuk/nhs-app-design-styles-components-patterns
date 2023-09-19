@@ -9,8 +9,8 @@
     @include nhsuk-responsive-margin(1, "bottom");
 
     @include mq($from: tablet) {
-      height: 32px;
-      width: 80px;
+      height: nhsuk-spacing(5);
+      width: 80px; // do we need to increase nhsuk spacing scale?
     }
   }
 }

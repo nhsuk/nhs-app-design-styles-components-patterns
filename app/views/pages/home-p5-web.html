@@ -13,19 +13,11 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- DYNAMIC PAGE TITLE -->
-      <div class="app-dynamic-page-title">
-        <h1 class="app-dynamic-page-title__heading">
-          <span class="greeting"></span>, 
-          <span class="nhsuk-u-display-block">Hamish</span>
-        </h1>
-      </div>
-
-      <!--{% from 'includes/components/dynamic-page-title-macro.njk' import dynamicPageTitle %}
-
       {{ dynamicPageTitle({
-        greeting: true,
-        logo: true
-      }) }}-->
+        logo: "true",
+        greetingName: "Hamish",
+        nhsNumber: "123 456 7890"
+      })}}
 
       <!-- INTERRUPTION CARD -->
       <div class="nhsuk-card app-card--dark-blue">

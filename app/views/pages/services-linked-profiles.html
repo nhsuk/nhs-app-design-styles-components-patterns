@@ -18,14 +18,10 @@
       {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
-      <div class="app-dynamic-page-title">
-        <h1 class="app-dynamic-page-title__heading">
-          {{ pageHeading }}
-        </h1>
-        <p class="app-dynamic-page-title__description">
-          {{ pageDescription }}
-        </p>
-      </div>
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
 
       <!-- SECTION TITLE - Your GP services -->
       <div class="app-section-title">

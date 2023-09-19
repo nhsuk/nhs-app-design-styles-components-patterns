@@ -14,14 +14,23 @@
     </svg>
     {% endif %}
     <h1 class="app-dynamic-page-title__heading">
-      {%- if params.greeting %}
+      {%- if params.greetingName %}
       <span class="greeting"></span>, 
-      <span class="nhsuk-u-display-block">Hamish</span>
+      <span class="nhsuk-u-display-block">{{ params.greetingName }}</span>
+      {%- else %}
+      {{ params.title }}
       {% endif %}
     </h1>
+    {%- if params.nhsNumber %}
     <p class="nhsuk-heading-s app-dynamic-page-title__description">
       NHS number:
-      <span class="app-dynamic-page-title__nhs-number">123 456 7890</span>
+      <span class="app-dynamic-page-title__nhs-number">{{ params.nhsNumber }}</span>
     </p>
+    {% endif %}
+    {%- if params.description %}
+    <p class="app-dynamic-page-title__description">
+      {{ params.description }}
+    </p>
+    {% endif %}
   </div>
 {% endmacro %}

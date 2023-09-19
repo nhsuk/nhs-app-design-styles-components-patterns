@@ -13,16 +13,10 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- DYNAMIC PAGE TITLE -->
-      <div class="app-dynamic-page-title">
-        <h1 class="app-dynamic-page-title__heading">
-          <span class="greeting"></span>, 
-          <span class="nhsuk-u-display-block">Hamish</span>
-        </h1>
-        <p class="nhsuk-heading-s app-dynamic-page-title__description">
-          NHS number:
-          <span class="app-dynamic-page-title__nhs-number">123 456 7890</span>
-        </p>
-      </div>
+      {{ dynamicPageTitle({
+        greetingName: "Hamish",
+        nhsNumber: "123 456 7890"
+      })}}
 
       <!-- SECTION TITLE - SERVICES -->
       <div class="app-section-title">

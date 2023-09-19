@@ -1,8 +1,11 @@
 {% extends 'layout-app.html' %}
 
-{% set linkedProfile = true %}
 {% set web = true %}
 {% set hub = home %}
+
+{% set linkedProfile = true %}
+{% set linkedProfileName = "Lyra Hunter" %}
+{% set linkedProfileAge = "5" %}
 
 {% block pageTitle %}
   NHS App homepage
@@ -17,14 +20,12 @@
       {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
-      <div class="app-dynamic-page-title">
-        <h1 class="app-dynamic-page-title__heading">
-          Lyra Hunter
-        </h1>
-        <p class="nhsuk-heading-s app-dynamic-page-title__description">
-          5 years old
-        </p>
-      </div>
+      {{ dynamicPageTitle({
+        linkedProfile: {
+          name: linkedProfileName,
+          age: linkedProfileAge
+        }
+      })}}
 
       <!-- SECTION TITLE - SERVICES -->
       <div class="app-section-title">

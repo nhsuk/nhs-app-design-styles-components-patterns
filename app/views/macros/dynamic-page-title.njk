@@ -13,24 +13,33 @@
       3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
     </svg>
     {% endif %}
-    <h1 class="app-dynamic-page-title__heading">
-      {%- if params.greetingName %}
-      <span class="greeting"></span>, 
-      <span class="nhsuk-u-display-block">{{ params.greetingName }}</span>
-      {%- else %}
-      {{ params.title }}
+    {%- if params.linkedProfile %}
+      <h1 class="app-dynamic-page-title__heading">
+        {{ params.linkedProfile.name }}
+      </h1>
+      <p class="nhsuk-heading-s app-dynamic-page-title__description">
+        {{ params.linkedProfile.age }} years old
+      </p>
+    {%- else %}
+      <h1 class="app-dynamic-page-title__heading">
+        {%- if params.greetingName %}
+        <span class="greeting"></span>, 
+        <span class="nhsuk-u-display-block">{{ params.greetingName }}</span>
+        {%- else %}
+        {{ params.title }}
+        {% endif %}
+      </h1>
+      {%- if params.nhsNumber %}
+      <p class="nhsuk-heading-s app-dynamic-page-title__description">
+        NHS number:
+        <span class="app-dynamic-page-title__nhs-number">{{ params.nhsNumber }}</span>
+      </p>
       {% endif %}
-    </h1>
-    {%- if params.nhsNumber %}
-    <p class="nhsuk-heading-s app-dynamic-page-title__description">
-      NHS number:
-      <span class="app-dynamic-page-title__nhs-number">{{ params.nhsNumber }}</span>
-    </p>
-    {% endif %}
-    {%- if params.description %}
-    <p class="app-dynamic-page-title__description">
-      {{ params.description }}
-    </p>
+      {%- if params.description %}
+      <p class="app-dynamic-page-title__description">
+        {{ params.description }}
+      </p>
+      {% endif %}
     {% endif %}
   </div>
 {% endmacro %}

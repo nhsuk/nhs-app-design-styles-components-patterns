@@ -213,8 +213,8 @@ app.post('/examples/passing-data/clear-data', (req, res) => {
 });
 
 // Redirect all POSTs to GETs - this allows users to use POST for autoStoreData
-app.post(/^\/([^.]+)$/, (req, res) => {
-  res.redirect(`/${req.params[0]}`);
+app.post(/^([^.]+)$/, (req, res) => {
+  res.redirect(`${req.params[0]}`);
 });
 
 // Catch 404 and forward to error handler

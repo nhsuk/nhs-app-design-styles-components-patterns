@@ -6,3 +6,10 @@
   padding-bottom: 12px;
   padding-top: 12px;
 }
+
+// Button styling override
+.nhsuk-button--reverse {
+  &:visited, &:active, &:hover {
+    color: #212b32;
+  }
+}

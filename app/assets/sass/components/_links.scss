@@ -1,0 +1,18 @@
+// Link with an icon
+.app-link--with-icon {
+  padding-left: 40px;
+  position: relative;
+
+  .app-icon {
+    fill: $nhsuk-link-color;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    width: 24px;
+
+    @include mq($from: tablet) {
+      height: 28px;
+      width: 28px;
+    }
+  }
+}

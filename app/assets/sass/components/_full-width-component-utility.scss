@@ -1,0 +1,28 @@
+// Full width component
+// Utility class to make a component full width screen, breaking container
+
+@mixin full-width-break-container() {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+.app-u-full-width-mobile {
+  @include mq($until: tablet) {
+    @include full-width-break-container()
+  }
+}
+
+.app-u-full-width-tablet {
+  @include mq($until: desktop) {
+    @include full-width-break-container()
+  }
+}
+
+.app-u-full-width-desktop {
+  @include full-width-break-container()
+}

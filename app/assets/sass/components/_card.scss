@@ -15,6 +15,7 @@
 }
 
 .app-card__content {
+  @include reading-width();
   @include nhsuk-responsive-padding(5, "bottom");
   @include nhsuk-responsive-padding(4, "right");
   @include nhsuk-responsive-padding(4, "left");
@@ -27,4 +28,17 @@
       width: 50%;
     }
   }
+
 }
+
+// Gives correct padding left and right when full width
+.app-u-full-width-tablet {
+  .app-card__content {
+    @include mq($from: tablet, $until: desktop) {
+      padding-left: nhsuk-spacing(5);
+      padding-right: nhsuk-spacing(5);
+    }
+  }
+}
+
+

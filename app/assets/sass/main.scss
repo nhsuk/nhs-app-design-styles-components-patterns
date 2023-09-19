@@ -81,6 +81,12 @@
   }
 }
 
+.app-u-full-width-tablet {
+  @include mq($until: desktop) {
+    @include full-width-break-container()
+  }
+}
+
 .app-u-full-width-desktop {
   @include full-width-break-container()
 }

@@ -41,6 +41,8 @@
 
       <h2>Example pages</h2>
 
+      <div class="nhsuk-inset-text nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5 nhsuk-u-padding-top-3 nhsuk-u-padding-bottom-3">
+
       <form method="post" action="/" novalidate="novalidate">
 
         {{ radios({
@@ -67,12 +69,15 @@
         }) }}
 
         {{ button({
-          "text": "Save"
+          "text": "Save",
+          "classes": "nhsuk-u-margin-bottom-0"
         }) }}
 
       </form>
 
-      <h3 class="nhsuk-heading-xs">Homepage</h2>
+    </div>
+
+      <h3 class="nhsuk-heading-xs">Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
       <ul clas="nhsuk-list">
         <li>
@@ -86,7 +91,7 @@
         </li>
       </ul>
 
-      <h3 class="nhsuk-heading-xs">Hubpages</h2>
+      <h3 class="nhsuk-heading-xs">Hubpages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>

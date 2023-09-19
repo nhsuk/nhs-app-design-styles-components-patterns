@@ -1,0 +1,67 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = your-health %}
+{% set pageHeading = "Your health" %}
+{% set pageDescription = "View your personal records and choices" %}
+
+{% block pageTitle %}
+  NHS App homepage
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      <div class="app-dynamic-page-title">
+        <h1 class="app-dynamic-page-title__heading">
+          {{ pageHeading }}
+        </h1>
+        <p class="app-dynamic-page-title__description">
+          {{ pageDescription }}
+        </p>
+      </div>
+
+      <!-- PANEL LINK CARD - Your health -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "GP health record",
+            URL: "#"
+          },
+          {
+            title: "Prescriptions",
+            URL: "#"
+          },
+          {
+            title: "Upcoming and past appointments",
+            URL: "#"
+          },
+          {
+            title: "Test results and imaging",
+            URL: "#"
+          },
+          {
+            title: "COVID-19 vaccine record",
+            URL: "#"
+          },
+          {
+            title: "Your health choices",
+            URL: "#"
+          },
+          {
+            title: "Care plans",
+            URL: "#"
+          },
+          {
+            title: "Hospital and specialist documents",
+            URL: "#"
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = your-health %}
+{% set pageHeading = "Your health" %}
+{% set pageDescription = "View your personal records and choices" %}
+
+{% block pageTitle %}
+  NHS App homepage
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      <div class="app-dynamic-page-title">
+        <h1 class="app-dynamic-page-title__heading">
+          {{ pageHeading }}
+        </h1>
+        <p class="app-dynamic-page-title__description">
+          {{ pageDescription }}
+        </p>
+      </div>
+
+      <!-- INTERRUPTION CARD -->
+      {% include "includes/components/interruption-card.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

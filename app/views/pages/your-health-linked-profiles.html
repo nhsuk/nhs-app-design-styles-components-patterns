@@ -1,8 +1,9 @@
 {% extends 'layout-app.html' %}
 
-{% set hub = services %}
-{% set pageHeading = "Services" %}
-{% set pageDescription = "Get care and support to help you stay well" %}
+{% set linkedProfile = true %}
+{% set hub = your-health %}
+{% set pageHeading = "Your health" %}
+{% set pageDescription = "View your personal records and choices" %}
 
 {% block pageTitle %}
   NHS App homepage
@@ -12,6 +13,9 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
+
+      <!-- SWITCH PROFILE BANNER -->
+      {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
       <div class="app-dynamic-page-title">
@@ -23,27 +27,23 @@
         </p>
       </div>
 
-      <!-- SECTION TITLE - Find health information -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Find health information</h2>
-      </div>
-
-      <!-- PANEL LINK CARD - Find health information -->
+      <!-- PANEL LINK CARD - Your health -->
       {{ panelLinkCard({
         items: [
           {
-            title: "Browse NHS health information",
+            title: "GP health record",
             URL: "#"
           },
           {
-            title: "Find COVID-19 guidance",
+            title: "View and manage prescriptions",
+            URL: "#"
+          },
+          {
+            title: "Upcoming and past appointments",
             URL: "#"
           }
         ]
       })}}
-
-      <!-- INTERRUPTION CARD -->
-      {% include "includes/components/interruption-card.html" %}
 
     </div>
   </div>

@@ -1,0 +1,50 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = services %}
+{% set pageHeading = "Services" %}
+
+{% block pageTitle %}
+  NHS App homepage
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      <div class="app-dynamic-page-title">
+        <h1 class="app-dynamic-page-title__heading">
+          {{ pageHeading }}
+        </h1>
+        <p class="app-dynamic-page-title__description">
+          Get care and support to help you stay well
+        </p>
+      </div>
+
+      <!-- SECTION TITLE - Find health information -->
+      <div class="app-section-title">
+        <h2 class="nhsuk-heading-s app-section-title__heading">Find health information</h2>
+      </div>
+
+      <!-- PANEL LINK CARD - Find health information -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Browse NHS health information",
+            URL: "#"
+          },
+          {
+            title: "Find COVID-19 guidance",
+            URL: "#"
+          }
+        ]
+      })}}
+
+      <!-- INTERRUPTION CARD -->
+      {% include "includes/components/interruption-card.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

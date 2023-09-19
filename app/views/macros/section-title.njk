@@ -1,0 +1,18 @@
+{% macro sectionTitle(params) %}
+
+{% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
+
+<div class="app-section-title">
+  <h{{ headingLevel }} class="nhsuk-heading-s app-section-title__heading">
+    {{ params.title }}
+  </h{{ headingLevel }}>
+  {%- if params.linkedProfile %}
+  <p class="app-section-title__link">
+    <a href="{{ params.URL }}">View all 
+      <span class="nhsuk-u-visually-hidden">{{ params.hiddenText }}</span>
+    </a>
+  </p>
+  {%- endif %}
+</div>
+
+{% endmacro %}

@@ -28,14 +28,11 @@
       })}}
 
       <!-- SECTION TITLE - SERVICES -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Services</h2>
-        <p class="app-section-title__link">
-          <a href="#">View all 
-            <span class="nhsuk-u-visually-hidden">services</span>
-          </a>
-        </p>
-      </div>
+      {{ sectionTitle({
+        title: "Services",
+        URL: "#",
+        hiddenText: "services"
+      })}}
 
       <!-- PANEL LINK CARD - SERVICES -->
       <ul class="app-panel-link-card">

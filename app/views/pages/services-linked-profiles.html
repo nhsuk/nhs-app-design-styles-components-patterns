@@ -28,9 +28,9 @@
       })}}
 
       <!-- SECTION TITLE - Your GP services -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Your GP services</h2>
-      </div>
+      {{ sectionTitle({
+        title: "Your GP services"
+      })}}
 
       <!-- PANEL LINK CARD - Your GP services -->
       {{ panelLinkCard({
@@ -47,10 +47,10 @@
       })}}
 
       <!-- SECTION TITLE - Other NHS services -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Other NHS services</h2>
-      </div>
-
+      {{ sectionTitle({
+        title: "Other NHS services"
+      })}}
+      
       <!-- PANEL LINK CARD - Other NHS services -->
       {{ panelLinkCard({
         items: [

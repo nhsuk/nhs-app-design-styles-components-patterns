@@ -19,14 +19,11 @@
       })}}
 
       <!-- SECTION TITLE - SERVICES -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Services</h2>
-        <p class="app-section-title__link">
-          <a href="#">View all 
-            <span class="nhsuk-u-visually-hidden">services</span>
-          </a>
-        </p>
-      </div>
+      {{ sectionTitle({
+        title: "Services",
+        URL: "#",
+        hiddenText: "services"
+      })}}
 
       <!-- PANEL LINK CARD - SERVICES -->
       <ul class="app-panel-link-card">
@@ -50,14 +47,11 @@
       </ul>
 
       <!-- SECTION TITLE - YOUR HEALTH -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Your health</h2>
-        <p class="app-section-title__link">
-          <a href="#">View all 
-            <span class="nhsuk-u-visually-hidden">your health</span>
-          </a>
-        </p>
-      </div>
+      {{ sectionTitle({
+        title: "Your health",
+        URL: "#",
+        hiddenText: "your health"
+      })}}
 
       <!-- PANEL LINK CARD - YOUR HEALTH -->
       <ul class="app-panel-link-card">
@@ -88,9 +82,9 @@
       </ul>
 
       <!-- SECTION TITLE - MESSAGES -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Messages</h2>
-      </div>
+      {{ sectionTitle({
+        title: "Messages"
+      })}}
 
       <!-- PANEL LINK CARD - MESSAGES -->
       <ul class="app-panel-link-card">
@@ -118,9 +112,9 @@
       </ul>
 
       <!-- SECTION TITLE - SWITCH PROFILES -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Manage services for another person</h2>
-      </div>
+      {{ sectionTitle({
+        title: "Manage services for another person"
+      })}}
 
       <!-- PANEL LINK CARD - SWITCH PROFILES -->
       <ul class="app-panel-link-card">

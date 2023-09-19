@@ -22,9 +22,9 @@
       {% include "includes/components/interruption-card.html" %}
 
       <!-- SECTION TITLE - MESSAGES -->
-      <div class="app-section-title">
-        <h2 class="nhsuk-heading-s app-section-title__heading">Messages</h2>
-      </div>
+      {{ sectionTitle({
+        title: "Messages"
+      })}}
 
       <!-- PANEL LINK CARD - MESSAGES -->
       <ul class="app-panel-link-card">

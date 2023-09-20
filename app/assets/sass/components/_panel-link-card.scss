@@ -84,7 +84,7 @@
 
 // Variant with badge
 
-.app-panel-link-card--with-badge {
+.app-panel-link-card--with-badge-right {
 
   .app-panel-link-card__link {
     margin-right: 72px;
@@ -95,8 +95,6 @@
   }
 
   .app-badge {
-    @include nhsuk-typography-responsive(19);
-    
     position: absolute;
     right: nhsuk-spacing(8);
     top: calc(50% - 12px);
@@ -104,6 +102,28 @@
     @include mq($from: tablet) {
       right: 80px;
       top: calc(50% - 14px);
+    }
+  }
+}
+
+.app-panel-link-card--with-badge-top {
+
+  .app-panel-link-card__link {
+    margin-top: nhsuk-spacing(6);
+
+    @include mq($from: tablet) {
+      margin-top: nhsuk-spacing(7);
+    }
+  }
+
+  .app-badge {
+    position: absolute;
+    left: nhsuk-spacing(3);
+    top: 20px;
+
+    @include mq($from: tablet) {
+      left: nhsuk-spacing(4);
+      top: nhsuk-spacing(4);
     }
   }
 }

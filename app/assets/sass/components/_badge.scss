@@ -3,6 +3,8 @@
 // ==========================================================================
 
 .app-badge {
+  @include nhsuk-typography-responsive(19);
+    
   background-color: $nhsuk-error-color;
   border-radius: nhsuk-spacing(1);
   color: $color_nhsuk-white;

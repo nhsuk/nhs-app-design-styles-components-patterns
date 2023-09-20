@@ -1,9 +1,9 @@
 {% extends 'layout-app.html' %}
 
-{% set hub = your-health %}
+{% set hub = account %}
 
-{% set pageHeading = "Your health" %}
-{% set pageDescription = "View your personal records and choices" %}
+{% set pageHeading = "Account and settings" %}
+{% set pageDescription = "Change your NHS App settings and personal details" %}
 
 {% block content %}
 
@@ -20,39 +20,34 @@
       {{ panelLinkCard({
         items: [
           {
-            title: "GP health record",
+            title: "Manage services for another person",
             URL: "#"
           },
           {
-            title: "Prescriptions",
+            title: "Change your contact or login details",
             URL: "#"
           },
           {
-            title: "Upcoming and past appointments",
+            title: "Turn on fingerprint, face or iris login",
             URL: "#"
           },
           {
-            title: "Test results and imaging",
+            title: "Manage your notifications",
             URL: "#"
           },
           {
-            title: "COVID-19 vaccine record",
+            title: "Manage cookies and read legal information",
             URL: "#"
           },
           {
-            title: "Your health choices",
-            URL: "#"
-          },
-          {
-            title: "Care plans",
-            URL: "#"
-          },
-          {
-            title: "Hospital and specialist documents",
+            title: "Update your GP surgery on changes to your personal details",
             URL: "#"
           }
         ]
       })}}
+
+      <!-- LOGOUT LINK WITH VERSION -->
+      {% include "includes/components/logout-link-with-version.html" %}
 
     </div>
   </div>

@@ -2,7 +2,7 @@
 
 {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
 
-<div class="app-section-title">
+<div class="app-section-title {%- if params.claases %}{% endif %}">
   <h{{ headingLevel }} class="nhsuk-heading-s app-section-title__heading">
     {{ params.title }}
   </h{{ headingLevel }}>

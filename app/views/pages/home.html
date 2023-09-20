@@ -2,9 +2,7 @@
 
 {% set hub = home %}
 
-{% block pageTitle %}
-  NHS App homepage
-{% endblock %}
+{% set pageHeading = "Home" %}
 
 {% block content %}
 
@@ -12,18 +10,11 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- DYNAMIC PAGE TITLE -->
-      {% if data['web'] === "yes" %}
-        {{ dynamicPageTitle({
-          greetingName: data['userFirstName'],
-          nhsNumber: data['nhsNumber']
-        })}}
-      {% else %}
-        {{ dynamicPageTitle({
-          logo: "true",
-          greetingName: data['userFirstName'],
-          nhsNumber: data['nhsNumber']
-        })}}
-      {% endif %}
+      {{ dynamicPageTitle({
+        logo: data['web'] !== "yes",
+        greetingName: data['userFirstName'],
+        nhsNumber: data['nhsNumber']
+      })}}
 
       <!-- SECTION TITLE - SERVICES -->
       {{ sectionTitle({

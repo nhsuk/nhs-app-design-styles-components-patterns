@@ -1,19 +1,14 @@
 {% extends 'layout-app.html' %}
 
-{% set hub = your-health %}
+{% set hub = account %}
 
-{% set linkedProfile = true %}
-
-{% set pageHeading = "Your health" %}
-{% set pageDescription = "View your personal records and choices" %}
+{% set pageHeading = "Account and settings" %}
+{% set pageDescription = "Change your NHS App settings and personal details" %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-
-      <!-- SWITCH PROFILE BANNER -->
-      {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
@@ -25,19 +20,18 @@
       {{ panelLinkCard({
         items: [
           {
-            title: "GP health record",
+            title: "Change your contact or login details",
             URL: "#"
           },
           {
-            title: "View and manage prescriptions",
-            URL: "#"
-          },
-          {
-            title: "Upcoming and past appointments",
+            title: "Manage cookies and read legal information",
             URL: "#"
           }
         ]
       })}}
+
+      <!-- LOGOUT LINK WITH VERSION -->
+      {% include "includes/components/logout-link-with-version.html" %}
 
     </div>
   </div>

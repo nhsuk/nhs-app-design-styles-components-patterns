@@ -1,5 +1,5 @@
 {% macro dynamicPageTitle(params) %}
-  <div class="app-dynamic-page-title">
+  <div class="app-dynamic-page-title {%- if params.claases %}{% endif %}">
     {%- if params.logo %}
     <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 40 16" height="22" width="54" aria-describedby="nhs-logo-title" role="img">
       <title id="nhs-logo-title">NHS</title>

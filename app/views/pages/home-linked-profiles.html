@@ -4,9 +4,7 @@
 
 {% set linkedProfile = true %}
 
-{% block pageTitle %}
-  NHS App homepage
-{% endblock %}
+{% set pageHeading = "Home" %}
 
 {% block content %}
 
@@ -17,22 +15,13 @@
       {% include "includes/components/switch-profile-banner.html" %}
 
       <!-- DYNAMIC PAGE TITLE -->
-      {% if data['web'] === "yes" %}
-        {{ dynamicPageTitle({
-          linkedProfile: {
-            name: data['linkedProfileName'],
-            age: data['linkedProfileAge']
-          }
-        })}}
-      {% else %}
-        {{ dynamicPageTitle({
-          logo: true,
-          linkedProfile: {
-            name: data['linkedProfileName'],
-            age: data['linkedProfileAge']
-          }
-        })}}
-      {% endif %}
+      {{ dynamicPageTitle({
+        logo: data['web'] !== "yes",
+        linkedProfile: {
+          name: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
+          age: data['linkedProfileAge']
+        }
+      })}}
 
       <!-- SECTION TITLE - SERVICES -->
       {{ sectionTitle({

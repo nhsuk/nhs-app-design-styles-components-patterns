@@ -1,0 +1,30 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = account %}
+
+{% set linkedProfile = true %}
+
+{% set pageHeading = "Account and settings" %}
+{% set pageDescription = "It's not possible to access this section while acting on " + data['linkedProfileFirstName'] + "'s behalf." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- SWITCH PROFILE BANNER -->
+      {% include "includes/components/switch-profile-banner.html" %}
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
+
+      <p>Switch to your profile to access this section.</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

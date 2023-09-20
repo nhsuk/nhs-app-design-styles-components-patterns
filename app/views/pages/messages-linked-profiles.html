@@ -1,0 +1,60 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = messages %}
+
+{% set linkedProfile = true %}
+
+{% set pageHeading = "Messages" %}
+{% set pageDescription = "It's not possible to access this section while acting on " + data['linkedProfileFirstName'] + "'s behalf." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- SWITCH PROFILE BANNER -->
+      {% include "includes/components/switch-profile-banner.html" %}
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription,
+        classes: "nhsuk-u-margin-bottom-0"
+      })}}
+
+      <p>Switch to your profile to access this section.</p>
+
+      {% if data['web'] === "yes" %}
+
+        {{ button({
+          text: "Switch to my profile",
+          href: "#",
+          classes: "app-button"
+        }) }}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block afterContent %}
+
+  {% if data['web'] === "no" %}
+
+    <div class="app-sticky-footer">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+          {{ button({
+            text: "Switch to my profile",
+            href: "#",
+            classes: "app-button nhsuk-u-margin-bottom-0"
+          }) }}
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
+
+{% endblock %}

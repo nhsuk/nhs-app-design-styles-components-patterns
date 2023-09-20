@@ -109,10 +109,10 @@
 .app-panel-link-card--with-badge-top {
 
   .app-panel-link-card__link {
-    margin-top: nhsuk-spacing(6);
+    margin-top: nhsuk-spacing(6) - 4px;
 
     @include mq($from: tablet) {
-      margin-top: nhsuk-spacing(7);
+      margin-top: nhsuk-spacing(7) - 4px;
     }
   }
 

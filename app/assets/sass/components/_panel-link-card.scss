@@ -3,31 +3,20 @@
 // ==========================================================================
 
 .app-panel-link-card {
-  @include nhsuk-responsive-margin(7, "bottom");
+  @include nhsuk-responsive-margin(5, "bottom");
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
-  list-style: none;
-  padding: 0;
+  position: relative;
 }
 
-.app-panel-link-card__item {
-  @include nhsuk-responsive-margin(4, "left");
-  @include nhsuk-responsive-margin(4, "right");
+.app-panel-link-card__content {
+  @include nhsuk-responsive-padding(4);
 
-  border-bottom: $card-border-width solid $card-border-color;
-  margin-bottom: 0;
-  padding: 20px 0;
-  position: relative;
-
-  @include mq($from: tablet) {
-    padding: nhsuk-spacing(4) 0;
+  @include mq($until: tablet) {
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
-
-  &:last-child {
-    border: none;
-  }
-
 }
 
 .app-panel-link-card__link {
@@ -52,8 +41,9 @@
 
 }
 
-.app-panel-link-card__description {
-  margin: nhsuk-spacing(1) 0 0;
+.app-panel-link-card__description,
+.app-panel-link-card__list {
+  margin: nhsuk-spacing(2) nhsuk-spacing(5) 0 0;
 }
 
 // Chevron
@@ -61,39 +51,40 @@
 .app-panel-link-card__chevron {
   position: absolute;
   height: nhsuk-spacing(4);
-  right: - nhsuk-spacing(1);
+  right: nhsuk-spacing(3);
   top: calc(50% - 12px);
   width: nhsuk-spacing(4);
 
   @include mq($from: tablet) {
-    height: 28px;
-    right: -2px;
-    top: calc(50% - 14px);
-    width: 28px;
+    height: 32px;
+    right: nhsuk-spacing(4);
+    top: calc(50% - 16px);
+    width: 32px;
   }
 }
 
 // Variant with icon
 
-.app-panel-link-card__item--with-icon {
+.app-panel-link-card--with-icon {
   @include nhsuk-responsive-padding(7, "left");
 }
 
 .app-panel-link-card__icon {
   height: nhsuk-spacing(4);
   position: absolute;
-  left: 0;
+  left: nhsuk-spacing(3);
   height: nhsuk-spacing(4);
 
   @include mq($from: tablet) {
     height: 28px;
+    left: nhsuk-spacing(4);
     width: 28px;
   }
 }
 
 // Variant with badge
 
-.app-panel-link-card__item--with-badge {
+.app-panel-link-card--with-badge {
 
   .app-panel-link-card__link {
     margin-right: 72px;
@@ -107,12 +98,47 @@
     @include nhsuk-typography-responsive(19);
     
     position: absolute;
-    right: nhsuk-spacing(5);
+    right: nhsuk-spacing(8);
     top: calc(50% - 12px);
 
     @include mq($from: tablet) {
-      right: nhsuk-spacing(7);
+      right: 80px;
       top: calc(50% - 14px);
     }
   }
+}
+
+// Stacked
+
+.app-panel-link-card-stack,
+.app-panel-link-card-group {
+  @include nhsuk-responsive-margin(7, "bottom");
+
+  list-style: none;
+  padding: 0;
+}
+
+.app-panel-link-card-stack {
+  border: $card-border-width solid $card-border-color;
+
+  .app-panel-link-card {
+    @include nhsuk-responsive-margin(0, "bottom");
+
+    border: 0;
+
+    &:last-child {
+      .app-panel-link-card__content {
+        border: 0;
+      }
+    }
+  }
+
+  .app-panel-link-card__content {
+    @include nhsuk-responsive-margin(4, "left");
+    @include nhsuk-responsive-margin(4, "right");
+    @include nhsuk-responsive-padding(0, "left");
+
+    border-bottom: $card-border-width solid $card-border-color;
+  }
+
 }

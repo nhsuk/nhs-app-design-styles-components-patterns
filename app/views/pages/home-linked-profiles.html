@@ -3,8 +3,6 @@
 {% set hub = home %}
 
 {% set linkedProfile = true %}
-{% set linkedProfileName = "Lyra Hunter" %}
-{% set linkedProfileAge = "5" %}
 
 {% block pageTitle %}
   NHS App homepage
@@ -22,16 +20,16 @@
       {% if data['web'] === "yes" %}
         {{ dynamicPageTitle({
           linkedProfile: {
-            name: linkedProfileName,
-            age: linkedProfileAge
+            name: data['linkedProfileName'],
+            age: data['linkedProfileAge']
           }
         })}}
       {% else %}
         {{ dynamicPageTitle({
           logo: true,
           linkedProfile: {
-            name: linkedProfileName,
-            age: linkedProfileAge
+            name: data['linkedProfileName'],
+            age: data['linkedProfileAge']
           }
         })}}
       {% endif %}

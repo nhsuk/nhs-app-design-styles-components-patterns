@@ -14,14 +14,14 @@
       <!-- DYNAMIC PAGE TITLE -->
       {% if data['web'] === "yes" %}
         {{ dynamicPageTitle({
-          greetingName: "Hamish",
-          nhsNumber: "123 456 7890"
+          greetingName: data['userFirstName'],
+          nhsNumber: data['nhsNumber']
         })}}
       {% else %}
         {{ dynamicPageTitle({
           logo: "true",
-          greetingName: "Hamish",
-          nhsNumber: "123 456 7890"
+          greetingName: data['userFirstName'],
+          nhsNumber: data['nhsNumber']
         })}}
       {% endif %}
 

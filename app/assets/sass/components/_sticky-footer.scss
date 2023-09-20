@@ -1,0 +1,25 @@
+// ==========================================================================
+// COMPONENTS / #STICKY FOOTER
+// ==========================================================================
+
+.app-sticky-footer {
+  @include nhsuk-responsive-padding(4);
+
+  background: $color_nhsuk-white;
+  bottom: 80px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: tablet) {
+    bottom: 84px;
+  }
+
+  .app-button {
+    width: 100%;
+
+    @include mq($from: tablet) {
+      width: 60%;
+    }
+  }
+}

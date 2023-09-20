@@ -25,14 +25,36 @@
       <p>Switch to your profile to access this section.</p>
 
       {% if data['web'] === "yes" %}
+
         {{ button({
           text: "Switch to my profile",
           href: "#",
           classes: "app-button"
         }) }}
+
       {% endif %}
 
     </div>
   </div>
+
+{% endblock %}
+
+{% block afterContent %}
+
+  {% if data['web'] === "no" %}
+
+    <div class="app-sticky-footer">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+          {{ button({
+            text: "Switch to my profile",
+            href: "#",
+            classes: "app-button nhsuk-u-margin-bottom-0"
+          }) }}
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
 
 {% endblock %}

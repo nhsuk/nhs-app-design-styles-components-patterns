@@ -1,5 +1,7 @@
 // App container
 .nhsuk-width-container {
+  max-width: 768px;
+  
   @include mq($from: tablet, $until: desktop) {
     margin: 0 32px; // to override container margin on tablet
   }

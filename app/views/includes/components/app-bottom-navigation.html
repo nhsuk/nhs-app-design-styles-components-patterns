@@ -34,7 +34,19 @@
         </li>
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/messages-p9">
-            {% include "includes/icons/messages.html" %}
+            {% if hub === "Messages" %}
+              {% if data['messages'] === true %}
+                {% include "includes/icons/messages-with-badge-active.html" %}
+              {% else %}
+                {% include "includes/icons/messages-active.html" %}
+              {% endif %}
+            {% else %}
+              {% if data['messages'] === true %}
+                {% include "includes/icons/messages-with-badge.html" %}
+              {% else %}
+                {% include "includes/icons/messages.html" %}
+              {% endif %}
+            {% endif %}
             <span class="app-bottom-navigation__label {% if hub === 'Messages' %}app-bottom-navigation__label--active{% endif %}">Messages</span>
           </a>
         </li>

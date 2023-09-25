@@ -16,7 +16,7 @@
 {% endif %}
 
 {% block pageTitle %}
-  NHS App redesign work
+  {{ pageHeading }} - NHS App redesign work
 {% endblock %}
 
 <!-- CHANGES HTML BACKGROUND COLOUR IF VARIABLE 'WEB' ON PAGE IS TRUE -->
@@ -51,7 +51,7 @@
   {% endif %}
   <!-- BACK LINK -->
   {% if backLink === true %}
-    {% include "includes/components/back-link-new.html" %}
+    {% include "includes/components/back-link.html" %}
   {% endif %}
   
 {% endblock %}

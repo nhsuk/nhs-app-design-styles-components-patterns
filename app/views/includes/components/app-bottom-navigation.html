@@ -4,34 +4,38 @@
       <ul class="app-bottom-navigation__list">
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="#">
-            <svg class="app-bottom-navigation__icon" aria-hidden="true" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.05506 9.73L4.34506 8.66V8.63H4.37506L11.9251 2.33C12.4851 1.88 13.2751 1.88 13.8451 2.34L21.3751 8.63H21.4051V8.66L22.6951 9.73C23.0151 9.99 23.0551 10.47 22.7851 10.79C22.6351 10.97 22.4251 11.06 22.2051 11.06C22.0351 11.06 21.8651 11 21.7251 10.89L21.3951 10.62V21.19C21.3951 21.6 21.0551 21.94 20.6451 21.94H5.08506C4.67506 21.94 4.33506 21.6 4.33506 21.19V10.62L4.00506 10.89C3.68506 11.16 3.21506 11.11 2.94506 10.8C2.67506 10.48 2.72506 10.01 3.03506 9.74L3.05506 9.73ZM10.5351 21.18H15.2051V13.63C15.2051 13.13 14.8551 12.73 14.4251 12.73H11.3151C10.8851 12.73 10.5351 13.13 10.5351 13.63V21.18Z"/>
-            </svg>
-            <span class="app-bottom-navigation__label app-bottom-navigation__label--active">Home</span>
+            {% if hub === "Home" %}
+              {% include "includes/icons/home-active.html" %}
+            {% else %}
+              {% include "includes/icons/home.html" %}
+            {% endif %}
+            <span class="app-bottom-navigation__label {% if hub === 'Home' %}app-bottom-navigation__label--active{% endif %}">Home</span>
           </a>
         </li>
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="#">
-            <svg class="app-bottom-navigation__icon" aria-hidden="true" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.625 21.99H14.625C15.595 21.99 16.385 21.2 16.385 20.23V15.75H20.865C21.835 15.75 22.625 14.96 22.625 13.99V9.98999C22.625 9.01999 21.835 8.22999 20.865 8.22999H16.385V3.76999C16.385 2.79999 15.595 2.00999 14.625 2.00999H10.625C9.655 2.00999 8.865 2.79999 8.865 3.76999V8.24999H4.385C3.415 8.24999 2.625 9.03999 2.625 10.01V14.01C2.625 14.98 3.415 15.77 4.385 15.77H8.865V20.25C8.865 21.22 9.655 22.01 10.625 22.01V21.99ZM20.865 9.63999C21.065 9.63999 21.225 9.79999 21.225 9.99999V14C21.225 14.2 21.065 14.36 20.865 14.36H16.125C15.495 14.36 14.985 14.87 14.985 15.5V20.23C14.985 20.43 14.825 20.59 14.625 20.59H10.625C10.425 20.59 10.265 20.43 10.265 20.23V15.5C10.265 14.87 9.755 14.36 9.125 14.36H4.385C4.185 14.36 4.025 14.2 4.025 14V9.99999C4.025 9.79999 4.185 9.63999 4.385 9.63999H9.125C9.755 9.63999 10.265 9.12999 10.265 8.49999V3.76999C10.265 3.56999 10.425 3.40999 10.625 3.40999H14.625C14.825 3.40999 14.985 3.56999 14.985 3.76999V8.49999C14.985 9.12999 15.495 9.63999 16.125 9.63999H20.865Z"/>
-            </svg>                
-            <span class="app-bottom-navigation__label">Services</span>
+            {% if hub === "Services" %}
+              {% include "includes/icons/services-active.html" %}
+            {% else %}
+              {% include "includes/icons/services.html" %}
+            {% endif %}        
+            <span class="app-bottom-navigation__label {% if hub === 'Services' %}app-bottom-navigation__label--active{% endif %}">Services</span>
           </a>
         </li>
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="#">
-            <svg class="app-bottom-navigation__icon" aria-hidden="true" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.375 22.05C12.605 22.05 12.825 21.95 12.975 21.79L17.735 16.69C19.125 15.2 20.375 13.55 21.435 11.78C22.275 10.49 22.575 8.84 22.225 7.28C21.885 5.76 20.995 4.49 19.715 3.69C17.335 2.22 14.165 3.07 12.485 5.64L12.365 5.83L12.245 5.64C10.565 3.07 7.39496 2.21 5.01496 3.69C3.73496 4.48 2.84496 5.76 2.50496 7.28C2.15496 8.84 2.45496 10.49 3.31496 11.8L3.65496 12.36C4.49496 13.74 5.46496 15.03 6.55496 16.2L11.775 21.8C11.915 21.95 12.165 22.06 12.375 22.06V22.05ZM17.195 4.47C17.805 4.47 18.405 4.63 18.945 4.96C19.875 5.54 20.525 6.47 20.775 7.6C21.035 8.77 20.815 10 20.175 10.98C19.145 12.68 17.965 14.25 16.645 15.66L12.375 20.24L7.65496 15.17C6.64496 14.08 5.72496 12.87 4.94496 11.58L4.59496 11C3.94496 10 3.72496 8.77 3.98496 7.6C4.23496 6.48 4.88496 5.54 5.81496 4.96C7.49496 3.92 9.77496 4.58 10.995 6.46L11.745 7.61C12.025 8.03 12.725 8.03 13.005 7.61L13.755 6.46C14.585 5.18 15.905 4.47 17.195 4.47Z"/>
-            </svg>
-            <span class="app-bottom-navigation__label">Your health</span>
+            {% if hub === "Your health" %}
+              {% include "includes/icons/your-health-active.html" %}
+            {% else %}
+              {% include "includes/icons/your-health.html" %}
+            {% endif %} 
+            <span class="app-bottom-navigation__label {% if hub === 'Your health' %}app-bottom-navigation__label--active{% endif %}">Your health</span>
           </a>
         </li>
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="#">
-            <svg class="app-bottom-navigation__icon app-bottom-navigation__icon--messages" aria-hidden="true" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="Vector" d="M1.07497 8.3L1.23497 8.36L1.42496 8.44L1.42496 0.959999C1.42496 0.489999 1.76497 0.109999 2.17496 0.109999L18.075 0.11C18.485 0.11 18.825 0.490001 18.825 0.960001L18.825 8.45L19.185 8.3C19.415 8.21 19.675 8.24 19.885 8.38C20.095 8.52 20.215 8.75 20.215 9L20.215 18.27C20.215 18.68 19.875 19.02 19.465 19.02L0.794964 19.02C0.384964 19.02 0.0449641 18.68 0.0449642 18.27L0.044965 9C0.044965 8.75 0.164966 8.52 0.374965 8.38C0.584964 8.24 0.844966 8.21 1.07497 8.3ZM4.40497 9.64L10.135 11.84L15.865 9.64L17.335 9.05L17.335 1.61L2.94497 1.61L2.94496 9.05L4.41497 9.64L4.40497 9.64ZM18.715 17.52L18.715 10.15L16.395 11.04L10.405 13.45C10.225 13.52 10.025 13.52 9.84496 13.45L3.90497 11.06L1.54496 10.16L1.54496 17.53L18.715 17.53L18.715 17.52Z"/>
-              </svg>
-            <span class="app-bottom-navigation__label">Messages</span>
+            {% include "includes/icons/messages.html" %}
+            <span class="app-bottom-navigation__label {% if hub === 'Messages' %}app-bottom-navigation__label--active{% endif %}">Messages</span>
           </a>
         </li>
       </ul>

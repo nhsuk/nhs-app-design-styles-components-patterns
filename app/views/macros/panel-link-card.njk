@@ -1,5 +1,5 @@
 {% macro panelLinkCard(params) %}
-<ul class="app-panel-link-card-stack {%- if params.classes %}{{ params.classes }}{% endif %}">
+<ul class="app-panel-link-card-stack {%- if params.classes %} {{ params.classes }}{% endif %}">
   {%- for item in params.items %}
     <li class="app-panel-link-card  
     {%- if item.icon == 'true' or item.messages %} app-panel-link-card__item--with-icon{% endif %}

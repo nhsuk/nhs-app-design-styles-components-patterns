@@ -1,0 +1,58 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "View and manage prescriptions" %}
+{% set pageDescription = "Check your ordered medicines and choose the pharmacy you collect them from" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Status of your request",
+            description: "Check the status of your repeat prescription request",
+            URL: "#"
+          },
+          {
+            title: "Your confirmed prescriptions",
+            description: "View the medicine your healthcare provider has confirmed for you",
+            URL: "#"
+          },
+          {
+            title: "Nominate a pharmacy",
+            description: "Choose a pharmacy for your prescriptions to be sent to",
+            URL: "#"
+          },
+          {
+            title: "Hospital and other medicines",
+            description: "View your current and past medicines or add a record of your own",
+            URL: "#"
+          }
+        ]
+      })}}
+
+       <!-- RELATED CONTENT CARD -->
+       {{ relatedContent({
+        title: "Access services",
+        description: "Place an order for a medicine you take often",
+        URL: "#",
+        linkText: "Request repeat prescriptions"
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

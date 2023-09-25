@@ -4,8 +4,8 @@
 
 {% set backLink = true %}
 
-{% set pageHeading = "Upcoming and past appointments" %}
-{% set pageDescription = "Check and change your bookings, or view past appointments" %}
+{% set pageHeading = "Care plans" %}
+{% set pageDescription = "Check plans you've agreed with your health team about how you want to be cared for" %}
 
 {% block content %}
 
@@ -22,22 +22,14 @@
       {{ panelLinkCard({
         items: [
           {
-            title: "GP surgery appointments",
+            title: "Manage your health care plans",
             URL: "#"
           },
           {
-            title: "Hospital referrals and appointments",
+            title: "View your universal health care plan",
             URL: "#"
           }
         ]
-      })}}
-
-      <!-- RELATED CONTENT CARD -->
-      {{ relatedContent({
-        title: "Access services",
-        description: "Get support from your GP and other services",
-        URL: "#",
-        linkText: "Explore services"
       })}}
 
     </div>

@@ -2,10 +2,11 @@
 
 {% set hub = "Your health" %}
 
+{% set linkedProfile = true %}
 {% set backLink = true %}
 
-{% set pageHeading = "Upcoming and past appointments" %}
-{% set pageDescription = "Check and change your bookings, or view past appointments" %}
+{% set pageHeading = "View and manage prescriptions" %}
+{% set pageDescription = "Check your ordered medicines and choose the pharmacy you collect them from" %}
 
 {% block content %}
 
@@ -22,22 +23,22 @@
       {{ panelLinkCard({
         items: [
           {
-            title: "GP surgery appointments",
+            title: "Check your current prescription orders",
             URL: "#"
           },
           {
-            title: "Hospital referrals and appointments",
+            title: "View your past prescriptions",
             URL: "#"
           }
         ]
       })}}
 
-      <!-- RELATED CONTENT CARD -->
-      {{ relatedContent({
+       <!-- RELATED CONTENT CARD -->
+       {{ relatedContent({
         title: "Access services",
-        description: "Get support from your GP and other services",
+        description: "Place an order for a medicine you take often",
         URL: "#",
-        linkText: "Explore services"
+        linkText: "Request repeat prescriptions"
       })}}
 
     </div>

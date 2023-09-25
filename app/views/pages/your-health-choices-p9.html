@@ -1,0 +1,62 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Your health choices" %}
+{% set pageDescription = "Record your decisions and keep track of your health information" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Make your organ donation decision",
+            URL: "#"
+          },
+          {
+            title: "Choose about your health records data",
+            URL: "#"
+          },
+          {
+            title: "Be part of health research",
+            URL: "#"
+          },
+          {
+            title: "Join a patient participation group",
+            URL: "#"
+          },
+          {
+            title: "Change your Great North Care Record preferences",
+            URL: "#"
+          },
+          {
+            title: "View links from your health team",
+            URL: "#"
+          },
+          {
+            title: "Track your symptoms",
+            URL: "#"
+          },
+          {
+            title: "Share records with your health team ",
+            URL: "#"
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

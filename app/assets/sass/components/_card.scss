@@ -25,7 +25,7 @@
     width: 100%;
 
     @include mq($from: tablet) {
-      width: 50%;
+      width: 60%;
     }
   }
 
@@ -41,10 +41,12 @@
   }
 }
 
+// Removes border from a card
 .app-card--no-border {
   border: 0;
 }
 
+// Center aligns card content
 .app-card--center-align {
   text-align: center;
 }

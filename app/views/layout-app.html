@@ -11,12 +11,7 @@
 {% else %}
 
   {% set containerClasses = "app-main-container" %}
-
-  {% if hub === "Home" and linkedProfile != true %}
-    {% set mainClasses = "app-main-wrapper app-main-wrapper--home" %}
-  {% else %}
-    {% set mainClasses = "app-main-wrapper" %}
-  {% endif %}
+  {% set mainClasses = "app-main-wrapper" %}
 
 {% endif %}
 

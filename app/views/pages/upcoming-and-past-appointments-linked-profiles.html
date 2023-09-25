@@ -23,18 +23,19 @@
       {{ panelLinkCard({
         items: [
           {
-            title: "GP surgery appointments",
-            URL: "#"
-          },
-          {
-            title: "Hospital referrals and appointments",
+            title: "GP surgery appointments ",
             URL: "#"
           }
         ]
       })}}
 
       <!-- RELATED CONTENT CARD -->
-      {% include "includes/components/related-content-card.html" %}
+      {{ relatedContent({
+        title: "Access services",
+        description: "Get support from your GP and other services",
+        URL: "#",
+        linkText: "Explore services"
+      })}}
 
     </div>
   </div>

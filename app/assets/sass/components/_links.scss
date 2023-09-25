@@ -1,5 +1,5 @@
 // Link with an icon
-.app-link--with-icon {
+.app-link-with-icon {
   padding-left: nhsuk-spacing(6);
   position: relative;
 
@@ -15,4 +15,9 @@
       width: 28px;
     }
   }
+}
+
+// Link with an icon
+.app-link-with-icon--compact {
+  padding-left: nhsuk-spacing(5);
 }

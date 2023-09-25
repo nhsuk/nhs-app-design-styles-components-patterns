@@ -1,0 +1,63 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set pageHeading = "Upcoming and past appointments" %}
+{% set pageDescription = "Check and change your bookings, or view past appointments" %}
+
+{% block outerContent %}
+  <!-- BACK LINK -->
+  <p class="app-link-with-icon app-link-with-icon--compact nhsuk-u-margin-bottom-3">
+    <a href="#">
+      <svg class="app-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 12C8 11.65 8.11429 11.4167 8.34286 11.1833L14.0571 5.35C14.5143 4.88333 15.2 4.88333 15.6571 5.35C16.1143 5.81667 16.1143 6.51667 15.6571 6.98333L10.7429 12L15.6571 17.0167C16.1143 17.4833 16.1143 18.1833 15.6571 18.65C15.2 19.1167 14.5143 19.1167 14.0571 18.65L8.34286 12.8167C8.11429 12.5833 8 12.35 8 12Z" />
+      </svg>
+      Back to Your health
+    </a>
+  </p>
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "GP surgery appointments",
+            URL: "#"
+          },
+          {
+            title: "Hospital referrals and appointments",
+            URL: "#"
+          }
+        ]
+      })}}
+
+      <!-- RELATED CONTENT CARD -->
+      <div class="nhsuk-card app-card--no-border app-card--center-align app-u-full-width-tablet">
+        <div class="nhsuk-card__content app-card__content">
+          <svg class="app-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+            <rect width="40" height="40" transform="translate(0.5)" fill="white"/>
+            <path d="M23.833 36.65H17.1663C15.5497 36.65 14.233 35.3333 14.233 33.7166V26.25H6.76634C5.14967 26.25 3.83301 24.9333 3.83301 23.3166V16.65C3.83301 15.0333 5.14967 13.7166 6.76634 13.7166H14.233V6.28331C14.233 4.66664 15.5497 3.34998 17.1663 3.34998H23.833C25.4497 3.34998 26.7663 4.66664 26.7663 6.28331V13.75H34.233C35.8497 13.75 37.1663 15.0666 37.1663 16.6833V23.35C37.1663 24.9666 35.8497 26.2833 34.233 26.2833H26.7663V33.75C26.7663 35.3666 25.4497 36.6833 23.833 36.6833V36.65ZM6.76634 16.0666C6.43301 16.0666 6.16634 16.3333 6.16634 16.6666V23.3333C6.16634 23.6666 6.43301 23.9333 6.76634 23.9333H14.6663C15.7163 23.9333 16.5663 24.7833 16.5663 25.8333V33.7166C16.5663 34.05 16.833 34.3166 17.1663 34.3166H23.833C24.1663 34.3166 24.433 34.05 24.433 33.7166V25.8333C24.433 24.7833 25.283 23.9333 26.333 23.9333H34.233C34.5663 23.9333 34.833 23.6666 34.833 23.3333V16.6666C34.833 16.3333 34.5663 16.0666 34.233 16.0666H26.333C25.283 16.0666 24.433 15.2166 24.433 14.1666V6.28331C24.433 5.94998 24.1663 5.68331 23.833 5.68331H17.1663C16.833 5.68331 16.5663 5.94998 16.5663 6.28331V14.1666C16.5663 15.2166 15.7163 16.0666 14.6663 16.0666H6.76634Z" />
+          </svg>
+          <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-2">Access services</h2>
+          <p class="nhsuk-card__description nhsuk-u-margin-bottom-5">Find available GP appointments and more available services</p>
+          <a class="nhsuk-button nhsuk-button--secondary app-button" href="#">
+            Explore services
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

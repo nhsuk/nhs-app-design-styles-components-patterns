@@ -48,6 +48,19 @@
 
 {% endblock %}
 
+
+{% block outerContent %}
+  <!-- SWITCH PROFILE BANNER -->
+  {% if linkedProfile === true %}
+    {% include "includes/components/switch-profile-banner.html" %}
+  {% endif %}
+  <!-- BACK LINK -->
+  {% if backLink === true %}
+    {% include "includes/components/back-link-new.html" %}
+  {% endif %}
+  
+{% endblock %}
+
 <!-- FOOTER -->
 {% block footer %}
 

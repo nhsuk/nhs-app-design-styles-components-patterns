@@ -3,9 +3,10 @@
 {% set hub = "Your health" %}
 
 {% set linkedProfile = true %}
+{% set backLink = true %}
 
-{% set pageHeading = "Your health" %}
-{% set pageDescription = "View your personal records and choices" %}
+{% set pageHeading = "Upcoming and past appointments" %}
+{% set pageDescription = "Check and change your bookings, or view past appointments" %}
 
 {% block content %}
 
@@ -18,25 +19,24 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD - Your health -->
+      <!-- PANEL LINK CARD -->
       {{ panelLinkCard({
         items: [
           {
-            title: "GP health record",
+            title: "GP surgery appointments",
             URL: "#"
           },
           {
-            title: "View and manage prescriptions",
-            URL: "#"
-          },
-          {
-            title: "Upcoming and past appointments",
+            title: "Hospital referrals and appointments",
             URL: "#"
           }
         ]
       })}}
 
+      <!-- RELATED CONTENT CARD -->
+      {% include "includes/components/related-content-card.html" %}
+
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}

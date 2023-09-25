@@ -21,3 +21,28 @@
 .app-link-with-icon--compact {
   padding-left: nhsuk-spacing(5);
 }
+
+// Back link
+.app-back-link {
+  @include nhsuk-responsive-margin(3, "bottom");
+
+  .nhsuk-back-link__link {
+    @include nhsuk-responsive-padding(4, "left");
+    @include nhsuk-typography-responsive(19);
+  }
+
+  .nhsuk-icon__chevron-left {
+    height: 24px;
+    width: 24px;
+
+    @include mq($until: tablet) {
+      top: auto; // Overrides service manual icon alignment - could do with reviewing in the NHS.UK Frontend
+    }
+
+    @include mq($from: tablet) {
+      height: 28px;
+      width: 28px;
+    }
+  }
+
+}

@@ -2,8 +2,10 @@
 
 {% set hub = "Account and settings" %}
 
-{% set pageHeading = "Account and settings" %}
-{% set pageDescription = "Change your NHS App settings and personal details" %}
+{% set backLink = true %}
+
+{% set pageHeading = "Manage cookies and read legal information" %}
+{% set pageDescription = "Choose about cookies and check our privacy, accessibility and other policies" %}
 
 {% block content %}
 
@@ -16,19 +18,19 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD - Your health -->
+      <!-- PANEL LINK CARD -->
       {{ panelLinkCard({
         items: [
           {
-            title: "Manage services for another person",
+            title: "Manage cookies",
             URL: "#"
           },
           {
-            title: "Change your contact or login details",
+            title: "Terms of use",
             URL: "#"
           },
           {
-            title: "Turn on fingerprint, face or iris login",
+            title: "Privacy policy",
             URL: "#"
           },
           {
@@ -36,20 +38,17 @@
             URL: "#"
           },
           {
-            title: "Manage cookies and read legal information",
-            URL: "/pages/cookies-and-legal-agreement"
+            title: "Accessibility statement",
+            URL: "#"
           },
           {
-            title: "Update your GP surgery on changes to your personal details",
+            title: "Open source licences",
             URL: "#"
           }
         ]
       })}}
 
-      <!-- LOGOUT LINK WITH VERSION -->
-      {% include "includes/components/logout-link-with-version.html" %}
-
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}

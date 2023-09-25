@@ -18,4 +18,8 @@ module.exports = {
   // Set version of the app
   "version": "2.36.6 (2.36.0)",
 
+  // Messages
+  "messages": true,
+  "messagesNumber": "8"
+
 }

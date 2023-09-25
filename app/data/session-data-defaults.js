@@ -19,7 +19,7 @@ module.exports = {
   "version": "2.36.6 (2.36.0)",
 
   // Messages
-  "messages": true,
-  "messagesNumber": "8"
+  "messages": true, // If true it shows red badge on message components and bottom nav
+  "messagesNumber": "8" // This displays in the messages badge
 
 }

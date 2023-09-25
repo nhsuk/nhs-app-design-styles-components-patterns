@@ -3,7 +3,7 @@
     <div class="nhsuk-grid-row">
       <ul class="app-bottom-navigation__list">
         <li class="app-bottom-navigation__item">
-          <a class="app-bottom-navigation__link" href="/pages/home-p9">
+          <a class="app-bottom-navigation__link" href="/pages/home-{{ data['accountType'] }}">
             {% if hub === "Home" %}
               {% include "includes/icons/home-active.html" %}
             {% else %}
@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="app-bottom-navigation__item">
-          <a class="app-bottom-navigation__link" href="/pages/services-p9">
+          <a class="app-bottom-navigation__link" href="/pages/services-{{ data['accountType'] }}">
             {% if hub === "Services" %}
               {% include "includes/icons/services-active.html" %}
             {% else %}
@@ -23,7 +23,7 @@
           </a>
         </li>
         <li class="app-bottom-navigation__item">
-          <a class="app-bottom-navigation__link" href="/pages/your-health-p9">
+          <a class="app-bottom-navigation__link" href="/pages/your-health-{{ data['accountType'] }}">
             {% if hub === "Your health" %}
               {% include "includes/icons/your-health-active.html" %}
             {% else %}
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="app-bottom-navigation__item">
-          <a class="app-bottom-navigation__link" href="/pages/messages-p9">
+          <a class="app-bottom-navigation__link" href="/pages/messages-{{ data['accountType'] }}">
             {% if hub === "Messages" %}
               {% if data['messages'] === true %}
                 {% include "includes/icons/messages-with-badge-active.html" %}

@@ -22,7 +22,7 @@ module.exports = {
   "messages": true, // If true it shows red badge on message components and bottom nav
   "messagesNumber": "8", // This displays in the messages badge
 
-  // Set account type
+  // Set account type - p9, p5 or linked-profiles
   "accountType": "p9",
 
 }

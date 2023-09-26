@@ -5,9 +5,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/home-{{ data['accountType'] }}">
             {% if hub === "Home" %}
-              {% include "includes/icons/home-active.html" %}
+              {% include "components/icons/home-active.html" %}
             {% else %}
-              {% include "includes/icons/home.html" %}
+              {% include "components/icons/home.html" %}
             {% endif %}
             <span class="app-bottom-navigation__label {% if hub === 'Home' %}app-bottom-navigation__label--active{% endif %}">Home</span>
           </a>
@@ -15,9 +15,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/services-{{ data['accountType'] }}">
             {% if hub === "Services" %}
-              {% include "includes/icons/services-active.html" %}
+              {% include "components/icons/services-active.html" %}
             {% else %}
-              {% include "includes/icons/services.html" %}
+              {% include "components/icons/services.html" %}
             {% endif %}        
             <span class="app-bottom-navigation__label {% if hub === 'Services' %}app-bottom-navigation__label--active{% endif %}">Services</span>
           </a>
@@ -25,9 +25,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/your-health-{{ data['accountType'] }}">
             {% if hub === "Your health" %}
-              {% include "includes/icons/your-health-active.html" %}
+              {% include "components/icons/your-health-active.html" %}
             {% else %}
-              {% include "includes/icons/your-health.html" %}
+              {% include "components/icons/your-health.html" %}
             {% endif %} 
             <span class="app-bottom-navigation__label {% if hub === 'Your health' %}app-bottom-navigation__label--active{% endif %}">Your health</span>
           </a>
@@ -36,15 +36,15 @@
           <a class="app-bottom-navigation__link" href="/pages/messages-{{ data['accountType'] }}">
             {% if hub === "Messages" %}
               {% if data['messages'] === true %}
-                {% include "includes/icons/messages-with-badge-active.html" %}
+                {% include "components/icons/messages-with-badge-active.html" %}
               {% else %}
-                {% include "includes/icons/messages-active.html" %}
+                {% include "components/icons/messages-active.html" %}
               {% endif %}
             {% else %}
               {% if data['messages'] === true %}
-                {% include "includes/icons/messages-with-badge.html" %}
+                {% include "components/icons/messages-with-badge.html" %}
               {% else %}
-                {% include "includes/icons/messages.html" %}
+                {% include "components/icons/messages.html" %}
               {% endif %}
             {% endif %}
             <span class="app-bottom-navigation__label {% if hub === 'Messages' %}app-bottom-navigation__label--active{% endif %}">Messages</span>

@@ -36,9 +36,9 @@
 
   <!-- WEB AND NATIVE - VARIABLE 'WEB' ON PAGE DECLARES WHAT TO DISPLAY -->
   {% if data['web'] === "yes" %}
-    {% include "includes/components/global-navigation-web.html" %}
+    {% include "components/global-navigation-web/include.html" %}
   {% else %}
-    {% include "includes/components/global-navigation-native.html" %}
+    {% include "components/global-navigation-native/include.html" %}
   {% endif %}
 
 {% endblock %}
@@ -47,11 +47,11 @@
 {% block outerContent %}
   <!-- SWITCH PROFILE BANNER -->
   {% if linkedProfile === true %}
-    {% include "includes/components/switch-profile-banner.html" %}
+    {% include "components/switch-profile-banner/include.html" %}
   {% endif %}
   <!-- BACK LINK -->
   {% if backLink === true %}
-    {% include "includes/components/back-link-new.html" %}
+    {% include "components/back-link/include-new.html" %}
   {% endif %}
   
 {% endblock %}
@@ -61,9 +61,9 @@
 
   <!-- WEB AND NATIVE - VARIABLE 'WEB' ON PAGE DECLARES WHAT TO DISPLAY -->
   {% if data['web'] === "yes" %}
-    {% include "includes/components/footer-web.html" %}
+    {% include "components/footer-web/include.html" %}
   {% else %}
-    {% include "includes/components/app-bottom-navigation.html" %}
+    {% include "components/app-bottom-navigation/include.html" %}
   {% endif %}
 
 {% endblock %}

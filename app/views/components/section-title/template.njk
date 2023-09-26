@@ -1,5 +1,3 @@
-{% macro sectionTitle(params) %}
-
 {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
 
 <div class="app-section-title {%- if params.classes %} {{ params.classes }}{% endif %}">
@@ -14,5 +12,3 @@
   </p>
   {%- endif %}
 </div>
-
-{% endmacro %}

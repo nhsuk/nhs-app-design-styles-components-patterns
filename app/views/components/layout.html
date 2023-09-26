@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Panel Link Card" %}
+
+{% block pageTitle %}
+  {{ pageHeading}} Component
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        <span class="nhsuk-caption-l">
+          Component
+          <span class="nhsuk-u-visually-hidden"> - </span>
+        </span>
+        {{ pageHeading }}
+      </h1>
+
+      {% if pageDescription %}
+      <p class="nhsuk-lede-text">
+        {{ pageDescription }}
+      </p>
+      {% endif %}
+
+      {% block innerContent %}
+      {% endblock %}
+
+  </div>
+{% endblock %}

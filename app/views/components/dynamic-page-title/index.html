@@ -1,0 +1,43 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Dynamic Page Title" %}
+
+{% block innerContent %}
+
+  <h2 class="nhsuk-heading-m">Variants</h2>
+
+  <h3 class="nhsuk-heading-xs">Homepage greeting</h3>
+
+  {{ dynamicPageTitle({
+    logo: data['web'] !== "yes",
+    greetingName: data['userFirstName'],
+    nhsNumber: data['nhsNumber']
+  })}}
+
+  <h3 class="nhsuk-heading-xs">Linked profile</h3>
+
+  {{ dynamicPageTitle({
+    logo: data['web'] !== "yes",
+    linkedProfile: {
+      name: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
+      age: data['linkedProfileAge']
+    }
+  })}}
+
+    
+
+  <h2 class="nhsuk-heading-m">Examples in context</h2>
+
+  <ul clas="nhsuk-list">
+    <li>
+      <a href="/pages/home-p9">Homepage - P9</a>
+    </li>
+    <li>
+      <a href="/pages/services-p9">Services - P9</a>
+    </li>
+    <li>
+      <a href="/pages/messages-p9">Messages - P9</a>
+    </li>
+  </ul>
+
+{% endblock %}

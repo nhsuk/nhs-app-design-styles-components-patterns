@@ -35,13 +35,13 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/messages-{{ data['accountType'] }}">
             {% if hub === "Messages" %}
-              {% if data['messages'] === true %}
+              {% if data['messages'] > 0 %}
                 {% include "components/icons/messages-with-badge-active.html" %}
               {% else %}
                 {% include "components/icons/messages-active.html" %}
               {% endif %}
             {% else %}
-              {% if data['messages'] === true %}
+              {% if data['messages'] > 0 %}
                 {% include "components/icons/messages-with-badge.html" %}
               {% else %}
                 {% include "components/icons/messages.html" %}

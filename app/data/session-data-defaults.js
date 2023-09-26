@@ -23,6 +23,6 @@ module.exports = {
   "messagesNumber": "8", // This displays in the messages badge
 
   // Set account type - p9, p5 or linked-profiles
-  "accountType": "p5",
+  "accountType": "p9",
 
 }

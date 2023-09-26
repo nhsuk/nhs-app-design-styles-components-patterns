@@ -22,41 +22,9 @@
 
       <h2>Example pages</h2>
 
-      <div class="nhsuk-inset-text nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5 nhsuk-u-padding-top-3 nhsuk-u-padding-bottom-3">
-
-      <form method="post" action="/" novalidate="novalidate">
-
-        {{ radios({
-          "idPrefix": "web",
-          "name": "web",
-          "fieldset": {
-            "legend": {
-              "text": "View pages for web or native?",
-              "classes": "nhsuk-fieldset__legend--s"
-            }
-          },
-          "items": [
-            {
-              "value": "yes",
-              "text": "Web",
-              checked: checked("web", "yes")
-            },
-            {
-              "value": "no",
-              "text": "Native",
-              checked: checked("web", "no")
-            }
-          ]
-        }) }}
-
-        {{ button({
-          "text": "Save",
-          "classes": "nhsuk-u-margin-bottom-0 app-button"
-        }) }}
-
-      </form>
-
-    </div>
+      <div class="nhsuk-inset-text nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5">
+        <p>Change the <a href="/data-settings">data settings</a> for the pages, including viewing the native or web header and footer, setting the user account information and number of messages.</p>
+      </div>
 
       <h3 class="nhsuk-heading-xs">Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 

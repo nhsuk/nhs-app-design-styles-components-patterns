@@ -19,7 +19,7 @@ module.exports = {
   "version": "2.36.6 (2.36.0)",
 
   // Messages
-  "messages": 8, // This displays in the messages badge
+  "messages": 10, // This displays in the messages badge
 
   // Set account type - p9, p5 or linked-profiles
   "accountType": "p5",

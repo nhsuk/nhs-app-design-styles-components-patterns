@@ -1,0 +1,174 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Data settings</h1>
+
+      <p class="nhsuk-lede-text">
+        Change and save the data used in the prototype.
+      </p>
+
+      <div class="nhsuk-inset-text">
+        <p>The default data is set in the <a href="">/data/session-data-default.js</a> file.</p>
+      </div>
+
+      <hr>
+
+      <form method="post" action="/" novalidate="novalidate">
+
+        {{ radios({
+          "idPrefix": "web",
+          "name": "web",
+          "fieldset": {
+            "legend": {
+              "text": "Web or native?",
+              "classes": "nhsuk-fieldset__legend--m"
+            }
+          },
+          "hint": {
+            "text": "This sets the header and footer used on the pages"
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Web",
+              checked: checked("web", "yes")
+            },
+            {
+              "value": "no",
+              "text": "Native",
+              checked: checked("web", "no")
+            }
+          ]
+        }) }}
+
+        <hr>
+
+        {{ radios({
+          "idPrefix": "accountType",
+          "name": "accountType",
+          "fieldset": {
+            "legend": {
+              "text": "Account type",
+              "classes": "nhsuk-fieldset__legend--m"
+            }
+          },
+          "hint": {
+            "text": "This sets the page URLs for main navigation"
+          },
+          "items": [
+            {
+              "value": "p9",
+              "text": "P9",
+              checked: checked("accountType", "p9")
+            },
+            {
+              "value": "p5",
+              "text": "P5",
+              checked: checked("accountType", "p5")
+            },
+            {
+              "value": "linked-profiles",
+              "text": "Linked profile",
+              checked: checked("accountType", "linked-profiles")
+            }
+          ]
+        }) }}
+
+        <hr>
+
+        {{ input({
+          "label": {
+          "text": "Number of messages",
+          "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
+          },
+          "id": "messages",
+          "name": "messages",
+          "classes": "nhsuk-input--width-2",
+          "value": data['messages']
+        }) }}
+
+        <hr>
+
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">User account</h2>
+
+        {{ input({
+          "label": {
+          "text": "First name"
+          },
+          "id": "userFirstName",
+          "name": "userFirstName",
+          "classes": "",
+          "value": data['userFirstName']
+        }) }}
+
+        {{ input({
+          "label": {
+          "text": "Last name"
+          },
+          "id": "userLastName",
+          "name": "userLastName",
+          "classes": "",
+          "value": data['userLastName']
+        }) }}
+
+        {{ input({
+          "label": {
+          "text": "NHS number"
+          },
+          "id": "nhsNumber",
+          "name": "nhsNumber",
+          "classes": "nhsuk-input--width-10",
+          "value": data['nhsNumber']
+        }) }}
+
+        <hr>
+
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Linked profile account</h2>
+
+        {{ input({
+          "label": {
+          "text": "First name"
+          },
+          "id": "linkedProfileFirstName",
+          "name": "linkedProfileFirstName",
+          "classes": "",
+          "value": data['linkedProfileFirstName']
+        }) }}
+
+        {{ input({
+          "label": {
+          "text": "Last name"
+          },
+          "id": "linkedProfileLastName",
+          "name": "linkedProfileLastName",
+          "classes": "",
+          "value": data['linkedProfileLastName']
+        }) }}
+
+        {{ input({
+          "label": {
+          "text": "Age"
+          },
+          "id": "linkedProfileAge",
+          "name": "linkedProfileAge",
+          "classes": "nhsuk-input--width-2",
+          "value": data['linkedProfileAge']
+        }) }}
+
+        <hr>
+
+        {{ button({
+          "text": "Save settings",
+          "classes": "nhsuk-u-margin-bottom-5 app-button"
+        }) }}
+
+        <!--<p><a href="#">Reset data settings</a></p>-->
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

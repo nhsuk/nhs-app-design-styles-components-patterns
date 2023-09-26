@@ -18,7 +18,7 @@
 
       <!-- PANEL LINK CARD - MESSAGES -->
       <ul class="app-panel-link-card-group">
-        <li class="app-panel-link-card app-panel-link-card--with-badge-top">
+        <li class="app-panel-link-card {% if data['messages'] > 0 %} app-panel-link-card--with-badge-top{% endif %}">
           <div class="app-panel-link-card__content">
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
               Your NHS healthcare services

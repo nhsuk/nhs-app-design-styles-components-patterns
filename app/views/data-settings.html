@@ -2,17 +2,13 @@
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-three-quarters">
 
       <h1>Data settings</h1>
 
       <p class="nhsuk-lede-text">
-        Change and save the data used in the prototype.
+        Change and save the dynamic content used in the prototype.
       </p>
-
-      <div class="nhsuk-inset-text">
-        <p>The default data is set in the <a href="https://github.com/nhsuk/nhs-app-redesign-prototype/blob/main/app/data/session-data-defaults.js">/data/session-data-default.js</a> file.</p>
-      </div>
 
       <hr>
 
@@ -28,7 +24,7 @@
             }
           },
           "hint": {
-            "text": "This sets the header and footer used on the pages"
+            "text": "This displays the web or native header and footer"
           },
           "items": [
             {
@@ -56,7 +52,7 @@
             }
           },
           "hint": {
-            "text": "This sets the page URLs for main navigation"
+            "text": "This changes the page URLs in the main nav"
           },
           "items": [
             {
@@ -162,12 +158,16 @@
 
         {{ button({
           "text": "Save settings",
-          "classes": "nhsuk-u-margin-bottom-5 app-button"
+          "classes": "app-button"
         }) }}
 
         <!--<p><a href="#">Reset data settings</a></p>-->
 
       </form>
+
+      <div class="nhsuk-inset-text">
+        <p>The default data is set in the <a href="https://github.com/nhsuk/nhs-app-redesign-prototype/blob/main/app/data/session-data-defaults.js">/data/session-data-default.js</a> file.</p>
+      </div>
 
     </div>
   </div>

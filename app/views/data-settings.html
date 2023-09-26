@@ -156,6 +156,19 @@
 
         <hr>
 
+        {{ input({
+          "label": {
+          "text": "Version",
+          "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
+          },
+          "id": "version",
+          "name": "version",
+          "classes": "",
+          "value": data['version']
+        }) }}
+
+        <hr>
+
         {{ button({
           "text": "Save settings",
           "classes": "app-button"

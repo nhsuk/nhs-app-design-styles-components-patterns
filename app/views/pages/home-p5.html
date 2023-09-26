@@ -10,21 +10,11 @@
     <div class="nhsuk-grid-column-full">
 
       <!-- DYNAMIC PAGE TITLE -->
-      {% if data['web'] === "yes" %}
-        <!-- FOR WEB -->
-        {{ dynamicPageTitle({
-          greetingName: data['userFirstName'],
-          nhsNumber: data['nhsNumber']
-        })}}
-      {% else %}
-        <!-- FOR NATIVE -->
-        {{ dynamicPageTitle({
-          logo: data['web'] !== "yes",
-          greetingName: data['userFirstName'],
-          nhsNumber: data['nhsNumber'],
-          classes: "nhsuk-u-margin-top-6"
-        })}}
-      {% endif %}
+      {{ dynamicPageTitle({
+        logo: data['web'] !== "yes",
+        greetingName: data['userFirstName'],
+        nhsNumber: data['nhsNumber']
+      })}}
 
       <!-- INTERRUPTION CARD -->
       {% include "includes/components/interruption-card.html" %}

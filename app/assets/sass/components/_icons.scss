@@ -5,3 +5,7 @@
 .app-icon {
   fill: $nhsuk-link-color; // Set default icon colour to NHS blue
 }
+
+.app-icon--no-fill {
+  fill: none; // Removes fill colour
+}

@@ -67,18 +67,18 @@
 
 .app-panel-link-card--with-icon {
   @include nhsuk-responsive-padding(7, "left");
-}
 
-.app-panel-link-card__icon {
-  height: nhsuk-spacing(4);
-  position: absolute;
-  left: nhsuk-spacing(3);
-  height: nhsuk-spacing(4);
-
-  @include mq($from: tablet) {
-    height: 28px;
-    left: nhsuk-spacing(4);
-    width: 28px;
+  .app-icon {
+    height: nhsuk-spacing(4);
+    position: absolute;
+    left: nhsuk-spacing(3);
+    height: nhsuk-spacing(4);
+  
+    @include mq($from: tablet) {
+      height: 28px;
+      left: nhsuk-spacing(4);
+      width: 28px;
+    }
   }
 }
 

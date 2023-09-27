@@ -34,9 +34,19 @@
   padding: 12px 0 20px;
   text-decoration: none;
 
+  .app-icon {
+    fill: $color_nhsuk-white;
+    height: 28px;
+    width: 28px;
+  }
+  
+  .app-icon--messages {
+    padding-top: nhsuk-spacing(1);;
+  }
+
   &:focus {
 
-    .app-bottom-navigation__icon {
+    .app-icon {
       fill: $nhsuk-focus-text-color;
     }
 
@@ -45,16 +55,6 @@
     }
 
   }
-}
-
-.app-bottom-navigation__icon {
-  fill: $color_nhsuk-white;
-  height: 28px;
-  width: 28px;
-}
-
-.app-bottom-navigation__icon--messages {
-  padding-top: nhsuk-spacing(1);;
 }
 
 .app-bottom-navigation__label {

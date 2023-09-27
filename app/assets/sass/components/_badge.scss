@@ -10,4 +10,8 @@
   color: $color_nhsuk-white;
   font-weight: bold;
   padding: 0 nhsuk-spacing(2);
+
+  @include mq($from: tablet) {
+    padding: 0 12px;
+  }
 }

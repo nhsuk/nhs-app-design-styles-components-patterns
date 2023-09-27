@@ -28,7 +28,7 @@
 ///////////////////////////////////////////
 
 .example {
-  border: 1px solid $nhsuk-border-color;
+  border: 1px solid $color_nhsuk-grey-3;
   margin-bottom: nhsuk-spacing(6);
   padding: nhsuk-spacing(7) nhsuk-spacing(4) nhsuk-spacing(4);
   position: relative;
@@ -40,10 +40,10 @@
     font-size: 14px;
     font-kerning: 1;
     font-weight: bold;
-    left: 0;
+    left: -1px;
     padding: nhsuk-spacing(1) nhsuk-spacing(2);
     position: absolute;
     text-transform: uppercase;
-    top: 0;
+    top: -1px;
   }
 }

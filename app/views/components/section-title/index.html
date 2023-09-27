@@ -1,0 +1,38 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Section Title" %}
+
+{% block innerContent %}
+
+  <h2 class="nhsuk-heading-m">Variants</h2>
+
+  <h3 class="nhsuk-heading-xs">Default</h3>
+
+  <div class="example">
+    {{ sectionTitle({
+      title: "Section title"
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With link</h3>
+
+  <div class="example">
+    {{ sectionTitle({
+      title: "Section title",
+      URL: "#",
+      linkText: "Link text"
+    })}}
+  </div>
+
+  <h2 class="nhsuk-heading-m">Examples in context</h2>
+
+  <ul clas="nhsuk-list">
+    <li>
+      <a href="/pages/home-p9">Homepage - P9</a>
+    </li>
+    <li>
+      <a href="/pages/services-p9">Services - P9</a>
+    </li>
+  </ul>
+
+{% endblock %}

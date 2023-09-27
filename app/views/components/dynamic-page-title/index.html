@@ -6,25 +6,56 @@
 
   <h2 class="nhsuk-heading-m">Variants</h2>
 
-  <h3 class="nhsuk-heading-xs">Homepage greeting</h3>
+  <h3 class="nhsuk-heading-xs">Homepage</h3>
 
-  {{ dynamicPageTitle({
-    logo: data['web'] !== "yes",
-    greetingName: data['userFirstName'],
-    nhsNumber: data['nhsNumber']
-  })}}
+  <div class="example">
+    {{ dynamicPageTitle({
+      logo: data['web'] !== "yes",
+      greetingName: data['userFirstName'],
+      nhsNumber: data['nhsNumber']
+    })}}
+  </div>
 
-  <h3 class="nhsuk-heading-xs">Linked profile</h3>
+  <h3 class="nhsuk-heading-xs">Homepage (web)</h3>
 
-  {{ dynamicPageTitle({
-    logo: data['web'] !== "yes",
-    linkedProfile: {
-      name: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
-      age: data['linkedProfileAge']
-    }
-  })}}
+  <div class="example">
+    {{ dynamicPageTitle({
+      greetingName: data['userFirstName'],
+      nhsNumber: data['nhsNumber']
+    })}}
+  </div>
 
-    
+  <h3 class="nhsuk-heading-xs">Homepage (linked profiles)</h3>
+
+  <div class="example">
+    {{ dynamicPageTitle({
+      logo: data['web'] !== "yes",
+      linkedProfile: {
+        name: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
+        age: data['linkedProfileAge']
+      }
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">Homepage (linked profiles - web)</h3>
+
+  <div class="example">
+    {{ dynamicPageTitle({
+      linkedProfile: {
+        name: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
+        age: data['linkedProfileAge']
+      }
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">Secondary</h3>
+
+  <div class="example">
+    {{ dynamicPageTitle({
+      title: "Services",
+      description: "Get care and support to help you stay well"
+    })}}
+  </div>
 
   <h2 class="nhsuk-heading-m">Examples in context</h2>
 

@@ -26,3 +26,24 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+.example {
+  border: 1px solid $nhsuk-border-color;
+  margin-bottom: nhsuk-spacing(6);
+  padding: nhsuk-spacing(9) nhsuk-spacing(4) nhsuk-spacing(4);
+  position: relative;
+
+  &:before {
+    background-color: $nhsuk-form-border-color;
+    color: $color_nhsuk-white;
+    content: "example";
+    font-size: 14px;
+    font-kerning: 1;
+    font-weight: bold;
+    left: 0;
+    padding: nhsuk-spacing(1) nhsuk-spacing(2);
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+}

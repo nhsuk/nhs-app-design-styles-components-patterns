@@ -3,12 +3,12 @@
 // ==========================================================================
 
 .app-dynamic-page-title {
-  @include nhsuk-responsive-margin(6, "bottom");
+  @include nhsuk-responsive-margin(7, "bottom");
   
   margin-top: nhsuk-spacing(2);
 
   .nhsuk-logo{
-    @include nhsuk-responsive-margin(1, "bottom");
+    @include nhsuk-responsive-margin(3, "bottom");
 
     @include mq($from: tablet) {
       height: nhsuk-spacing(5);

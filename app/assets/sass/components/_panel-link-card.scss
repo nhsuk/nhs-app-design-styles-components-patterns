@@ -69,17 +69,19 @@
   @include nhsuk-responsive-padding(7, "left");
 
   .app-icon {
-  height: nhsuk-spacing(4);
-  position: absolute;
-  left: nhsuk-spacing(3);
-  height: nhsuk-spacing(4);
+    height: nhsuk-spacing(4);
+    position: absolute;
+    left: nhsuk-spacing(3);
+    height: nhsuk-spacing(4);
+    top: calc(50% - 12px);
 
-  @include mq($from: tablet) {
-    height: 28px;
-    left: nhsuk-spacing(4);
-    width: 28px;
+    @include mq($from: tablet) {
+      height: 28px;
+      left: nhsuk-spacing(4);
+      width: 28px;
+      top: calc(50% - 14px);
+    }
   }
-}
 
 }
 

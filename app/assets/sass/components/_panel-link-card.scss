@@ -69,17 +69,18 @@
   @include nhsuk-responsive-padding(7, "left");
 
   .app-icon {
-    height: nhsuk-spacing(4);
-    position: absolute;
-    left: nhsuk-spacing(3);
-    height: nhsuk-spacing(4);
-  
-    @include mq($from: tablet) {
-      height: 28px;
-      left: nhsuk-spacing(4);
-      width: 28px;
-    }
+  height: nhsuk-spacing(4);
+  position: absolute;
+  left: nhsuk-spacing(3);
+  height: nhsuk-spacing(4);
+
+  @include mq($from: tablet) {
+    height: 28px;
+    left: nhsuk-spacing(4);
+    width: 28px;
   }
+}
+
 }
 
 // Variant with badge
@@ -130,15 +131,15 @@
 
 // Stacked
 
-.app-panel-link-card-stack,
-.app-panel-link-card-group {
+.app-panel-link-card-stacked,
+.app-panel-link-card-spaced {
   @include nhsuk-responsive-margin(7, "bottom");
 
   list-style: none;
   padding: 0;
 }
 
-.app-panel-link-card-stack {
+.app-panel-link-card-stacked {
   border: $card-border-width solid $card-border-color;
 
   .app-panel-link-card {

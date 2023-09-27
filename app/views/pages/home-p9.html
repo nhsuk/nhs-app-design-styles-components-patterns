@@ -68,35 +68,16 @@
       })}}
 
       <!-- PANEL LINK CARD - MESSAGES -->
-      <ul class="app-panel-link-card-stack">
-        <li class="app-panel-link-card  app-panel-link-card--with-icon app-panel-link-card--with-badge-right">
-          <div class="app-panel-link-card__content">
-            {% if data['messages'] > 1 %}
-              {% include "components/icons/messages-with-badge.html" %}
-            {% else %}
-              {% include "components/icons/messages.html" %}
-            {% endif %}
-            <a class="app-panel-link-card__link nhsuk-heading-s" href="/pages/messages-p9">
-              View your messages
-              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
-              </svg>
-              {% include "components/badge/include.html" %}
-            </a>
-          </div>
-        </li>
-      </ul>
-
-     <!-- {{ panelLinkCard({
+     {{ panelLinkCard({
         items: [
           {
             title: "View your messages",
-            URL: "#",
+            URL: "/pages/messages-p9",
             icon: true,
             messages: data['messages']
           }
         ]
-      })}}-->
+      })}}
 
       <!-- SECTION TITLE - SWITCH PROFILES -->
       {{ sectionTitle({
@@ -104,19 +85,15 @@
       })}}
 
       <!-- PANEL LINK CARD - SWITCH PROFILES -->
-      <ul class="app-panel-link-card-stack">
-        <li class="app-panel-link-card app-panel-link-card--with-icon">
-          <div class="app-panel-link-card__content">
-            {% include "components/icons/switch-profiles.html" %}
-            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-              Switch profiles
-              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" fill="#005EB8"/>
-              </svg>
-            </a>
-          </div>
-        </li>
-      </ul>
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Switch profiles",
+            URL: "#",
+            icon: true
+          }
+        ]
+      })}}
 
       <!-- CAMPAIGN CARD -->
       {% include "components/campaign-card/include.html" %}

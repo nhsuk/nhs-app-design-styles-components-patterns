@@ -37,6 +37,28 @@
 
   &:hover {
     text-decoration: underline;
+
+    .app-panel-link-card__chevron {
+      fill: $nhsuk-link-hover-color;
+    }
+  }
+
+  &:visited {
+    .app-panel-link-card__chevron {
+      fill: $nhsuk-link-visited-color;
+    }
+  }
+
+  &:visited {
+    .app-panel-link-card__chevron {
+      fill: $nhsuk-link-active-color;
+    }
+  }
+
+  &:focus {
+    .app-panel-link-card__chevron {
+      fill: $nhsuk-link-active-color;
+    }
   }
 
 }
@@ -49,8 +71,9 @@
 // Chevron
 
 .app-panel-link-card__chevron {
-  position: absolute;
+  fill: $nhsuk-link-color;
   height: nhsuk-spacing(4);
+  position: absolute;
   right: nhsuk-spacing(3);
   top: calc(50% - 12px);
   width: nhsuk-spacing(4);

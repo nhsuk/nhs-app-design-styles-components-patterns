@@ -47,12 +47,19 @@
     top: -1px;
   }
 
-  .app-bottom-navigation {
+  .app-bottom-navigation,
+  .app-global-navigation-native {
     position: absolute;
+    left: 0;
+    right: 0;
   }
 
 }
 
 .example--tall {
   min-height: 140px;
+}
+
+.example--white-background {
+  background-color: $color_nhsuk-white;
 }

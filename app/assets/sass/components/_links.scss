@@ -15,6 +15,33 @@
       width: 28px;
     }
   }
+
+  a {
+    &:hover {
+      .app-icon {
+        fill: $nhsuk-link-hover-color;
+      }
+    }
+
+    &:visited {
+      .app-icon {
+        fill: $nhsuk-link-visited-color;
+      }
+    }
+
+    &:visited {
+      .app-icon {
+        fill: $nhsuk-link-active-color;
+      }
+    }
+
+    &:focus {
+      .app-icon {
+        fill: $nhsuk-link-active-color;
+      }
+    }
+  }
+  
 }
 
 // Link with an icon

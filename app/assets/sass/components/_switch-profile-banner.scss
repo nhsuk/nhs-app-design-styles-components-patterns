@@ -3,11 +3,15 @@
 // ==========================================================================
 
 .app-switch-profile-banner {
-  @include nhsuk-responsive-margin(4, "bottom");
+  @include nhsuk-responsive-margin(6, "bottom");
   @include nhsuk-responsive-padding(4, "bottom");
   @include nhsuk-responsive-padding(4, "top");
 
   background-color: $color_nhsuk-warm-yellow;
+
+  + .app-link-with-icon--compact {
+    margin-top: - nhsuk-spacing(3);
+  }
 }
 
 .app-switch-profile-banner__link {

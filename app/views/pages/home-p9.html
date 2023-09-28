@@ -96,7 +96,13 @@
       })}}
 
       <!-- CAMPAIGN CARD -->
-      {% include "components/campaign-card/include.html" %}
+      {{ campaignCard({
+        title: "Book a free flu vaccine",
+        description: "Check if you are eligible and book an appointment.",
+        URL: "#",
+        linkText: "Find out more",
+        hiddenText: "about booking a free flue vaccine"
+      })}}
 
       <!-- GET HELP LINK -->
       {% include "components/app-action-link/include.html" %}

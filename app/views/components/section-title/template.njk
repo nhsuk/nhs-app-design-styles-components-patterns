@@ -7,7 +7,7 @@
   {%- if params.URL %}
   <p class="app-section-title__link">
     <a href="{{ params.URL }}" class="nhsuk-link--no-visited-state">{%- if params.linkText %}{{ params.linkText }}{% else %}View all{% endif %}
-      <span class="nhsuk-u-visually-hidden">{{ params.hiddenText }}</span>
+      {%- if params.hiddenText %}<span class="nhsuk-u-visually-hidden">{{ params.hiddenText }}</span>{% endif %}
     </a>
   </p>
   {%- endif %}

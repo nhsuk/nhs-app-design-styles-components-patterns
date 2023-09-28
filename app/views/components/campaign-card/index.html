@@ -1,0 +1,22 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Campaign Card" %}
+
+{% block innerContent %}
+
+  {{ campaignCard({
+    title: "Title",
+    description: "Description text",
+    URL: "#",
+    linkText: "Link text"
+  })}}
+
+  <h2 class="nhsuk-heading-m">Examples in context</h2>
+
+  <ul clas="nhsuk-list">
+    <li>
+      <a href="/pages/home-p9">Homepage - P9</a>
+    </li>
+  </ul>
+
+{% endblock %}

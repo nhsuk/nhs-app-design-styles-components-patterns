@@ -17,7 +17,13 @@
       })}}
 
       <!-- INTERRUPTION CARD -->
-      {% include "components/interruption-card/include.html" %}
+      {{ interruptionCard({
+        title: "Prove who you are to get full access",
+        description: "You'll need to prove who you are before you can use most parts of the NHS App, including prescriptions, appointments and your GP health record.",
+        URL: "#",
+        linkText: "Continue",
+        hiddenText: "to get full access"
+      })}}
 
     </div>
   </div>

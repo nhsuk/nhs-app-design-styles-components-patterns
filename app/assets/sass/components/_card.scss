@@ -49,5 +49,9 @@
 // Center aligns card content
 .app-card--center-align {
   text-align: center;
+
+  .app-card__content {
+    margin: 0 auto;
+  }
 }
 

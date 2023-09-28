@@ -11,6 +11,10 @@
 
   + .app-link-with-icon--compact {
     margin-top: - nhsuk-spacing(3);
+
+    @include mq($from: tablet) {
+      margin-top: - nhsuk-spacing(4);
+    }
   }
 }
 

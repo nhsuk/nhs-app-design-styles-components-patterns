@@ -1,0 +1,172 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <h1>
+        <span class="nhsuk-caption-l">
+          Documentation example
+          <span class="nhsuk-u-visually-hidden"> - </span>
+        </span>
+        Warning callout
+      </h1>
+
+      <div class="nhsuk-reading-width">
+
+        <h2 id="current-design">What was being used</h2>
+        
+        <div class="example grey-background">
+          <img class="component-image mobile" alt="Medicines yellow callout" src="/images/documentation-example/meds-callout.png">
+          <p class="nhsuk-body-s">Yellow warning used on medicines</p>
+        </div>
+        
+        <div class="example grey-background">
+          <img class="component-image mobile" alt="Conditions yellow callout" src="/images/documentation-example/conditions-callout.png">
+          <p class="nhsuk-body-s">Yellow warning used on conditions</p>
+        </div>
+        
+        <h2 id="previous-research">Previous research</h2>
+        
+        <p>In a usability lab, the medicines team tested their new design against the current design used on conditions pages. The outcome was that users saw the medicines design as a warning, being more 'important' and the (!) icon drew their attention. </p>
+        
+        <p>Notes from the testing…<p>
+        <ul>
+          <li>P1 - Liked the (!) icon - it brought my attention</li>
+          <li>P3 - was drawn to [these] ones, especially with the (!)</li>
+          <li>P3 - (!) make me feel as though it's a must read.</li>
+        </ul>
+        
+        <h2 id="acceptance-criteria">Acceptance criteria</h2>
+        <p>A user is able to interpret that the warning callout as being something important in comparison to the rest of the page.</p>
+        
+        <h2 id="user-need">User need</h2>
+        <p>As a user I need to identify and understand the important content on the page (even if I don't read all the content) so that I get the best outcome for my situation and don't endanger my health.</p>
+        
+        <h2 id="our-designs">Design and research</h2>
+        
+        <h3>Notes</h3>
+        <p>Yellow is the most visible colour of the spectrum.</p>
+        <p>The human eye processes yellow first. This explains why it is used for cautionary signs and emergency rescue vehicles.</p>
+        
+        <img class="component-image mobile" alt="Example safety signs" src="/images/documentation-example/safety-signs.jpg">
+        <p class="nhsuk-body-s" style="margin-top:0;">Safety signage example</p>
+        
+        <h3>Design challenge</h3>
+        <ul>
+          <li>Design a warning callout that will work well in both contexts, for medicines and conditions.</li>
+          <li>Make the design feel a part of the new design system.</li>
+        </ul>
+        
+        <h3 class="nhsuk-heading-l">First iteration</h3>
+        <h4 class="nhsuk-heading-m">Hypothesis</h4>
+        <p><strong>If</strong> we make the callout black/yellow and use a (!) icon</br>
+        <strong>Then</strong> users will take notice</br>
+        <strong>Because</strong> they see it as a warning and important information.</p>
+        <div class="example grey-background">
+          <img class="component-image" src="/images/documentation-example/callout-desktop-v1.png">
+        </div>
+        <h4 class="nhsuk-heading-m">Design decisions</h4>
+        <ul>
+          <li>Having the icon in a square offset left will more in keeping with other new design elements such as the <a href="/styles/do-dont-lists">Do and don't lists</a>.</li>
+        </ul>
+        <h4 class="nhsuk-heading-m">Research findings</h4>
+        <p><strong>Leeds, pop-up research x 2, over 50 people</strong></p>
+        <ul>
+          <li>Users didn't understand it as a warning</li>
+          <li>Some users didn't see it as part of the page </li>
+        </ul>
+        
+        <h3 class="nhsuk-heading-l">Second iteration</h3>
+        <h4 class="nhsuk-heading-m">Hypothesis</h4>
+        <p><strong>If</strong> we make the yellow brighter and increase the font weight</br>
+        <strong>Then</strong> users will take more notice and read it</br>
+        <strong>Because</strong> it looks more like a warning</p>
+        <div class="example grey-background">
+          <img class="component-image" src="/images/documentation-example/callout-desktop-v2.png">
+        </div>
+        <h4 class="nhsuk-heading-m">Research findings</h4>
+        <p><strong>Usability lab, Leeds, 13th June 2018</strong></p>
+        <ul>
+          <li>3/5 five users initially missed the callout, with one indicating their attention was drawn to the heading below.</li>
+          <li>Most users correctly  understood its importance vs other call outs and the meaning of the yellow colour as a warning.</li>
+        </ul>
+        
+        <h3 class="nhsuk-heading-l">Third iteration</h3>
+        <h4 class="nhsuk-heading-m">Hypothesis</h4>
+        <p>Previous usability testing has shown us that users scan headings.</br>
+        <strong>If</strong> we add a heading</br>
+        <strong>Then</strong> users will notice the callout more</br>
+        <strong>Because</strong> users scan headings</p>
+        
+        <p><strong>If</strong> we change the background colour to yellow</br>
+        <strong>Then</strong> users will notice the callout more</br>
+        <strong>Because</strong> it will help it stand out from the surrounding white boxes</p>
+        
+        <div class="example grey-background">
+          <img class="component-image" src="/images/documentation-example/callout-desktop-final.png">
+        </div>
+        <h5 class="nhsuk-heading-m">Research findings</h5>
+        <p><strong>Usability lab, Leeds, 20th June 2018</strong></p>
+        <ul>
+          <li>All users naturally noticed the yellow callout, and 4/5 of the users understood its meaning and place in the hierarchy.</li>
+          <li>“It's a warning, but it's not scary”</li>
+          <li>“The 'Important' heading stood out”</li>
+        </ul>
+        
+        <p><strong>Usability lab, Salford, 4th July 2018</strong></p>
+        <ul>
+          <li>Overall the important box tested well, with most users understanding it where it belongs in a hierarchy.</li>
+        </ul>
+        
+        <p><strong>Usability lab, Sheffield, 16th July 2018</strong></p>
+        <ul>
+          <li>All users understood the meaning of the important call out box, and where it belongs in the hierarchy. Users stated it would make them take notice of the important information.</li>
+          <li>All users understood the meaning behind each of these elements, and where each belonged in a hierarchy of importance.</li>
+          <li>“It jumps out. If I was scanning I'd go back to that.”</li>
+        </ul>
+        
+        
+        <h2 id="accessibility">Accessibility</h2>
+        <h3>Colour contrast</h3>
+        <p>The heading and background contrast ratio is 11.92:1, which exceeds AAA guidelines.</p>
+        <p>The content and background contrast ratio is 13.69:1, which exceeds AAA guidelines.</p>
+        <h3>ARIA</h3>
+        <p>We do not use an <code>aria-label</code> because it could cause confusion having the heading and <code>aria-label</code> set as 'Important'. </p>
+        <p>If the heading was made editable (see <a href="#future-developments">future developments</a>), we recommend adding an <code>aria-label</code>, eg: <code>aria-label=”Important”</code>.  This is will help users with screen readers understand that the information is important. This will need to be tested by users with access needs.</p>
+        
+        <h2 id="usage">Usage (rules)</h2>
+        <p>Use the important callout to display information that is:</p>
+        <ul>
+          <li>time critical</li>
+          <li>may have a significant health impact</li>
+          <li>addresses a common and/or significant misconception or patient mistake</li>
+        </ul>
+        <p>Give warning callouts a short, clearly worded heading. Headings help people scan the page for warnings and understand what's relevant to them.</p>
+        
+        <h2 id="future-developments">Future developments</h2>
+        <p>Due to time constraints, the heading of the warning callout component in wagtail is not editable, the heading 'Important' is hard coded. Moving forward, we propose making the heading editable to make it more contextual.</p>
+        <p>An example of this would be on the chickenpox page…</p>
+        
+        <div class="example grey-background">
+          <img class="component-image mobile" alt="Current callout design example with hardcoded header" src="/images/documentation-example/callout-heading.png">
+          <p class="nhsuk-body-s">Current design with hardcoded header</p>
+        </div>
+        
+        <div class="example grey-background">
+          <img class="component-image mobile" alt="Current callout design example with editable header" src="/images/documentation-example/callout-heading-editable.png">
+          <p class="nhsuk-body-s">Proposed design with editable header</p>
+        </div>
+         
+        <p>Research has shown us that users scan the page for keywords.</p>
+        <p>We believe that if a user was checking to see if they should send their child to school when they have chickenpox… they would scan the page for the word 'school'.</p>
+        <p>So changing the heading to 'School, nursery or work' would make the information more noticeable and easier to find.
+        <p>At the moment this is just a hypothesis and should be tested with users.</p>
+        
+        
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
+

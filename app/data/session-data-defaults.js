@@ -6,13 +6,13 @@ module.exports = {
   "web": "no", 
 
   // Set linked profile details
-  "linkedProfileFirstName": "Lyra",
-  "linkedProfileLastName": "Hunter",
-  "linkedProfileAge": "5",
+  "linkedProfileFirstName": "Toby",
+  "linkedProfileLastName": "Day",
+  "linkedProfileAge": "83",
 
   // Set user details
-  "userFirstName": "Hamish",
-  "userLastName": "Hunter",
+  "userFirstName": "Mary",
+  "userLastName": "Swanson",
   "nhsNumber": "123 456 7890",
 
   // Set version of the app

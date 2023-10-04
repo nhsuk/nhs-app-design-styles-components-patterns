@@ -2,8 +2,15 @@
 <div class="app-switch-profile-banner app-u-full-width-desktop">
   <div class="nhsuk-width-container">
     <h2 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Acting for {{ data['linkedProfileFirstName'] }} {{ data['linkedProfileLastName'] }}</h2>
-    <p class="nhsuk-u-margin-bottom-0">
-      <a class="nhsuk-link app-switch-profile-banner__link" href="#">Switch back to your profile</a>
-    </p>
+    
+    <form id="switchProfile" action="/pages/home-p9" method="post" novalidate>
+
+      <input type="hidden" name="accountType" value="p9">
+
+      <p class="nhsuk-u-margin-bottom-0">
+        <a class="nhsuk-link app-switch-profile-banner__link" onclick="document.getElementById('switchProfile').submit();" href="#">Switch back to your profile</a>
+      </p>
+
+    </form>
   </div>
 </div>

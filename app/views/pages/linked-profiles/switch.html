@@ -1,0 +1,61 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Linked profiles" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Switch to " + data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'] + "'s profile to act on their behalf" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading
+      })}}
+
+      <!-- Tick list -->
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h2 class="nhsuk-heading-m">Services available for</h2>
+          <ul class="nhsuk-list nhsuk-list--tick" role="list">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              You can book a GP appointment
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              You can order a repeat prescription
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+              </svg>
+              You can view their GP health record
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form action="/pages/home-linked-profiles" method="post" novalidate>
+
+        <input type="hidden" name="accountType" value="linked-profiles">
+
+        {{ button({
+          text: "Switch to " + data['linkedProfileFirstName'] + "'s profile",
+          classes: "app-button"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

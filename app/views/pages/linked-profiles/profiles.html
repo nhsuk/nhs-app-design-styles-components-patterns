@@ -1,0 +1,36 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Linked profiles" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Linked profiles" %}
+{% set pageDescription = "You can access services in the app for the following people." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
+            URL: "/pages/linked-profiles/switch",
+            description: data['linkedProfileAge']
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

@@ -23,11 +23,16 @@
 
       {% if data['web'] === "yes" %}
 
+      <form action="/pages/home-p9" method="post" novalidate>
+
+        <input type="hidden" name="accountType" value="p9">
+
         {{ button({
           text: "Switch to my profile",
-          href: "#",
           classes: "app-button"
         }) }}
+
+      </form>
 
       {% endif %}
 
@@ -43,11 +48,17 @@
     <div class="app-sticky-footer">
       <div class="nhsuk-width-container">
         <div class="nhsuk-grid-row">
-          {{ button({
-            text: "Switch to my profile",
-            href: "#",
-            classes: "app-button nhsuk-u-margin-bottom-0"
-          }) }}
+
+          <form action="/pages/home-p9" method="post" novalidate>
+
+            <input type="hidden" name="accountType" value="p9">
+    
+            {{ button({
+              text: "Switch to my profile",
+              classes: "app-button nhsuk-u-margin-bottom-0"
+            }) }}
+    
+          </form>
         </div>
       </div>
     </div>

@@ -23,11 +23,16 @@
 
       {% if data['web'] === "yes" %}
 
+      <form action="/pages/account-and-settings-p9" method="post" novalidate>
+
+        <input type="hidden" name="accountType" value="p9">
+
         {{ button({
           text: "Switch to my profile",
-          href: "#",
           classes: "app-button"
         }) }}
+
+      </form>
 
       {% endif %}
 
@@ -40,17 +45,23 @@
 
   {% if data['web'] === "no" %}
 
-    <div class="app-sticky-footer">
-      <div class="nhsuk-width-container">
-        <div class="nhsuk-grid-row">
+  <div class="app-sticky-footer">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+
+        <form action="/pages/account-and-settings-p9" method="post" novalidate>
+
+          <input type="hidden" name="accountType" value="p9">
+  
           {{ button({
             text: "Switch to my profile",
-            href: "#",
             classes: "app-button nhsuk-u-margin-bottom-0"
           }) }}
-        </div>
+  
+        </form>
       </div>
     </div>
+  </div>
 
   {% endif %}
 

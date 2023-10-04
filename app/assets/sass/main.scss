@@ -23,47 +23,9 @@
 @import 'components/sticky-footer';
 @import 'components/switch-profile-banner';
 
+// Prototype specific styles
+@import 'prototype-specific/example';
+
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
-
-.example {
-  border: 1px solid $color_nhsuk-grey-3;
-  margin-bottom: nhsuk-spacing(6);
-  padding: nhsuk-spacing(7) nhsuk-spacing(4) nhsuk-spacing(4);
-  position: relative;
-
-  &:before {
-    background-color: $nhsuk-form-border-color;
-    color: $color_nhsuk-white;
-    content: "example";
-    font-size: 14px;
-    font-kerning: 1;
-    font-weight: bold;
-    left: -1px;
-    padding: nhsuk-spacing(1) nhsuk-spacing(2);
-    position: absolute;
-    text-transform: uppercase;
-    top: -1px;
-  }
-
-  .app-bottom-navigation,
-  .app-global-navigation-native {
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-
-  .component-image {
-    width: 100%;
-  }
-
-}
-
-.example--tall {
-  min-height: 140px;
-}
-
-.example--white-background {
-  background-color: $color_nhsuk-white;
-}

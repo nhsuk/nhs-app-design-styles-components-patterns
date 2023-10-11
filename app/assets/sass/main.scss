@@ -30,6 +30,11 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
-.app-section-break--4 {
-  border-bottom: 4px solid #d8dde0;
+hr {
+  border-color: $color_nhsuk-grey-3;
 }
+
+.app-section-break--4 {
+  border-bottom-width: nhsuk-spacing(1);
+}
+

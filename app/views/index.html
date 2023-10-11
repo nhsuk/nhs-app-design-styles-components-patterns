@@ -81,7 +81,7 @@
           </li>
         </ul>
 
-        <h3 class="nhsuk-heading-xs">Your health pages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h3 class="nhsuk-heading-xs">Your health {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
@@ -104,14 +104,19 @@
           </li>
         </ul>
 
-        <h3 class="nhsuk-heading-xs">Account and settings pages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h3 class="nhsuk-heading-xs">Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
             <a href="pages/account-and-settings/cookies-and-legal-agreement">Manage cookies and read legal information</a>
           </li>
-        </ul>
-    
+          <li>
+            <a href="pages/account-and-settings/linked-profiles">Linked profiles</a>
+          </li>
+          <li>
+            <a href="pages/account-and-settings/switch-profiles">Switch profiles</a>
+          </li>
+        </ul>    
 
       <h2>Components</h2>
 

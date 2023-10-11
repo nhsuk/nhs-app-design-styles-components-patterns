@@ -4,9 +4,7 @@
 
 .app-button {
   padding: 12px 40px;
-}
 
-.app-button--full-width {
   @include mq($until: tablet) {
     width: 100%;
   }

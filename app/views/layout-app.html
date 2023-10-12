@@ -10,8 +10,13 @@
 
 {% else %}
 
-  {% set containerClasses = "app-main-container" %}
-  {% set mainClasses = "app-main-wrapper" %}
+  {% if containerFullWidth === true %}
+    {% set containerClasses = "app-width-container app-width-container--full" %}
+    {% set mainClasses = "app-main-wrapper app-main-wrapper--no-bottom-padding" %}
+  {% else %}
+    {% set containerClasses = "app-width-container" %}
+    {% set mainClasses = "app-main-wrapper" %}
+  {% endif %}
 
 {% endif %}
 
@@ -51,7 +56,13 @@
   {% endif %}
   <!-- BACK LINK -->
   {% if backLink === true %}
-    {% include "components/back-link/include-new.html" %}
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          {% include "components/back-link/include-new.html" %}
+        </div>
+      </div>
+    </div>
   {% endif %}
   
 {% endblock %}

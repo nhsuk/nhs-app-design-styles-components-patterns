@@ -36,5 +36,23 @@ hr {
 
 .app-section-break--4 {
   border-bottom-width: nhsuk-spacing(1);
+  border-color: $color_nhsuk-blue;
 }
 
+.app-section {
+  @include top-and-bottom();
+  @include nhsuk-responsive-padding(7, "bottom");
+  @include nhsuk-responsive-padding(7, "top");
+} 
+
+.app-section--grey-4 {
+  background-color: $color_nhsuk-grey-4;
+
+  hr {
+    border-color: $color_nhsuk-grey-2;
+  }
+}
+
+.app-section--with-border {
+  border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
+} 

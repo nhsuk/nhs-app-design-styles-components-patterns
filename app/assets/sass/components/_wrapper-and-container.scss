@@ -6,7 +6,7 @@
 }
 
 // App main container
-.app-main-container {
+.app-width-container {
   padding-top: 60px; // to give correct spacing for sticky header
 }
 
@@ -18,4 +18,15 @@
 // Web main wrapper if linked profile
 .app-main-wrapper--no-top-padding {
   padding-top: 0;
+}
+
+// Web main wrapper if linked profile
+.app-main-wrapper--no-bottom-padding {
+  padding-bottom: 80px; // Needs 80px padding for global nav
+}
+
+// Make the container full width
+.app-width-container--full {
+  margin: 0;
+  max-width: none;
 }

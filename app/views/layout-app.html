@@ -3,9 +3,13 @@
 <!-- ADDS CUSTOM CLASSES ON MAIN TO GIVE CORRECT SPACING FOR NATIVE PAGES -->
 {% if data['web'] === "yes" %}
 
-  {% if linkedProfile === true %}
+  {% if linkedProfile === true or backLink === true %}
     {% set mainClasses = "app-main-wrapper--no-top-padding" %}
   {% else %}
+  {% endif %}
+
+  {% if containerFullWidth === true %}
+    {% set containerClasses = "app-width-container--full" %}
   {% endif %}
 
 {% else %}
@@ -56,13 +60,17 @@
   {% endif %}
   <!-- BACK LINK -->
   {% if backLink === true %}
-    <div class="nhsuk-width-container">
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          {% include "components/back-link/include-new.html" %}
+    {% if containerFullWidth === true %}
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            {% include "components/back-link/include-new.html" %}
+          </div>
         </div>
       </div>
-    </div>
+    {% else %}
+      {% include "components/back-link/include-new.html" %}
+    {% endif %}
   {% endif %}
   
 {% endblock %}

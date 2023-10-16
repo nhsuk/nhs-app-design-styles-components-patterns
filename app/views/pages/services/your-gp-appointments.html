@@ -7,6 +7,7 @@
 {% set backLink = true %}
 
 {% set pageHeading = "Your GP appointments" %}
+{% set pageDescription = "For urgent medical advice, go to <a href='#'>111.nhs.uk</a> or <a href='#'>call 111</a>." %}
 
 {% block content %}
 
@@ -17,10 +18,9 @@
         <!-- DYNAMIC PAGE TITLE -->
         {{ dynamicPageTitle({
           title: pageHeading,
+          description: pageDescription,
           classes: "nhsuk-u-margin-bottom-5"
         })}}
-
-        <p>For urgent medical advice, go to <a href="#">111.nhs.uk</a> or <a href="#">call 111</a>.</p>
 
         {{ button({
           text: "Book an appointment",

@@ -5,16 +5,15 @@
   position: relative;
 
   &:before {
-    background-color: $nhsuk-form-border-color;
-    color: $color_nhsuk-white;
-    content: "example";
-    font-size: 14px;
+    @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
+    background-color: #dbe0e3;
+    border: 1px solid #94a1aa;
+    color: #354550;
+    content: "Example";
     font-kerning: 1;
-    font-weight: bold;
     left: -1px;
     padding: nhsuk-spacing(1) nhsuk-spacing(2);
     position: absolute;
-    text-transform: uppercase;
     top: -1px;
   }
 

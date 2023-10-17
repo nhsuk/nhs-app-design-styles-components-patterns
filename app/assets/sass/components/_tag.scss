@@ -1,0 +1,74 @@
+/* ==========================================================================
+   #TAG
+   ========================================================================== */
+
+  .app-tag {
+    @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
+    background-color: shade($color_nhsuk-blue, 10%);
+    border: 1px solid shade($color_nhsuk-blue, 10%);
+    color: $color_nhsuk-white;
+  }
+  
+  /* Colour variants
+    ========================================================================== */
+  
+  .app-tag--white {
+    background-color: $color_nhsuk-white;
+    border-color: tint($color_nhsuk-black, 60%);
+    color: $color_nhsuk-black;
+  }
+  
+  .app-tag--grey {
+    background-color: tint($color_nhsuk-grey-1, 80%);
+    border-color: tint($color_nhsuk-grey-1, 40%);
+    color: shade($color_nhsuk-grey-1, 30%);
+  }
+  
+  .app-tag--green {
+    background-color: tint($color_nhsuk-green, 80%);
+    border-color: tint($color_nhsuk-green, 40%);
+    color: shade($color_nhsuk-green, 40%);
+  }
+  
+  .app-tag--aqua-green {
+    background-color: tint($color_nhsuk-aqua-green, 80%);
+    border-color: tint($color_nhsuk-aqua-green, 50%);
+    color: shade($color_nhsuk-aqua-green, 50%);
+  }
+  
+  .app-tag--blue {
+    background-color: tint($color_nhsuk-blue, 80%);
+    border-color: tint($color_nhsuk-blue, 50%);
+    color: shade($color_nhsuk-blue, 30%);
+  }
+  
+  .app-tag--purple {
+    background-color: tint($color_nhsuk-purple, 80%);
+    border-color: tint($color_nhsuk-purple, 60%);
+    color: shade($color_nhsuk-purple, 0%);
+  }
+  
+  .app-tag--pink {
+    background-color: tint($color_nhsuk-pink, 80%);
+    border-color: tint($color_nhsuk-pink, 50%);
+    color: shade($color_nhsuk-pink, 30%);
+  }
+  
+  .app-tag--red {
+    background-color: tint($color_nhsuk-red, 80%);
+    border-color: tint($color_nhsuk-red, 50%);
+    color: shade($color_nhsuk-red, 40%);
+  }
+  
+  .app-tag--orange {
+    background-color: tint($color_nhsuk-warm-yellow, 70%);
+    border-color: $color_nhsuk-warm-yellow;
+    color: shade($color_nhsuk-warm-yellow, 70%);
+  }
+  
+  .app-tag--yellow {
+    background-color: tint($color_nhsuk-yellow, 70%);
+    border-color: shade($color_nhsuk-yellow, 10%);
+    color: shade($color_nhsuk-yellow, 70%);
+  }
+  

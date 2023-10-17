@@ -45,7 +45,7 @@
   .app-tag--purple {
     background-color: tint($color_nhsuk-purple, 85%);
     border-color: tint($color_nhsuk-purple, 70%);
-    color: tint($color_nhsuk-purple, 15%);
+    color: tint($color_nhsuk-purple, 10%);
   }
   
   .app-tag--pink {
@@ -62,13 +62,13 @@
   
   .app-tag--orange {
     background-color: tint($color_nhsuk-warm-yellow, 70%);
-    border-color: $color_nhsuk-warm-yellow;
+    border-color: tint($color_nhsuk-warm-yellow, 30%);
     color: shade($color_nhsuk-warm-yellow, 65%);
   }
   
   .app-tag--yellow {
     background-color: tint($color_nhsuk-yellow, 70%);
-    border-color: shade($color_nhsuk-yellow, 10%);
+    border-color: tint($color_nhsuk-yellow, 10%);
     color: shade($color_nhsuk-yellow, 65%);
   }
   

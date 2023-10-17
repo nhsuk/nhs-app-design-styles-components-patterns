@@ -75,7 +75,7 @@
 
 .app-tag--yellow {
   background-color: tint($color_nhsuk-yellow, 70%);
-  border-color: tint($color_nhsuk-yellow, 10%);
+  border-color: shade($color_nhsuk-yellow, 10%);
   color: shade($color_nhsuk-yellow, 65%);
 }
 

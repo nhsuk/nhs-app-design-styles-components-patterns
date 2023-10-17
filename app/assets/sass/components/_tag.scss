@@ -4,9 +4,9 @@
 
 .app-tag {
   @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
-  background-color: shade($color_nhsuk-blue, 10%);
-  border: 1px solid shade($color_nhsuk-blue, 10%);
-  color: $color_nhsuk-white;
+  background-color: tint($color_nhsuk-blue, 80%);
+  border: 1px solid tint($color_nhsuk-blue, 60%);
+  color: shade($color_nhsuk-blue, 30%);
   margin-bottom: - nhsuk-spacing(1);
   margin-top: - nhsuk-spacing(1);
 }

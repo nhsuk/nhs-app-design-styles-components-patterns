@@ -17,6 +17,16 @@
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
+            <code> nhsuk-tag </code>
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Active"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
             <code> nhsuk-tag--white </code>
           </td>
           <td class="nhsuk-table__cell">
@@ -142,6 +152,17 @@
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
+            <code> nhsuk-tag </code>
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Active",
+              classes: "app-tag"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
             <code> nhsuk-tag--white </code>
           </td>
           <td class="nhsuk-table__cell">
@@ -247,6 +268,28 @@
             {{ tag({
               text: "Delayed",
               classes: "app-tag app-tag--yellow"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            <code> nhsuk-tag--text-color </code>
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Completed",
+              classes: "app-tag app-tag--text-color"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            <code> nhsuk-tag--secondary-text-color </code>
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Cannot start yet",
+              classes: "app-tag app-tag--secondary-text-color"
             })}}
           </td>
         </tr>

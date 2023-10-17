@@ -1,74 +1,88 @@
 /* ==========================================================================
-   #TAG
-   ========================================================================== */
+  #TAG
+  ========================================================================== */
 
-  .app-tag {
-    @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
-    background-color: shade($color_nhsuk-blue, 10%);
-    border: 1px solid shade($color_nhsuk-blue, 10%);
-    color: $color_nhsuk-white;
-  }
-  
-  /* Colour variants
-    ========================================================================== */
-  
-  .app-tag--white {
-    background-color: $color_nhsuk-white;
-    border-color: tint($color_nhsuk-black, 80%);
-    color: $color_nhsuk-black;
-  }
-  
-  .app-tag--grey {
-    background-color: tint($color_nhsuk-grey-1, 80%);
-    border-color: tint($color_nhsuk-grey-1, 60%);
-    color: shade($color_nhsuk-grey-1, 30%);
-  }
-  
-  .app-tag--green {
-    background-color: tint($color_nhsuk-green, 80%);
-    border-color: tint($color_nhsuk-green, 60%);
-    color: shade($color_nhsuk-green, 40%);
-  }
-  
-  .app-tag--aqua-green {
-    background-color: tint($color_nhsuk-aqua-green, 80%);
-    border-color: tint($color_nhsuk-aqua-green, 60%);
-    color: shade($color_nhsuk-aqua-green, 50%);
-  }
-  
-  .app-tag--blue {
-    background-color: tint($color_nhsuk-blue, 80%);
-    border-color: tint($color_nhsuk-blue, 60%);
-    color: shade($color_nhsuk-blue, 30%);
-  }
-  
-  .app-tag--purple {
-    background-color: tint($color_nhsuk-purple, 85%);
-    border-color: tint($color_nhsuk-purple, 70%);
-    color: tint($color_nhsuk-purple, 10%);
-  }
-  
-  .app-tag--pink {
-    background-color: tint($color_nhsuk-pink, 85%);
-    border-color: tint($color_nhsuk-pink, 60%);
-    color: shade($color_nhsuk-pink, 25%);
-  }
-  
-  .app-tag--red {
-    background-color: tint($color_nhsuk-red, 80%);
-    border-color: tint($color_nhsuk-red, 60%);
-    color: shade($color_nhsuk-red, 40%);
-  }
-  
-  .app-tag--orange {
-    background-color: tint($color_nhsuk-warm-yellow, 70%);
-    border-color: tint($color_nhsuk-warm-yellow, 30%);
-    color: shade($color_nhsuk-warm-yellow, 65%);
-  }
-  
-  .app-tag--yellow {
-    background-color: tint($color_nhsuk-yellow, 70%);
-    border-color: tint($color_nhsuk-yellow, 10%);
-    color: shade($color_nhsuk-yellow, 65%);
-  }
+.app-tag {
+  @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
+  background-color: shade($color_nhsuk-blue, 10%);
+  border: 1px solid shade($color_nhsuk-blue, 10%);
+  color: $color_nhsuk-white;
+  margin-bottom: - nhsuk-spacing(1);
+  margin-top: - nhsuk-spacing(1);
+}
+
+/* Colour variants
+  ========================================================================== */
+
+.app-tag--white {
+  background-color: $color_nhsuk-white;
+  border-color: tint($color_nhsuk-black, 80%);
+  color: $color_nhsuk-black;
+}
+
+.app-tag--grey {
+  background-color: tint($color_nhsuk-grey-1, 80%);
+  border-color: tint($color_nhsuk-grey-1, 60%);
+  color: shade($color_nhsuk-grey-1, 30%);
+}
+
+.app-tag--green {
+  background-color: tint($color_nhsuk-green, 80%);
+  border-color: tint($color_nhsuk-green, 60%);
+  color: shade($color_nhsuk-green, 40%);
+}
+
+.app-tag--aqua-green {
+  background-color: tint($color_nhsuk-aqua-green, 80%);
+  border-color: tint($color_nhsuk-aqua-green, 60%);
+  color: shade($color_nhsuk-aqua-green, 50%);
+}
+
+.app-tag--blue {
+  background-color: tint($color_nhsuk-blue, 80%);
+  border-color: tint($color_nhsuk-blue, 60%);
+  color: shade($color_nhsuk-blue, 30%);
+}
+
+.app-tag--purple {
+  background-color: tint($color_nhsuk-purple, 85%);
+  border-color: tint($color_nhsuk-purple, 70%);
+  color: tint($color_nhsuk-purple, 10%);
+}
+
+.app-tag--pink {
+  background-color: tint($color_nhsuk-pink, 85%);
+  border-color: tint($color_nhsuk-pink, 60%);
+  color: shade($color_nhsuk-pink, 25%);
+}
+
+.app-tag--red {
+  background-color: tint($color_nhsuk-red, 80%);
+  border-color: tint($color_nhsuk-red, 60%);
+  color: shade($color_nhsuk-red, 40%);
+}
+
+.app-tag--orange {
+  background-color: tint($color_nhsuk-warm-yellow, 70%);
+  border-color: tint($color_nhsuk-warm-yellow, 30%);
+  color: shade($color_nhsuk-warm-yellow, 65%);
+}
+
+.app-tag--yellow {
+  background-color: tint($color_nhsuk-yellow, 70%);
+  border-color: tint($color_nhsuk-yellow, 10%);
+  color: shade($color_nhsuk-yellow, 65%);
+}
+
+.app-tag--text-color {
+  background-color: transparent;
+  border-color: transparent;
+  color: $nhsuk-text-color;
+}
+
+.app-tag--secondary-text-color {
+  background-color: transparent;
+  border-color: transparent;
+  color: $nhsuk-secondary-text-color;
+}
   

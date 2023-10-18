@@ -45,16 +45,10 @@
   }
 
   &:focus {
-
-    .app-icon {
-      fill: $nhsuk-focus-text-color;
-    }
-
-    .app-bottom-navigation__label {
-      color: $nhsuk-focus-text-color;
-    }
-
+    background-color: transparent;
+    box-shadow: none;
   }
+
 }
 
 .app-bottom-navigation__label {

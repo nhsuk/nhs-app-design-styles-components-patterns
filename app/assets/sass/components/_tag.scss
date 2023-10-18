@@ -90,4 +90,9 @@
   border-color: transparent;
   color: $nhsuk-secondary-text-color;
 }
+
+.app-tag--no-border {
+  border: 0;
+  padding: 2px nhsuk-spacing(2);
+}
   

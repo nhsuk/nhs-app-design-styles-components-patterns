@@ -57,3 +57,15 @@ hr {
 .app-section--with-border {
   border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
 } 
+
+/* testing apple ios dynamic text */
+
+@supports (font: -apple-system-body) {
+  html {
+    font: -apple-system-body !important;
+  }
+}
+
+body {
+  font-family: Frutiger W01,Arial,Sans-serif;
+}

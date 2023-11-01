@@ -21,6 +21,13 @@
   @include nhsuk-responsive-margin(3, "bottom");
 }
 
+.app-dynamic-page-title__name {
+  display: block;
+  text-transform: capitalize;
+  word-wrap: break-word;
+
+}
+
 .app-dynamic-page-title__nhs-number {
   color: $nhsuk-link-color;
 }

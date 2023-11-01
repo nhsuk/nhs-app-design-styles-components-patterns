@@ -11,8 +11,8 @@ module.exports = {
   "linkedProfileAge": "83",
 
   // Set user details
-  "userFirstName": "mary",
-  "userLastName": "swanson",
+  "userFirstName": "thulasikanth",
+  "userLastName": "selvagunachandrun",
   "nhsNumber": "123 456 7890",
 
   // Set version of the app

@@ -21,10 +21,9 @@
     </p>
   {%- else %}
     <h1 class="app-dynamic-page-title__heading">
-      {%- if params.greetingFirstName %}
-      <span class="greeting"></span>, 
-      <span class="app-dynamic-page-title__name">{{ params.greetingFirstName }} </span>
-      <span class="app-dynamic-page-title__name">{{ params.greetingLastName }}</span>
+      {%- if params.greetingName %}
+      <span class="app-greeting"></span>, 
+      <span class="app-dynamic-page-title__name">{{ params.greetingName }}</span>
       {%- else %}
       {{ params.title }}
       {% endif %}

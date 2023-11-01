@@ -12,8 +12,7 @@
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
         logo: data['web'] !== "yes",
-        greetingFirstName: data['userFirstName'],
-        greetingLastName: data['userLastName'],
+        greetingName: data['userFirstName'] + " " + data['userLastName'],
         nhsNumber: data['nhsNumber']
       })}}
 

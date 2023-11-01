@@ -18,4 +18,4 @@ var thehours = new Date().getHours();
     themessage = evening;
   }
 
-  $('.greeting').append(themessage);
+  $('.app-greeting').append(themessage);

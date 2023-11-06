@@ -1,4 +1,4 @@
-# NHS App redesign prototype
+# NHS App design system work
 
 A prototype to test new design components and patterns for the NHS App.
 

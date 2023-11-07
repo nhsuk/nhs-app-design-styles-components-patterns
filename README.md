@@ -1,5 +1,11 @@
-# NHS App design system work
+# NHS App: Design system work
 
-A prototype to test new design components and patterns for the NHS App.
+## About this repo
 
-Built using the <a href="http://nhsuk-prototype-kit.azurewebsites.net">NHS.UK prototype kit</a>.
+This is a place to discuss and test new design styles components and patterns for the NHS App.
+
+---
+
+### **[View and discuss NHS App design styles, components and patterns]([https://github.com/orgs/alphagov/projects/43](https://github.com/orgs/nhsuk/projects/8))**
+
+---

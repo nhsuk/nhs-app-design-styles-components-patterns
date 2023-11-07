@@ -1,6 +1,6 @@
 ---
-name: '🆕 Add a component or pattern'
-about: Add a component or pattern being used on the NHS App so we share design work and user insights
+name: '🆕 Add a style, component or pattern'
+about: Add a style, component or pattern being used on the NHS App so we share design work and user insights
 ---
 
 ## What

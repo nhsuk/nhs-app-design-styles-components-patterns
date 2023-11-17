@@ -1,0 +1,21 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Divider line" %}
+
+{% block innerContent %}
+
+  <p>Colour: #d8dde0<br>Width: 1px</p>
+
+  <h2 class="nhsuk-heading-m">Section break m</h2>
+  <p>24px margin top and bottom</p>
+  <hr class="nhsuk-section-break--m">
+
+  <h2 class="nhsuk-heading-m">Section break l</h2>
+  <p>40px margin top and bottom</p>
+  <hr class="nhsuk-section-break-l">
+
+  <h2 class="nhsuk-heading-m">Section break xl</h2>
+  <p>56px margin top and bottom</p>
+  <hr class="nhsuk-section-break--xl">
+
+{% endblock %}

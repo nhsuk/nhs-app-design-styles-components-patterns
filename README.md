@@ -6,7 +6,7 @@ This is a place to test and document design styles, components and patterns bein
 
 ## Building on the NHS digital service manual
 
-The NHS App uses the [NHS design system](https://service-manual.nhs.uk/design-system), however it also uses many undocumented styles, components and patterns.
+The NHS App uses the [NHS design system](https://service-manual.nhs.uk/design-system), however it also uses many custom styles, components and patterns.
 
 ## Documenting NHS App design styles, components and patterns
 

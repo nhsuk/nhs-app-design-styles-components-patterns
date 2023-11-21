@@ -20,15 +20,6 @@
   @include nhsuk-responsive-padding(4, "right");
   @include nhsuk-responsive-padding(4, "left");
   @include nhsuk-responsive-padding(5, "top");
-
-  .app-button {
-    width: 100%;
-
-    @include mq($from: tablet) {
-      width: 60%;
-    }
-  }
-
 }
 
 // Gives correct padding left and right when full width

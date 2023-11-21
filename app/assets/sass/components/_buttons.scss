@@ -10,6 +10,12 @@
   }
 }
 
+.app-button--small {
+  @include mq($until: tablet) {
+    width: auto;
+  }
+}
+
 // Button styling override
 .nhsuk-button--reverse {
   &:visited, &:active, &:hover {

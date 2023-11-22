@@ -1,0 +1,64 @@
+/* ==========================================================================
+  #TIMELINE
+  ========================================================================== */
+
+.app-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  
+.app-timeline__item {
+  display: flex;
+  margin-bottom: 0;
+  margin-left: 16px;
+  padding-bottom: 40px;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &:before {
+      border: none;
+    }
+  }
+}
+
+.app-timeline__item:before {
+  border-left: 2px dashed $color_nhsuk-blue;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2px;
+
+  @include mq($from: tablet) {
+    top: 2px;
+  }
+}
+
+.app-timeline__badge {
+  height: 24px;
+  margin-left: -12px;
+  margin-right: 16px;
+  width: 24px;
+  z-index: 1;
+
+  @include mq($from: tablet) {
+    margin-top: 2px;
+  }
+}
+
+.app-timeline__body {
+  margin-top: 0;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.app-timeline__item--past {
+  .app-timeline__badge-fill {
+    fill: $color_nhsuk-blue;
+  }
+}

@@ -154,6 +154,12 @@
   }
 }
 
+.app-panel-link-card__content {
+  @include nhsuk-responsive-margin(4, "left");
+  @include nhsuk-responsive-margin(4, "right");
+  @include nhsuk-responsive-padding(0, "left");
+}
+
 // Stacked
 
 .app-panel-link-card-stacked,
@@ -172,6 +178,10 @@
 
     border: 0;
 
+    .app-panel-link-card__content {
+      border-bottom: $card-border-width solid $card-border-color;
+    }
+
     &:last-child {
       .app-panel-link-card__content {
         border: 0;
@@ -179,12 +189,41 @@
     }
   }
 
-  .app-panel-link-card__content {
-    @include nhsuk-responsive-margin(4, "left");
-    @include nhsuk-responsive-margin(4, "right");
-    @include nhsuk-responsive-padding(0, "left");
+}
 
-    border-bottom: $card-border-width solid $card-border-color;
+// Messages
+
+.app-panel-link-card__content--message {
+  padding-left: 16px;
+
+  @include mq($from: tablet) {
+    padding-left: 28px;
   }
 
+  .app-panel-link-card__description {
+    margin-right: 0;
+  }
+}
+
+.app-panel-link-card__link--with-badge {
+  position: relative;
+
+  &:before {
+    background-color: $color_nhsuk-blue;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    height: 8px;
+    left: -16px;
+    position: absolute;
+    top: calc(50% - 4px);
+    width: 8px;
+
+    @include mq($from: tablet) {
+      height: 12px;
+      left: -28px;
+      top: calc(50% - 6px);
+      width: 12px;
+    }
+  }
 }

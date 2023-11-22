@@ -19,20 +19,20 @@
     padding-bottom: 0;
 
     &:before {
-      border: none;
+      background-image: none;
     }
   }
 }
 
 .app-timeline__item:before {
-  border-left: 2px dashed $color_nhsuk-blue;
+  background-image: url('data:image/svg+xml,<svg width="2" height="400" viewBox="0 0 2 400" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="0.75" x2="0.749983" y2="399.25" stroke="%23005EB8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/></svg>');
   bottom: 0;
   content: "";
   display: block;
   left: 0;
   position: absolute;
   top: 0;
-  width: 2px;
+  width: 0.094rem;
 
   @include mq($from: tablet) {
     top: 2px;
@@ -40,7 +40,11 @@
 }
 
 .app-timeline__badge {
+  align-items: center;
   height: 24px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
   margin-left: -12px;
   margin-right: 16px;
   width: 24px;

@@ -6,8 +6,8 @@
 
   &:before {
     @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
-    background-color: #dbe0e3;
-    border: 1px solid #94a1aa;
+    background-color: white;
+    border: 1px solid $color_nhsuk-grey-3;
     color: #354550;
     content: "Example";
     font-kerning: 1;

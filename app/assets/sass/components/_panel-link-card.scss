@@ -221,13 +221,13 @@
     height: 8px;
     left: -16px;
     position: absolute;
-    top: calc(50% - 4px);
+    top: 7px;
     width: 8px;
 
     @include mq($from: tablet) {
       height: 12px;
       left: -28px;
-      top: calc(50% - 6px);
+      top: 7px;
       width: 12px;
     }
   }

@@ -16,6 +16,8 @@
   position: relative;
 
   &:last-child {
+    padding-bottom: 24px;
+
     &:before {
       background-image: none;
     }

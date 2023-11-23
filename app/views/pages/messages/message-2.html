@@ -1,0 +1,35 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Range Surgery" %}
+{% set pageDescription = "Received on Thursday at 2:45pm" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSmall: true,
+        description: pageDescription,
+        descriptionMuted: true
+      })}}
+
+      <p class="nhsuk-u-margin-bottom-7">Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
+
+      {{ button({
+        text: "Reply to this message",
+        classes: "app-button",
+        href: "#"
+      }) }}
+
+    </div>
+  </div>
+
+  {% endblock %}

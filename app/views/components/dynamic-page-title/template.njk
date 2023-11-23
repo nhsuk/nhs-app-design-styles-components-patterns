@@ -1,4 +1,4 @@
-<div class="app-dynamic-page-title {%- if params.classes %} {{ params.classes }}{% endif %} {%- if params.logo and data['web'] !== "yes" %} nhsuk-u-padding-top-4 {% endif %}">
+<div class="app-dynamic-page-title {%- if params.classes %} {{ params.classes }}{% endif %} {%- if params.logo and data['web'] !== "yes" %} nhsuk-u-padding-top-4 {% endif %} {%- if params.titleSmall %} nhsuk-u-margin-bottom-5{% endif %}">
   {%- if params.logo %}
   <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 40 16" height="22" width="54" aria-describedby="nhs-logo-title" role="img">
     <title id="nhs-logo-title">NHS</title>
@@ -20,7 +20,7 @@
       {{ params.linkedProfile.age }} years old
     </p>
   {%- else %}
-    <h1 class="app-dynamic-page-title__heading">
+    <h1 class="app-dynamic-page-title__heading {%- if params.titleSmall %} nhsuk-heading-l{% endif %}">
       {%- if params.greetingName %}
       <span class="app-greeting"></span>, 
       <span class="app-dynamic-page-title__name">{{ params.greetingName }}</span>
@@ -35,7 +35,7 @@
     </p>
     {% endif %}
     {%- if params.description %}
-    <p class="app-dynamic-page-title__description">
+    <p class="app-dynamic-page-title__description {%- if params.descriptionMuted %} nhsuk-u-secondary-text-color{% endif %}">
       {{ params.description | safe }}
     </p>
     {% endif %}

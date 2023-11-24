@@ -11,7 +11,7 @@
 {% block content %}
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-two-thirds">
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
@@ -21,7 +21,9 @@
         descriptionMuted: true
       })}}
 
-      <p class="nhsuk-u-margin-bottom-7">Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
+      <div class="nhsuk-u-margin-bottom-7">
+        <p>Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.</p>
+      </div>
 
       {{ button({
         text: "Reply to this message",

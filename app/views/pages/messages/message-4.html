@@ -1,0 +1,70 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Hughenden Valley Surgery" %}
+{% set pageDescription = "Received 6 November 2023 at 6:30pm" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSmall: true,
+        description: pageDescription,
+        descriptionMuted: true
+      })}}
+
+      <div class="nhsuk-u-margin-bottom-7">
+        <p><strong>Your next COVID-19 vaccination</strong></p>
+
+        <p>I'd like to invite you to get your COVID-19 vaccination this spring.<br>
+        This is because either:</p>
+
+        <p>You're aged <strong>75 or over</strong> (by 30 June 2023), or Your NHS record suggests you may have a <strong>weakened immune system</strong> due to a health condition or medical treatment.
+
+        <p>It's important you get this further vaccination as soon as possible, as protection fades over time. Your protection may reduce more quickly than other people's does. This vaccination will lower your risk of hospital admission and help you to recover more quickly if you catch COVID-19 during the spring or summer.
+
+        <p>If your last COVID-19 vaccination was after 5 April 2023, or you already have one booked, please ignore this invitation. 
+
+        <p>How to get your vaccination 
+
+        <p>Book<br>
+        via this app<br>
+        Book online at<br>
+        www.nhs.uk/get-vaccination <br>
+        Find a walk-in service at<br>
+        www.nhs.uk/vaccine-walk-in<br>
+        Call 119 to book or find a walk-in site. Please note that 119 only has access to the same appointments as those available online.
+        No additional appointments are available</p>
+
+        <p><strong>If you need a home visit</strong></p>
+
+        <p>If you usually get your care at home, please contact your GP practise. They should either provide a home vaccination, or arrange one with another local NHS service.</p>
+
+        <p><strong>At your appointment</strong></p>
+
+        <p>If you are aged under 75, please bring this invitation, an NHS letter describing your condition or treatment, or a repeat prescription or medicine box with your name and a recent date. You'll need to speak to someone before vaccination to check that you're eligible.</p>
+
+        <p>You can let staff know if you have a weakened immune system and they'll try to reduce your wait time. You can also ask them to wear a mask.</p>
+
+        <p><strong>For more information</strong></p>
+
+        <p>Please read the leaflet at www.gov.uk/government/publications/covid-19-vaccination-spring-booster-resources before your vaccination. The leaflet is also available in other languages and formats. Further information on the vaccine is also available at www.nhs.uk/covidvaccination.</p>
+
+        <p>Kind Regards</p>
+
+        <p>Dr Nikita Kanani MBE<br>
+        GP and Deputy Lead, NHS COVID-19 Vaccination Programme NHS England</p>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

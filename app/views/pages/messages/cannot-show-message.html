@@ -1,0 +1,36 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Cannot show message" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading
+      })}}
+
+      <p>There was a problem opening your message.</p>
+      <p>If the problem continues, try again later.</p>
+
+      {{ button({
+        text: "Reply to this message",
+        classes: "nhsuk-button--secondary app-button nhsuk-u-margin-top-2",
+        href: "#"
+      }) }}
+
+      <h2>Further information</h2>
+      <p>Messages contain non-urgent advice only.</p>
+      <p>If you are expecting a message from a healthcare provider, contact the sender directly.</p>
+
+    </div>
+  </div>
+
+  {% endblock %}

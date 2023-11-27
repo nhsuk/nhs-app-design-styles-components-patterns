@@ -22,8 +22,21 @@
       })}}
 
       <div class="nhsuk-u-margin-bottom-7">
-        <p>Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.</p>
+        Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.
       </div>
+
+      {% if data['replySent'] === "true" %}
+
+      <hr>
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Your reply has been sent</h2>
+      <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-5">Delivered today at 2:28pm</p>
+
+      <p class="nhsuk-u-margin-bottom-5">'{{ data['message-reply'] }}'</p>
+
+      <p class="nhsuk-u-secondary-text-color">If you need to change your reply, you'll need to contact Range Surgery.</p>
+
+      {% else %}
 
       <!-- WHEN THE BUTTON IS CLICKED ON, THE HIDDEN CONTENT - SELECT YOUR REPLY WILL SHOW -->
       <!-- THE JAVASCRIPT AT THE BOTTOM OF THIS PAGE MAKES THAT HAPPEN -->
@@ -32,7 +45,9 @@
       </a>
 
       <!-- HIDDEN CONTENT - SELECT YOUR REPLY -->
-      <form id="hiddenDiv" style="display:none" method="post" action="">
+      <form id="hiddenDiv" style="display:none" method="post" action="/pages/messages/message-2">
+
+        <input type="hidden" name="replySent" value="true">
 
         {{ radios({
           "idPrefix": "message-reply",
@@ -62,11 +77,12 @@
 
         {{ button({
           text: "Send",
-          classes: "app-button",
-          href: "#"
+          classes: "app-button"
         }) }}
 
       </form>
+
+      {% endif %}
 
     </div>
   </div>

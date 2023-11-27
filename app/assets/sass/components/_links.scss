@@ -74,3 +74,10 @@
   }
 
 }
+
+// No visited state link - icon colour
+.app-link-with-icon .nhsuk-link--no-visited-state:visited {
+  .app-icon {
+    fill: $nhsuk-link-color;
+  }
+}

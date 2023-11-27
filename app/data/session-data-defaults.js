@@ -18,6 +18,9 @@ module.exports = {
   // Set version of the app
   "version": "2.36.6 (2.36.0)",
 
+  "message1read": "false",
+  "message2read": "false",
+
   // Messages
   "messages": 2, // This displays in the messages badge
 

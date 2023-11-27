@@ -1,0 +1,34 @@
+/* ==========================================================================
+   COMPONENTS / #LOADER
+   ========================================================================== */
+
+   .app-loader {
+    @include nhsuk-responsive-margin(4, bottom);
+    @include nhsuk-responsive-margin(4, top);
+    
+    position: relative;
+    text-align: center;
+  }
+  
+  .app-loader__spinner {
+    animation: spin 2s linear infinite;
+    border: nhsuk-spacing(3) solid darken(#f0f4f5, 10%);
+    border-radius: 50%;
+    border-top: nhsuk-spacing(3) solid tint($color_nhsuk-blue, 15%);
+    display: inline-block;
+    height: 120px;
+    margin: auto;
+    width: 120px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .app-loader--middle {
+    position: fixed;
+    top: calc(50% - 60px);
+    left: 0;
+    right: 0;
+  }

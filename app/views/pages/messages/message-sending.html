@@ -1,0 +1,41 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/messages/your-messages" %}
+
+{% set pageHeading = "Range Surgery" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSmall: true
+      })}}
+
+      <div class="app-loader app-loader--middle">
+        <span class="app-loader__spinner"></span>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block pageScripts %}
+    <!-- JAVASCRIPT REDIRECT BACK TO MESSAGE PAGE -->
+    <script>
+      $(document).ready(function () {
+          // Handler for .ready() called.
+          window.setTimeout(function () {
+              location.href = "/pages/messages/message-2";
+          }, 1500);
+      });
+    </script>
+  {% endblock %}

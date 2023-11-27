@@ -46,7 +46,7 @@
       </a>
 
       <!-- HIDDEN CONTENT - SELECT YOUR REPLY -->
-      <form id="hiddenDiv" style="display:none" method="post" action="/pages/messages/message-2">
+      <form id="hiddenDiv" style="display:none" method="post" action="/pages/messages/message-sending">
 
         <input type="hidden" name="replySent" value="true">
 
@@ -76,10 +76,9 @@
           ]
         }) }}
 
-        {{ button({
-          text: "Send",
-          classes: "app-button"
-        }) }}
+        <button class="nhsuk-button app-button" data-module="nhsuk-button" type="submit">
+          Send
+        </button>
 
       </form>
 
@@ -88,22 +87,25 @@
     </div>
   </div>
 
-  <!-- THE JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
-  <script>
-    document.getElementById('showButton').addEventListener('click', function() {
-      // Get a reference to the hidden div
-      var hiddenDiv = document.getElementById('hiddenDiv');
+  {% endblock %}
 
-      // Check if the div is currently hidden
-      if (hiddenDiv.style.display === 'none') {
-        // If hidden, show the div
-        hiddenDiv.style.display = 'block';
-        showButton.style.display = 'none';
-      } else {
-        // If visible, hide the div
-        hiddenDiv.style.display = 'none';
-      }
-    });
-  </script>
+  {% block pageScripts %}
+    <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
+    <script>
+      document.getElementById('showButton').addEventListener('click', function() {
+        // Get a reference to the hidden div
+        var hiddenDiv = document.getElementById('hiddenDiv');
+  
+        // Check if the div is currently hidden
+        if (hiddenDiv.style.display === 'none') {
+          // If hidden, show the div
+          hiddenDiv.style.display = 'block';
+          showButton.style.display = 'none';
+        } else {
+          // If visible, hide the div
+          hiddenDiv.style.display = 'none';
+        }
+      });
 
+    </script>
   {% endblock %}

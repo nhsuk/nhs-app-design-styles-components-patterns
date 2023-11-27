@@ -25,13 +25,68 @@
         <p>Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.</p>
       </div>
 
-      {{ button({
-        text: "Reply to this message",
-        classes: "app-button",
-        href: "#"
-      }) }}
+      <!-- WHEN THE BUTTON IS CLICKED ON, THE HIDDEN CONTENT - SELECT YOUR REPLY WILL SHOW -->
+      <!-- THE JAVASCRIPT AT THE BOTTOM OF THIS PAGE MAKES THAT HAPPEN -->
+      <a id="showButton" class="nhsuk-button app-button" data-module="nhsuk-button" href="#" draggable="false" role="button">
+        Reply to this message
+      </a>
+
+      <!-- HIDDEN CONTENT - SELECT YOUR REPLY -->
+      <form id="hiddenDiv" style="display:none" method="post" action="">
+
+        {{ radios({
+          "idPrefix": "message-reply",
+          "name": "message-reply",
+          classes: "nhsuk-u-margin-bottom-5",
+          "fieldset": {
+            "legend": {
+              "text": "Select your reply",
+              "classes": "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              "value": "SMOKE",
+              "text": "SMOKE"
+            },
+            {
+              "value": "EX",
+              "text": "EX"
+            },
+            {
+              "value": "NEVER",
+              "text": "NEVER"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Send",
+          classes: "app-button",
+          href: "#"
+        }) }}
+
+      </form>
 
     </div>
   </div>
+
+  <!-- THE JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
+  <script>
+    document.getElementById('showButton').addEventListener('click', function() {
+      // Get a reference to the hidden div
+      var hiddenDiv = document.getElementById('hiddenDiv');
+
+      // Check if the div is currently hidden
+      if (hiddenDiv.style.display === 'none') {
+        // If hidden, show the div
+        hiddenDiv.style.display = 'block';
+        showButton.style.display = 'none';
+      } else {
+        // If visible, hide the div
+        hiddenDiv.style.display = 'none';
+      }
+    });
+  </script>
 
   {% endblock %}

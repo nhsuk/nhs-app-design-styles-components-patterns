@@ -22,20 +22,36 @@
       <ul class=" app-panel-link-card-stacked ">
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
-            <span class="nhsuk-u-display-block nhsuk-u-font-weight-bold">1:02pm</span>
-            <a class="app-panel-link-card__link nhsuk-heading-s" href="/pages/messages/message-1">
-              <span class="app-panel-link-card__link--with-badge">Portland Street Great Westood Surgery</span>
-            </a>
-            <p class="app-panel-link-card__description">Patient survey reminder. The Patient feedback survey is about to close. Have your say about Portland Street Great Westood Surgery by providing us with your thoughts. </p>
+            <span class="nhsuk-u-display-block {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">1:02pm</span>
+            <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
+            <form id="message1" method="post" action="/pages/messages/message-1">
+              <input type="hidden" name="message1read" value="true">
+              <a onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+                {% if data['message1read'] === "true" %}
+                Portland Street Great Westood Surgery
+                {% else %}
+                <span class="app-panel-link-card__link--with-badge">Portland Street Great Westood Surgery</span>
+                {% endif %}
+              </a>
+            </form>
+            <p class="app-panel-link-card__description {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color{% endif %}">Patient survey reminder. The Patient feedback survey is about to close. Have your say about Portland Street Great Westood Surgery by providing us with your thoughts. </p>
           </div>
         </li>
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
-            <span class="nhsuk-u-display-block nhsuk-u-font-weight-bold">Thursday</span>
-            <a class="app-panel-link-card__link nhsuk-heading-s" href="/pages/messages/message-2">
-              <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
-            </a>
-            <p class="app-panel-link-card__description">Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
+            <span class="nhsuk-u-display-block {% if data['message2read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">Thursday</span>
+            <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
+            <form id="message2" method="post" action="/pages/messages/message-2">
+              <input type="hidden" name="message2read" value="true">
+              <a onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+                {% if data['message2read'] === "true" %}
+                Range Surgery
+                {% else %}
+                <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
+                {% endif %}
+              </a>
+            </form>
+            <p class="app-panel-link-card__description {% if data['message2read'] === 'true' %}nhsuk-u-secondary-text-color{% endif %}">Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
           </div>
         </li>
         <li class="app-panel-link-card">

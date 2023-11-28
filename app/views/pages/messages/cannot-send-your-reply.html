@@ -5,7 +5,7 @@
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Cannot show message" %}
+{% set pageHeading = "Cannot send your reply" %}
 
 {% block content %}
 
@@ -18,18 +18,13 @@
         classes: "nhsuk-u-margin-bottom-5"
       })}}
 
-      <p>There was a problem opening your message.</p>
-      <p>If the problem continues, try again later.</p>
+      <p>There was a technical problem. This might be temporary. </p>
 
       {{ button({
         text: "Try again",
         classes: "nhsuk-button--secondary app-button nhsuk-u-margin-top-2",
         href: "#"
       }) }}
-
-      <h2>Further information</h2>
-      <p>Messages contain non-urgent advice only.</p>
-      <p>If you are expecting a message from a healthcare provider, contact the sender directly.</p>
 
     </div>
   </div>

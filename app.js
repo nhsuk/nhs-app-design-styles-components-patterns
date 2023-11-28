@@ -207,10 +207,10 @@ if (useDocumentation || onlyDocumentation === 'true') {
 }
 
 // Clear all data in session if you open /examples/passing-data/clear-data
-app.post('/examples/passing-data/clear-data', (req, res) => {
-  req.session.data = {};
-  res.render('examples/passing-data/clear-data-success');
-});
+app.post('/clear-data', function (req, res) {
+  req.session.data = {}
+  res.render('clear-data-success')
+})
 
 // Redirect all POSTs to GETs - this allows users to use POST for autoStoreData
 app.post(/^([^.]+)$/, (req, res) => {

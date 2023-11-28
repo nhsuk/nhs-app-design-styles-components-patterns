@@ -40,6 +40,35 @@
         fill: $nhsuk-link-active-color;
       }
     }
+
+    // No visited state link - icon colour
+    &.nhsuk-link--no-visited-state {
+
+      &:visited {
+        .app-icon {
+          fill: $nhsuk-link-color;
+        }
+      }
+
+      &:hover {
+        .app-icon {
+          fill: $nhsuk-link-hover-color;
+        }
+      }
+
+
+      &:active {
+        .app-icon {
+          fill: $nhsuk-link-active-color;
+        }
+      }
+
+      &:focus {
+        .app-icon {
+          fill: $nhsuk-link-active-color;
+        }
+      }
+    }
   }
   
 }
@@ -73,11 +102,4 @@
     }
   }
 
-}
-
-// No visited state link - icon colour
-.app-link-with-icon .nhsuk-link--no-visited-state:visited {
-  .app-icon {
-    fill: $nhsuk-link-color;
-  }
 }

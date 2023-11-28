@@ -4,6 +4,7 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/messages-" + data['accountType'] %}
 
 {% set pageHeading = "Your messages" %}
 {% set pageDescription = "You have 2 unread messages" %}
@@ -26,6 +27,7 @@
             <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
             <form id="message1" method="post" action="/pages/messages/message-1">
               <input type="hidden" name="message1read" value="true">
+              <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
               <a onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message1read'] === "true" %}
                 Portland Street Great Westood Surgery
@@ -43,6 +45,7 @@
             <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
             <form id="message2" method="post" action="/pages/messages/message-2">
               <input type="hidden" name="message2read" value="true">
+              <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
               <a onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message2read'] === "true" %}
                 Range Surgery

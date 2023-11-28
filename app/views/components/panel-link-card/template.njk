@@ -2,8 +2,8 @@
 {%- for item in params.items %}
   <li class="app-panel-link-card  
   {%- if item.icon == true %} app-panel-link-card--with-icon{% endif %}
-  {%- if item.icon == true and item.messages %} app-panel-link-card--with-badge-right{% endif %}
-  {%- if item.icon != true and item.messages %} app-panel-link-card--with-badge-top{% endif %}
+  {%- if item.icon == true and item.messages > 0 %} app-panel-link-card--with-badge-right{% endif %}
+  {%- if item.icon != true and item.messages > 0 %} app-panel-link-card--with-badge-top{% endif %}
   ">
     <div class="app-panel-link-card__content">
       {%- if item.icon == true %}

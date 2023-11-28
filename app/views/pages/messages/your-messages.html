@@ -7,7 +7,12 @@
 {% set backLinkURL = "/pages/messages-" + data['accountType'] %}
 
 {% set pageHeading = "Your messages" %}
-{% set pageDescription = "You have 2 unread messages" %}
+
+{% if data['messages'] == 1 %}
+  {% set pageDescription = "You have " + data['messages'] + " unread message" %}
+{% else %}
+  {% set pageDescription = "You have " + data['messages'] + " unread messages" %}
+{% endif %}
 
 {% block content %}
 
@@ -26,8 +31,10 @@
             <span class="nhsuk-u-display-block {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">1:02pm</span>
             <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
             <form id="message1" method="post" action="/pages/messages/message-1">
+              {% if data['message1read'] === "false" %}
               <input type="hidden" name="message1read" value="true">
               <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
+              {% endif %}
               <a onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message1read'] === "true" %}
                 Portland Street Great Westood Surgery
@@ -44,8 +51,10 @@
             <span class="nhsuk-u-display-block {% if data['message2read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">Thursday</span>
             <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
             <form id="message2" method="post" action="/pages/messages/message-2">
+              {% if data['message2read'] === "false" %}
               <input type="hidden" name="message2read" value="true">
               <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
+              {% endif %}
               <a onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message2read'] === "true" %}
                 Range Surgery

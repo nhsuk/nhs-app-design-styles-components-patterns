@@ -20,11 +20,13 @@
 
       <p>There was a technical problem. This might be temporary. </p>
 
-      {{ button({
-        text: "Try again",
-        classes: "nhsuk-button--secondary app-button nhsuk-u-margin-top-2",
-        href: "#"
-      }) }}
+      <form method="post" action="/pages/messages/message-sending">
+        <input type="hidden" name="message2sent" value="true">
+        {{ button({
+          text: "Try again",
+          classes: "nhsuk-button--secondary app-button nhsuk-u-margin-top-2"
+        }) }}
+      </form>
 
     </div>
   </div>

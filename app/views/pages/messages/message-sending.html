@@ -32,7 +32,11 @@
   {% endblock %}
 
   {% block pageScripts %}
+
+  
     <!-- JAVASCRIPT REDIRECT BACK TO MESSAGE PAGE -->
+
+    {% if data['message2sent'] === "true" %}
     <script>
       $(document).ready(function () {
           // Handler for .ready() called.
@@ -41,4 +45,14 @@
           }, 800);
       });
     </script>
+    {% else %}
+    <script>
+      $(document).ready(function () {
+          // Handler for .ready() called.
+          window.setTimeout(function () {
+              location.href = "/pages/messages/cannot-send-your-reply";
+          }, 800);
+      });
+    </script>
+    {% endif %}
   {% endblock %}

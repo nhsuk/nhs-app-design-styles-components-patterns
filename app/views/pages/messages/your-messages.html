@@ -36,7 +36,7 @@
               <input type="hidden" name="message1read" value="true">
               <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
               {% endif %}
-              <a href="#" onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+              <a href="#1" onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message1read'] === "true" %}
                 Portland Street Great Westood Surgery
                 {% else %}
@@ -56,7 +56,7 @@
               <input type="hidden" name="message2read" value="true">
               <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
               {% endif %}
-              <a href="#" onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+              <a href="#2" onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 {% if data['message2read'] === "true" %}
                 Range Surgery
                 {% else %}

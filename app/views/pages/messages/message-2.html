@@ -31,7 +31,7 @@
 
       <hr>
 
-      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Your reply has been sent</h2>
+      <h2 id="message-sent" class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Your reply has been sent</h2>
       <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-5">Delivered today at 2:28pm</p>
 
       <p class="nhsuk-u-margin-bottom-5">'{{ data['message-reply'] }}'</p>
@@ -47,7 +47,7 @@
       </a>
 
       <!-- HIDDEN CONTENT - SELECT YOUR REPLY -->
-      <form id="hiddenDiv" style="display:none" method="post" action="/pages/messages/message-sending">
+      <form id="hiddenDiv" tabindex="0" style="display:none" method="post" action="/pages/messages/message-sending">
 
         <input type="hidden" name="replySent" value="true">
 
@@ -101,6 +101,7 @@
         if (hiddenDiv.style.display === 'none') {
           // If hidden, show the div
           hiddenDiv.style.display = 'block';
+          hiddenDiv.focus()
           showButton.style.display = 'none';
         } else {
           // If visible, hide the div

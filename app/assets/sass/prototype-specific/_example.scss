@@ -37,3 +37,10 @@
 .example--white-background {
   background-color: $color_nhsuk-white;
 }
+
+#hiddenDiv,
+#messageSent {
+  &:focus-visible {
+    outline: none;
+  }
+}

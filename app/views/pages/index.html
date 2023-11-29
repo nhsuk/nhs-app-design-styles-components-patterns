@@ -96,6 +96,20 @@
             <a href="/pages/your-health/prescriptions-linked-profiles">Prescriptions - Linked profiles</a>
           </li>
         </ul>
+        
+        <h2 class="nhsuk-heading-xs">Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+
+        <ul clas="nhsuk-list">
+          <li>
+            <a href="/pages/messages/your-messages">Your messages</a>
+          </li>
+          <li>
+            <a href="/pages/messages/cannot-send-your-reply">Cannot send your reply</a>
+          </li>
+          <li>
+            <a href="/pages/messages/cannot-show-message">Cannot show message</a>
+          </li>
+        </ul>
 
         <h2 class="nhsuk-heading-xs">Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
@@ -112,7 +126,7 @@
         </ul>  
         
         <div class="nhsuk-inset-text">
-          <p>These pages are in the '/app/views/pages' folder in the prototype.</p>
+          <p>These pages are in the <a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/tree/main/app/views/pages">/app/views/pages folder on GitHub</a></p>
         </div>
 
     </div>

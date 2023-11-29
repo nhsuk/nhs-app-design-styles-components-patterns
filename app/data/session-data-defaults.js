@@ -18,11 +18,11 @@ module.exports = {
   // Set version of the app
   "version": "2.36.6 (2.36.0)",
 
-  "message1read": "false",
-  "message2read": "false",
-
   // Messages
-  "messages": 2, // This displays in the messages badge
+  "message1read": "false", 
+  "message2read": "false", 
+  "messages": 2, // This displays in the messages badge - set this to the number of unread messages - For example, if 'message1read = true' and 'message2read = false', then set the 'messages' number to 1
+  "messageSendingError": "true", // Shows 'cannot send your reply' screen for message 2
 
   // Set account type - p9, p5 or linked-profiles
   "accountType": "p9",

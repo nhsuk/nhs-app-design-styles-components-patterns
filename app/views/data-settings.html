@@ -80,15 +80,89 @@
 
         <hr>
 
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Messages</h2>
+
+        {{ radios({
+          "idPrefix": "message1read",
+          "name": "message1read",
+          "fieldset": {
+            "legend": {
+              "text": "Message 1 read",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "true",
+              "text": "Yes",
+              checked: checked("message1read", "true")
+            },
+            {
+              "value": "false",
+              "text": "No",
+              checked: checked("message1read", "false")
+            }
+          ]
+        }) }}
+
+        {{ radios({
+          "idPrefix": "message2read",
+          "name": "message2read",
+          "fieldset": {
+            "legend": {
+              "text": "Message 2 read",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "true",
+              "text": "Yes",
+              checked: checked("message2read", "true")
+            },
+            {
+              "value": "false",
+              "text": "No",
+              checked: checked("message2read", "false")
+            }
+          ]
+        }) }}
+
         {{ input({
           "label": {
           "text": "Number of messages",
-          "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
+          "classes": "nhsuk-label"
           },
           "id": "messages",
           "name": "messages",
           "classes": "nhsuk-input--width-2",
           "value": data['messages']
+        }) }}
+
+        {{ radios({
+          "idPrefix": "messageSendingError",
+          "name": "messageSendingError",
+          "fieldset": {
+            "legend": {
+              "text": "Message sending error",
+              "classes": "nhsuk-label"
+            }
+          },
+          "hint": {
+            "text": "This shows the 'Cannot send your reply' page when replying to message 2"
+          },
+          "items": [
+            {
+              "value": "true",
+              "text": "Yes",
+              checked: checked("messageSendingError", "true")
+            },
+            {
+              "value": "false",
+              "text": "No",
+              checked: checked("messageSendingError", "false")
+            }
+          ]
         }) }}
 
         <hr>

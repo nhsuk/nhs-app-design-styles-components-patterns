@@ -25,7 +25,13 @@
       <span class="app-greeting"></span>, 
       <span class="app-dynamic-page-title__name">{{ params.greetingName }}</span>
       {%- else %}
-      {{ params.title }}
+        {%- if params.titleHiddenTextBefore %} 
+          <span class="nhsuk-u-visually-hidden">{{ params.titleHiddenTextBefore }} </span>
+        {% endif %}
+        {{ params.title }}
+        {%- if params.titleHiddenTextAfter %} 
+          <span class="nhsuk-u-visually-hidden"> {{ params.titleHiddenTextAfter }}</span>
+        {% endif %}
       {% endif %}
     </h1>
     {%- if params.nhsNumber %}

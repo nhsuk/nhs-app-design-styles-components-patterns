@@ -4,78 +4,115 @@
 
 {% block innerContent %}
 
-<h2 class="nhsuk-heading-m">Unread</h2>
+  <h2 class="nhsuk-heading-m">Unread</h2>
 
-<ul class=" app-panel-link-card-stacked ">
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-font-weight-bold">Thursday</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
-      </a>
-      <p class="app-panel-link-card__description">Dear Janet, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
-    </div>
-  </li>
-</ul>
+  <ul class="app-panel-link-card-stacked">
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-font-weight-bold">
+          Thursday
+        </span>
+        <a href="#" class="app-panel-link-card__link nhsuk-heading-s">
+          <span class="nhsuk-u-visually-hidden">Unread message from </span>
+          <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
+          <span class="nhsuk-u-visually-hidden"> received on Thursday at 2:45pm </span> 
+        </a>
+        <p class="app-panel-link-card__description">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. 
+        </p>
+      </div>
+    </li>
+  </ul>
 
-<h2 class="nhsuk-heading-m">Read</h2>
+  <h2 class="nhsuk-heading-m">Read</h2>
 
-<ul class=" app-panel-link-card-stacked ">
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">4 Oct 2023</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        Hughenden Valley Surgery
-      </a>
-      <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">Reminder of your telephone appointment with your GP on Friday 23 October at 1:30pm.</p>
-    </div>
-  </li>
-</ul>
+  <ul class="app-panel-link-card-stacked">
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+          4 Oct 2023
+        </span>
+        <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+          <span class="nhsuk-u-visually-hidden">Read message from </span>
+          Hughenden Valley Surgery
+          <span class="nhsuk-u-visually-hidden"> received 4 October 2023 at 6:30pm</span> 
+        </a>
+        <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Reminder of your telephone appointment with your GP on Friday 23 October at 1:30pm.
+        </p>
+      </div>
+    </li>
+  </ul>
 
-<h2 class="nhsuk-heading-m">Stacked</h2>
+  <h2 class="nhsuk-heading-m">Stacked</h2>
 
-<ul class=" app-panel-link-card-stacked ">
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-font-weight-bold">1:02pm</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        <span class="app-panel-link-card__link--with-badge">Portland Street Great Westood Surgery</span>
-      </a>
-      <p class="app-panel-link-card__description">Patient survey reminder. The Patient feedback survey is about to close. Have your say about Portland Street Great Westood Surgery by providing us with your thoughts. </p>
-    </div>
-  </li>
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-font-weight-bold">Thursday</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
-      </a>
-      <p class="app-panel-link-card__description">Dear Janet, we would like to ask you a few questions about smoking. If you smoke, select SMOKE. If you're an ex smoker, select EX. If you have never smoked, select NEVER.  </p>
-    </div>
-  </li>
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">4 Oct 2023</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        Hughenden Valley Surgery
-      </a>
-      <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">Reminder of your telephone appointment with your GP on Friday 23 October at 1:30pm.</p>
-    </div>
-  </li>
-  <li class="app-panel-link-card">
-    <div class="app-panel-link-card__content app-panel-link-card__content--message">
-      <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">18 Dec 2022</span>
-      <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-        NHS APP
-      </a>
-      <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">Your next COVID-19 vaccination. I'd like to invite you to get your COVID-19 vaccination this spring.
-        This is because either:
-        You're aged 75 or over (by 30 June 2023), or 
-        Your NHS record suggests you may have a weakened immune system due to a health condition or medical treatment.</p>
-    </div>
-  </li>
-</ul>
-
-
+  <ul class="app-panel-link-card-stacked">
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-font-weight-bold">
+          1:02pm
+        </span>
+        <a href="#" class="app-panel-link-card__link nhsuk-heading-s">
+          <span class="nhsuk-u-visually-hidden">Unread message from </span>
+          <span class="app-panel-link-card__link--with-badge">Portland Street Great Westood Surgery</span>
+          <span class="nhsuk-u-visually-hidden"> received today at 1:02pm</span> 
+        </a>
+        <p class="app-panel-link-card__description">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Patient survey reminder. The Patient feedback survey is about to close. Have your say about Portland Street Great Westood Surgery by providing us with your thoughts. 
+        </p>
+      </div>
+    </li>
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-font-weight-bold">
+          Thursday
+        </span>
+        <a href="#" class="app-panel-link-card__link nhsuk-heading-s">
+          <span class="nhsuk-u-visually-hidden">Unread message from </span>
+          <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
+          <span class="nhsuk-u-visually-hidden"> received on Thursday at 2:45pm </span> 
+        </a>
+        <p class="app-panel-link-card__description">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. 
+        </p>
+      </div>
+    </li>
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+          4 Oct 2023
+        </span>
+        <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+          <span class="nhsuk-u-visually-hidden">Read message from </span>
+          Hughenden Valley Surgery
+          <span class="nhsuk-u-visually-hidden"> received 4 October 2023 at 6:30pm</span> 
+        </a>
+        <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Reminder of your telephone appointment with your GP on Friday 23 October at 1:30pm.
+        </p>
+      </div>
+    </li>
+    <li class="app-panel-link-card">
+      <div class="app-panel-link-card__content app-panel-link-card__content--message">
+        <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+          18 Sep 2023
+        </span>
+        <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+          <span class="nhsuk-u-visually-hidden">Read message from </span>
+          NHS APP
+          <span class="nhsuk-u-visually-hidden"> received 18 September 2023 at 2:15pm </span> 
+        </a>
+        <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">
+          <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+          Your next COVID-19 vaccination. I'd like to invite you to get your COVID-19 vaccination this spring.
+        </p>
+      </div>
+    </li>
+  </ul>
 
 {% endblock %}

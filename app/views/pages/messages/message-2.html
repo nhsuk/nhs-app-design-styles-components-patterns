@@ -31,7 +31,7 @@
 
       <hr>
 
-      <h2 id="message-sent" class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Your reply has been sent</h2>
+      <h2 id="message-sent" tabindex="-5" class="nhsuk-heading-m nhsuk-u-margin-bottom-2">Your reply has been sent</h2>
       <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-5">Delivered today at 2:28pm</p>
 
       <p class="nhsuk-u-margin-bottom-5">'{{ data['message-reply'] }}'</p>
@@ -91,23 +91,28 @@
   {% endblock %}
 
   {% block pageScripts %}
-    <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
-    <script>
-      document.getElementById('showButton').addEventListener('click', function() {
-        // Get a reference to the hidden div
-        var hiddenDiv = document.getElementById('hiddenDiv');
-  
-        // Check if the div is currently hidden
-        if (hiddenDiv.style.display === 'none') {
-          // If hidden, show the div
-          hiddenDiv.style.display = 'block';
-          hiddenDiv.focus()
-          showButton.style.display = 'none';
-        } else {
-          // If visible, hide the div
-          hiddenDiv.style.display = 'none';
-        }
-      });
-
-    </script>
+    {% if data['replySent'] === "true" %}
+      <script>
+        document.getElementById('message-sent').focus();
+      </script>
+    {% else %}
+      <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
+      <script>
+        document.getElementById('showButton').addEventListener('click', function() {
+          // Get a reference to the hidden div
+          var hiddenDiv = document.getElementById('hiddenDiv');
+    
+          // Check if the div is currently hidden
+          if (hiddenDiv.style.display === 'none') {
+            // If hidden, show the div
+            hiddenDiv.style.display = 'block';
+            hiddenDiv.focus()
+            showButton.style.display = 'none';
+          } else {
+            // If visible, hide the div
+            hiddenDiv.style.display = 'none';
+          }
+        });
+      </script>
+    {% endif %}
   {% endblock %}

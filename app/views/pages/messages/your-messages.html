@@ -67,6 +67,9 @@
               <input type="hidden" name="message2read" value="true">
               <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
               {% endif %}
+              {% if data['replySent'] === "true" %}
+              <input type="hidden" name="replySentFocus" value="flase">
+              {% endif %}
               <a href="#2" onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
                 <span class="nhsuk-u-visually-hidden">{% if data['message2read'] === "true" %}Read {% else %}Unread {% endif %} message from </span>
                 {% if data['message2read'] === "true" %}

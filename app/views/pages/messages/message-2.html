@@ -50,6 +50,7 @@
       <form id="hiddenDiv" tabindex="0" style="display:none" method="post" action="/pages/messages/message-sending">
 
         <input type="hidden" name="replySent" value="true">
+        <input type="hidden" name="replySentFocus" value="true">
 
         {{ radios({
           "idPrefix": "message-reply",
@@ -91,7 +92,7 @@
   {% endblock %}
 
   {% block pageScripts %}
-    {% if data['replySent'] === "true" %}
+    {% if data['replySentFocus'] === "true" %}
       <script>
         document.getElementById('message-sent').focus();
       </script>

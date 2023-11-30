@@ -4,8 +4,6 @@
 
 .app-dynamic-page-title {
   @include nhsuk-responsive-margin(7, "bottom");
-  
-  margin-top: nhsuk-spacing(2);
 
   .nhsuk-logo{
     @include nhsuk-responsive-margin(3, "bottom");

@@ -1,0 +1,323 @@
+<!-- Copyright (c) 2022 Ivan Teplov -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Sheet</title>
+
+    <!-- Utility classes for CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
+
+    <!-- Custom stylesheet -->
+    <style>
+
+        :root {
+          --background: #fff;
+          --foreground: #000;
+          --divider: #dcdcdc;
+          --overlay: #888;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --background: #000;
+            --foreground: #fff;
+            --divider: #333;
+          }
+        }
+
+        html,
+        body {
+          height: 100%;
+        }
+
+        body {
+          background: var(--background);
+          color: var(--foreground);
+
+          overflow: hidden;
+          line-height: 1.5;
+
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        button,
+        input,
+        textarea,
+        [contenteditable="true"] {
+          box-sizing: border-box;
+          padding: 1rem;
+
+          border-radius: 1rem;
+          border: 0.0625rem solid var(--divider);
+
+          font-family: inherit;
+          font-size: 1rem;
+
+          background: var(--background);
+          color: var(--foreground);
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        button {
+          cursor: pointer;
+        }
+
+        .sheet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
+          visibility: visible;
+          transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .sheet[aria-hidden="true"] {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+
+        .sheet .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          background: var(--overlay);
+          opacity: 0.5;
+        }
+
+        .sheet .contents {
+          display: flex;
+          flex-direction: column;
+
+          border-radius: 1rem 1rem 0 0;
+
+          background: var(--background);
+
+          overflow-y: hidden;
+
+          --default-transitions: transform 0.5s, border-radius 0.5s;
+
+          transition: var(--default-transitions);
+          transform: translateY(0);
+
+          max-width: 70rem;
+          max-height: 100vh;
+          height: 30vh;
+
+          box-sizing: border-box;
+
+          width: 100%;
+        }
+
+        .sheet .contents:not(.not-selectable) {
+          transition: var(--default-transitions), height 0.5s;
+        }
+
+        .sheet .contents.fullscreen {
+          border-radius: 0;
+        }
+
+        .sheet[aria-hidden="true"] .contents {
+          transform: translateY(100%);
+        }
+
+        .sheet .controls {
+          display: flex;
+        }
+
+        .sheet .draggable-area {
+          width: 3rem;
+          margin: auto;
+          padding: 1rem;
+          cursor: grab;
+        }
+
+        .sheet .draggable-thumb {
+          width: inherit;
+          height: 0.25rem;
+          background: var(--divider);
+          border-radius: 0.125rem;
+        }
+
+        .sheet .close-sheet {
+          border: none;
+          padding: 0.7rem;
+        }
+
+        .sheet .body {
+          flex-grow: 1;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+
+          overflow-y: auto;
+          gap: 1rem;
+
+          padding: 1rem;
+          box-sizing: border-box;
+        }
+
+        form {
+          gap: 1rem;
+        }
+
+    </style>
+
+    <!-- Script that makes the sheet work -->
+    
+
+  </head>
+  <body class="font-system column fill items-center justify-center">
+    <!-- Button to open a sheet -->
+    <button type="button" id="open-sheet" aria-controls="sheet">Open Sheet</button>
+
+    <!-- The sheet component -->
+    <div id="sheet" class="sheet" aria-hidden="true" role="dialog">
+      <!-- Dark background for the sheet -->
+      <div class="overlay"></div>
+
+      <!-- The sheet itself -->
+      <div class="contents">
+        <!-- Sheet controls -->
+        <header class="controls">
+          <!-- The thing to drag if you want to resize the sheet -->
+          <div class="draggable-area">
+            <div class="draggable-thumb"></div>
+          </div>
+          <!-- Button to close the sheet -->
+          <button class="close-sheet" type="button" title="Close the sheet">&times;</button>
+        </header>
+
+        <!-- Body of the sheet -->
+        <main class="body">
+          <h2>Bottom sheet heading</h2>
+          <p>Bottom sheet description text.</p>
+
+          <form action="" method="get" class="column">
+            <input type="email" placeholder="Email field">
+            <textarea placeholder="Text field"></textarea>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <script>
+
+        const $ = document.querySelector.bind(document)
+
+        const openSheetButton = $("#open-sheet")
+        const sheet = $("#sheet")
+        const sheetContents = sheet.querySelector(".contents")
+        const draggableArea = sheet.querySelector(".draggable-area")
+
+        let sheetHeight // in vh
+
+        const setSheetHeight = (value) => {
+          sheetHeight = Math.max(0, Math.min(100, value))
+          sheetContents.style.height = `${sheetHeight}vh`
+
+          if (sheetHeight === 100) {
+            sheetContents.classList.add("fullscreen")
+          } else {
+            sheetContents.classList.remove("fullscreen")
+          }
+        }
+
+        const setIsSheetShown = (isShown) => {
+          sheet.setAttribute("aria-hidden", String(!isShown))
+        }
+
+        // Open the sheet when clicking the 'open sheet' button
+        openSheetButton.addEventListener("click", () => {
+          setSheetHeight(Math.min(50, 720 / window.innerHeight * 100))
+          setIsSheetShown(true)
+        })
+
+        // Hide the sheet when clicking the 'close' button
+        sheet.querySelector(".close-sheet").addEventListener("click", () => {
+          setIsSheetShown(false)
+        })
+
+        // Hide the sheet when clicking the background
+        sheet.querySelector(".overlay").addEventListener("click", () => {
+          setIsSheetShown(false)
+        })
+
+        const isFocused = element => document.activeElement === element
+
+        // Hide the sheet when pressing Escape if the target element
+        // is not an input field
+        window.addEventListener("keyup", (event) => {
+          const isSheetElementFocused =
+            sheet.contains(event.target) && isFocused(event.target)
+
+          if (event.key === "Escape" && !isSheetElementFocused) {
+            setIsSheetShown(false)
+          }
+        })
+
+        const touchPosition = (event) =>
+          event.touches ? event.touches[0] : event
+
+        let dragPosition
+
+        const onDragStart = (event) => {
+          dragPosition = touchPosition(event).pageY
+          sheetContents.classList.add("not-selectable")
+          draggableArea.style.cursor = document.body.style.cursor = "grabbing"
+        }
+
+        const onDragMove = (event) => {
+          if (dragPosition === undefined) return
+
+          const y = touchPosition(event).pageY
+          const deltaY = dragPosition - y
+          const deltaHeight = deltaY / window.innerHeight * 100
+
+          setSheetHeight(sheetHeight + deltaHeight)
+          dragPosition = y
+        }
+
+        const onDragEnd = () => {
+          dragPosition = undefined
+          sheetContents.classList.remove("not-selectable")
+          draggableArea.style.cursor = document.body.style.cursor = ""
+
+          if (sheetHeight < 25) {
+            setIsSheetShown(false)
+          } else if (sheetHeight > 75) {
+            setSheetHeight(100)
+          } else {
+            setSheetHeight(50)
+          }
+        }
+
+        draggableArea.addEventListener("mousedown", onDragStart)
+        draggableArea.addEventListener("touchstart", onDragStart)
+
+        window.addEventListener("mousemove", onDragMove)
+        window.addEventListener("touchmove", onDragMove)
+
+        window.addEventListener("mouseup", onDragEnd)
+        window.addEventListener("touchend", onDragEnd)
+
+    </script>
+  </body>
+</html>

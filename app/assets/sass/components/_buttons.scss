@@ -22,3 +22,20 @@
     color: $nhsuk-focus-text-color;
   }
 }
+
+// Button group
+
+.app-button-group {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+
+  @include mq($from: tablet) {
+    align-items: baseline;
+  }
+
+  .app-button {
+    margin-bottom: 24px;
+  }
+}

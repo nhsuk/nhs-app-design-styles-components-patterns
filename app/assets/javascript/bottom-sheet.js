@@ -28,7 +28,7 @@ const setIsSheetShown = (isShown) => {
 
 // Open the sheet when clicking the 'open sheet' button
 openSheetButton.addEventListener("click", () => {
-  setSheetHeight(Math.min(50, 720 / window.innerHeight * 100))
+  setSheetHeight(Math.min(80, 720 / window.innerHeight * 100))
   setIsSheetShown(true)
 })
 

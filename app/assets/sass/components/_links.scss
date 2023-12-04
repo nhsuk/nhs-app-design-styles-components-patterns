@@ -103,3 +103,7 @@
   }
 
 }
+
+.app-link {
+  @include nhsuk-typography-responsive(19);
+}

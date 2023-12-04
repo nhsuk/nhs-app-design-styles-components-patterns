@@ -88,7 +88,7 @@ const onDragEnd = () => {
   sheetContents.classList.remove("not-selectable")
   draggableArea.style.cursor = document.body.style.cursor = ""
 
-  if (sheetHeight < 25) {
+  if (sheetHeight < 35) {
     setIsSheetShown(false)
     // Remove overflow hidden to html and body tags
     document.body.classList.remove("app-bottom-sheet__body")

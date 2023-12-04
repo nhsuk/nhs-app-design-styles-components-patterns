@@ -76,32 +76,39 @@
 }
 
 .app-bottom-sheet .app-bottom-sheet__draggable-area {
-  width: 100%;
-  padding: 24px;
+  border-bottom: 1px solid $color_nhsuk-grey-4;
+  margin: 0 16px;
+  padding: 16px 0;
   cursor: grab;
+}
+
+.app-bottom-sheet__heading {
+  @include nhsuk-typography-responsive(22);
+
+  margin-bottom: 0;
+  padding-right: 48px;
 }
 
 .app-bottom-sheet .app-bottom-sheet__draggable-thumb {
   width: 36px;
   height: 5px;
-  background: #dcdcdc;
+  background: $color_nhsuk-grey-3;
   border-radius: 2.5px;
   margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16px;
 }
 
 .app-bottom-sheet .app-bottom-sheet__close-sheet {
-  background-color: transparent;
-  border: none;
-  color: $color_nhsuk-blue;
-  font-size: 16px;
-  padding: 0;
   position: absolute;
-  left: 24px;
-  top: 20px;
+  right: 16px;
+  top: 16px;
 }
 
 .app-bottom-sheet .app-bottom-sheet__body {
   height: 100%;
-  padding: 24px;
+  padding: 24px 16px;
   overflow-y: auto;
 }

@@ -16,6 +16,7 @@ const setSheetHeight = (value) => {
     sheetContents.classList.add("fullscreen")
   } else {
     sheetContents.classList.remove("fullscreen")
+    // Add overflow hidden to html and body tags
     document.body.classList.add("app-bottom-sheet__body")
     html.classList.add("app-bottom-sheet__body")
   }
@@ -34,11 +35,17 @@ openSheetButton.addEventListener("click", () => {
 // Hide the sheet when clicking the 'close' button
 sheet.querySelector(".app-bottom-sheet__close-sheet").addEventListener("click", () => {
   setIsSheetShown(false)
+  // Remove overflow hidden to html and body tags
+  document.body.classList.remove("app-bottom-sheet__body")
+  html.classList.remove("app-bottom-sheet__body")
 })
 
 // Hide the sheet when clicking the background
 sheet.querySelector(".app-bottom-sheet__overlay").addEventListener("click", () => {
   setIsSheetShown(false)
+  // Remove overflow hidden to html and body tags
+  document.body.classList.remove("app-bottom-sheet__body")
+  html.classList.remove("app-bottom-sheet__body")
 })
 
 const isFocused = element => document.activeElement === element
@@ -83,8 +90,11 @@ const onDragEnd = () => {
 
   if (sheetHeight < 25) {
     setIsSheetShown(false)
+    // Remove overflow hidden to html and body tags
+    document.body.classList.remove("app-bottom-sheet__body")
+    html.classList.remove("app-bottom-sheet__body")
   } else if (sheetHeight > 75) {
-    setSheetHeight(100)
+    setSheetHeight(98)
   } else {
     setSheetHeight(50)
   }

@@ -31,8 +31,8 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: #888;
-  opacity: 0.5;
+  background: #000;
+  opacity: 0.4;
 }
 
 .app-bottom-sheet .app-bottom-sheet__contents {
@@ -72,27 +72,32 @@
 }
 
 .app-bottom-sheet .app-bottom-sheet__controls {
-  display: flex;
+  
 }
 
 .app-bottom-sheet .app-bottom-sheet__draggable-area {
-  width: 3rem;
-  margin: auto;
-  padding: 1rem;
+  width: 100%;
+  padding: 24px;
   cursor: grab;
 }
 
 .app-bottom-sheet .app-bottom-sheet__draggable-thumb {
-  width: inherit;
-  height: 0.25rem;
+  width: 36px;
+  height: 5px;
   background: #dcdcdc;
-  border-radius: 0.125rem;
+  border-radius: 2.5px;
+  margin: 0 auto;
 }
 
 .app-bottom-sheet .app-bottom-sheet__close-sheet {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
-  padding: 0.7rem;
+  color: $color_nhsuk-blue;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  left: 24px;
+  top: 20px;
 }
 
 .app-bottom-sheet .app-bottom-sheet__body {

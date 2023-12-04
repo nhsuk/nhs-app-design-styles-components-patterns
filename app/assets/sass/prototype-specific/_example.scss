@@ -44,3 +44,14 @@
     outline: none;
   }
 }
+
+.app-button--link {
+  @include nhsuk-link-style-default;
+  @include nhsuk-typography-responsive(19);
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}

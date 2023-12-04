@@ -5,7 +5,7 @@
 {% block innerContent %}
 
   <!-- Button to open a sheet -->
-  <button class="nhsuk-button app-button" type="button" id="open-sheet" aria-controls="sheet">Open Sheet</button>
+  <button class="app-button--link" type="button" id="open-sheet" aria-controls="sheet">Open bottom sheet</button>
 
   <!-- The sheet component -->
   <div id="sheet" class="app-bottom-sheet" aria-hidden="true" role="dialog">
@@ -19,15 +19,15 @@
         <!-- The thing to drag if you want to resize the sheet -->
         <div class="app-bottom-sheet__draggable-area">
           <div class="app-bottom-sheet__draggable-thumb"></div>
-          <button class="app-bottom-sheet__close-sheet" type="button" title="Close the sheet">Close</button>
+          <button class="app-bottom-sheet__close-sheet app-button--link" type="button" title="Close the sheet">Close</button>
         </div>
         <!-- Button to close the sheet -->
       </header>
 
       <!-- Body of the sheet -->
       <main class="app-bottom-sheet__body">
-        <h2>Bottom sheet heading</h2>
-        <p>Bottom sheet content</p>
+        <h2>Bottom sheet example</h2>
+        <p>Here's where the content goes.</p>
       </main>
     </div>
   </div>

@@ -1,0 +1,98 @@
+.app-bottom-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.app-bottom-sheet[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.app-bottom-sheet .app-bottom-sheet__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #888;
+  opacity: 0.5;
+}
+
+.app-bottom-sheet .app-bottom-sheet__contents {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 1rem 1rem 0 0;
+
+  background: #fff;
+
+  overflow-y: hidden;
+
+  --default-transitions: transform 0.5s, border-radius 0.5s;
+
+  transition: var(--default-transitions);
+  transform: translateY(0);
+
+  max-width: 70rem;
+  max-height: 100vh;
+  height: 30vh;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+.app-bottom-sheet .app-bottom-sheet__contents:not(.not-selectable) {
+  transition: var(--default-transitions), height 0.5s;
+}
+
+.app-bottom-sheet .app-bottom-sheet__contents.fullscreen {
+  border-radius: 0;
+}
+
+.app-bottom-sheet[aria-hidden="true"] .app-bottom-sheet__contents {
+  transform: translateY(100%);
+}
+
+.app-bottom-sheet .app-bottom-sheet__controls {
+  display: flex;
+}
+
+.app-bottom-sheet .app-bottom-sheet__draggable-area {
+  width: 3rem;
+  margin: auto;
+  padding: 1rem;
+  cursor: grab;
+}
+
+.app-bottom-sheet .app-bottom-sheet__draggable-thumb {
+  width: inherit;
+  height: 0.25rem;
+  background: #dcdcdc;
+  border-radius: 0.125rem;
+}
+
+.app-bottom-sheet .app-bottom-sheet__close-sheet {
+  background-color: #fff;
+  border: none;
+  padding: 0.7rem;
+}
+
+.app-bottom-sheet .app-bottom-sheet__body {
+  height: 100%;
+  padding: 24px;
+  overflow-y: auto;
+}

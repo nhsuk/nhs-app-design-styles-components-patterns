@@ -4,6 +4,7 @@ const openSheetButton = $("#open-sheet")
 const sheet = $("#sheet")
 const sheetContents = sheet.querySelector(".app-bottom-sheet__contents")
 const draggableArea = sheet.querySelector(".app-bottom-sheet__draggable-area")
+const html = document.querySelector("html")
 
 let sheetHeight // in vh
 
@@ -15,6 +16,8 @@ const setSheetHeight = (value) => {
     sheetContents.classList.add("fullscreen")
   } else {
     sheetContents.classList.remove("fullscreen")
+    document.body.classList.add("app-bottom-sheet__body")
+    html.classList.add("app-bottom-sheet__body")
   }
 }
 

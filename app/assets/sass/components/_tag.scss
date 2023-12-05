@@ -5,78 +5,110 @@
 .app-tag {
   @include nhsuk-font($size: 19, $weight: normal, $line-height: 1.5);
   background-color: tint($color_nhsuk-blue, 80%);
-  border: 1px solid tint($color_nhsuk-blue, 60%);
+  border: 1px solid shade($color_nhsuk-blue, 30%);
   color: shade($color_nhsuk-blue, 30%);
   margin-bottom: -1px;
   margin-top: -1px;
-  padding: 1px nhsuk-spacing(2);
+  padding: 2px 10px;
 
   @include mq($from: tablet) {
     line-height: 1.47368;
   }
 }
 
+.app-tag--new {
+  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1.25);
+  background-color: tint($color_nhsuk-blue, 80%);
+  border: 1px solid shade($color_nhsuk-blue, 30%);
+  border-radius: 2px;
+  color: shade($color_nhsuk-blue, 30%);
+  letter-spacing: 0.01rem;
+  padding: 3px 10px;
+
+  @include mq($until: tablet) {
+    line-height: 1.4285em;
+  }
+}
+
+.app-tag--uppercase {
+  text-transform: uppercase;
+}
+
 /* Colour variants
   ========================================================================== */
 
+$color_tag-green-text: #04512B;
+$color_tag-green-background: #B5EDD2;
+$color_tag-grey-background: #E0DDDD;
+$color_tag-grey-text: #303E4F;
+$color_tag-purple-background: #DAD7F3;
+$color_tag-purple-text: #532D8B;
+$color_tag-orange-background: #FAD59E;
+$color_tag-orange-text: #583F01;
+$color_tag-red-background: #FFD1D1;
+$color_tag-red-text: #8D0B01;
+$color_tag-yellow-background: #F0E993;
+$color_tag-yellow-text: #5C4800;
+
+
 .app-tag--white {
   background-color: $color_nhsuk-white;
-  border-color: tint($color_nhsuk-black, 80%);
+  border-color: $color_nhsuk-black;
   color: $color_nhsuk-black;
 }
 
 .app-tag--grey {
-  background-color: tint($color_nhsuk-grey-1, 80%);
-  border-color: tint($color_nhsuk-grey-1, 60%);
-  color: shade($color_nhsuk-grey-1, 30%);
+  background-color: $color_tag-grey-background;
+  border-color: $color_tag-grey-text;
+  color: $color_tag-grey-text;
 }
 
 .app-tag--green {
-  background-color: tint($color_nhsuk-green, 80%);
-  border-color: tint($color_nhsuk-green, 60%);
-  color: shade($color_nhsuk-green, 40%);
+  background-color: $color_tag-green-background;
+  border-color: $color_tag-green-text;
+  color: $color_tag-green-text;
 }
 
 .app-tag--aqua-green {
   background-color: tint($color_nhsuk-aqua-green, 80%);
-  border-color: tint($color_nhsuk-aqua-green, 60%);
+  border-color: shade($color_nhsuk-aqua-green, 50%);
   color: shade($color_nhsuk-aqua-green, 50%);
 }
 
 .app-tag--blue {
   background-color: tint($color_nhsuk-blue, 80%);
-  border-color: tint($color_nhsuk-blue, 60%);
+  border-color: shade($color_nhsuk-blue, 30%);
   color: shade($color_nhsuk-blue, 30%);
 }
 
 .app-tag--purple {
-  background-color: tint($color_nhsuk-purple, 85%);
-  border-color: tint($color_nhsuk-purple, 70%);
-  color: tint($color_nhsuk-purple, 10%);
+  background-color: $color_tag-purple-background;
+  border-color: $color_tag-purple-text;
+  color: $color_tag-purple-text;
 }
 
 .app-tag--pink {
   background-color: tint($color_nhsuk-pink, 85%);
-  border-color: tint($color_nhsuk-pink, 60%);
+  border-color: shade($color_nhsuk-pink, 25%);
   color: shade($color_nhsuk-pink, 25%);
 }
 
 .app-tag--red {
-  background-color: tint($color_nhsuk-red, 80%);
-  border-color: tint($color_nhsuk-red, 60%);
-  color: shade($color_nhsuk-red, 40%);
+  background-color: $color_tag-red-background;
+  border-color: $color_tag-red-text;
+  color: $color_tag-red-text;
 }
 
 .app-tag--orange {
-  background-color: tint($color_nhsuk-warm-yellow, 70%);
-  border-color: tint($color_nhsuk-warm-yellow, 30%);
-  color: shade($color_nhsuk-warm-yellow, 65%);
+  background-color: $color_tag-orange-background;
+  border-color: $color_tag-orange-text;
+  color: $color_tag-orange-text;
 }
 
 .app-tag--yellow {
-  background-color: tint($color_nhsuk-yellow, 70%);
-  border-color: shade($color_nhsuk-yellow, 10%);
-  color: shade($color_nhsuk-yellow, 65%);
+  background-color: $color_tag-yellow-background;
+  border-color: $color_tag-yellow-text;
+  color: $color_tag-yellow-text;
 }
 
 .app-tag--text-color {
@@ -93,6 +125,10 @@
 
 .app-tag--no-border {
   border: 0;
-  padding: 2px nhsuk-spacing(2);
+  padding: 3px 10px;
+
+  &.app-tag--new {
+    padding: 4px 10px;
+  }
 }
   

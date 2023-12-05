@@ -4,7 +4,14 @@
 
 {% block innerContent %}
 
-  <h2 class="nhsuk-heading-m">Current design</h2>
+  <h2 class="nhsuk-heading-l">Current design</h2>
+
+  <ul>
+    <li>font size 14px on mobile and desktop</li>
+    <li>font weight bold</li>
+    <li>border 1px</li>
+    <li>sentence case</li>
+  </ul>
 
   <div class="example">
     <table class="nhsuk-table">
@@ -139,33 +146,33 @@
     </table>
   </div>
 
-  <h2 class="nhsuk-heading-m">New design options</h2>
+  <h2 class="nhsuk-heading-l">New design options</h2>
 
-  <h3 class="nhsuk-heading-xs">With border</h3>
+  <h3 class="nhsuk-heading-m">Option 1</h3>
+
+  <p>In line with <a href="https://deploy-preview-2977--govuk-design-system-preview.netlify.app/components/tag/">new gov.uk tag design</a>, including:</p>
+  <ul>
+    <li>no longer bold</li>
+    <li>increase font size to 19px on desktop / 16px on mobile</li>
+    <li>change colours to use lighter background colours</li>
+  </ul>
+    
 
   <div class="example">
     <table class="nhsuk-table">
       <thead class="nhsuk-table__head">
         <tr class="nhsuk-table__row">
-          <th class="nhsuk-table__header" scope="col"> Class name </th>
-          <th class="nhsuk-table__header" scope="col"> Tag </th>
+          <th class="nhsuk-table__header" scope="col"> No border </th>
+          <th class="nhsuk-table__header" scope="col"> Border </th>
         </tr>
       </thead>
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag </code>
-          </td>
-          <td class="nhsuk-table__cell">
             {{ tag({
-              text: "Active",
-              classes: "app-tag"
+              text: "Started",
+              classes: "app-tag--no-border app-tag app-tag--white"
             })}}
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--white </code>
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -176,7 +183,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--grey </code>
+            {{ tag({
+              text: "Not started",
+              classes: "app-tag--no-border app-tag app-tag--grey"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -187,7 +197,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--green </code>
+            {{ tag({
+              text: "New",
+              classes: "app-tag--no-border app-tag app-tag--green"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -198,7 +211,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--aqua-green </code>
+            {{ tag({
+              text: "Active",
+              classes: "app-tag--no-border app-tag app-tag--aqua-green"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -209,7 +225,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--blue </code>
+            {{ tag({
+              text: "Pending",
+              classes: "app-tag--no-border app-tag app-tag--blue"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -220,7 +239,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--purple </code>
+            {{ tag({
+              text: "Received",
+              classes: "app-tag--no-border app-tag app-tag--purple"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -231,7 +253,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--pink </code>
+            {{ tag({
+              text: "Sent",
+              classes: "app-tag--no-border app-tag app-tag--pink"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -242,7 +267,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--red </code>
+            {{ tag({
+              text: "Rejected",
+              classes: "app-tag--no-border app-tag app-tag--red"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -253,7 +281,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--orange </code>
+            {{ tag({
+              text: "Declined",
+              classes: "app-tag--no-border app-tag app-tag--orange"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -264,7 +295,10 @@
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--yellow </code>
+            {{ tag({
+              text: "Delayed",
+              classes: "app-tag--no-border app-tag app-tag--yellow"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
@@ -273,25 +307,165 @@
             })}}
           </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="nhsuk-heading-m">Option 2</h3>
+
+  <ul>
+    <li>letter spacing</li>
+    <li>border radius 2px</li>
+    <li>increase font size to 16px on desktop / 14px on mobile</li>
+    <li>change colours to use lighter background colours</li>
+  </ul>
+
+  <div class="example">
+    <table class="nhsuk-table">
+      <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th class="nhsuk-table__header" scope="col"> No border </th>
+          <th class="nhsuk-table__header" scope="col"> Border </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--text-color </code>
+            {{ tag({
+              text: "Started",
+              classes: "app-tag--no-border app-tag--new app-tag--white"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
-              text: "Completed",
-              classes: "app-tag app-tag--text-color"
+              text: "Started",
+              classes: "app-tag--new app-tag--white"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--secondary-text-color </code>
+            {{ tag({
+              text: "Not started",
+              classes: "app-tag--no-border app-tag--new app-tag--grey"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
-              text: "Cannot start yet",
-              classes: "app-tag app-tag--secondary-text-color"
+              text: "Not started",
+              classes: "app-tag--new app-tag--grey"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "New",
+              classes: "app-tag--no-border app-tag--new app-tag--green"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "New",
+              classes: "app-tag--new app-tag--green"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Active",
+              classes: "app-tag--no-border app-tag--new app-tag--aqua-green"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Active",
+              classes: "app-tag--new app-tag--aqua-green"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Pending",
+              classes: "app-tag--no-border app-tag--new app-tag--blue"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Pending",
+              classes: "app-tag--new app-tag--blue"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Received",
+              classes: "app-tag--no-border app-tag--new app-tag--purple"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Received",
+              classes: "app-tag--new app-tag--purple"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Sent",
+              classes: "app-tag--no-border app-tag--new app-tag--pink"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Sent",
+              classes: "app-tag--new app-tag--pink"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Rejected",
+              classes: "app-tag--no-border app-tag--new app-tag--red"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Rejected",
+              classes: "app-tag--new app-tag--red"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Declined",
+              classes: "app-tag--no-border app-tag--new app-tag--orange"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Declined",
+              classes: "app-tag--new app-tag--orange"
+            })}}
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Delayed",
+              classes: "app-tag--no-border app-tag--new app-tag--yellow"
+            })}}
+          </td>
+          <td class="nhsuk-table__cell">
+            {{ tag({
+              text: "Delayed",
+              classes: "app-tag--new app-tag--yellow"
             })}}
           </td>
         </tr>
@@ -299,157 +473,156 @@
     </table>
   </div>
 
-  <h3 class="nhsuk-heading-xs">Without border</h3>
+  <h3 class="nhsuk-heading-m">Option 3</h3>
+
+  <p>Same as option 2 but uppercase.</p>
 
   <div class="example">
     <table class="nhsuk-table">
       <thead class="nhsuk-table__head">
         <tr class="nhsuk-table__row">
-          <th class="nhsuk-table__header" scope="col"> Class name </th>
-          <th class="nhsuk-table__header" scope="col"> Tag </th>
+          <th class="nhsuk-table__header" scope="col"> No border </th>
+          <th class="nhsuk-table__header" scope="col"> Border </th>
         </tr>
       </thead>
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag </code>
-          </td>
-          <td class="nhsuk-table__cell">
             {{ tag({
-              text: "Active",
-              classes: "app-tag--no-border app-tag"
+              text: "Started",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--white"
             })}}
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--white </code>
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Started",
-              classes: "app-tag--no-border app-tag app-tag--white"
+              classes: "app-tag--new app-tag--uppercase app-tag--white"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--grey </code>
+            {{ tag({
+              text: "Not started",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--grey"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Not started",
-              classes: "app-tag--no-border app-tag app-tag--grey"
+              classes: "app-tag--new app-tag--uppercase app-tag--grey"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--green </code>
+            {{ tag({
+              text: "New",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--green"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "New",
-              classes: "app-tag--no-border app-tag app-tag--green"
+              classes: "app-tag--new app-tag--uppercase app-tag--green"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--aqua-green </code>
+            {{ tag({
+              text: "Active",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--aqua-green"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Active",
-              classes: "app-tag--no-border app-tag app-tag--aqua-green"
+              classes: "app-tag--new app-tag--uppercase app-tag--aqua-green"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--blue </code>
+            {{ tag({
+              text: "Pending",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--blue"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Pending",
-              classes: "app-tag--no-border app-tag app-tag--blue"
+              classes: "app-tag--new app-tag--uppercase app-tag--blue"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--purple </code>
+            {{ tag({
+              text: "Received",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--purple"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Received",
-              classes: "app-tag--no-border app-tag app-tag--purple"
+              classes: "app-tag--new app-tag--uppercase app-tag--purple"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--pink </code>
+            {{ tag({
+              text: "Sent",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--pink"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Sent",
-              classes: "app-tag--no-border app-tag app-tag--pink"
+              classes: "app-tag--new app-tag--uppercase app-tag--pink"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--red </code>
+            {{ tag({
+              text: "Rejected",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--red"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Rejected",
-              classes: "app-tag--no-border app-tag app-tag--red"
+              classes: "app-tag--new app-tag--uppercase app-tag--red"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--orange </code>
+            {{ tag({
+              text: "Declined",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--orange"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Declined",
-              classes: "app-tag--no-border app-tag app-tag--orange"
+              classes: "app-tag--new app-tag--uppercase app-tag--orange"
             })}}
           </td>
         </tr>
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--yellow </code>
+            {{ tag({
+              text: "Delayed",
+              classes: "app-tag--no-border app-tag--new app-tag--uppercase app-tag--yellow"
+            })}}
           </td>
           <td class="nhsuk-table__cell">
             {{ tag({
               text: "Delayed",
-              classes: "app-tag--no-border app-tag app-tag--yellow"
-            })}}
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--text-color </code>
-          </td>
-          <td class="nhsuk-table__cell">
-            {{ tag({
-              text: "Completed",
-              classes: "app-tag--no-border app-tag app-tag--text-color"
-            })}}
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            <code> nhsuk-tag--secondary-text-color </code>
-          </td>
-          <td class="nhsuk-table__cell">
-            {{ tag({
-              text: "Cannot start yet",
-              classes: "app-tag--no-border app-tag app-tag--secondary-text-color"
+              classes: "app-tag--new app-tag--uppercase app-tag--yellow"
             })}}
           </td>
         </tr>

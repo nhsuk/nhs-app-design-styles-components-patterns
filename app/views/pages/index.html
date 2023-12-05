@@ -15,11 +15,7 @@
         {{ pageDescription }}
       </p>
 
-      <div class="nhsuk-inset-text">
-        <p>The prototype uses default data to create dynamic content. You can change the dynamic content in <a href="/data-settings">data settings</a>.</p>
-      </div>
-
-      <h2 class="nhsuk-heading-xs">Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+      <h2 class="nhsuk-heading-m">Homepage {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
       <ul clas="nhsuk-list">
         <li>
@@ -33,7 +29,7 @@
         </li>
       </ul>
 
-      <h2 class="nhsuk-heading-xs">Hubpages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+      <h2 class="nhsuk-heading-m">Hubpages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
@@ -74,7 +70,7 @@
           </li>
         </ul>
 
-        <h2 class="nhsuk-heading-xs">Your health {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h2 class="nhsuk-heading-m">Your health {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
@@ -100,7 +96,7 @@
           </li>
         </ul>
         
-        <h2 class="nhsuk-heading-xs">Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h2 class="nhsuk-heading-m">Messages {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
@@ -114,7 +110,7 @@
           </li>
         </ul>
 
-        <h2 class="nhsuk-heading-xs">Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
+        <h2 class="nhsuk-heading-m">Account and settings {% if data['web'] === "yes" %}(Web){% else %}(Native){% endif %}</h2>
 
         <ul clas="nhsuk-list">
           <li>
@@ -126,11 +122,16 @@
           <li>
             <a href="/pages/account-and-settings/switch-profiles">Switch profiles</a>
           </li>
-        </ul>  
+        </ul> 
         
-        <div class="nhsuk-inset-text">
-          <p>These pages are in the <a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/tree/main/app/views/pages">/app/views/pages folder on GitHub</a></p>
-        </div>
+        <hr>
+
+        <h2>Prototype data</h2>
+        <p>The prototype uses default data to create dynamic content, for example, the username that gets displayed on the home page.</p> 
+        <p>The content can be changed with <a href="/data-settings">data settings</a>. You can also toggle between viewing the native or web header and footer.</p>
+
+        <h2>Code</h2>
+        <p>The code for each page can be found in the <code>/app/views/pages</code> folder.</p>
 
     </div>
   </div>

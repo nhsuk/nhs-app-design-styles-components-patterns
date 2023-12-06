@@ -17,7 +17,7 @@
 }
 
 .app-badge-status-dot {
-  background-color: red;
+  background-color: $color_nhsuk-blue;
   border-radius: 50%;
   display: inline-block;
   margin-right: 12px;
@@ -30,4 +30,24 @@
 
 .app-badge--purple {
   background-color: $color_tag-purple-text;
+}
+
+.app-badge--yellow {
+  background-color: $color_tag-yellow-text;
+}
+
+.app-badge--green {
+  background-color: $color_tag-green-text;
+}
+
+.app-badge--grey {
+  background-color: $color_tag-grey-text;
+}
+
+.app-badge--red {
+  background-color: $color_tag-red-text;
+}
+
+.app-badge--orange {
+  background-color: $color_tag-orange-text;
 }

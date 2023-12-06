@@ -1,0 +1,107 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "GP surgery appointments" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <!-- SECTION TITLE - SERVICES -->
+      {{ sectionTitle({
+        title: "Upcoming appointments"
+      })}}
+
+      <!-- CARDS -->
+      <ul class="app-panel-link-card-spaced">
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content">
+            <span class="app-panel-link-card__tag">
+              {{ tag({
+                text: "Action needed",
+                classes: "app-tag--no-border app-tag--new app-tag--purple"
+              })}}
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+              Oral surgery
+              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+              </svg>
+            </a>
+            <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Tuesday 5 November 2023 <br> 10.30am</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12">The Willows, Croydon University Hospital</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12"><span class="app-badge-status-dot app-badge--purple"></span>1 document attached</p>
+          </div>
+        </li>
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content">
+            <span class="app-panel-link-card__tag">
+              {{ tag({
+                text: "Upcoming",
+                classes: "app-tag--no-border app-tag--new app-tag--green"
+              })}}
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+              Asthma appointment
+              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+              </svg>
+            </a>
+            <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Friday 27 October 2023 <br> 2.45pm</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12">The Willows, Croydon University Hospital</p>
+          </div>
+        </li>
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content">
+            <span class="app-panel-link-card__tag">
+              {{ tag({
+                text: "Cancelled",
+                classes: "app-tag--no-border app-tag--new app-tag--grey"
+              })}}
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+              Cardiology appointment
+              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+              </svg>
+            </a>
+            <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Monday 5 June 2023 <br> 8.00am</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12">The Willows, Croydon University Hospital</p>   
+          </div>
+        </li>
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content">
+            <span class="app-panel-link-card__tag">
+              {{ tag({
+                text: "Pending",
+                classes: "app-tag--no-border app-tag--new app-tag--yellow"
+              })}}
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
+              Orthopaedic appointment
+              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+              </svg>
+            </a>
+            <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Thursday 15 March 2023 <br> 9.15am</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12">The Willows, Croydon University Hospital</p>
+            <p class="app-panel-link-card__description nhsuk-u-margin-top-12">1 document attached</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  {% endblock %}

@@ -28,6 +28,18 @@
     width: 100%;
   }
 
+  .nhsuk-table {
+    margin-bottom: 16px;
+  }
+
+}
+
+.example--no-tag {
+  padding: nhsuk-spacing(4);
+
+  &:before {
+    display: none;
+  }
 }
 
 .example--tall {

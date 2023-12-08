@@ -1,0 +1,49 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Select location" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form method="post" action="/pages/services/gp-appointment-clinician" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-location",
+          name: "gp-appointment-location",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--xl",
+              isPageHeading: true
+            }
+          },
+          hint: {
+            text: "Only one available"
+          },
+          "items": [
+            {
+              value: "York Road practice",
+              text: "York Road practice",
+              checked: checked("gp-appointment-location", "York Road practice")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

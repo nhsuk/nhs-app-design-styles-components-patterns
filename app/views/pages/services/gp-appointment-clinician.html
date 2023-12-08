@@ -1,0 +1,54 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Select clinician" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form method="post" action="/pages/services/gp-appointment-select" novalidate="novalidate">
+
+        {{ checkboxes({
+          idPrefix: "gp-appointment-clinician",
+          name: "gp-appointment-clinician",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--xl",
+              isPageHeading: true
+            }
+          },
+          hint: {
+            text: "Optional"
+          },
+          "items": [
+            {
+              value: "Dr K Cooper",
+              text: "Dr K Cooper",
+              checked: checked("gp-appointment-clinician", "Dr K Cooper")
+            },
+            {
+              value: "Dr R Baines",
+              text: "Dr R Baines",
+              checked: checked("gp-appointment-clinician", "Dr R Baines")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

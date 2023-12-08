@@ -1,0 +1,74 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Select appointment type" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form method="post" action="/pages/services/gp-appointment-reason" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-type",
+          name: "gp-appointment-type",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--xl",
+              isPageHeading: true
+            }
+          },
+          hint: {
+            text: "Select one"
+          },
+          "items": [
+            {
+              value: "General",
+              text: "General",
+              checked: checked("gp-appointment-type", "General")
+            },
+            {
+              value: "BABY IMMS 1yr and 3yr4mnths Other ages via reception",
+              text: "BABY IMMS 1yr and 3yr4mnths Other ages via reception",
+              checked: checked("gp-appointment-type", "BABY IMMS 1yr and 3yr4mnths Other ages via reception")
+            },
+            {
+              value: "Diabetes or Asthma Review F2F by Invitation",
+              text: "Diabetes or Asthma Review F2F by Invitation",
+              checked: checked("gp-appointment-type", "Diabetes or Asthma Review F2F by Invitation")
+            },
+            {
+              value: "Blood Test by Invitation or Blood Monitoring",
+              text: "Blood Test by Invitation or Blood Monitoring",
+              checked: checked("gp-appointment-type", "Blood Test by Invitation or Blood Monitoring")
+            },
+            {
+              value: "NHS Healthcheck by Invitation NOT routine annual review",
+              text: "NHS Healthcheck by Invitation NOT routine annual review",
+              checked: checked("gp-appointment-type", "NHS Healthcheck by Invitation NOT routine annual review")
+            },
+            {
+              value: "Regular B12 injection",
+              text: "Regular B12 injection",
+              checked: checked("gp-appointment-type", "Regular B12 injection")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

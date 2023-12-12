@@ -4,7 +4,7 @@
 
 .app-button {
   margin-top: nhsuk-spacing(2);
-  padding: 12px 40px;
+  padding: 12px 32px;
 
   @include mq($until: tablet) {
     width: 100%;

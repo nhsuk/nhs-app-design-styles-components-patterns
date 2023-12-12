@@ -1,0 +1,108 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Confirm appointment details" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Monday 20 November 2023
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> date</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            5:30pm
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> time</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Appointment type
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            General
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> appointment type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Dr. K Cooper
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> clinician</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Reason for appointment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            I am experiencing back pain which has been ongoing for over 10 days.
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> reason for appointment</span>
+            </a>
+          </dd>
+        </div>
+   
+      </dl>
+
+
+      <form method="post" action="/pages/services/gp-appointment-confirmed" novalidate="novalidate">
+
+        {{ button({
+          text: "Confirm booking",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

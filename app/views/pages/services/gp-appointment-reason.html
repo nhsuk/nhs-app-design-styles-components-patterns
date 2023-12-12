@@ -5,14 +5,32 @@
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Select appointment type" %}
+{% set pageHeading = "Why do you need an appointment?" %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
       <form method="post" action="/pages/services/gp-appointment-location" novalidate="novalidate">
+
+        {{ textarea({
+          name: "gp-appointment-reason",
+          id: "gp-appointment-reason",
+          label: {
+            text: "Add notes for your GP",
+            classes: "nhsuk-label--m nhsuk-u-margin-bottom-2"
+          },
+          hint: {
+            text: "You can add a note about your appointment here. Your note may not be seen or replied to."
+          }
+        }) }}
 
         {{ button({
           text: "Continue",

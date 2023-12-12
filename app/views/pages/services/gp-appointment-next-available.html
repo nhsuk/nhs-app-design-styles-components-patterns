@@ -1,0 +1,80 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Next available appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-6">Monday 20 November 2023</h2>
+
+      <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-time-1",
+          name: "gp-appointment-time-1",
+          classes: "nhsuk-u-margin-bottom-4",
+          fieldset: {
+            legend: {
+              text: "Dr. K Cooper",
+              classes: "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              value: "5:30pm",
+              text: "5:30pm",
+              checked: checked("gp-appointment-time-1", "5:30pm")
+            }
+          ]
+        }) }}
+
+        {{ radios({
+          idPrefix: "gp-appointment-time-2",
+          name: "gp-appointment-time-2",
+          classes: "nhsuk-u-margin-bottom-4",
+          fieldset: {
+            legend: {
+              text: "Dr. R Baines",
+              classes: "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              value: "9am",
+              text: "9am",
+              checked: checked("gp-appointment-time-2", "9am")
+            },
+            {
+              value: "2pm",
+              text: "2pm",
+              checked: checked("gp-appointment-time-2", "2pm")
+            }
+          ]
+        }) }}
+
+        <a class="nhsuk-u-display-inline-block nhsuk-u-margin-bottom-6" href="#">View more appointment times</a>
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

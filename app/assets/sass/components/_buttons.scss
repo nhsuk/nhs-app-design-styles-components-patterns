@@ -3,6 +3,7 @@
 // ==========================================================================
 
 .app-button {
+  margin-top: nhsuk-spacing(2);
   padding: 12px 40px;
 
   @include mq($until: tablet) {

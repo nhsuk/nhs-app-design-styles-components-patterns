@@ -44,8 +44,10 @@
   }
 
   &:visited {
+    color: $nhsuk-link-color;
+    
     .app-panel-link-card__chevron {
-      fill: $nhsuk-link-visited-color;
+      fill: $nhsuk-link-color;
     }
   }
 

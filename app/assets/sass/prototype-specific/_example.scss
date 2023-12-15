@@ -5,14 +5,14 @@
   position: relative;
 
   &:before {
-    @include nhsuk-font($size: 19, $weight: normal, $line-height: 1);
+    @include nhsuk-font($size: 16, $weight: normal, $line-height: 1);
     background-color: white;
     border: 1px solid $color_nhsuk-grey-3;
     color: #354550;
     content: "Example";
     font-kerning: 1;
     left: -1px;
-    padding: nhsuk-spacing(1) nhsuk-spacing(2);
+    padding: 4px 10px;
     position: absolute;
     top: -1px;
   }

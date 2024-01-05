@@ -14,14 +14,19 @@
   display: flex;
   flex-wrap: nowrap;
   padding: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .app-date-picker__item {
-  background: $color_nhsuk-grey-2;
-  color: $color_nhsuk-white;
+  background: $color_nhsuk-grey-4;
+  color: $color_nhsuk-grey-2;
   display: inline-block;
-  flex: 1 0 68px;
   margin: 2px;
+  min-height: 68px;
+  min-width: 68px;
   text-align: center;
 
   &:last-child {
@@ -69,6 +74,7 @@
   background: transparent;
   border: 0;
   height: 68px;
+  padding: 0;
   position: absolute;
   top: 0;
   width: 24px;

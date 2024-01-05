@@ -1,0 +1,188 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Select appointment date and time" %}
+{% set pageDescription = "The next available appointment is Monday 20 November." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-6">November 2023</h2>
+
+      <div class="app-date-picker">
+        <button class="app-date-picker__button app-date-picker__button--left" onclick="clickLeft()">
+          <span class="nhsuk-u-visually-hidden">Left</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 10 15" fill="none">
+            <path d="M8.17917 14.9698C7.92917 14.9698 7.68917 14.8798 7.49917 14.6998L1.12917 8.72978C0.929174 8.53978 0.819174 8.27978 0.809174 8.00978C0.799174 7.73978 0.919173 7.46978 1.11917 7.27978L7.48917 1.16978C7.88917 0.789782 8.51917 0.799782 8.89917 1.19978C9.27917 1.59978 9.26917 2.22978 8.86917 2.60978L3.25917 7.98978L8.85917 13.2398C9.25917 13.6198 9.27917 14.2498 8.90917 14.6498C8.70917 14.8598 8.44917 14.9698 8.17917 14.9698Z" fill="#005EB8"/>
+          </svg>
+        </button>
+        <ul class="app-date-picker__container" id="app-date-picker__container">
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link app-date-picker__link--active">
+              <span class="date-picker__day">Mon</span>
+              <span class="date-picker__number">20</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Tue</span>
+              <span class="date-picker__number">21</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <span class="date-picker__day">Wed</span>
+            <span class="date-picker__number">22</span>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Thu</span>
+              <span class="date-picker__number">23</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Fri</span>
+              <span class="date-picker__number">24</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Sat</span>
+              <span class="date-picker__number">25</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Sun</span>
+              <span class="date-picker__number">26</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Mon</span>
+              <span class="date-picker__number">27</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Tue</span>
+              <span class="date-picker__number">28</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Wed</span>
+              <span class="date-picker__number">29</span>
+            </a>
+          </li>
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link">
+              <span class="date-picker__day">Thu</span>
+              <span class="date-picker__number">30</span>
+            </a>
+          </li>
+        </ul>
+        <button class="app-date-picker__button app-date-picker__button--right" onclick="clickRight()">
+          <span class="nhsuk-u-visually-hidden">Right</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8.82191 19.11C8.56191 19.11 8.29191 19.01 8.10191 18.8C7.72191 18.4 7.73191 17.77 8.13191 17.39L13.7419 12.01L8.14191 6.75999C7.74191 6.37999 7.72191 5.74999 8.09191 5.34999C8.47191 4.94999 9.10191 4.92999 9.50191 5.29999L15.8719 11.27C16.0719 11.46 16.1819 11.72 16.1919 11.99C16.2019 12.26 16.0819 12.53 15.8819 12.72L9.51191 18.83C9.32191 19.02 9.07191 19.11 8.82191 19.11Z" fill="#005EB8"/>
+            </svg>
+        </button>
+      </div>
+
+      <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+
+      <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-time-1",
+          name: "gp-appointment-time-1",
+          classes: "nhsuk-u-margin-bottom-4",
+          fieldset: {
+            legend: {
+              text: "Dr. K Cooper",
+              classes: "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              value: "5:30pm",
+              text: "5:30pm",
+              checked: checked("gp-appointment-time-1", "5:30pm")
+            }
+          ]
+        }) }}
+
+        {{ radios({
+          idPrefix: "gp-appointment-time-2",
+          name: "gp-appointment-time-2",
+          classes: "nhsuk-u-margin-bottom-4",
+          fieldset: {
+            legend: {
+              text: "Dr. R Baines",
+              classes: "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              value: "9am",
+              text: "9am",
+              checked: checked("gp-appointment-time-2", "9am")
+            },
+            {
+              value: "2pm",
+              text: "2pm",
+              checked: checked("gp-appointment-time-2", "2pm")
+            }
+          ]
+        }) }}
+
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block pageScripts %}
+
+    <script>
+      function clickLeft() {
+        let container = document.querySelector('#app-date-picker__container');
+        container.scrollTo({
+          left:container.scrollLeft - 200,
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      function clickRight() {
+        let container = document.querySelector('#app-date-picker__container');
+        container.scrollTo({
+          left:container.scrollLeft + 200,
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    </script>
+
+  {% endblock %}

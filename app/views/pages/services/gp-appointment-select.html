@@ -30,8 +30,8 @@
           </svg>
         </button>
         <ul class="app-date-picker__container" id="app-date-picker__container">
-          <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link app-date-picker__link--active">
+          <li class="app-date-picker__item app-date-picker__item--active">
+            <a href="#" class="app-date-picker__link">
               <span class="date-picker__day">Mon</span>
               <span class="date-picker__number">20</span>
             </a>
@@ -166,6 +166,7 @@
   {% block pageScripts %}
 
     <script>
+
       function clickLeft() {
         let container = document.querySelector('#app-date-picker__container');
         container.scrollTo({
@@ -183,6 +184,18 @@
           behavior: "smooth"
         });
       }
+
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("app-date-picker__container");
+      var btns = header.getElementsByClassName("app-date-picker__item");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("app-date-picker__item--active");
+        current[0].className = current[0].className.replace(" app-date-picker__item--active", "");
+        this.className += " app-date-picker__item--active";
+        });
+      }
+
     </script>
 
   {% endblock %}

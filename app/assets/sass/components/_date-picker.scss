@@ -47,12 +47,19 @@
   }
 }
 
-.app-date-picker__link--active {
-  background: $color_nhsuk-blue;
-  color: $color_nhsuk-white;
-
-  &:visited {
+.app-date-picker__item--active {
+  .app-date-picker__link {
+    background: $color_nhsuk-blue;
     color: $color_nhsuk-white;
+
+    &:visited {
+      color: $color_nhsuk-white;
+    }
+
+    &:focus {
+      background-color: #ffeb3b;;
+      color: #212b32;
+    }
   }
 }
 
@@ -78,6 +85,14 @@
   position: absolute;
   top: 0;
   width: 24px;
+
+  &:focus {
+    background-color: #ffeb3b;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    outline: 4px solid transparent;
+    text-decoration: none;
+  }
 }
 
 .app-date-picker__button--left {

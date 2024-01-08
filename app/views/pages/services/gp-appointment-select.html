@@ -31,13 +31,13 @@
         </button>
         <ul class="app-date-picker__container" id="app-date-picker__container">
           <li class="app-date-picker__item app-date-picker__item--active">
-            <a href="#" class="app-date-picker__link" onclick="openCity(event, 'date-1')">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-1')">
               <span class="date-picker__day">Mon</span>
               <span class="date-picker__number">20</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link" onclick="openCity(event, 'date-2')">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-2')">
               <span class="date-picker__day">Tue</span>
               <span class="date-picker__number">21</span>
             </a>
@@ -47,49 +47,49 @@
             <span class="date-picker__number">22</span>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link" onclick="openCity(event, 'date-3')">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-3')">
               <span class="date-picker__day">Thu</span>
               <span class="date-picker__number">23</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-4')">
               <span class="date-picker__day">Fri</span>
               <span class="date-picker__number">24</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-5')">
               <span class="date-picker__day">Sat</span>
               <span class="date-picker__number">25</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-6')">
               <span class="date-picker__day">Sun</span>
               <span class="date-picker__number">26</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-7')">
               <span class="date-picker__day">Mon</span>
               <span class="date-picker__number">27</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-8')">
               <span class="date-picker__day">Tue</span>
               <span class="date-picker__number">28</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-9')">
               <span class="date-picker__day">Wed</span>
               <span class="date-picker__number">29</span>
             </a>
           </li>
           <li class="app-date-picker__item">
-            <a href="#" class="app-date-picker__link">
+            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-10')">
               <span class="date-picker__day">Thu</span>
               <span class="date-picker__number">30</span>
             </a>
@@ -103,13 +103,12 @@
         </button>
       </div>
 
-      <div id="appointments">
+        <form id="appointmentWrapper" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
 
-        <!-- Tab content -->
-        <div id="date-1" class="tabcontent" style="display: block">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+          <!-- Tab content -->
+          <div id="date-1" class="appointments" style="display: block">
 
-          <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
     
             {{ radios({
               idPrefix: "gp-appointment-time-1",
@@ -154,86 +153,317 @@
               ]
             }) }}
     
-    
-            {{ button({
-              text: "Continue",
-              classes: "app-button"
-            }) }}
-            
-          </form>
         </div>
 
-        <div id="date-2" class="tabcontent">
+        <div id="date-2" class="appointments">
           <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
-
-          <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
     
-            {{ radios({
-              idPrefix: "gp-appointment-time-1",
-              name: "gp-appointment-time-1",
-              classes: "nhsuk-u-margin-bottom-4",
-              fieldset: {
-                legend: {
-                  text: "Dr. K Cooper",
-                  classes: "nhsuk-fieldset__legend--m"
-                }
-              },
-              "items": [
-                {
-                  value: "5:30pm",
-                  text: "5:30pm",
-                  checked: checked("gp-appointment-time-1", "5:30pm")
-                }
-              ]
-            }) }}  
-    
-            {{ button({
-              text: "Continue",
-              classes: "app-button"
-            }) }}
-            
-          </form>
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}  
+ 
         </div>
 
-        <div id="date-3" class="tabcontent">
+        <div id="date-3" class="appointments">
           <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
-
-          <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
     
-            {{ radios({
-              idPrefix: "gp-appointment-time-2",
-              name: "gp-appointment-time-2",
-              classes: "nhsuk-u-margin-bottom-4",
-              fieldset: {
-                legend: {
-                  text: "Dr. R Baines",
-                  classes: "nhsuk-fieldset__legend--m"
-                }
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
               },
-              "items": [
-                {
-                  value: "9am",
-                  text: "9am",
-                  checked: checked("gp-appointment-time-2", "9am")
-                },
-                {
-                  value: "2pm",
-                  text: "2pm",
-                  checked: checked("gp-appointment-time-2", "2pm")
-                }
-              ]
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
             }) }}
-    
-    
-            {{ button({
-              text: "Continue",
-              classes: "app-button"
-            }) }}
-            
-          </form>
+
         </div>
 
-      </div>
+        <div id="date-4" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}
+  
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
+              },
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
+          }) }}
+    
+        </div>
+
+        <div id="date-5" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}  
+    
+        </div>
+
+        <div id="date-6" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
+              },
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
+          }) }}
+    
+        </div>
+
+        <div id="date-7" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}
+  
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
+              },
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
+          }) }}
+    
+        </div>
+
+        <div id="date-8" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}  
+    
+        </div>
+
+        <div id="date-9" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
+              },
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
+          }) }}
+            
+        </div>
+
+        <div id="date-10" class="appointments">
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+    
+          {{ radios({
+            idPrefix: "gp-appointment-time-1",
+            name: "gp-appointment-time-1",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. K Cooper",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "5:30pm",
+                text: "5:30pm",
+                checked: checked("gp-appointment-time-1", "5:30pm")
+              }
+            ]
+          }) }}
+  
+          {{ radios({
+            idPrefix: "gp-appointment-time-2",
+            name: "gp-appointment-time-2",
+            classes: "nhsuk-u-margin-bottom-4",
+            fieldset: {
+              legend: {
+                text: "Dr. R Baines",
+                classes: "nhsuk-fieldset__legend--m"
+              }
+            },
+            "items": [
+              {
+                value: "9am",
+                text: "9am",
+                checked: checked("gp-appointment-time-2", "9am")
+              },
+              {
+                value: "2pm",
+                text: "2pm",
+                checked: checked("gp-appointment-time-2", "2pm")
+              }
+            ]
+          }) }}
+    
+        </div>
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button"
+        }) }}
+        
+      </form>
 
     </div>
   </div>
@@ -244,7 +474,7 @@
 
     <style>
       /* Style the tab content */
-      .tabcontent {
+      .appointments {
         display: none;
       }
     </style>
@@ -281,25 +511,22 @@
       }
 
       // Show and hide appointments
-      function openCity(evt, cityName) {
+      function openAppointments(evt, cityName) {
       // Declare all variables
-      var i, tabcontent, tablinks;
+      var i, tabcontent;
 
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
+      // Get all elements with class="appointments" and hide them
+      tabcontent = document.getElementsByClassName("appointments");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
-      }
-
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
 
       // Show the current tab, and add an "active" class to the button that opened the tab
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
+
+      var hiddenDiv = document.getElementById('appointmentWrapper');
+      hiddenDiv.focus()
     }
 
     </script>

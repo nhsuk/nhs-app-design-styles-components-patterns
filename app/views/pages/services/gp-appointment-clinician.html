@@ -31,12 +31,36 @@
             {
               value: "Dr K Cooper",
               text: "Dr K Cooper",
-              checked: checked("gp-appointment-clinician", "Dr K Cooper")
+              checked: checked("gp-appointment-clinician", "Dr K Cooper"),
+              exclusiveGroup: "clinician-list"
             },
             {
               value: "Dr R Baines",
               text: "Dr R Baines",
-              checked: checked("gp-appointment-clinician", "Dr R Baines")
+              checked: checked("gp-appointment-clinician", "Dr R Baines"),
+              exclusiveGroup: "clinician-list"
+            },
+            {
+              value: "Dr J Due",
+              text: "Dr J Due",
+              checked: checked("gp-appointment-clinician", "Dr J Due"),
+              exclusiveGroup: "clinician-list"
+            },
+            {
+              value: "Dr M Smith",
+              text: "Dr M Smith",
+              checked: checked("gp-appointment-clinician", "Dr M Smith"),
+              exclusiveGroup: "clinician-list"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "I have no preference",
+              checked: checked("gp-appointment-clinician", "none"),
+              exclusive: true,
+              exclusiveGroup: "clinician-list"
             }
           ]
         }) }}

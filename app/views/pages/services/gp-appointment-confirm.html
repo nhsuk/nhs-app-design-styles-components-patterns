@@ -22,23 +22,10 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Date
+            Date and time
           </dt>
           <dd class="nhsuk-summary-list__value">
-            Monday 20 November 2023
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a href="#">
-              Edit<span class="nhsuk-u-visually-hidden"> date</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Time
-          </dt>
-          <dd class="nhsuk-summary-list__value">
+            Monday 20 November 2023<br>
             5:30pm
           </dd>
           <dd class="nhsuk-summary-list__actions">
@@ -50,10 +37,24 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['gp-appointment-location'] or 'York Road practice' }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> location</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
             Appointment type
           </dt>
           <dd class="nhsuk-summary-list__value">
-            General
+            {{ data['gp-appointment-type'] or 'General' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">
@@ -67,7 +68,7 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            Dr. K Cooper
+            {{ data['gp-appointment-clinician'] or 'Dr K Cooper' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">
@@ -81,7 +82,7 @@
             Reason for appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-            I am experiencing back pain which has been ongoing for over 10 days.
+            {{ data['gp-appointment-reason'] or 'I have a pain in my foot' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">

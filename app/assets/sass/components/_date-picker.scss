@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .app-date-picker {
-  padding: 0 48px;
+  padding: 0 32px;
   margin-bottom: 40px;
   position: relative;
 }
@@ -84,7 +84,7 @@
   padding: 0;
   position: absolute;
   top: 0;
-  width: 40px;
+  width: 24px;
 
   &:focus {
     background-color: #ffeb3b;

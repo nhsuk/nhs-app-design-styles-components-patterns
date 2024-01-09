@@ -27,4 +27,6 @@ module.exports = {
   // Set account type - p9, p5 or linked-profiles
   "accountType": "p9",
 
+  "gp-appointment-clinician": "",
+
 }

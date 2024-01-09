@@ -20,7 +20,7 @@
 
       <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-6">Monday 20 November 2023</h2>
 
-      <form method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-time-1",
@@ -34,9 +34,9 @@
           },
           "items": [
             {
-              value: "5:30pm",
+              value: "01",
               text: "5:30pm",
-              checked: checked("gp-appointment-time-1", "5:30pm")
+              checked: checked("gp-appointment-time-1", "01")
             }
           ]
         }) }}
@@ -53,14 +53,14 @@
           },
           "items": [
             {
-              value: "9am",
+              value: "02",
               text: "9am",
-              checked: checked("gp-appointment-time-1", "9am")
+              checked: checked("gp-appointment-time-1", "02")
             },
             {
-              value: "2pm",
+              value: "03",
               text: "2pm",
-              checked: checked("gp-appointment-time-1", "2pm")
+              checked: checked("gp-appointment-time-1", "03")
             }
           ]
         }) }}
@@ -69,14 +69,38 @@
           <a href="/pages/services/gp-appointment-select">View more appointment times</a>
         </p>
 
-        {{ button({
-          text: "Continue",
-          classes: "app-button"
-        }) }}
+        {% if data['web'] === "yes" %}
+
+          {{ button({
+            text: "Continue",
+            classes: "app-button"
+          }) }}
+
+        {% endif %}
         
       </form>
 
     </div>
   </div>
+
+  {% endblock %}
+
+  {% block afterContent %}
+
+    {% if data['web'] === "no" %}
+
+      <div class="app-sticky-footer">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+
+            <button class="nhsuk-button app-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" form="form" type="submit">
+              Continue
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
 
   {% endblock %}

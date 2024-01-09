@@ -94,16 +94,40 @@
       </dl>
 
 
-      <form method="post" action="/pages/services/gp-appointment-confirmed" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-confirmed" novalidate="novalidate">
 
-        {{ button({
-          text: "Confirm booking",
-          classes: "app-button"
-        }) }}
+        {% if data['web'] === "yes" %}
+
+          {{ button({
+            text: "Confirm appointment",
+            classes: "app-button"
+          }) }}
+
+        {% endif %}
         
       </form>
 
     </div>
   </div>
+
+  {% endblock %}
+
+  {% block afterContent %}
+
+    {% if data['web'] === "no" %}
+
+      <div class="app-sticky-footer">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+
+            <button class="nhsuk-button app-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" form="form" type="submit">
+              Confirm appointment
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
 
   {% endblock %}

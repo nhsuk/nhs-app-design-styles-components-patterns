@@ -12,7 +12,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form method="post" action="/pages/services/gp-appointment-clinician" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-clinician" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-location",
@@ -36,14 +36,38 @@
           ]
         }) }}
 
-        {{ button({
-          text: "Continue",
-          classes: "app-button"
-        }) }}
+        {% if data['web'] === "yes" %}
+
+          {{ button({
+            text: "Continue",
+            classes: "app-button"
+          }) }}
+
+        {% endif %}
         
       </form>
 
     </div>
   </div>
+
+  {% endblock %}
+
+  {% block afterContent %}
+
+    {% if data['web'] === "no" %}
+
+      <div class="app-sticky-footer">
+        <div class="nhsuk-width-container">
+          <div class="nhsuk-grid-row">
+
+            <button class="nhsuk-button app-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" form="form" type="submit">
+              Continue
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
 
   {% endblock %}

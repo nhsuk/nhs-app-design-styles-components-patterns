@@ -500,7 +500,7 @@
       }
 
       // Show and hide appointments
-      function openAppointments(evt, cityName) {
+      function openAppointments(evt, date) {
       // Declare all variables
       var i, tabcontent, tablinks;
 
@@ -517,7 +517,7 @@
       }
 
       // Show the current tab, and add an "app-date-picker__link--active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
+      document.getElementById(date).style.display = "block";
       evt.currentTarget.className += " app-date-picker__link--active";
 
       var hiddenDiv = document.getElementById('appointmentWrapper');

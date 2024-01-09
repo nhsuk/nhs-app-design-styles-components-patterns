@@ -20,13 +20,11 @@
         description: pageDescription
       })}}
 
-      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">November 2023</h2>
+      <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">November 2023</h2>
 
-      <hr class=" nhsuk-u-margin-top-0">
-
-      <div class="app-date-picker nhsuk-u-margin-bottom-6">
+      <div class="app-date-picker nhsuk-u-margin-bottom-5">
         <button class="app-date-picker__button app-date-picker__button--left" onclick="clickLeft()" aria-hidden="true">
-          <span class="nhsuk-u-visually-hidden">Previous days</span>
+          <span class="nhsuk-u-visually-hidden">Left</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 10 15" fill="none">
             <path d="M8.17917 14.9698C7.92917 14.9698 7.68917 14.8798 7.49917 14.6998L1.12917 8.72978C0.929174 8.53978 0.819174 8.27978 0.809174 8.00978C0.799174 7.73978 0.919173 7.46978 1.11917 7.27978L7.48917 1.16978C7.88917 0.789782 8.51917 0.799782 8.89917 1.19978C9.27917 1.59978 9.26917 2.22978 8.86917 2.60978L3.25917 7.98978L8.85917 13.2398C9.25917 13.6198 9.27917 14.2498 8.90917 14.6498C8.70917 14.8598 8.44917 14.9698 8.17917 14.9698Z" fill="#005EB8"/>
           </svg>
@@ -129,7 +127,7 @@
           </li>
         </ul>
         <button class="app-date-picker__button app-date-picker__button--right" onclick="clickRight()" aria-hidden="true">
-          <span class="nhsuk-u-visually-hidden">Next days</span>
+          <span class="nhsuk-u-visually-hidden">Right</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M8.82191 19.11C8.56191 19.11 8.29191 19.01 8.10191 18.8C7.72191 18.4 7.73191 17.77 8.13191 17.39L13.7419 12.01L8.14191 6.75999C7.74191 6.37999 7.72191 5.74999 8.09191 5.34999C8.47191 4.94999 9.10191 4.92999 9.50191 5.29999L15.8719 11.27C16.0719 11.46 16.1819 11.72 16.1919 11.99C16.2019 12.26 16.0819 12.53 15.8819 12.72L9.51191 18.83C9.32191 19.02 9.07191 19.11 8.82191 19.11Z" fill="#005EB8"/>
             </svg>
@@ -141,7 +139,7 @@
           <!-- Tab content -->
           <div id="date-1" class="appointments" style="display: block">
 
-            <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+            <p class="nhsuk-u-margin-bottom-5">3 appointments available</p>
     
             {{ radios({
               idPrefix: "gp-appointment-time-1",
@@ -150,7 +148,7 @@
               fieldset: {
                 legend: {
                   text: "Dr. K Cooper",
-                  classes: "nhsuk-fieldset__legend--m"
+                  classes: "nhsuk-fieldset__legend--s"
                 }
               },
               "items": [
@@ -169,7 +167,7 @@
               fieldset: {
                 legend: {
                   text: "Dr. R Baines",
-                  classes: "nhsuk-fieldset__legend--m"
+                  classes: "nhsuk-fieldset__legend--s"
                 }
               },
               "items": [
@@ -189,7 +187,8 @@
         </div>
 
         <div id="date-2" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
+          
+          <p class="nhsuk-u-margin-bottom-5">1 appointment available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -198,7 +197,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -213,7 +212,7 @@
         </div>
 
         <div id="date-3" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">2 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -222,7 +221,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -242,7 +241,7 @@
         </div>
 
         <div id="date-4" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">3 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -251,7 +250,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -270,7 +269,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -290,7 +289,7 @@
         </div>
 
         <div id="date-5" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
+          <p class="nhsuk-u-margin-bottom-5">1 appointment available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -299,7 +298,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -314,7 +313,7 @@
         </div>
 
         <div id="date-6" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">2 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -323,7 +322,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -343,7 +342,7 @@
         </div>
 
         <div id="date-7" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">3 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -352,7 +351,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -371,7 +370,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -391,7 +390,7 @@
         </div>
 
         <div id="date-8" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
+          <p class="nhsuk-u-margin-bottom-5">1 appointment available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -400,7 +399,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -415,7 +414,7 @@
         </div>
 
         <div id="date-9" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">2 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -424,7 +423,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -444,7 +443,7 @@
         </div>
 
         <div id="date-10" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
+          <p class="nhsuk-u-margin-bottom-5">3 appointments available</p>
     
           {{ radios({
             idPrefix: "gp-appointment-time-1",
@@ -453,7 +452,7 @@
             fieldset: {
               legend: {
                 text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [
@@ -472,7 +471,7 @@
             fieldset: {
               legend: {
                 text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
+                classes: "nhsuk-fieldset__legend--s"
               }
             },
             "items": [

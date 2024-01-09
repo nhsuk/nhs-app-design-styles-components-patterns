@@ -14,6 +14,7 @@
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
+  margin: 0;
   padding: 0;
 
   &::-webkit-scrollbar {
@@ -46,6 +47,7 @@
   &:visited {
     color: $color_nhsuk-blue;
   }
+
 }
 
 .app-date-picker__link--active {
@@ -100,4 +102,10 @@
 
 .app-date-picker__button--right {
   right: 0;
+}
+
+.app-date-picker--v2 {
+  .app-date-picker__link {
+    border: 1px solid $color_nhsuk-blue;
+  }
 }

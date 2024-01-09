@@ -47,19 +47,17 @@
   }
 }
 
-.app-date-picker__item--active {
-  .app-date-picker__link {
-    background: $color_nhsuk-blue;
+.app-date-picker__link--active {
+  background: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+
+  &:visited {
     color: $color_nhsuk-white;
+  }
 
-    &:visited {
-      color: $color_nhsuk-white;
-    }
-
-    &:focus {
-      background-color: #ffeb3b;;
-      color: #212b32;
-    }
+  &:focus {
+    background-color: #ffeb3b;;
+    color: #212b32;
   }
 }
 

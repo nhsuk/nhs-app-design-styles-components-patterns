@@ -30,8 +30,8 @@
           </svg>
         </button>
         <ul class="app-date-picker__container" id="app-date-picker__container">
-          <li class="app-date-picker__item app-date-picker__item--active">
-            <a href="#" class="app-date-picker__link" onclick="openAppointments(event, 'date-1')">
+          <li class="app-date-picker__item">
+            <a href="#" class="app-date-picker__link app-date-picker__link--active" onclick="openAppointments(event, 'date-1')">
               <span class="date-picker__day">Mon</span>
               <span class="date-picker__number">20</span>
             </a>
@@ -499,21 +499,10 @@
         });
       }
 
-      // Add active class to the current button (highlight it)
-      var header = document.getElementById("app-date-picker__container");
-      var btns = header.getElementsByClassName("app-date-picker__item");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("app-date-picker__item--active");
-        current[0].className = current[0].className.replace(" app-date-picker__item--active", "");
-        this.className += " app-date-picker__item--active";
-        });
-      }
-
       // Show and hide appointments
       function openAppointments(evt, cityName) {
       // Declare all variables
-      var i, tabcontent;
+      var i, tabcontent, tablinks;
 
       // Get all elements with class="appointments" and hide them
       tabcontent = document.getElementsByClassName("appointments");
@@ -521,9 +510,15 @@
         tabcontent[i].style.display = "none";
       }
 
-      // Show the current tab, and add an "active" class to the button that opened the tab
+      // Get all elements with class="app-date-picker__link" and remove the class "app-date-picker__link--active"
+      tablinks = document.getElementsByClassName("app-date-picker__link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" app-date-picker__link--active", "");
+      }
+
+      // Show the current tab, and add an "app-date-picker__link--active" class to the button that opened the tab
       document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
+      evt.currentTarget.className += " app-date-picker__link--active";
 
       var hiddenDiv = document.getElementById('appointmentWrapper');
       hiddenDiv.focus()

@@ -22,9 +22,9 @@
 
       <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">November 2023</h2>
 
-      <hr class=" nhsuk-u-margin-top-0">
+      <hr class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5">
 
-      <div class="app-date-picker nhsuk-u-margin-bottom-6">
+      <div class="app-date-picker nhsuk-u-margin-bottom-5">
         <button class="app-date-picker__button app-date-picker__button--left" onclick="clickLeft()" aria-hidden="true">
           <span class="nhsuk-u-visually-hidden">Previous days</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 10 15" fill="none">
@@ -136,359 +136,97 @@
         </button>
       </div>
 
-        <form id="appointmentWrapper" tabindex="0" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+      <form id="appointmentWrapper" tabindex="0" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
 
-          <!-- Tab content -->
-          <div id="date-1" class="appointments" style="display: block">
+        <!-- Tab content -->
+        <div id="date-1" class="appointments" style="display: block;">
+          <p class="nhsuk-u-margin-bottom-5">3 appointments available</p>
 
-            <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
-    
-            {{ radios({
-              idPrefix: "gp-appointment-time-1",
-              name: "gp-appointment-time-1",
-              classes: "nhsuk-u-margin-bottom-4",
-              fieldset: {
-                legend: {
-                  text: "Dr. K Cooper",
-                  classes: "nhsuk-fieldset__legend--m"
-                }
-              },
-              "items": [
-                {
-                  value: "1",
-                  text: "5:30pm",
-                  checked: checked("gp-appointment-time-1", "1")
-                }
-              ]
-            }) }}
-    
-            {{ radios({
-              idPrefix: "gp-appointment-time-1",
-              name: "gp-appointment-time-1",
-              classes: "nhsuk-u-margin-bottom-4",
-              fieldset: {
-                legend: {
-                  text: "Dr. R Baines",
-                  classes: "nhsuk-fieldset__legend--m"
-                }
-              },
-              "items": [
-                {
-                  value: "2",
-                  text: "9am",
-                  checked: checked("gp-appointment-time-1", "2")
-                },
-                {
-                  value: "3",
-                  text: "2pm",
-                  checked: checked("gp-appointment-time-1", "3")
-                }
-              ]
-            }) }}
-    
+          {% if data['gp-appointment-clinician'] === "Dr K Cooper" or data['gp-appointment-clinician'] === "" or data['gp-appointment-clinician'] === "none" %}
+
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              Dr. K Cooper
+            </legend>
+            <div class="nhsuk-radios nhsuk-u-margin-bottom-4"> 
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="gp-appointment-time-1-1" name="gp-appointment-time-1" type="radio" value="1">
+                <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-1">
+                  5:30pm
+                </label>
+              </div>
+            </div>
+            </fieldset>
+          </div>
+
+          {% endif %}
+
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Dr. R Baines
+              </legend>
+              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-1-1" name="gp-appointment-time-1" type="radio" value="2">
+                  <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-1">
+                    9am
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-1-2" name="gp-appointment-time-1" type="radio" value="3">
+                  <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-2">
+                    2pm
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </div>
 
-        <div id="date-2" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "4",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "4")
-              }
-            ]
-          }) }}  
- 
+        <div id="date-2" class="appointments" style="display: none;">
+          <p class="nhsuk-u-margin-bottom-5">1 appointment available</p>
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Dr. K Cooper
+              </legend>
+              <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-1-1" name="gp-appointment-time-1" type="radio" value="4">
+                  <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-1">
+                    5:30pm
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </div>
 
-        <div id="date-3" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "5",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "5")
-              },
-              {
-                value: "6",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "6")
-              }
-            ]
-            }) }}
-
-        </div>
-
-        <div id="date-4" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "7",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "7")
-              }
-            ]
-          }) }}
-  
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "8",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "8")
-              },
-              {
-                value: "9",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "9")
-              }
-            ]
-          }) }}
-    
-        </div>
-
-        <div id="date-5" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "10",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "10")
-              }
-            ]
-          }) }}  
-    
-        </div>
-
-        <div id="date-6" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "11",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "11")
-              },
-              {
-                value: "12",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "12")
-              }
-            ]
-          }) }}
-    
-        </div>
-
-        <div id="date-7" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "13",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "13")
-              }
-            ]
-          }) }}
-  
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "14",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "14")
-              },
-              {
-                value: "15",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "15")
-              }
-            ]
-          }) }}
-    
-        </div>
-
-        <div id="date-8" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">1 appointment available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "16",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "16")
-              }
-            ]
-          }) }}  
-    
-        </div>
-
-        <div id="date-9" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">2 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "17",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "17")
-              },
-              {
-                value: "18",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "18")
-              }
-            ]
-          }) }}
-            
-        </div>
-
-        <div id="date-10" class="appointments">
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-6">3 appointments available</p>
-    
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. K Cooper",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "19",
-                text: "5:30pm",
-                checked: checked("gp-appointment-time-1", "19")
-              }
-            ]
-          }) }}
-  
-          {{ radios({
-            idPrefix: "gp-appointment-time-1",
-            name: "gp-appointment-time-1",
-            classes: "nhsuk-u-margin-bottom-4",
-            fieldset: {
-              legend: {
-                text: "Dr. R Baines",
-                classes: "nhsuk-fieldset__legend--m"
-              }
-            },
-            "items": [
-              {
-                value: "20",
-                text: "9am",
-                checked: checked("gp-appointment-time-1", "20")
-              },
-              {
-                value: "21",
-                text: "2pm",
-                checked: checked("gp-appointment-time-1", "21")
-              }
-            ]
-          }) }}
-    
+        <div id="date-3" class="appointments" style="display: none;">
+          <p class="nhsuk-u-margin-bottom-5">2 appointments available</p>
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                  Dr. R Baines
+                </legend>
+                <div class="nhsuk-radios nhsuk-u-margin-bottom-4">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="gp-appointment-time-1-1" name="gp-appointment-time-1" type="radio" value="5">
+                    <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-1">
+                      9am
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="gp-appointment-time-1-2" name="gp-appointment-time-1" type="radio" value="6">
+                    <label class="nhsuk-label nhsuk-radios__label" for="gp-appointment-time-1-2">
+                      2pm
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
         </div>
 
         {% if data['web'] === "yes" %}
@@ -578,7 +316,8 @@
       evt.currentTarget.className += " app-date-picker__link--active";
 
       var hiddenDiv = document.getElementById('appointmentWrapper');
-      hiddenDiv.focus()
+      hiddenDiv.focus();
+      hiddenDiv.scrollIntoView();
     }
 
     </script>

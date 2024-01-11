@@ -104,6 +104,14 @@
   right: 0;
 }
 
+#appointmentWrapper {
+
+  &:focus-visible {
+    outline: none;
+  }
+
+}
+
 .app-date-picker--v2 {
   .app-date-picker__link {
     border: 1px solid $color_nhsuk-blue;

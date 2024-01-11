@@ -27,7 +27,29 @@
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content">
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-              Monday 20 November 2023
+              {% if data['gp-appointment-time'] < 4 %}
+                Monday 20 November 2023
+              {% elif data['gp-appointment-time'] < 9 %}
+                Tuesday 21 November 2023
+              {% elif data['gp-appointment-time'] < 13 %}
+                Thursday 23 November 2023
+              {% elif data['gp-appointment-time'] < 16 %}
+                Friday 24 November 2023
+              {% elif data['gp-appointment-time'] < 21 %}
+                Monday 27 November 2023
+              {% elif data['gp-appointment-time'] < 25 %}
+                Tuesday 28 November 2023
+              {% elif data['gp-appointment-time'] < 28 %}
+                Wednsday 29 November 2023
+              {% elif data['gp-appointment-time'] < 33 %}
+                Thursday 30 November 2023
+              {% elif data['gp-appointment-time'] < 37 %}
+                Friday 1 December 2023
+              {% elif data['gp-appointment-time'] < 40 %}
+                Monday 4 December 2023
+              {% else %}
+                Monday 20 November 2023
+              {% endif %}
               <span class="nhsuk-u-visually-hidden">at 
                 5:30pm
               </span>

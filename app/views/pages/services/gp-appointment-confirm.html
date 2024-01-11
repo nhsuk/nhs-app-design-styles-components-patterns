@@ -49,7 +49,25 @@
               Monday 20 November 2023
             {% endif %}
             <br>
-            5:30pm
+            {% if data['gp-appointment-time'] in ["10", "22", "34"] %}
+              8am
+            {% elif data['gp-appointment-time'] in ["11", "23", "35"] %}
+              8:30am
+            {% elif data['gp-appointment-time'] in ["2", "14", "26", "38", "6", "12", "18", "24", "30", "36"] %}
+              9am
+            {% elif data['gp-appointment-time'] in ["7", "19", "31"] %}
+              10am
+            {% elif data['gp-appointment-time'] in ["8", "20", "32"] %}
+              11am
+            {% elif data['gp-appointment-time'] in ["3", "15", "27", "39"] %}
+              2pm
+            {% elif data['gp-appointment-time'] in ["4", "16", "28"] %}
+              2:30pm
+            {% elif data['gp-appointment-time'] in ["5", "17", "29"] %}
+              3pm
+            {% else %}
+              5:30pm
+            {% endif %}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">
@@ -91,7 +109,11 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-clinician'] }}
+            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
+              Dr. K Cooper
+            {% else %}
+              Dr. R Baines
+            {% endif %}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">
@@ -105,7 +127,7 @@
             Reason for appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-reason'] or 'I have a pain in my foot' }}
+            {{ data['gp-appointment-reason'] or 'Pain in my foot' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="#">

@@ -86,11 +86,18 @@ hr {
 
 // Header - onboarding
 .app-header_logo--onboarding {
-  margin: 0 auto;
   float: none;
-  max-width: 100px;
+  margin: 0 auto;
+  max-width: 83px;
+
+  .nhsuk-header__link,
+  .nhsuk-logo {
+    height: 32px;
+    width: 83px;
+  }
 }
 
+// Utility class for center aligning an element
 @include mq($until: tablet) {
   .app-u-align-center--mobile {
     display: block;

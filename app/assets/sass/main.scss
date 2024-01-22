@@ -83,3 +83,17 @@ hr {
 .nhsuk-u-margin-top-12 {
   margin-top: 12px !important;
 }
+
+// Header - onboarding
+.app-header_logo--onboarding {
+  margin: 0 auto;
+  float: none;
+  max-width: 100px;
+}
+
+@include mq($until: tablet) {
+  .app-u-align-center--mobile {
+    display: block;
+    margin: 0 auto;
+  }
+}

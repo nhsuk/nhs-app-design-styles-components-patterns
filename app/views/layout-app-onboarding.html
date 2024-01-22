@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ pageHeading }} - NHS App redesign work
+{% endblock %}
+
+<!-- CHANGES HTML BACKGROUND COLOUR IF VARIABLE 'WEB' ON PAGE IS TRUE -->
+{% block head %}
+  {% if data['web'] === "yes" %}
+  {% else %}
+    <style>
+      html {
+        background-color: #f0f4f5;
+      }
+    </style>
+  {% endif %}
+{% endblock %}
+
+<!-- HEADER -->
+{% block header %}
+  {% include "components/global-navigation-web/include-onboarding.html" %}
+{% endblock %}
+
+{% block outerContent %} 
+{% endblock %}
+
+<!-- FOOTER -->
+{% block footer %}
+{% endblock %}

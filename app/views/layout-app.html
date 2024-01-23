@@ -31,10 +31,21 @@
 <!-- CHANGES HTML BACKGROUND COLOUR IF VARIABLE 'WEB' ON PAGE IS TRUE -->
 {% block head %}
   {% if data['web'] === "yes" %}
+
+  <style>
+    #hc_extension_bkgnd {
+      background-color: #d8dde0 !important;
+    }
+  </style>
+
   {% else %}
     <style>
       html {
         background-color: #f0f4f5;
+      }
+
+      #hc_extension_bkgnd {
+        background-color: #f0f4f5 !important;
       }
     </style>
   {% endif %}

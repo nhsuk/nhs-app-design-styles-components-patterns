@@ -4,15 +4,11 @@
 
 .app-button {
   padding: 12px 32px;
-
-  @include mq($until: tablet) {
-    width: 100%;
-  }
 }
 
-.app-button--small {
+.app-button--full-width {
   @include mq($until: tablet) {
-    width: auto;
+    width: 100%;
   }
 }
 

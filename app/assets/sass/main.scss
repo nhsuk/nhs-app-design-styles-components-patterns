@@ -104,3 +104,13 @@ hr {
     margin: 0 auto;
   }
 }
+
+.app-display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nhsuk-link {
+  @include nhsuk-typography-responsive(19);
+}

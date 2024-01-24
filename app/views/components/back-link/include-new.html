@@ -1,8 +1,8 @@
-<p class="app-link-with-icon app-link-with-icon--compact {% if data['web'] === 'yes' %} nhsuk-u-margin-top-4{% endif %}">
-  <a href="{% if backLinkURL %}{{ backLinkURL }}{% else %}javascript: window.history.go(-1){% endif %}" class="nhsuk-link--no-visited-state">
+<div class="nhsuk-u-margin-bottom-4 {% if data['web'] === 'yes' %} nhsuk-u-margin-top-4{% endif %}">
+  <a href="{% if backLinkURL %}{{ backLinkURL }}{% else %}javascript: window.history.go(-1){% endif %}" class="app-link app-link--with-icon nhsuk-link--no-visited-state">
     <svg class="app-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M8 12C8 11.65 8.11429 11.4167 8.34286 11.1833L14.0571 5.35C14.5143 4.88333 15.2 4.88333 15.6571 5.35C16.1143 5.81667 16.1143 6.51667 15.6571 6.98333L10.7429 12L15.6571 17.0167C16.1143 17.4833 16.1143 18.1833 15.6571 18.65C15.2 19.1167 14.5143 19.1167 14.0571 18.65L8.34286 12.8167C8.11429 12.5833 8 12.35 8 12Z" />
     </svg>
     {% if backLinkText %}{{ backLinkText }}{% else %}Back{% endif %}
   </a>
-</p>
+</div>

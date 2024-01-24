@@ -1,0 +1,61 @@
+/* ==========================================================================
+   UTILITIES / #DISPLAY
+   ========================================================================== */
+
+/* stylelint-disable declaration-no-important */
+
+/* Flex */
+.app-u-display-flex { display: flex !important; }
+.app-u-display-inline-flex { display: inline-flex !important; }
+
+/* Flex direction */
+.app-u-flex-direction--row { flex-direction: row !important; } /* Default */
+.app-u-flex-direction--row-reverse { flex-direction: row-reverse !important; }
+.app-u-flex-direction--column { flex-direction: column !important; }
+.app-u-flex-direction--column-reverse { flex-direction: column-reverse !important; }
+
+
+/* Flex wrap */
+.app-u-flex-wrap--no-wrap { flex-wrap: nowrap !important; } /* Default */
+.app-u-flex-wrap--wrap { flex-wrap: wrap !important; }
+.app-u-flex-wrap--wrap-reverse { flex-wrap: wrap-reverse !important; }
+
+
+/* Justify content */
+.app-u-justify-content--flex-end { justify-content: flex-end !important; }
+.app-u-justify-content--flex-start { justify-content: flex-start !important; } /* Default */
+.app-u-justify-content--center { justify-content: center !important; }
+.app-u-justify-content--space-around { justify-content: space-around !important; }
+.app-u-justify-content--space-between { justify-content: space-between !important; }
+
+
+/* Align items */
+.app-u-align-items--flex-start { align-items: flex-start !important; }
+.app-u-align-items--center { align-items: center !important; }
+.app-u-align-items--flex-end { align-items: flex-end !important; }
+.app-u-align-items--stretch { align-items: stretch !important; } /* Default */
+.app-u-align-items--baseline  { align-items: baseline !important; }
+
+
+/* Flex grow */
+.app-u-flex-grow--0 { flex-grow: 0 !important; } /* Default */
+.app-u-flex-grow--1 { flex-grow: 1 !important; }
+
+
+/* Flex shrink */
+.app-u-flex-shrink--0 { flex-shrink: 0 !important; }
+.app-u-flex-shrink--1 { flex-shrink: 1 !important; } /* Default */
+
+
+/* Flex basis */
+.app-u-flex-basis--auto { flex-basis: auto !important; } /* Default */
+.app-u-flex-basis--0 { flex-basis: 0 !important; }
+
+
+/* Align self */
+.app-u-align-self--auto { align-self: auto !important; } /* Default */
+.app-u-align-self--flex-start { align-self: flex-start !important; }
+.app-u-align-self--center { align-self: center !important; }
+.app-u-align-self--flex-end { align-self: flex-end !important; }
+.app-u-align-self--stretch { align-self: stretch !important; }
+.app-u-align-self--baseline { align-self: baseline !important; }

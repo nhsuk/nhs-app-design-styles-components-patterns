@@ -1,7 +1,7 @@
 {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
 
-<div class="app-display-flex {%- if params.classes %} {{ params.classes }}{% endif %}">
-  <h{{ headingLevel }} class="nhsuk-heading-s">
+<div class="app-display-flex nhsuk-u-margin-bottom-4 {%- if params.classes %} {{ params.classes }}{% endif %}">
+  <h{{ headingLevel }} class="nhsuk-heading-s nhsuk-u-margin-bottom-0">
     {{ params.title }}
   </h{{ headingLevel }}>
   {%- if params.URL %}

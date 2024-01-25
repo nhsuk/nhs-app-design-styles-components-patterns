@@ -1,11 +1,11 @@
 {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
 
-<div class="app-display-flex nhsuk-u-margin-bottom-4 {%- if params.classes %} {{ params.classes }}{% endif %}">
+<div class="app-u-display-flex app-u-justify-content--space-between app-u-align-items--flex-start app-u-gap-3 nhsuk-u-margin-bottom-4 {%- if params.classes %} {{ params.classes }}{% endif %}">
   <h{{ headingLevel }} class="nhsuk-heading-s nhsuk-u-margin-bottom-0">
     {{ params.title }}
   </h{{ headingLevel }}>
   {%- if params.URL %}
-  <a href="{{ params.URL }}" class="nhsuk-link nhsuk-link--no-visited-state">{%- if params.linkText %}{{ params.linkText }}{% else %}View all{% endif %}
+  <a href="{{ params.URL }}" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-u-nowrap">{%- if params.linkText %}{{ params.linkText }}{% else %}View all{% endif %}
     {%- if params.hiddenText %}<span class="nhsuk-u-visually-hidden">{{ params.hiddenText }}</span>{% endif %}
   </a>
   {%- endif %}

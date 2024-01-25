@@ -1,106 +1,27 @@
+// Link
+.app-link {
+  @include nhsuk-typography-responsive(19);
+}
+
 // Link with an icon
 $app-link-with-icon-size-mobile: nhsuk-spacing(4);
 $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
 
-.app-link-with-icon {
+.app-link--with-icon {
+  @include nhsuk-responsive-margin(4, "bottom");
 
-  .app-link {
-    align-items: center;
-    display: flex;
-    gap: nhsuk-spacing(2);
+  align-items: center;
+  display: inline-flex;
+  gap: nhsuk-spacing(2);
 
-    .app-icon {
-      fill: $nhsuk-link-color;
-      height: $app-link-with-icon-size-mobile;
-      width: $app-link-with-icon-size-mobile;
-      
-      @include mq($from: tablet) {
-        height: $app-link-with-icon-size-tablet;
-        width: $app-link-with-icon-size-tablet;
-      }
-    }
-
-    &:hover {
-      .app-icon {
-        fill: $nhsuk-link-hover-color;
-      }
-    }
-  
-    &:visited {
-      .app-icon {
-        fill: $nhsuk-link-visited-color;
-      }
-    }
-  
-    &:active {
-      .app-icon {
-        fill: $nhsuk-link-active-color;
-      }
-    }
-  
-    &:focus {
-      .app-icon {
-        fill: $nhsuk-focus-text-color;
-      }
-    }
-  
-    // No visited state link - icon colour
-    &.nhsuk-link--no-visited-state {
-  
-      &:visited {
-        .app-icon {
-          fill: $nhsuk-link-color;
-        }
-      }
-  
-      &:hover {
-        .app-icon {
-          fill: $nhsuk-link-hover-color;
-        }
-      }
-  
-  
-      &:active {
-        .app-icon {
-          fill: $nhsuk-link-active-color;
-        }
-      }
-  
-      &:focus {
-        .app-icon {
-          fill: $nhsuk-focus-text-color;
-        }
-      }
-    }
-  }
-}
-  
-
-// Back link
-.app-back-link {
-  @include nhsuk-responsive-margin(3, "bottom");
-
-  .nhsuk-back-link__link {
-    @include nhsuk-responsive-padding(4, "left");
-    @include nhsuk-typography-responsive(19);
-  }
-
-  .nhsuk-icon__chevron-left {
-    height: 24px;
-    width: 24px;
-
-    @include mq($until: tablet) {
-      top: auto; // Overrides service manual icon alignment - could do with reviewing in the NHS.UK Frontend
-    }
-
+  .app-icon {
+    fill: currentColor;
+    height: $app-link-with-icon-size-mobile;
+    width: $app-link-with-icon-size-mobile;
+    
     @include mq($from: tablet) {
-      height: 28px;
-      width: 28px;
+      height: $app-link-with-icon-size-tablet;
+      width: $app-link-with-icon-size-tablet;
     }
   }
-
-}
-
-.app-link {
-  @include nhsuk-typography-responsive(19);
 }

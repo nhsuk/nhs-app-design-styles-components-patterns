@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .app-button {
-  padding: 12px 32px;
+  padding: 12px nhsuk-spacing(5);
 }
 
 .app-button--full-width {
@@ -20,6 +20,7 @@
 }
 
 // Button group
+// Code from GOV.UK Frontend
 
 .app-button-group {
   $horizontal-gap: nhsuk-spacing(4);

@@ -9,7 +9,7 @@
 
   background-color: $color_nhsuk-warm-yellow;
 
-  + .app-link-with-icon--compact {
+  + .app-link--with-icon {
     margin-top: - nhsuk-spacing(3);
 
     @include mq($from: tablet) {

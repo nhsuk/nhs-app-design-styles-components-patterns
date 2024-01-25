@@ -1,55 +1,22 @@
 // Link with an icon
-.app-link--with-icon {
-  padding-left: nhsuk-spacing(5);
-  position: relative;
+$app-link-with-icon-size-mobile: nhsuk-spacing(4);
+$app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
 
-  @include mq($from: tablet) {
-    padding-left: nhsuk-spacing(6);
-  }
+.app-link-with-icon {
 
-  .app-icon {
-    fill: $nhsuk-link-color;
-    height: nhsuk-spacing(4);
-    position: absolute;
-    left: 0;
-    width: nhsuk-spacing(4);
+  .app-link {
+    align-items: center;
+    display: flex;
+    gap: nhsuk-spacing(2);
 
-    @include mq($from: tablet) {
-      height: 28px;
-      width: 28px;
-    }
-  }
-
-  &:hover {
     .app-icon {
-      fill: $nhsuk-link-hover-color;
-    }
-  }
-
-  &:visited {
-    .app-icon {
-      fill: $nhsuk-link-visited-color;
-    }
-  }
-
-  &:active {
-    .app-icon {
-      fill: $nhsuk-link-active-color;
-    }
-  }
-
-  &:focus {
-    .app-icon {
-      fill: $nhsuk-link-active-color;
-    }
-  }
-
-  // No visited state link - icon colour
-  &.nhsuk-link--no-visited-state {
-
-    &:visited {
-      .app-icon {
-        fill: $nhsuk-link-color;
+      fill: $nhsuk-link-color;
+      height: $app-link-with-icon-size-mobile;
+      width: $app-link-with-icon-size-mobile;
+      
+      @include mq($from: tablet) {
+        height: $app-link-with-icon-size-tablet;
+        width: $app-link-with-icon-size-tablet;
       }
     }
 
@@ -58,17 +25,51 @@
         fill: $nhsuk-link-hover-color;
       }
     }
-
-
+  
+    &:visited {
+      .app-icon {
+        fill: $nhsuk-link-visited-color;
+      }
+    }
+  
     &:active {
       .app-icon {
         fill: $nhsuk-link-active-color;
       }
     }
-
+  
     &:focus {
       .app-icon {
-        fill: $nhsuk-link-active-color;
+        fill: $nhsuk-focus-text-color;
+      }
+    }
+  
+    // No visited state link - icon colour
+    &.nhsuk-link--no-visited-state {
+  
+      &:visited {
+        .app-icon {
+          fill: $nhsuk-link-color;
+        }
+      }
+  
+      &:hover {
+        .app-icon {
+          fill: $nhsuk-link-hover-color;
+        }
+      }
+  
+  
+      &:active {
+        .app-icon {
+          fill: $nhsuk-link-active-color;
+        }
+      }
+  
+      &:focus {
+        .app-icon {
+          fill: $nhsuk-focus-text-color;
+        }
       }
     }
   }

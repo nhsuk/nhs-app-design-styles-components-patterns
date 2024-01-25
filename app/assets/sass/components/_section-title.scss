@@ -5,15 +5,8 @@
 .app-section-title {
   @include nhsuk-responsive-margin(4, "bottom");
 
-  position: relative;
-}
-
-.app-section-title__heading {
-  margin-bottom: 0;
-}
-
-.app-section-title__link {
-  position: absolute;
-  right: 0;
-  top: 2px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: nhsuk-spacing(3);
 }

@@ -57,17 +57,6 @@
   }
 }
 
-.app-button--link {
-  @include nhsuk-link-style-default;
-  @include nhsuk-typography-responsive(19);
-
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-}
-
 #hc_extension_bkgnd {
   background-color: #d8dde0 !important;
 }

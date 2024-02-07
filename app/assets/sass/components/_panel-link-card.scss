@@ -12,7 +12,6 @@
 
 .app-panel-link-card__content {
   @include nhsuk-responsive-padding(4);
-  @include nhsuk-responsive-padding(7, "right");
 
   @include mq($until: tablet) {
     padding-bottom: 20px;
@@ -52,7 +51,7 @@
 
 .app-panel-link-card__description,
 .app-panel-link-card__list {
-  margin: nhsuk-spacing(2) nhsuk-spacing(5) 0 0;
+  margin: 12px nhsuk-spacing(5) 0 0;
 }
 
 // Chevron

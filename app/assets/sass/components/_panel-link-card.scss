@@ -51,6 +51,8 @@
 
 .app-panel-link-card__description,
 .app-panel-link-card__list {
+  @include reading-width();
+  
   margin: 12px nhsuk-spacing(5) 0 0;
 }
 

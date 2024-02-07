@@ -1,0 +1,32 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Cardiology waiting list" %}
+{% set pageDescription = "View and manage your upcoming and past hospital appointments." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <p class="nhsuk-u-margin-bottom-1">Estimated treatment start date:</p>
+      <p class="nhsuk-heading-s nhsuk-u-padding-top-0">March 2024</p>
+
+      <p>This is the average waiting time for this department at Manchester University NHS Trust.</p>
+
+      <p>Waiting times may differ for patients with an urgent condition.</p>
+
+    </div>
+  </div>
+
+  {% endblock %}

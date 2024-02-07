@@ -12,6 +12,7 @@
 
 .app-panel-link-card__content {
   @include nhsuk-responsive-padding(4);
+  @include nhsuk-responsive-padding(7, "right");
 
   @include mq($until: tablet) {
     padding-bottom: 20px;
@@ -25,6 +26,10 @@
   margin-right: nhsuk-spacing(3);
   text-decoration: none;
 
+  .app-panel-link-card__chevron {
+    fill: currentColor;
+  }
+
   &::after {
     bottom: 0;
     content: "";
@@ -37,30 +42,10 @@
 
   &:hover {
     text-decoration: underline;
-
-    .app-panel-link-card__chevron {
-      fill: $nhsuk-link-hover-color;
-    }
   }
 
   &:visited {
     color: $nhsuk-link-color;
-    
-    .app-panel-link-card__chevron {
-      fill: $nhsuk-link-color;
-    }
-  }
-
-  &:visited {
-    .app-panel-link-card__chevron {
-      fill: $nhsuk-link-active-color;
-    }
-  }
-
-  &:focus {
-    .app-panel-link-card__chevron {
-      fill: $nhsuk-link-active-color;
-    }
   }
 
 }

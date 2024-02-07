@@ -96,7 +96,7 @@
           title: "Panel link title",
           URL: "#",
           icon: true,
-          messages: data['messages']
+          notifications: data['messages']
         }
       ]
     })}}
@@ -110,7 +110,24 @@
         {
           title: "Panel link title",
           URL: "#",
-          icon: false
+          icon: false,
+          notifications: 2
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With badge at the top</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: false,
+          notifications: 2,
+          notificationsPosition: 'top'
         }
       ]
     })}}

@@ -5,18 +5,24 @@
 @import 'components/list-border';
 @import 'components/related-nav';
 
-$color_tag-green-text: #04512B;
-$color_tag-green-background: #B5EDD2;
-$color_tag-grey-background: #E0DDDD;
+$color_tag-aqua-green-background: #CCE7E6;
+$color_tag-aqua-green-text: #004642;
+$color_tag-blue-background: #D2E1EF;
+$color_tag-blue-text: #01407D;
+$color_tag-green-text: #03501D;
+$color_tag-green-background: #C9E6D8;
+$color_tag-grey-background: #E6E2E2;
 $color_tag-grey-text: #303E4F;
-$color_tag-purple-background: #DAD7F3;
+$color_tag-purple-background: #D9D7EB;
 $color_tag-purple-text: #532D8B;
-$color_tag-orange-background: #FAD59E;
-$color_tag-orange-text: #583F01;
-$color_tag-red-background: #FFD1D1;
-$color_tag-red-text: #8D0B01;
-$color_tag-yellow-background: #F0E993;
-$color_tag-yellow-text: #5C4800;
+$color_tag-orange-background: #FAE1BC;
+$color_tag-orange-text: #533C00;
+$color_tag-pink-background: #EFD3E3;
+$color_tag-pink-text: #57133A;
+$color_tag-red-background: #F8D9D9;
+$color_tag-red-text: #7E0D04;
+$color_tag-yellow-background: #EEE8A7;
+$color_tag-yellow-text: #5B4701;
 
 // Components that are custom to the NHS App
 @import 'components/full-width-component-utility';

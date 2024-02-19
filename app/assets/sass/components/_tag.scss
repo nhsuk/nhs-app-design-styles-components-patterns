@@ -57,15 +57,15 @@
 }
 
 .app-tag--aqua-green {
-  background-color: tint($color_nhsuk-aqua-green, 80%);
-  border-color: shade($color_nhsuk-aqua-green, 50%);
-  color: shade($color_nhsuk-aqua-green, 50%);
+  background-color: $color_tag-aqua-green-background;
+  border-color: $color_tag-aqua-green-text;
+  color: $color_tag-aqua-green-text;
 }
 
 .app-tag--blue {
-  background-color: tint($color_nhsuk-blue, 80%);
-  border-color: shade($color_nhsuk-blue, 30%);
-  color: shade($color_nhsuk-blue, 30%);
+  background-color: $color_tag-blue-background;
+  border-color: $color_tag-blue-text;
+  color: $color_tag-blue-text;
 }
 
 .app-tag--purple {
@@ -75,9 +75,9 @@
 }
 
 .app-tag--pink {
-  background-color: tint($color_nhsuk-pink, 85%);
-  border-color: shade($color_nhsuk-pink, 25%);
-  color: shade($color_nhsuk-pink, 25%);
+  background-color: $color_tag-pink-background;
+  border-color: $color_tag-pink-text;
+  color: $color_tag-pink-text;
 }
 
 .app-tag--red {

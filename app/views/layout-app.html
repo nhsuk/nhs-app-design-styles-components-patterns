@@ -29,6 +29,10 @@
 {% endblock %}
 
 <!-- CHANGES HTML BACKGROUND COLOUR IF VARIABLE 'WEB' ON PAGE IS TRUE -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Other head elements like title, stylesheets, etc. can go here -->
 {% block head %}
   {% if data['web'] === "yes" %}
 
@@ -50,6 +54,7 @@
     </style>
   {% endif %}
 {% endblock %}
+</head>
 
 <!-- HEADER -->
 {% block header %}

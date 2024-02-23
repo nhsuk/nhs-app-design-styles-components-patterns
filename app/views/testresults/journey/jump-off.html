@@ -1,0 +1,42 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your GP health record" %}
+
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading
+    })}}
+
+    <div>
+        <p class="nhsuk-body-m">Your GP record shows personal and sensitive information.
+            <br>
+            <br>
+        
+            You may see test results, documents and consultation notes that you have not yet discussed with your doctor.</p>
+    </div>
+    <div>
+        <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p>If someone is pressuring you for this information, contact your GP surgery.</p>
+          </div>
+    </div>
+    <div>
+        <a href="/testresults/journey/gp-health-record" class="nhsuk-button app-button">Continue</a>
+      </div>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Test results and imaging" %}
+{% set pageDescription = "View your test results" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "GP-ordered test results",
+            description: "View test results requested or done by your GP practice",
+            URL: "/testresults/journey/gp-test-jumpoff"
+          },
+          {
+            title: "Hospital-ordered tests results",
+            description: "View test results initiated in hospital, including specialist-requested tets",
+            URL: "#"
+          },
+          {
+            title: "PKB managed tests results",
+            description: "View tests stored in PAtient Knows Best, your personal health record",
+            URL: "#"
+          }
+         
+        ]
+      })}}
+ 
+      
+
+    </div>
+  </div>
+
+  {% endblock %}

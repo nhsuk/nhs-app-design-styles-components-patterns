@@ -1,0 +1,78 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your GP health record" %}
+
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading
+    })}}
+
+       <!-- USER INFO -->
+    <div>
+        <h2> Miss Jane Smith</h2>
+    </div>
+    <div>
+        <h5 style="margin-bottom: 4px; font-size: 18px;">Date of birth</h5>
+        <p style="font-size: 16px;">11 August 1989</p>
+    </div>
+    <div>
+        <h5 style="padding-top: 16px; margin-bottom: 4px; font-size: 18px;">NHS number:</h5>
+        <p style="font-size: 16px;">020 1234 5902</p>
+    </div>
+    <div>
+        <h5 style="padding-top: 16px; margin-bottom: 4px; font-size: 18px;">Address:</h5>
+        <p style="font-size: 16px;">73 Hamilton Terrace, London. NW8 9QX</p>
+    </div>
+
+    <!-- PANEL LINK CARD - Your GP health record-->
+    <div class="padding-top:40px; padding-bottom:32px;">
+    {{ panelLinkCard({
+        items: [
+          {
+            title: "Allergies and adverse reactions",
+            URL: "#"
+          },
+          {
+            title: "Medicines",
+            URL: "#"
+          },
+          {
+            title: "Immunisations",
+            URL: "#"
+          },
+          {
+            title: "Health conditions",
+            URL: "#"
+          },
+          {
+            title: "Test results",
+            URL: "/testresults/journey/gp-tests"
+          },
+          {
+            title: "Consultations and events",
+            URL: "#"
+          },
+          {
+            title: "Your health choices",
+            URL: "Documents"
+          }
+    
+        ]
+      })}}
+    </div>
+</div>
+</div>
+
+{% endblock %}

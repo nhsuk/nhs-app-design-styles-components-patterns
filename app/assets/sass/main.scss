@@ -122,3 +122,7 @@ hr {
 .nhsuk-link {
   @include nhsuk-typography-responsive(19);
 }
+
+.my-text-width {
+  width: 261px;
+}

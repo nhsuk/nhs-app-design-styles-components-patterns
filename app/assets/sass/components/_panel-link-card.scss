@@ -225,3 +225,11 @@
   display: block;
   margin-bottom: 16px;
 }
+
+// Grouped - small
+
+.app-panel-link-card-spaced--small {
+  .app-panel-link-card {
+    @include nhsuk-responsive-margin(2, "bottom");
+  }
+}

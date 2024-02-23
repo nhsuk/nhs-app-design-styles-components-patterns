@@ -4,7 +4,7 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+{% set backLinkURL = "/pages/services/gp-appointment-select-appointment" %}
 
 {% set pageHeading = "Why do you need an appointment?" %}
 
@@ -19,7 +19,7 @@
         titleSecondary: true
       })}}
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-location" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
 
         {{ textarea({
           name: "gp-appointment-reason",

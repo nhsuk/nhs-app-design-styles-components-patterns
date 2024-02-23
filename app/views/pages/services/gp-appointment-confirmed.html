@@ -22,77 +22,76 @@
 
       </div>
 
-      <!-- CARDS -->
-      <ul class="app-panel-link-card-spaced">
-        <li class="app-panel-link-card">
-          <div class="app-panel-link-card__content">
-            <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
-              {% if data['gp-appointment-time'] < 4 %}
-                Monday 20 November 2023
-              {% elif data['gp-appointment-time'] < 9 %}
-                Tuesday 21 November 2023
-              {% elif data['gp-appointment-time'] < 13 %}
-                Thursday 23 November 2023
-              {% elif data['gp-appointment-time'] < 16 %}
-                Friday 24 November 2023
-              {% elif data['gp-appointment-time'] < 21 %}
-                Monday 27 November 2023
-              {% elif data['gp-appointment-time'] < 25 %}
-                Tuesday 28 November 2023
-              {% elif data['gp-appointment-time'] < 28 %}
-                Wednsday 29 November 2023
-              {% elif data['gp-appointment-time'] < 33 %}
-                Thursday 30 November 2023
-              {% elif data['gp-appointment-time'] < 37 %}
-                Friday 1 December 2023
-              {% elif data['gp-appointment-time'] < 40 %}
-                Monday 4 December 2023
-              {% else %}
-                Monday 20 November 2023
-              {% endif %}
-              <span class="nhsuk-u-visually-hidden">at 
-                {% if data['gp-appointment-time'] in ["10", "22", "34"] %}
-                  8am
-                {% elif data['gp-appointment-time'] in ["11", "23", "35"] %}
-                  8:30am
-                {% elif data['gp-appointment-time'] in ["2", "14", "26", "38", "6", "12", "18", "24", "30", "36"] %}
-                  9am
-                {% elif data['gp-appointment-time'] in ["7", "19", "31"] %}
-                  10am
-                {% elif data['gp-appointment-time'] in ["8", "20", "32"] %}
-                  11am
-                {% elif data['gp-appointment-time'] in ["3", "15", "27", "39"] %}
-                  2pm
-                {% elif data['gp-appointment-time'] in ["4", "16", "28"] %}
-                  2:30pm
-                {% elif data['gp-appointment-time'] in ["5", "17", "29"] %}
-                  3pm
-                {% else %}
-                  5:30pm
-                {% endif %}
-              </span>
-              <svg class="app-panel-link-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
-              </svg>
-            </a>
-            <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">
-              5:30pm
-            </p>
-            <p class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12">
-              {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
-                Dr. K Cooper
-              {% else %}
-                Dr. R Baines
-              {% endif %}
-            </p>
-            <p class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12">
-              {{ data['gp-appointment-type'] or 'General' }}
-            </p>
-          </div>
-        </li>
-      </ul>
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Appointment type
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['gp-appointment-type'] or 'General' }}
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['gp-appointment-location'] or 'York Road practice' }}
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
+              Dr Max Smith
+            {% else %}
+              Dr Emily Taylor
+            {% endif %}
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of appointment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+              Monday 20 November 2023
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time of appointment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+              9:00am
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Reason for appointment
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['gp-appointment-reason'] or 'Pain in my foot' }}
+          </dd>
+        </div>
+   
+      </dl>
+
+      {{ button({
+        text: "View all appointments",
+        classes: "nhsuk-button--secondary app-button app-button--full-width"
+      }) }}
 
     </div>
   </div>
 
   {% endblock %}
+
+

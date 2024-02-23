@@ -6,14 +6,14 @@
 {% set backLinkText = "Back" %}
 {% set backLinkURL = "/pages/services/gp-appointment-location" %}
 
-{% set pageHeading = "Select clinician" %}
+{% set pageHeading = "Select a clinician" %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-next-available" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-select-date" novalidate="novalidate">
 
         {{ checkboxes({
           idPrefix: "gp-appointment-clinician",
@@ -25,17 +25,20 @@
               isPageHeading: true
             }
           },
+          hint: {
+            text: "Choose all that apply"
+          },
           "items": [
             {
-              value: "Dr K Cooper",
-              text: "Dr K Cooper",
-              checked: checked("gp-appointment-clinician", "Dr K Cooper"),
+              value: "Dr Max Smith",
+              text: "Dr Max Smith",
+              checked: checked("gp-appointment-clinician", "Dr Max Smith"),
               exclusiveGroup: "clinician-list"
             },
             {
-              value: "Dr R Baines",
-              text: "Dr R Baines",
-              checked: checked("gp-appointment-clinician", "Dr R Baines"),
+              value: "Dr Emily Taylor",
+              text: "Dr Emily Taylor",
+              checked: checked("gp-appointment-clinician", "Dr Emily Taylor"),
               exclusiveGroup: "clinician-list"
             },
             {

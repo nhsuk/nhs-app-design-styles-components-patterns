@@ -25,3 +25,9 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
     }
   }
 }
+
+.nhsuk-link--no-visited-state {
+  .nhsuk-icon {
+    fill: currentColor !important;
+  }
+}

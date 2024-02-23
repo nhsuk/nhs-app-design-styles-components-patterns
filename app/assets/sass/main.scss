@@ -122,3 +122,19 @@ hr {
 .nhsuk-link {
   @include nhsuk-typography-responsive(19);
 }
+
+// Custom CSS for appointment labels
+.app-label--flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+
+  @include mq($until: tablet) {
+    gap: 8px;
+  }
+}
+
+.app-label--full-width {
+  width: 100%;
+}

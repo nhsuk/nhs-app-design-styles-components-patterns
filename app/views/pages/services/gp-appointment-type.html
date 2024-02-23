@@ -13,7 +13,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-reason" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-location" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-type",
@@ -24,9 +24,6 @@
               classes: "nhsuk-fieldset__legend--xl",
               isPageHeading: true
             }
-          },
-          hint: {
-            text: "Select one"
           },
           "items": [
             {

@@ -4,9 +4,9 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-reason" %}
+{% set backLinkURL = "/pages/services/gp-appointment-type" %}
 
-{% set pageHeading = "Select location" %}
+{% set pageHeading = "Select a location" %}
 
 {% block content %}
 
@@ -15,7 +15,7 @@
 
       <form id="form" method="post" action="/pages/services/gp-appointment-clinician" novalidate="novalidate">
 
-        {{ radios({
+        {{ checkboxes({
           idPrefix: "gp-appointment-location",
           name: "gp-appointment-location",
           fieldset: {
@@ -26,14 +26,38 @@
             }
           },
           hint: {
-            text: "Only one available"
+            text: "Choose all that apply"
           },
           "items": [
             {
               value: "York Road practice",
               text: "York Road practice",
-              checked: true
+              checked: checked("gp-appointment-location", "York Road practice"),
+              hint: {
+                text: "20 York Rd, London, SE1 7ND"
+              },
+              exclusiveGroup: "location-list"
+            },
+            {
+              value: "Southbank Practice",
+              text: "Southbank Practice",
+              checked: checked("gp-appointment-location", "Southbank Practice"),
+              hint: {
+                text: "76 Upper Ground, London, SE1 7ND"
+              },
+              exclusiveGroup: "location-list"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "I have no preference",
+              checked: checked("gp-appointment-location", "none"),
+              exclusive: true,
+              exclusiveGroup: "location-list"
             }
+
           ]
         }) }}
 

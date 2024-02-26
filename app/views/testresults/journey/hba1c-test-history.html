@@ -22,6 +22,10 @@
         <img src="/images/documentation-example/hba1c-graph.png" alt="Haemoglobin HbA1c graph showing results over the last 6 months." width="342">
     </div>
 
+    <div class="nhsuk-grid-column-full">
+      <div style="width: 400px; height: 400px;"><canvas id="graph"></canvas></div>
+    </div>
+
     <div style="padding-bottom: 16px;">
       <h3>Your result history</h3>
         <p class="nhsuk-body-m">The table below shows your haemoglobin A1c (HbA1c) results over the last 6 months.
@@ -102,3 +106,71 @@
     </div>
 
     {% endblock %}
+
+    {% block pageScripts %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+const data = [
+      { month: 'Aug', value: 5.0 },
+      { month: 'Sep', value: 6.0 },
+      { month: 'Oct', value: 5.5 },
+      { month: 'Nov', value: 4.0 },
+      { month: 'Dec', value: 6.3 },
+      { month: 'Jan', value: 7.0 },
+      { month: 'Feb', value: 6.8 },
+    ];
+
+    // eslint-disable-next-line no-new
+    new Chart(
+      document.getElementById('graph'),
+      {
+        type: 'line',
+        options: {
+          maintainAspectRatio: false,
+          animation: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              bodyColor: '#000000',
+              backgroundColor: '#fff',
+              cornerRadius: 0,
+              boxPadding: 50,
+              borderColor: '#000000',
+              borderWidth: 1,
+            },
+          },
+          scales: {
+            x: {
+              border: {
+                color: '#000000',
+              },
+            },
+            y: {
+              border: {
+                color: '#000000',
+              },
+            },
+          },
+        },
+        data: {
+          labels: data.map(row => row.month),
+          datasets: [
+            {
+              label: 'hb1ac',
+              data: data.map(row => row.value),
+              borderColor: '#000000',
+              borderWidth: 1,
+              pointRadius: 4,
+              pointBackgroundColor: '#000000',
+            }
+          ],
+        },
+      },
+    );
+
+
+</script>
+
+  {% endblock %}

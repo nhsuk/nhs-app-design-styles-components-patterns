@@ -7,7 +7,6 @@
 {% set backLinkURL = "/pages/services/gp-appointment-select-date" %}
 
 {% set pageHeading = "Select your appointment" %}
-{% set pageDescription = "The next available appointment is displayed first." %}
 
 {% block content %}
 
@@ -17,13 +16,15 @@
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
         title: pageHeading,
-        titleSecondary: true,
-        description: pageDescription
+        titleSecondary: true
       })}}
 
-      <h2 class="nhsuk-heading-m">Monday 19 February 2024</h2>
+      <h2 class="nhsuk-heading-m">
+        <span class="nhsuk-u-visually-hidden">Appointments on </span>
+        Monday 11 March 2024
+      </h2>
 
-      <h3 class="nhsuk-heading-s">Morning appointment</h3>
+      <h3 class="nhsuk-heading-s">Morning <span class="nhsuk-u-visually-hidden">appointment</span></h3>
 
       <ul class="app-panel-link-card-spaced app-panel-link-card-stacked">
         <li class="app-panel-link-card">
@@ -88,7 +89,7 @@
         </li>
       </ul>
 
-      <h3 class="nhsuk-heading-s">Afternoon appointment</h3>
+      <h3 class="nhsuk-heading-s">Afternoon <span class="nhsuk-u-visually-hidden">appointment</span></h3>
 
       <ul class="app-panel-link-card-spaced app-panel-link-card-stacked">
         <li class="app-panel-link-card">

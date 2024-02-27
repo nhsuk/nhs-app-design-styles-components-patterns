@@ -144,3 +144,17 @@ hr {
 .nhsuk-form-group {
   margin-bottom: 32px;
 }
+
+// Pagination
+// nhsuk-list is overriding style and adding margin bottom 8px to li
+.nhsuk-pagination-item--previous,
+.nhsuk-pagination-item--next {
+  margin-bottom: 0 !important;
+}
+
+.app-pagination__title--small {
+  @include mq($until: tablet) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}

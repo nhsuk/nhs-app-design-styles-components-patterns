@@ -1,0 +1,52 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set pageHeading = "Your health" %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <!-- DYNAMIC PAGE TITLE -->
+        {{ dynamicPageTitle({
+        title:"Your health",
+        titleSecondary: true,
+        description: "View your personal records and choices"
+        })}}
+
+        <!-- PANEL LINK CARD - SERVICES -->
+        {{ panelLinkCard({
+        items: [
+        {
+        title: "GP health record",
+        URL: "/pages/your-health/test-results/jump-off"
+        },
+        {
+        title: "View and manage prescriptions",
+        URL: "#"
+        },
+        {
+        title: "Upcoming and past appointments",
+        URL: "#"
+        },
+        {
+        title: "COVID-19 vaccine record",
+        URL: "#"
+        },
+        {
+        title: "Your health choices",
+        URL: "#"
+        },
+        {
+        title: "Care plans",
+        URL: "#"
+        }
+        ]
+        })}}
+
+    </div>
+</div>
+
+{% endblock %}

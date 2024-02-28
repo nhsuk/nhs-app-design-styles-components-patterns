@@ -28,5 +28,6 @@ module.exports = {
   "accountType": "p9",
 
   "gp-appointment-clinician": "",
+  "gp-appointment-location": "",
 
 }

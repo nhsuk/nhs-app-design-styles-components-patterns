@@ -7,13 +7,14 @@
 
 {% set pageHeading = "Your Haemoglobin A1c (HbA1c) history" %}
 
+{% set graphAriaText = "A line graph showing your haemoglobin A1c (HbA1c) history measurements over the last six months from 2 September 2023 to 1 March 2024. The Y-axis represents HbA1c levels in mmol/mol, ranging from 0 to 100. The X-axis represents months. The data points show .... The most recent reading on 12 January 2024 is 46 mmol/mol. The line has data points marked for each month, illustrating fluctuations in HbA1c levels." %}
+
 
 
 {% block content %}
 
 
 
-<div class="nhsuk-width-container">
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-top-3 nhsuk-u-padding-bottom-6">
       <div class="nhsuk-layout_gp-session-on-demand-padding">
@@ -24,15 +25,13 @@
             })}}
             <hr style="border-color: black;" class="nhsuk-section-break--m">
             </hr>
-            <div class="nhsuk-grid-column-full">
               <div id="chartjs-tooltip" style="border:1px solid black; padding: 10px; margin-bottom: 20px"></div>
               <div style="width: 100%; height: 500px">
-                <canvas id="graph" aria-label="This is the graph of your hb1ac. To be completed later."></canvas>
+                <canvas id="graph" aria-label="{{ graphAriaText }}"></canvas>
               </div>
-            </div>
             <hr style="border-color: black;" class="nhsuk-section-break--m">
             </hr>
-            <div style="padding-bottom: 16px; padding-left: 0px;" class="nhsuk-grid-column-two-thirds">
+            <div style="padding-bottom: 16px; padding-left: 0px;" class="nhsuk-grid-column-full">
               <a href="https://labtestsonline.org.uk/tests/WHITE-BLOOD-CELL-COUNT" rel="noopener noreferrer"
                 target="_blank" class="nhsuk-u-margin-bottom-0">Learn more about your HbA1c test results</a>
             </div>
@@ -120,7 +119,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   {% endblock %}
 

@@ -17,12 +17,18 @@
         description: pageDescription
       })}}
 
+      {% if data['testResultsShowJumpOffPage'] === "true" %}
+        {% set gpHealthRecordUrl = "/pages/your-health/test-results/jump-off" %}
+      {% else %}
+        {% set gpHealthRecordUrl = "/pages/your-health/test-results/gp-health-record" %}
+      {% endif %}
+
       <!-- PANEL LINK CARD - Your health -->
       {{ panelLinkCard({
         items: [
           {
             title: "GP health record",
-            URL: "#"
+            URL: gpHealthRecordUrl
           },
           {
             title: "View and manage prescriptions",

@@ -29,4 +29,7 @@ module.exports = {
 
   "gp-appointment-clinician": "",
 
+  // Test results
+  "testResultsShowJumpOffPage" : "true",
+
 }

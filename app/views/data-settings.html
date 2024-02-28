@@ -4,263 +4,292 @@
 {% set pageDescription = "Change and save the dynamic content used in the prototype." %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
 
-      {% include "components/back-link/include.html" %}
+    {% include "components/back-link/include.html" %}
 
-      <h1>{{ pageHeading }}</h1>
+    <h1>{{ pageHeading }}</h1>
 
-      <p class="nhsuk-lede-text">
-        {{ pageDescription }}
-      </p>
+    <p class="nhsuk-lede-text">
+      {{ pageDescription }}
+    </p>
+
+    <hr>
+
+    <form method="post" action="/pages/" novalidate="novalidate">
+
+      {{ radios({
+      "idPrefix": "web",
+      "name": "web",
+      "fieldset": {
+      "legend": {
+      "text": "Web or native?",
+      "classes": "nhsuk-fieldset__legend--m"
+      }
+      },
+      "hint": {
+      "text": "This displays the web or native header and footer"
+      },
+      "items": [
+      {
+      "value": "yes",
+      "text": "Web",
+      checked: checked("web", "yes")
+      },
+      {
+      "value": "no",
+      "text": "Native",
+      checked: checked("web", "no")
+      }
+      ]
+      }) }}
 
       <hr>
 
-      <form method="post" action="/pages/" novalidate="novalidate">
+      {{ radios({
+      "idPrefix": "accountType",
+      "name": "accountType",
+      "fieldset": {
+      "legend": {
+      "text": "Account type",
+      "classes": "nhsuk-fieldset__legend--m"
+      }
+      },
+      "hint": {
+      "text": "This changes the page URLs in the main nav"
+      },
+      "items": [
+      {
+      "value": "p9",
+      "text": "P9",
+      checked: checked("accountType", "p9")
+      },
+      {
+      "value": "p5",
+      "text": "P5",
+      checked: checked("accountType", "p5")
+      },
+      {
+      "value": "linked-profiles",
+      "text": "Linked profile",
+      checked: checked("accountType", "linked-profiles")
+      }
+      ]
+      }) }}
 
-        {{ radios({
-          "idPrefix": "web",
-          "name": "web",
-          "fieldset": {
-            "legend": {
-              "text": "Web or native?",
-              "classes": "nhsuk-fieldset__legend--m"
-            }
-          },
-          "hint": {
-            "text": "This displays the web or native header and footer"
-          },
-          "items": [
-            {
-              "value": "yes",
-              "text": "Web",
-              checked: checked("web", "yes")
-            },
-            {
-              "value": "no",
-              "text": "Native",
-              checked: checked("web", "no")
-            }
-          ]
-        }) }}
+      <hr>
 
-        <hr>
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Test Results</h2>
 
-        {{ radios({
-          "idPrefix": "accountType",
-          "name": "accountType",
-          "fieldset": {
-            "legend": {
-              "text": "Account type",
-              "classes": "nhsuk-fieldset__legend--m"
-            }
-          },
-          "hint": {
-            "text": "This changes the page URLs in the main nav"
-          },
-          "items": [
-            {
-              "value": "p9",
-              "text": "P9",
-              checked: checked("accountType", "p9")
-            },
-            {
-              "value": "p5",
-              "text": "P5",
-              checked: checked("accountType", "p5")
-            },
-            {
-              "value": "linked-profiles",
-              "text": "Linked profile",
-              checked: checked("accountType", "linked-profiles")
-            }
-          ]
-        }) }}
+      {{ radios({
+      "idPrefix": "testResultsShowJumpOffPage",
+      "name": "testResultsShowJumpOffPage",
+      "fieldset": {
+      "legend": {
+      "text": "Show Jump Off Page",
+      "classes": "nhsuk-label"
+      }
+      },
+      "items": [
+      {
+      "value": "true",
+      "text": "Yes",
+      checked: checked("testResultsShowJumpOffPage", "true")
+      },
+      {
+      "value": "false",
+      "text": "No",
+      checked: checked("testResultsShowJumpOffPage", "false")
+      }
+      ]
+      }) }}
 
-        <hr>
+      <hr>
 
-        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Messages</h2>
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Messages</h2>
 
-        {{ radios({
-          "idPrefix": "message1read",
-          "name": "message1read",
-          "fieldset": {
-            "legend": {
-              "text": "Message 1 read",
-              "classes": "nhsuk-label"
-            }
-          },
-          "items": [
-            {
-              "value": "true",
-              "text": "Yes",
-              checked: checked("message1read", "true")
-            },
-            {
-              "value": "false",
-              "text": "No",
-              checked: checked("message1read", "false")
-            }
-          ]
-        }) }}
+      {{ radios({
+      "idPrefix": "message1read",
+      "name": "message1read",
+      "fieldset": {
+      "legend": {
+      "text": "Message 1 read",
+      "classes": "nhsuk-label"
+      }
+      },
+      "items": [
+      {
+      "value": "true",
+      "text": "Yes",
+      checked: checked("message1read", "true")
+      },
+      {
+      "value": "false",
+      "text": "No",
+      checked: checked("message1read", "false")
+      }
+      ]
+      }) }}
 
-        {{ radios({
-          "idPrefix": "message2read",
-          "name": "message2read",
-          "fieldset": {
-            "legend": {
-              "text": "Message 2 read",
-              "classes": "nhsuk-label"
-            }
-          },
-          "items": [
-            {
-              "value": "true",
-              "text": "Yes",
-              checked: checked("message2read", "true")
-            },
-            {
-              "value": "false",
-              "text": "No",
-              checked: checked("message2read", "false")
-            }
-          ]
-        }) }}
+      {{ radios({
+      "idPrefix": "message2read",
+      "name": "message2read",
+      "fieldset": {
+      "legend": {
+      "text": "Message 2 read",
+      "classes": "nhsuk-label"
+      }
+      },
+      "items": [
+      {
+      "value": "true",
+      "text": "Yes",
+      checked: checked("message2read", "true")
+      },
+      {
+      "value": "false",
+      "text": "No",
+      checked: checked("message2read", "false")
+      }
+      ]
+      }) }}
 
-        {{ input({
-          "label": {
-          "text": "Number of messages",
-          "classes": "nhsuk-label"
-          },
-          "id": "messages",
-          "name": "messages",
-          "classes": "nhsuk-input--width-2",
-          "value": data['messages']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "Number of messages",
+      "classes": "nhsuk-label"
+      },
+      "id": "messages",
+      "name": "messages",
+      "classes": "nhsuk-input--width-2",
+      "value": data['messages']
+      }) }}
 
-        {{ radios({
-          "idPrefix": "messageSendingError",
-          "name": "messageSendingError",
-          "fieldset": {
-            "legend": {
-              "text": "Message sending error",
-              "classes": "nhsuk-label"
-            }
-          },
-          "hint": {
-            "text": "This shows the 'Cannot send your reply' page when replying to message 2"
-          },
-          "items": [
-            {
-              "value": "true",
-              "text": "Yes",
-              checked: checked("messageSendingError", "true")
-            },
-            {
-              "value": "false",
-              "text": "No",
-              checked: checked("messageSendingError", "false")
-            }
-          ]
-        }) }}
+      {{ radios({
+      "idPrefix": "messageSendingError",
+      "name": "messageSendingError",
+      "fieldset": {
+      "legend": {
+      "text": "Message sending error",
+      "classes": "nhsuk-label"
+      }
+      },
+      "hint": {
+      "text": "This shows the 'Cannot send your reply' page when replying to message 2"
+      },
+      "items": [
+      {
+      "value": "true",
+      "text": "Yes",
+      checked: checked("messageSendingError", "true")
+      },
+      {
+      "value": "false",
+      "text": "No",
+      checked: checked("messageSendingError", "false")
+      }
+      ]
+      }) }}
 
-        <hr>
+      <hr>
 
-        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">User account</h2>
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">User account</h2>
 
-        {{ input({
-          "label": {
-          "text": "First name"
-          },
-          "id": "userFirstName",
-          "name": "userFirstName",
-          "classes": "",
-          "value": data['userFirstName']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "First name"
+      },
+      "id": "userFirstName",
+      "name": "userFirstName",
+      "classes": "",
+      "value": data['userFirstName']
+      }) }}
 
-        {{ input({
-          "label": {
-          "text": "Last name"
-          },
-          "id": "userLastName",
-          "name": "userLastName",
-          "classes": "",
-          "value": data['userLastName']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "Last name"
+      },
+      "id": "userLastName",
+      "name": "userLastName",
+      "classes": "",
+      "value": data['userLastName']
+      }) }}
 
-        {{ input({
-          "label": {
-          "text": "NHS number"
-          },
-          "id": "nhsNumber",
-          "name": "nhsNumber",
-          "classes": "nhsuk-input--width-10",
-          "value": data['nhsNumber']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "NHS number"
+      },
+      "id": "nhsNumber",
+      "name": "nhsNumber",
+      "classes": "nhsuk-input--width-10",
+      "value": data['nhsNumber']
+      }) }}
 
-        <hr>
+      <hr>
 
-        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Linked profile account</h2>
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Linked profile account</h2>
 
-        {{ input({
-          "label": {
-          "text": "First name"
-          },
-          "id": "linkedProfileFirstName",
-          "name": "linkedProfileFirstName",
-          "classes": "",
-          "value": data['linkedProfileFirstName']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "First name"
+      },
+      "id": "linkedProfileFirstName",
+      "name": "linkedProfileFirstName",
+      "classes": "",
+      "value": data['linkedProfileFirstName']
+      }) }}
 
-        {{ input({
-          "label": {
-          "text": "Last name"
-          },
-          "id": "linkedProfileLastName",
-          "name": "linkedProfileLastName",
-          "classes": "",
-          "value": data['linkedProfileLastName']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "Last name"
+      },
+      "id": "linkedProfileLastName",
+      "name": "linkedProfileLastName",
+      "classes": "",
+      "value": data['linkedProfileLastName']
+      }) }}
 
-        {{ input({
-          "label": {
-          "text": "Age"
-          },
-          "id": "linkedProfileAge",
-          "name": "linkedProfileAge",
-          "classes": "nhsuk-input--width-2",
-          "value": data['linkedProfileAge']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "Age"
+      },
+      "id": "linkedProfileAge",
+      "name": "linkedProfileAge",
+      "classes": "nhsuk-input--width-2",
+      "value": data['linkedProfileAge']
+      }) }}
 
-        <hr>
+      <hr>
 
-        {{ input({
-          "label": {
-          "text": "Version",
-          "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
-          },
-          "id": "version",
-          "name": "version",
-          "classes": "",
-          "value": data['version']
-        }) }}
+      {{ input({
+      "label": {
+      "text": "Version",
+      "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
+      },
+      "id": "version",
+      "name": "version",
+      "classes": "",
+      "value": data['version']
+      }) }}
 
-        <hr>
+      <hr>
 
-        {{ button({
-          "text": "Save settings",
-          "classes": "app-button app-button--full-width"
-        }) }}
+      {{ button({
+      "text": "Save settings",
+      "classes": "app-button app-button--full-width"
+      }) }}
 
-        <p><a href="/clear-data">Reset data settings</a></p>
+      <p><a href="/clear-data">Reset data settings</a></p>
 
-      </form>
+    </form>
 
-      <div class="nhsuk-inset-text">
-        <p>The default data is set in the <a href="https://github.com/nhsuk/nhs-app-redesign-prototype/blob/main/app/data/session-data-defaults.js">/data/session-data-default.js</a> file.</p>
-      </div>
-
+    <div class="nhsuk-inset-text">
+      <p>The default data is set in the <a
+          href="https://github.com/nhsuk/nhs-app-redesign-prototype/blob/main/app/data/session-data-defaults.js">/data/session-data-default.js</a>
+        file.</p>
     </div>
+
   </div>
+</div>
 {% endblock %}

@@ -40,7 +40,7 @@
             Location
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-location'] or 'York Road practice' }}
+            {{ data['appointment-location'] or 'York Road practice' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-location">
@@ -54,11 +54,7 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
-              Dr Max Smith
-            {% else %}
-              Dr Emily Taylor
-            {% endif %}
+            {{ data['appointment-clinician'] or 'Dr Max Smith' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-clinician">
@@ -72,7 +68,25 @@
             Date of appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-              Monday 20 November 2023
+            {% if data['gp-appointment-date'] in ["1"] %}
+              Monday 11 March 2024
+            {% elif data['gp-appointment-date'] in ["2"] %}
+              Tuesday 12 March 2024
+            {% elif data['gp-appointment-date'] in ["3"] %}
+              Thursday 14 March 2024
+            {% elif data['gp-appointment-date'] in ["4"] %}
+              Friday 15 March 2024
+            {% elif data['gp-appointment-date'] in ["5"] %}
+              Monday 18 March 2024
+            {% elif data['gp-appointment-date'] in ["6"] %}
+              Tuesday 19 March 2024
+            {% elif data['gp-appointment-date'] in ["7"] %}
+              Tuesday 26 March 2024
+            {% elif data['gp-appointment-date'] in ["8"] %}
+              Thursday 28 March 2024
+            {% else %}
+              Friday 29 March 2024
+            {% endif %}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-date">
@@ -86,7 +100,7 @@
             Time of appointment
           </dt>
           <dd class="nhsuk-summary-list__value">
-              9:00am
+              {{ data['appointment-time'] or '9:00am' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment">

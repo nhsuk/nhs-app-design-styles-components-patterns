@@ -1,0 +1,191 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/services/gp-appointment-clinician" %}
+
+{% set pageHeading = "Select date of appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <form id="form" tabindex="0" method="post" action="/pages/services/gp-appointment-select-appointment" novalidate="novalidate">
+
+        <div id="one" class="tabcontent">
+
+          <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+            <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m nhsuk-u-visually-hidden">
+              Dates with available appointments for week commencing Monday 11 March 2024
+            </legend>
+            <div class="nhsuk-radios nhsuk-u-margin-bottom-4"> 
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="gp-appointment-time-1" name="gp-appointment-time" type="radio" value="1">
+                <label class="nhsuk-label nhsuk-radios__label  app-label--full-width" for="gp-appointment-time-1">
+                  <span class="app-label--flex">
+                    <span class="">
+                      <span class="">Monday</span>
+                      <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">11 March 2024</span>
+                    </span>
+                    <span class="nhsuk-tag app-tag app-tag--no-border app-tag--green">12 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                  </span>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="gp-appointment-time-2" name="gp-appointment-time" type="radio" value="2">
+                <label class="nhsuk-label nhsuk-radios__label app-label--full-width" for="gp-appointment-time-2">
+                  <span class="app-label--flex">
+                    <span class="">
+                      <span class="">Tuesday</span>
+                      <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">12 March 2024</span>
+                    </span>
+                    <span class="nhsuk-tag app-tag app-tag--no-border app-tag--orange">3 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                  </span>
+                </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-3" name="gp-appointment-time" type="radio" value="3">
+                  <label class="nhsuk-label nhsuk-radios__label  app-label--full-width" for="gp-appointment-time-3">
+                    <span class="app-label--flex">
+                      <span class="">
+                        <span class="">Thursday</span>
+                        <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">14 March 2024</span>
+                      </span>
+                      <span class="nhsuk-tag app-tag app-tag--no-border app-tag--orange">2 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-4" name="gp-appointment-time" type="radio" value="4">
+                  <label class="nhsuk-label nhsuk-radios__label app-label--full-width" for="gp-appointment-time-4">
+                    <span class="app-label--flex">
+                      <span class="">
+                        <span class="">Friday</span>
+                        <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">15 March 2024</span>
+                      </span>
+                      <span class="nhsuk-tag app-tag app-tag--no-border app-tag--green">7 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-5" name="gp-appointment-time" type="radio" value="5">
+                  <label class="nhsuk-label nhsuk-radios__label  app-label--full-width" for="gp-appointment-time-5">
+                    <span class="app-label--flex">
+                      <span class="">
+                        <span class="">Monday</span>
+                        <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">18 March 2024</span>
+                      </span>
+                      <span class="nhsuk-tag app-tag app-tag--no-border app-tag--green">9 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-6" name="gp-appointment-time" type="radio" value="6">
+                  <label class="nhsuk-label nhsuk-radios__label app-label--full-width" for="gp-appointment-time-6">
+                    <span class="app-label--flex">
+                      <span class="">
+                        <span class="">Tuesday</span>
+                        <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">19 March 2024</span>
+                      </span>
+                      <span class="nhsuk-tag app-tag app-tag--no-border app-tag--orange">3 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                    </span>
+                  </label>
+                  </div>
+                
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="gp-appointment-time-7" name="gp-appointment-time" type="radio" value="7">
+                  <label class="nhsuk-label nhsuk-radios__label app-label--full-width" for="gp-appointment-time-7">
+                    <span class="app-label--flex">
+                      <span class="">
+                        <span class="">Tuesday</span>
+                        <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">26 March 2024</span>
+                      </span>
+                      <span class="nhsuk-tag app-tag app-tag--no-border app-tag--orange">1 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                    </span>
+                  </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="gp-appointment-time-8" name="gp-appointment-time" type="radio" value="8">
+                    <label class="nhsuk-label nhsuk-radios__label  app-label--full-width" for="gp-appointment-time-8">
+                      <span class="app-label--flex">
+                        <span class="">
+                          <span class="">Thursday</span>
+                          <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">28 March 2024</span>
+                        </span>
+                        <span class="nhsuk-tag app-tag app-tag--no-border app-tag--orange">2 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="gp-appointment-time-9" name="gp-appointment-time" type="radio" value="9">
+                    <label class="nhsuk-label nhsuk-radios__label app-label--full-width" for="gp-appointment-time-9">
+                      <span class="app-label--flex">
+                        <span class="">
+                          <span class="">Friday</span>
+                          <span class="nhsuk-hint nhsuk-u-display-block nhsuk-u-margin-bottom-1">29 March 2024</span>
+                        </span>
+                        <span class="nhsuk-tag app-tag app-tag--no-border app-tag--green">4 <span class="nhsuk-u-visually-hidden">apointments </span> available</span>
+                      </span>
+                    </label>
+                  </div>
+              </div>
+            </fieldset>
+          </div>
+
+              
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button app-button--full-width"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block pageScripts %}
+
+    <script>
+
+      function openWeek(evt, weekName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(weekName).style.display = "block";
+        evt.currentTarget.className += " active";
+
+        var hiddenDiv = document.getElementById('form');
+        hiddenDiv.focus();
+
+      }
+
+    </script>
+
+  {% endblock %}
+

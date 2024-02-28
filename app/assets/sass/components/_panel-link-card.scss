@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .app-panel-link-card {
-  @include nhsuk-responsive-margin(5, "bottom");
+  @include nhsuk-responsive-margin(2, "bottom");
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;

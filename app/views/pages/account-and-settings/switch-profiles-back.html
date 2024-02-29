@@ -1,0 +1,37 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Linked profiles" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "You are acting on behalf of " + data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'] %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <p class="nhsuk-u-margin-bottom-6"><strong>Age:</strong> 84 years old <br> <strong>GP surgery:</strong> F0001</p>
+
+      <form action="/pages/home-p9" method="post" novalidate>
+
+        <input type="hidden" name="accountType" value="p9">
+
+        {{ button({
+          text: "Switch to my profile",
+          classes: "app-button app-button--full-width"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

@@ -19,9 +19,7 @@
         description: pageDescription
       })}}
 
-      <p>Switch to your profile to access this section.</p>
-
-      {% if data['web'] === "yes" %}
+      <p class="nhsuk-u-margin-bottom-5">Switch to your profile to access this section.</p>
 
       <form action="/pages/account-and-settings-p9" method="post" novalidate>
 
@@ -34,35 +32,7 @@
 
       </form>
 
-      {% endif %}
-
     </div>
   </div>
-
-{% endblock %}
-
-{% block afterContent %}
-
-  {% if data['web'] === "no" %}
-
-  <div class="app-sticky-footer">
-    <div class="nhsuk-width-container">
-      <div class="nhsuk-grid-row">
-
-        <form action="/pages/account-and-settings-p9" method="post" novalidate>
-
-          <input type="hidden" name="accountType" value="p9">
-  
-          {{ button({
-            text: "Switch to my profile",
-            classes: "app-button nhsuk-u-margin-bottom-0"
-          }) }}
-  
-        </form>
-      </div>
-    </div>
-  </div>
-
-  {% endif %}
 
 {% endblock %}

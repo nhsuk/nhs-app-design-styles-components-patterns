@@ -85,3 +85,27 @@
   }
 }
 
+// Large card
+.app-card--large {
+  @include mq($from: desktop) {
+    display: flex;
+
+    .app-card__img-wrapper {
+      flex: 3 0;
+    }
+
+    .app-card__content {
+      flex: 2 0;
+      padding-right: 80px;
+    }
+
+  }
+  @include mq($from: large-desktop) {
+    .app-card__img-wrapper {
+      flex-grow: 2;
+    }
+    .app-card__content {
+      flex-grow: 3;
+    }
+  }
+}

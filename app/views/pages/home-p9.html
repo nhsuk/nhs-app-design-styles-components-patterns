@@ -96,13 +96,20 @@
       })}}
 
       <!-- CAMPAIGN CARD -->
-      {{ campaignCard({
-        title: "Stay well this winter",
-        description: "Learn about vaccines, keeping warm and looking out for others this winter",
-        URL: "#",
-        linkText: "Find out more",
-        hiddenText: "about staying well this winter"
-      })}}
+      <div class="nhsuk-card nhsuk-card--clickable app-card--dark-blue">
+        <img class="nhsuk-card__img" src="/images/campaigns/campaign-card-image-1.jpg" alt="">
+        <div class="nhsuk-card__content app-card__content app-card__content--with-chevron ">
+          <h2 class="nhsuk-card__heading nhsuk-heading-l nhsuk-u-margin-bottom-2">
+            <a class="nhsuk-card__link" href="#">Health research changes lives</a>
+          </h2>
+          <p class="nhsuk-card__description nhsuk-u-margin-bottom-0">Register with Be Part of Research to find and join studies</p>
+  
+          <svg class="app-card__chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z" />
+          </svg>
+  
+        </div>
+      </div>
 
       <!-- GET HELP LINK -->
       {% include "components/app-action-link/include.html" %}

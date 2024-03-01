@@ -1,0 +1,63 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Account and settings" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your GP Details" %}
+{% set pageDescription = "Note that certain services may not be offered by your GP surgery." %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">
+            Your GP Surgery
+          </h3>
+          <p class="nhsuk-card__description"> Springfield Medical Centre, <br> 110 Union Rd, SW8 2SH </p> 
+          <p class="nhsuk-card__description"> If you need to change your registered GP, <a href="https://www.nhs.uk/service-search/find-a-gp">find a GP.</a> </p>
+      
+        </div>
+      </div>
+
+      <h1 class="nhsuk-heading-m">Your GP services</h1>
+      <span class="app-panel-link-card__tag">
+        {{ tag({
+          text: "Enabled by GP",
+          classes: "app-tag--no-border app-tag--new app-tag--green"
+        })}}
+      </span>
+<ul> <li> Request repeat prescriptions </li> <li> View your GP health record </li> <li> View your messages </li> <li> Contact your GP surgery for a document or update </li> <li> Switch profiles </li> </ul>
+      
+
+      <span class="app-panel-link-card__tag">
+        {{ tag({
+          text: "Disabled by GP",
+          classes: "app-tag--no-border app-tag--new app-tag--grey"
+        })}}
+      </span>
+
+      <ul> <li> Book GP appointments </li> <li> Contact your GP for a health problem </li> </ul>
+      
+      <p> If you require more information about your available services, contact your surgery.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block afterContent %}
+
+
+{% endblock %}

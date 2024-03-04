@@ -21,6 +21,10 @@
 
   .nhsuk-card__link {
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .nhsuk-card__img {

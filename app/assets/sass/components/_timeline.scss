@@ -12,46 +12,65 @@
   display: flex;
   margin-bottom: 0;
   margin-left: 12px;
-  padding-bottom: 40px;
+  margin-top: -4px;
+  padding-bottom: 24px;
   position: relative;
 
  &:last-child {
     padding-bottom: 24px;
 
     &:before {
-      background-image: none;
+      border: none;
     }
   }
 }
 
 .app-timeline__item:before {
-  background-image: url('data:image/svg+xml,<svg width="2" height="400" viewBox="0 0 2 400" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="0.75" x2="0.749983" y2="399.25" stroke="%23005EB8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/></svg>');
+  /*background-image: url('data:image/svg+xml,<svg width="2" height="400" viewBox="0 0 2 400" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="0.75" x2="0.749983" y2="399.25" stroke="%23005EB8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/></svg>');*/
+  border-left: 4px solid $color_nhsuk-blue;
   bottom: 0;
   content: "";
   display: block;
-  left: 0;
+  left: -2px;
   position: absolute;
-  top: 0;
-  width: 0.094rem;
+  top: 8px;
+  width: 4px;
 
   @include mq($from: tablet) {
-    top: 2px;
+    top: 8px;
   }
+}
+
+.app-timeline__item--grey:before {
+  border-left: 4px dashed $color_nhsuk-grey-3;
 }
 
 .app-timeline__badge {
   align-items: center;
-  height: 24px;
+  height: 28px;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
-  margin-left: -12px;
+  margin-left: -14px;
   margin-right: 16px;
-  width: 24px;
+  margin-top: 0;
+  width: 28px;
   z-index: 1;
 
   @include mq($from: tablet) {
     margin-top: 2px;
+  }
+}
+
+.app-timeline__badge--small {
+  height: 14px;
+  margin-left: -7px;
+  margin-right: 23px;
+  margin-top: 7px;
+  width: 14px;
+
+  @include mq($from: tablet) {
+    margin-top: 8px;
   }
 }
 

@@ -31,28 +31,43 @@
         </div>
       </div>
 
-      <h1 class="nhsuk-heading-m">Your GP services</h1>
-      <span class="app-panel-link-card__tag">
+    <div style="margin-top:-20px;">
+       <h1 class="nhsuk-heading-m">Your GP services</h1>
+       <span class="app-panel-link-card__tag"; style="margin-top:20px;">
         {{ tag({
           text: "Enabled by GP",
           classes: "app-tag--no-border app-tag--new app-tag--green"
         })}}
-      </span>
-<ul> <li> Request repeat prescriptions </li> <li> View your GP health record </li> <li> View your messages </li> <li> Contact your GP surgery for a document or update </li> <li> Switch profiles </li> </ul>
-      
+       </span>
+       <ul style="line-height:120%; margin-top:15px;"> 
+        <li> Request repeat prescriptions </li> 
+        <li> View your GP health record </li> 
+        <li> View your messages </li> 
+        <li> Contact your GP surgery for a document or update </li> 
+        <li> Switch profiles </li>
+        </ul>
+      </div>
 
+    <div style="margin-top:30px">
       <span class="app-panel-link-card__tag">
         {{ tag({
           text: "Disabled by GP",
           classes: "app-tag--no-border app-tag--new app-tag--grey"
+          
         })}}
       </span>
 
-      <ul> <li> Book GP appointments </li> <li> Contact your GP for a health problem </li> </ul>
+       <ul style="line-height:120%;margin-top:15px;"> 
+        <li> Book GP appointments </li>
+         <li> Contact your GP for a health problem </li> 
+       </ul>
       
-      <p> If you require more information about your available services, contact your surgery.</p>
+      <p style="margin-top:24px;"> If you require more information about your available services, contact your surgery.</p>
 
     </div>
+
+
+   </div>
   </div>
 
 {% endblock %}

@@ -122,6 +122,7 @@
 
   {% block pageScripts %}
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- chart.js requires a date adapter. https://www.chartjs.org/docs/latest/axes/cartesian/time.html -->
   <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.1/dist/chartjs-adapter-moment.min.js"></script>
 
@@ -140,7 +141,6 @@
     let lastIndex = 7;
     let firstLoad = true;
 
-    // eslint-disable-next-line no-new
     var chart = new Chart(
       document.getElementById('graph'),
       {
@@ -168,6 +168,7 @@
               // Disable the on-canvas tooltip
               enabled: false,
 
+              // This allows us to use a custom html element for the tooltip information.
               external: function (context) {
                 // Tooltip Element
                 let tooltipEl = document.getElementById('chartjs-tooltip');
@@ -182,11 +183,9 @@
                   return;
                 }
 
-                console.log(activeElements[0]);
-                console.log(index);
-
+                // Do nothing if the action is on the currently highlighted element and also not the first load
+                // This avoids a recusive call and stack overflow on the chart.update().
                 if (activeElements[0].index === lastIndex && !firstLoad) {
-                  console.log('same active element - return');
                   return;
                 }
 
@@ -194,7 +193,7 @@
                   firstLoad = false;
                 }
 
-                // Set Text
+                // Set test and styling
                 const title = tooltipModel.title[0] || '';
                 const value = tooltipModel.dataPoints[0].formattedValue;
 
@@ -203,17 +202,18 @@
                 innerHtml += '<p style="color: black; margin-bottom: 0px">' + value + " mmol/mol" + '</p>';
                 tooltipEl.innerHTML = innerHtml;
 
+                // Aote the index of last visited point
                 lastIndex = tooltipModel.dataPoints[0].dataIndex;
 
-                // adjust point size
-                console.log(index);
+                // Adjust point sizes to highlight the last visited point
+                // The pointRadius accepts an array for the size of each point
                 const pointSizeArray = [...Array(data.length)].map((_, i) => {
                   if (i === index) return 8;
                   else return 4;
                 });
-                console.log(pointSizeArray);
                 tooltipModel.dataPoints[0].dataset.pointRadius = pointSizeArray;
 
+                // Chart
                 context.chart.tooltip.setActiveElements([{
                   datasetIndex: 0,
                   index: index,
@@ -251,16 +251,24 @@
               max: '2024-03-01',
               ticks: {
                 stepSize: 1,
+                // This call back allows us to customise the graph axis lines/ticks
                 callback: function (value, index, ticks) {
+                  // For dates you can have a tick of month, week, day as the minimum tick/step size
+                  // You can't draw lines less than a stepsize of 1
+                  // So, for mid month line on the graph you select day as the step size and manually draw the lines and values
 
                   let date = moment(value);
+                  
+                  // If first of the month then draw a line and add a text on axis
                   if (date.date() === 1)
                     return date.format('MMM');
 
+                  // If mid month then draw line with no text on axis
                   if (date.date() === 16) {
                     return '';
                   }
 
+                  // Other days return no line and no text
                   return undefined;
                 },
               },
@@ -309,6 +317,8 @@
       },
     );
 
+    // On the first graph load we select the last data point and set as active
+    // This is so the last point is highlighted and the tooltip loaded
     const numberOfElements = chart.data.datasets[0].data.length
     if (numberOfElements) {
       chart.setActiveElements([

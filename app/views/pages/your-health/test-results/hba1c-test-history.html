@@ -273,7 +273,8 @@
                 },
               },
               grid: {
-                tickWidth: 2,
+                // This sets tick widths, so zero for no tick. This can be done programatically
+                tickWidth: [2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2],
                 tickLength: 8,
                 tickColor: '#000000',
               },
@@ -295,7 +296,7 @@
                 callback: function (value, index) {
                   if (index === 0) return undefined;
                   else return value;
-                }
+                },
               },
             },
           },

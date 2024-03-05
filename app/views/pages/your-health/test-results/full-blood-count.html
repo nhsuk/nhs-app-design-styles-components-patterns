@@ -7,417 +7,460 @@
 
 {% set pageHeading = "Full blood count - FBC" %}
 
-
-
 {% block content %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
 
-      <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        title: pageHeading
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading
     })}}
 
     <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Test date
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            24 November 2023
-          </dd>
-      
-        </div>
-    </dl>
-      
-    <dl class="nhsuk-summary-list">
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Test date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          24 November 2023
+        </dd>
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Healthcare professional's comments
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            Abnormal - but expected. Keep routine appointment (non-urgent)
-          </dd>
-      
-        </div>
+      </div>
     </dl>
 
     <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Laboratory comments
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            No comment
-          </dd>
-      
-        </div>
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Healthcare professional's comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          Normal - Take no action
+        </dd>
+
+      </div>
+    </dl>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Laboratory comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          No comment
+        </dd>
+
+      </div>
     </dl>
 
     <hr aria-hidden="true" style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
 
-    <h2 class="nhsuk-heading-l"; style= padding-bottom:16px;>Your results</h2>
+    <h2 class="nhsuk-heading-l" style="padding-bottom:16px;">Your results</h2>
 
-<div>
-  <dl class="nhsuk-summary-list">
-
-    <div class="no-border-summary-list__row">
-      <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-        Haemoglobin estimation:
-      </dt>
-      <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-        146 g/L
-      </dt>
-  <p>The normal range is between 135 to 180</p>
-        </div>
-  <div>
-    <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-    <img src="/images/documentation-example/haemoglobin est.png" alt="Result within reference range" width="342" height="109">
-    <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-    <p class="nhsuk-body-xs" style="color: #4C6272; font-size: 14px; margin-bottom:0px;" >Laboratory comment</p>
-    <p class="nhsuk-body-xs" style="color: #4C6272; font-size: 14px; margin-bottom:16px;" >Haemoglobin variant previously detected - sample sent for haemoglobin variant testing. MC</p>
-    <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a haemoglobin estimation test?</a>
-    <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-    <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-
-<div>
-    <dl class="nhsuk-summary-list">
+    <div>
+      <dl class="nhsuk-summary-list">
 
         <div class="no-border-summary-list__row">
           <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Total white cell count:
+            Haemoglobin estimation:
           </dt>
           <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            8 10*9/L
+            146 g/L
+          </dt>
+          <p>The normal range is between 135 to 180</p>
+        </div>
+        <div>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-one-hundred-forty-six.png" alt="Result within reference range" width="342"
+            height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <p class="nhsuk-body-xs" style="color: #4C6272; font-size: 14px; margin-bottom:0px;">Laboratory comment</p>
+          <p class="nhsuk-body-xs" style="color: #4C6272; font-size: 14px; margin-bottom:16px;">Haemoglobin variant
+            previously detected - sample sent for haemoglobin variant testing. MC</p>
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a haemoglobin estimation test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Total white cell count:
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                8 10*9/L
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The normal range is between 4 to 11
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-eight-point-one-zero.png" alt="Result within reference range"
+            width="342" height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a total white cell count test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Platelet count:
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                290 g/L
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The reference range is between 135 to 180
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-two-hundred-ninety.png" alt="Result outside reference range" width="342"
+            height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a platelet count test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Mean corpuscular volume (MCV):
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                100 fL
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The reference range is between 78 to 100fL
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-one-hundred.png" alt="Result within reference range"
+            width="342" height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a mean corpuscular volume (MCV) test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Haematocrit:
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                0.46
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The reference range is between 0.40 to 0.52
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png" alt="Result within reference range" width="342"
+            height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a haematocrit test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Red blood cell (RBC) count:
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                0.46
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The reference range is between 0.40 to 0.52
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png" alt="Result within reference range" width="342"
+            height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a red blood cell (RBC) count test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+
+        <div>
+          <dl class="nhsuk-summary-list">
+
+            <div class="no-border-summary-list__row">
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                Neutrophil count:
+              </dt>
+              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+                15.5 10*9/L
+              </dt>
+              <div style="padding-top: 12px; padding-bottom: 0px;">
+                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+                  The reference range is between 2.00 to 7.50 10*9/L
+                </dd>
+              </div>
+
+            </div>
+          </dl>
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+          <img src="/images/documentation-example/indicator-range-bar-fifteen-point-five.png" alt="Result outside reference range" width="342"
+            height="109">
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+          <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+            style="display: inline-block; padding-bottom: 16px;">What is a neutrophil count test?</a>
+          <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+          <hr aria-hidden="true"
+            style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+        </div>
+    </div>
+
+    <div>
+      <dl class="nhsuk-summary-list">
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Lymphocyte count:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            1.54 10*9/L
           </dt>
           <div style="padding-top: 12px; padding-bottom: 0px;">
             <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                The normal range is between 4 to 11
-              </dd>
-        </div>
-      
-        </div>
-    </dl>
-    <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-    <img src="/images/documentation-example/total white cell count.png" alt="Result within reference range" width="342" height="109">
-    <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-    <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a total white cell count test?</a>
-    <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-    <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Platelet count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          290 g/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 135 to 180
-            </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/platelet count.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a platelet count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Mean corpuscular volume (MCV):
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          100 fL
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 78 to 100fL
-            </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/mean corpuscular volume (MCV).png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a mean corpuscular volume (MCV) test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Haematocrit:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.46
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 0.40 to 0.52
-            </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/haematocrit.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a haematocrit test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Red blood cell (RBC) count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.46
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 0.40 to 0.52
-            </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/haematocrit.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a red blood cell (RBC) count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Neutrophil count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          15.5 10*9/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 2.00 to 7.50 10*9/L
-            </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/neutrophil count.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a neutrophil count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-</div>
-
-<div>
-  <dl class="nhsuk-summary-list">
-
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Lymphocyte count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.46
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               The reference range is between 2.00 to 7.50
             </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/lymphocyte count.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a lymphocyte count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+          </div>
+        </div>
+      </dl>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+      <img src="/images/documentation-example/indicator-range-bar-one-point-five-four.png" alt="Result outside reference range" width="342"
+        height="109">
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+      <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+        style="display: inline-block; padding-bottom: 16px;">What is a lymphocyte count test?</a>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
-</div>
+    </div>
 
-<div>
-  <dl class="nhsuk-summary-list">
+    <div>
+      <dl class="nhsuk-summary-list">
 
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Monocyte count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.30 10*9/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Monocyte count:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            0.30 10*9/L
+          </dt>
+          <div style="padding-top: 12px; padding-bottom: 0px;">
+            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               The reference range is between 0.20 to 0.80
             </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/monocyte count.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a monocyte count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+          </div>
 
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+        </div>
+      </dl>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+      <img src="/images/documentation-example/indicator-range-bar-zero-point-three.png" alt="Result within reference range" width="342"
+        height="109">
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+      <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+        style="display: inline-block; padding-bottom: 16px;">What is a monocyte count test?</a>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-</div>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
-<div>
-  <dl class="nhsuk-summary-list">
+    </div>
 
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Eosinophil count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.45 10*9/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+    <div>
+      <dl class="nhsuk-summary-list">
+
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Eosinophil count:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            0.45 10*9/L
+          </dt>
+          <div style="padding-top: 12px; padding-bottom: 0px;">
+            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               The reference range is between 0.04 to 0.40 10*9/L
             </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-  <img src="/images/documentation-example/eosinophil count.png" alt="Result within reference range" width="342" height="109">
-  <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a eosinophil count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+          </div>
 
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+        </div>
+      </dl>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+      <img src="/images/documentation-example/indicator-range-bar-zero-point-four-five.png" alt="Result outside reference range" width="342"
+        height="109">
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+      <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+        style="display: inline-block; padding-bottom: 16px;">What is a eosinophil count test?</a>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-</div>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
-<div>
-  <dl class="nhsuk-summary-list">
+    </div>
 
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Basophil count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.03 10*9/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+    <div>
+      <dl class="nhsuk-summary-list">
+
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Basophil count:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            0.03 10*9/L
+          </dt>
+          <div style="padding-top: 12px; padding-bottom: 0px;">
+            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               The reference range is below 0.10
             </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a basophil count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+          </div>
 
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+        </div>
+      </dl>
+      <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+        style="display: inline-block; padding-bottom: 16px;">What is a basophil count test?</a>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-</div>
-<div>
-  <dl class="nhsuk-summary-list">
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Nucleated red blood cell count:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          0.13 10*9/L
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+    </div>
+    <div>
+      <dl class="nhsuk-summary-list">
+
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Nucleated red blood cell count:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            0.13 10*9/L
+          </dt>
+          <div style="padding-top: 12px; padding-bottom: 0px;">
+            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               The reference range is below 0.60
             </dd>
-      </div>
-    
-      </div>
-  </dl>
-  <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">What is a nucleated red blood cell count test?</a>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+          </div>
 
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+        </div>
+      </dl>
+      <a href="https://labtestsonline.org.uk/tests/haemoglobin"
+        style="display: inline-block; padding-bottom: 16px;">What is a nucleated red blood cell count test?</a>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-</div>
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
-<div>
-  <dl class="nhsuk-summary-list">
+    </div>
 
-      <div class="no-border-summary-list__row">
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          Percentage hypochronic cells:
-        </dt>
-        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-          1%
-        </dt>
-        <div style="padding-top: 12px; padding-bottom: 0px;">
-          <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
+    <div>
+      <dl class="nhsuk-summary-list">
+
+        <div class="no-border-summary-list__row">
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            Percentage hypochronic cells:
+          </dt>
+          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+            1%
+          </dt>
+          <div style="padding-top: 12px; padding-bottom: 0px;">
+            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
               No range
             </dd>
-      </div>
+          </div>
+
+        </div>
+      </dl>
+      <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+
+      <hr aria-hidden="true"
+        style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+
+    </div>
     
-      </div>
-  </dl>
-  <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
-
-  <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-
-</div>
-
- 
-
-
-
-
-
-
-
-
-{% endblock %}
+    {% endblock %}

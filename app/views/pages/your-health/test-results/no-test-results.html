@@ -1,0 +1,26 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Test results" %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading
+    })}}
+
+    <div>
+      <p class="nhsuk-body-l">You have no hospital-ordered test results available in the NHS App.
+      </p>
+    </div>
+</div>
+
+{% endblock %}

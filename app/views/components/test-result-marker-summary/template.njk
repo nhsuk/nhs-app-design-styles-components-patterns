@@ -1,0 +1,17 @@
+<div>
+  <h4 class="nhsuk-heading-s nhsuk-u-margin-bottom-0">
+    {{ params.testResultMarkerName }}:
+  </h4>
+  <h4 class="nhsuk-heading-s nhsuk-u-margin-bottom-12">
+    {{ params.resultResultMarkerValue }} {{ params.resultResultMarkerValueUnits }}
+  </h4>
+  {%- if params.minimumReferenceRange and params.maximumReferenceRange %}
+  <p>The reference range is between {{ params.minimumReferenceRange }} to {{ params.maximumReferenceRange }} {{ params.resultResultMarkerValueUnits }}</p>
+  {% elif params.minimumReferenceRange %}
+  <p>The reference range is above {{ params.minimumReferenceRange }} {{ params.resultResultMarkerValueUnits }}</p>
+  {% elif params.maximumReferenceRange %}
+  <p>The reference range is below {{ params.maximumReferenceRange }} {{ params.resultResultMarkerValueUnits }}</p>
+  {% else %}
+  <p>No range</p>
+  {% endif %}
+</div>

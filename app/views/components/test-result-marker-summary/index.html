@@ -1,0 +1,201 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Panel Link" %}
+
+{% block innerContent %}
+
+  <h2 class="nhsuk-heading-m">Variants</h2>
+
+  <h3 class="nhsuk-heading-xs">Default</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#"
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With supporting text</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          description: "Supporting list"
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With supporting list</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          description: "Supporting list:",
+          list: [
+            {
+              text: "supporting list item"
+            },
+            {
+              text: "supporting list item"
+            },
+            {
+              text: "supporting list item"
+            }
+          ]
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With icon</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: true
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With icon and supporting text</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: true,
+          description: "Supporting text"
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With icon and badge</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: true,
+          notifications: data['messages']
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With badge</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: false,
+          notifications: 2
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">With badge at the top</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#",
+          icon: false,
+          notifications: 2,
+          notificationsPosition: 'top'
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">Stacked</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        }
+      ]
+    })}}
+  </div>
+
+  <h3 class="nhsuk-heading-xs">Spaced</h3>
+
+  <div class="example">
+    {{ panelLinkCard({
+      spaced: true,
+      items: [
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        },
+        {
+          title: "Panel link title",
+          URL: "#"
+        }
+      ]
+    })}}
+  </div>
+
+  <h2 class="nhsuk-heading-m">Examples in context</h2>
+
+  <ul clas="nhsuk-list">
+    <li>
+      <a href="/pages/home-p9">Homepage - P9</a>
+    </li>
+    <li>
+      <a href="/pages/services-p9">Services - P9</a>
+    </li>
+    <li>
+      <a href="/pages/messages-p9">Messages - P9</a>
+    </li>
+  </ul>
+
+{% endblock %}

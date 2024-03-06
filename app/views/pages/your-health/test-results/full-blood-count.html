@@ -1,3 +1,5 @@
+{% from 'components/test-result-marker-summary/macro.njk' import testResultMarkerSummary %}
+
 {% extends 'layout-app.html' %}
 
 {% set hub = "Your health" %}
@@ -39,7 +41,6 @@
         <dd class="nhsuk-summary-list__value">
           Normal - Take no action
         </dd>
-
       </div>
     </dl>
 
@@ -63,20 +64,19 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Haemoglobin estimation:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            146 g/L
-          </dt>
-          <p>The normal range is between 135 to 180</p>
-        </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Haemoglobin estimation",
+        resultResultMarkerValue: 146,
+        resultResultMarkerValueUnits: "g/L",
+        minimumReferenceRange: 135,
+        maximumReferenceRange: 180
+        })}}
+        
         <div>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-one-hundred-forty-six.png" alt="Result within reference range" width="342"
-            height="109">
+          <img src="/images/documentation-example/indicator-range-bar-one-hundred-forty-six.png"
+            alt="Result within reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <p class="nhsuk-body-xs" style="color: #4C6272; font-size: 14px; margin-bottom:0px;">Laboratory comment</p>
@@ -94,25 +94,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Total white cell count:
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                8 10*9/L
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The normal range is between 4 to 11
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Total white cell count",
+            resultResultMarkerValue: 8,
+            resultResultMarkerValueUnits: "10*9/L",
+            minimumReferenceRange: 4,
+            maximumReferenceRange: 11
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-eight-point-one-zero.png" alt="Result within reference range"
-            width="342" height="109">
+          <img src="/images/documentation-example/indicator-range-bar-eight-point-one-zero.png"
+            alt="Result within reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -126,25 +120,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Platelet count:
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                290 g/L
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The reference range is between 135 to 180
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Platelet count",
+            resultResultMarkerValue: 290,
+            resultResultMarkerValueUnits: "g/L",
+            minimumReferenceRange: 135,
+            maximumReferenceRange: 180
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-two-hundred-ninety.png" alt="Result outside reference range" width="342"
-            height="109">
+          <img src="/images/documentation-example/indicator-range-bar-two-hundred-ninety.png"
+            alt="Result outside reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -158,25 +146,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Mean corpuscular volume (MCV):
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                100 fL
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The reference range is between 78 to 100fL
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Mean corpuscular volume (MCV)",
+            resultResultMarkerValue: 100,
+            resultResultMarkerValueUnits: "fL",
+            minimumReferenceRange: 78,
+            maximumReferenceRange: 100
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-one-hundred.png" alt="Result within reference range"
-            width="342" height="109">
+          <img src="/images/documentation-example/indicator-range-bar-one-hundred.png"
+            alt="Result within reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -191,25 +173,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Haematocrit:
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                0.46
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The reference range is between 0.40 to 0.52
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Haematocrit",
+            resultResultMarkerValue: 0.46,
+            resultResultMarkerValueUnits: "",
+            minimumReferenceRange: 0.40,
+            maximumReferenceRange: 0.52
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png" alt="Result within reference range" width="342"
-            height="109">
+          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png"
+            alt="Result within reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -224,25 +200,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Red blood cell (RBC) count:
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                0.46
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The reference range is between 0.40 to 0.52
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Red blood cell (RBC) count",
+            resultResultMarkerValue: 0.46,
+            resultResultMarkerValueUnits: "",
+            minimumReferenceRange: 0.40,
+            maximumReferenceRange: 0.52
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png" alt="Result within reference range" width="342"
-            height="109">
+          <img src="/images/documentation-example/indicator-range-bar-zero-point-four-six.png"
+            alt="Result within reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -257,25 +227,19 @@
         <div>
           <dl class="nhsuk-summary-list">
 
-            <div class="no-border-summary-list__row">
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                Neutrophil count:
-              </dt>
-              <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-                15.5 10*9/L
-              </dt>
-              <div style="padding-top: 12px; padding-bottom: 0px;">
-                <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-                  The reference range is between 2.00 to 7.50 10*9/L
-                </dd>
-              </div>
+            {{ testResultMarkerSummary({
+            testResultMarkerName: "Neutrophil count",
+            resultResultMarkerValue: 15.5,
+            resultResultMarkerValueUnits: "10*9/L",
+            minimumReferenceRange: 2.00,
+            maximumReferenceRange: 7.50
+            })}}
 
-            </div>
           </dl>
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-          <img src="/images/documentation-example/indicator-range-bar-fifteen-point-five.png" alt="Result outside reference range" width="342"
-            height="109">
+          <img src="/images/documentation-example/indicator-range-bar-fifteen-point-five.png"
+            alt="Result outside reference range" width="342" height="109">
           <hr aria-hidden="true"
             style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
           <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -290,24 +254,20 @@
 
     <div>
       <dl class="nhsuk-summary-list">
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Lymphocyte count:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            1.54 10*9/L
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 2.00 to 7.50
-            </dd>
-          </div>
-        </div>
+
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Lymphocyte count",
+        resultResultMarkerValue: 1.54,
+        resultResultMarkerValueUnits: "10*9/L",
+        minimumReferenceRange: 2.00,
+        maximumReferenceRange: 7.50
+        })}}
+
       </dl>
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-      <img src="/images/documentation-example/indicator-range-bar-one-point-five-four.png" alt="Result outside reference range" width="342"
-        height="109">
+      <img src="/images/documentation-example/indicator-range-bar-one-point-five-four.png"
+        alt="Result outside reference range" width="342" height="109">
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -322,25 +282,19 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Monocyte count:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            0.30 10*9/L
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 0.20 to 0.80
-            </dd>
-          </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Monocyte count",
+        resultResultMarkerValue: 0.30,
+        resultResultMarkerValueUnits: "10*9/L",
+        minimumReferenceRange: 0.20,
+        maximumReferenceRange: 0.80
+        })}}
 
-        </div>
       </dl>
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-      <img src="/images/documentation-example/indicator-range-bar-zero-point-three.png" alt="Result within reference range" width="342"
-        height="109">
+      <img src="/images/documentation-example/indicator-range-bar-zero-point-three.png"
+        alt="Result within reference range" width="342" height="109">
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -355,25 +309,19 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Eosinophil count:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            0.45 10*9/L
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is between 0.04 to 0.40 10*9/L
-            </dd>
-          </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Eosinophil count",
+        resultResultMarkerValue: 0.45,
+        resultResultMarkerValueUnits: "10*9/L",
+        minimumReferenceRange: 0.04,
+        maximumReferenceRange: 0.40
+        })}}
 
-        </div>
       </dl>
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-      <img src="/images/documentation-example/indicator-range-bar-zero-point-four-five.png" alt="Result outside reference range" width="342"
-        height="109">
+      <img src="/images/documentation-example/indicator-range-bar-zero-point-four-five.png"
+        alt="Result outside reference range" width="342" height="109">
       <hr aria-hidden="true"
         style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
@@ -388,20 +336,14 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Basophil count:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            0.03 10*9/L
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is below 0.10
-            </dd>
-          </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Basophil count",
+        resultResultMarkerValue: 0.03,
+        resultResultMarkerValueUnits: "10*9/L",
+        minimumReferenceRange: null,
+        maximumReferenceRange: 0.10
+        })}}
 
-        </div>
       </dl>
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
         style="display: inline-block; padding-bottom: 16px;">What is a basophil count test?</a>
@@ -414,20 +356,14 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Nucleated red blood cell count:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            0.13 10*9/L
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              The reference range is below 0.60
-            </dd>
-          </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Nucleated red blood cell count",
+        resultResultMarkerValue: 0.13,
+        resultResultMarkerValueUnits: "10*9/L",
+        minimumReferenceRange: null,
+        maximumReferenceRange: 0.60
+        })}}
 
-        </div>
       </dl>
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
         style="display: inline-block; padding-bottom: 16px;">What is a nucleated red blood cell count test?</a>
@@ -441,20 +377,14 @@
     <div>
       <dl class="nhsuk-summary-list">
 
-        <div class="no-border-summary-list__row">
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            Percentage hypochronic cells:
-          </dt>
-          <dt class="nhsuk-heading-m nhsuk-summary-list__key">
-            1%
-          </dt>
-          <div style="padding-top: 12px; padding-bottom: 0px;">
-            <dd class="nhsuk-summary-list__value" style="color: #4C6272;">
-              No range
-            </dd>
-          </div>
+        {{ testResultMarkerSummary({
+        testResultMarkerName: "Percentage hypochronic cells",
+        resultResultMarkerValue: 1,
+        resultResultMarkerValueUnits: "%",
+        minimumReferenceRange: null,
+        maximumReferenceRange: null
+        })}}
 
-        </div>
       </dl>
       <a href="#" style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
@@ -462,5 +392,5 @@
         style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
     </div>
-    
+
     {% endblock %}

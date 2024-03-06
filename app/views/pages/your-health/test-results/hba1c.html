@@ -1,3 +1,5 @@
+{% from 'components/test-result-marker-summary/macro.njk' import testResultMarkerSummary %}
+
 {% extends 'layout-app.html' %}
 
 {% set hub = "Your health" %}
@@ -6,8 +8,6 @@
 {% set backLinkText = "Back" %}
 
 {% set pageHeading = "Haemoglobin A1c (HbA1c)" %}
-
-
 
 {% block content %}
 
@@ -58,26 +58,29 @@
       </div>
     </dl>
 
-    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
+    <hr aria-hidden="true" style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
 
     <h2 class="nhsuk-heading-l" style="padding-bottom:16px;">Your results</h2>
 
+    {{ testResultMarkerSummary({
+      testResultMarkerName: "Haemoglobin A1c (HbA1c)",
+      resultResultMarkerValue: 46,
+      resultResultMarkerValueUnits: "mmol/mol",
+      minimumReferenceRange: 20,
+      maximumReferenceRange: 42
+    })}}
+
     <div>
-      <h4 style="line-height: 24px; margin-bottom: 0px;">Haemoglobin A1c (HbA1c):</h4>
-      <h4 style="line-height: 28px; margin-bottom: 12px;">46 mmol/mol</h4>
-      <p>The reference range is between 20 to 42 mmol/mol</p>
-    </div>
-    <div>
-      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+      <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
       <img src="/images/documentation-example/indicator-range-bar-forty-six.png" alt="Result outside reference range" width="342"
         height="109">
-      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+      <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
         style="display: inline-block; padding-bottom: 16px;">What is a haemoglobin A1c (HbA1c) test?</a>
       <a href="/pages/your-health/test-results/hba1c-test-history.html"
         style="display: inline-block; padding-bottom: 16px;">View test result history</a>
 
-      <hr style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+      <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
     </div>
 

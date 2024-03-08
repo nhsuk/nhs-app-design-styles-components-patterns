@@ -1,0 +1,87 @@
+// ==========================================================================
+// COMPONENTS / #CARD LINK
+// ==========================================================================
+
+.app-card-link {
+  @include nhsuk-responsive-margin(5, "bottom");
+
+  background-color: $color_nhsuk-white;
+  border: $card-border-width solid $card-border-color;
+  list-style: none;
+  padding: 0;
+}
+
+.app-card-link__item {
+  margin: 0;
+  padding: 0 nhsuk-spacing(3);
+
+  @include mq($from: tablet) {
+    padding: 0 nhsuk-spacing(4);
+  }
+
+  &:last-of-type {
+    .app-card-link__link {
+      border: 0;
+    }
+  }
+}
+
+.app-card-link__link {
+  align-items: center;
+  border-bottom: 1px solid $card-border-color;
+  display: flex;
+  padding: nhsuk-spacing(3) 0;
+  gap: nhsuk-spacing(3);
+  text-decoration: none;
+
+  @include mq($from: tablet) {
+    padding: nhsuk-spacing(4) 0;
+  }
+
+  &:focus {
+    // Remove focus styles
+    background-color: transparent;
+    box-shadow: none;
+    outline: 0;
+
+    .app-card-link__title-text {
+      // Add focus style to title text
+      @include nhsuk-focused-text;
+    }
+  }
+
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  .app-icon {
+    height: 24px;
+    width: 24px;
+
+    @include mq($from: tablet) {
+      height: 28px;
+      width: 28px;
+    }
+  }
+}
+
+.app-card-link__content {
+  display: flex;
+  flex-grow: 2;
+  flex-wrap: wrap;
+}
+
+.app-card-link__title,
+.app-card-link__description {
+  flex-basis: 100%;
+}
+
+.app-card-link__title {
+  @include nhsuk-typography-responsive(22);
+  font-weight: bold;
+}
+
+.app-card-link__description {
+  color: $nhsuk-text-color;
+}
+

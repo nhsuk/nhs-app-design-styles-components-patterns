@@ -69,6 +69,7 @@
   display: flex;
   flex-grow: 2;
   flex-wrap: wrap;
+  gap: nhsuk-spacing(1);
 }
 
 .app-card-link__title,

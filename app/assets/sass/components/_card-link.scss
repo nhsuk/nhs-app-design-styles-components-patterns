@@ -38,6 +38,17 @@
     padding: nhsuk-spacing(4) 0;
   }
 
+  &:hover {
+    .app-card-link__title-text {
+      color: $nhsuk-link-hover-color;
+      text-decoration: underline;
+    }
+
+    .app-icon--chevron {
+      fill: $nhsuk-link-hover-color;
+    }
+  }
+
   &:focus {
     // Remove focus styles
     background-color: transparent;

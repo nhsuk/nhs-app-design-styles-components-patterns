@@ -2,8 +2,9 @@
 // COMPONENTS / #CARD LINK
 // ==========================================================================
 
-// Remove default padding / margin for cards in a UL
 .app-cards {
+  @include nhsuk-responsive-margin(5, "bottom");
+
   list-style: none;
   padding: 0;
 }

@@ -2,17 +2,18 @@
 // COMPONENTS / #CARD LINK
 // ==========================================================================
 
+// Remove default padding / margin for cards in a UL
 .app-cards {
   list-style: none;
   padding: 0;
 }
+
 
 .app-card-link {
   @include nhsuk-responsive-margin(5, "bottom");
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
-  margin: 0;
   padding: 0 nhsuk-spacing(3);
   position: relative;
 
@@ -98,13 +99,21 @@
   }
 }
 
+.app-card-link__main--gap-4 {
+  gap: 4px;
+}
+
+.app-card-link__main--gap-8 {
+  gap: 8px;
+}
+
+.app-card-link__main--gap-12 {
+  gap: 12px;
+}
+
 .app-card-link__title {
   @include nhsuk-typography-responsive(22);
   font-weight: bold;
-}
-
-.app-u-gap-12 {
-  gap: 12px !important;
 }
 
 .nhsuk-u-text-color {

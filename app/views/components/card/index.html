@@ -1,0 +1,123 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Card" %}
+
+{% block innerContent %}
+
+<h2 class="nhsuk-heading-m">Default</h2>
+
+<div class="example">
+  <ul class="app-cards">
+    <li class="app-card-link">
+      <div class="app-card-link__content">
+        <span class="app-card-link__main app-u-gap-12">
+          <a href="#" class="app-card-link__link app-card-link__link--flex app-u-gap-12">
+
+            <span>
+              <span class="app-badge">
+                <span class="nhsuk-u-visually-hidden">
+                You have
+                </span>
+                  4
+                <span class="nhsuk-u-visually-hidden">
+                unread messages
+                </span>
+              </span>
+            </span>
+
+            <span class="app-card-link__title">
+              <span class="app-card-link__title-text">Title</span>
+            </span>
+
+          </a>
+
+          <p>Supporting text</p>
+
+          <ul>
+            <li>from your GP surgery</li>
+            <li>about hospital and specialist care appointments</li>
+            <li>about invitations and reminders</li>
+          </ul>
+
+        </span>
+
+        <svg class="app-icon app-icon--chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+        </svg>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="example">
+  <ul class="app-cards app-cards--spaced">
+    <li class="app-card-link">
+      <div class="app-card-link__content">
+        
+        <span class="app-card-link__main app-u-gap-12">
+          <a href="#" class="app-card-link__link app-card-link__link--flex">
+
+            <span class="nhsuk-u-margin-bottom-3">
+              {{ tag({
+                text: "Action needed",
+                classes: "app-tag--no-border app-tag app-tag--red"
+              })}}
+            </span>
+
+            <span class="app-card-link__title">
+              <span class="app-card-link__title-text">Oral surgery</span>
+            </span>
+
+            <p class="nhsuk-u-text-color nhsuk-u-font-weight-bold">Tuesday 26 January 2024 <br> 1:10pm</p>
+
+          </a>
+
+          <p>The Willows, Croydon University Hospital</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+            <span class="app-badge-status-dot app-badge--red"></span>Document(s) and questionnaire(s) attached
+          </p>
+
+        </span>
+
+        <svg class="app-icon app-icon--chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+        </svg>
+      </div>
+    </li>
+    <li class="app-card-link">
+      <div class="app-card-link__content">
+        
+        <span class="app-card-link__main app-u-gap-12">
+          <a href="#" class="app-card-link__link app-card-link__link--flex">
+
+            <span class="nhsuk-u-margin-bottom-3">
+              {{ tag({
+                text: "Action needed",
+                classes: "app-tag--no-border app-tag app-tag--red"
+              })}}
+            </span>
+
+            <span class="app-card-link__title">
+              <span class="app-card-link__title-text">Oral surgery</span>
+            </span>
+
+            <p class="nhsuk-u-text-color nhsuk-u-font-weight-bold">Tuesday 26 January 2024 <br> 1:10pm</p>
+
+          </a>
+
+          <p>The Willows, Croydon University Hospital</p>
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+            <span class="app-badge-status-dot app-badge--red"></span>Document(s) and questionnaire(s) attached
+          </p>
+
+        </span>
+
+        <svg class="app-icon app-icon--chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
+        </svg>
+      </div>
+    </li>
+  </ul>
+</div>
+
+{% endblock %}

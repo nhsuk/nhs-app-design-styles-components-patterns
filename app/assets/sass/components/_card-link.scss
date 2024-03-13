@@ -14,7 +14,7 @@
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
-  position: relative;
+  position: relative; // Set to relative so the entire card can be clickable
 }
 
 .app-card-link__content {
@@ -72,6 +72,7 @@
     color: $color_nhsuk-blue;
   }
 
+  // Makes the entire card clickable
   &::after {
     bottom: 0;
     content: "";
@@ -146,7 +147,6 @@
 }
 
 // Utility class (to be added somewhere else!)
-
 .nhsuk-u-text-color {
   color: $nhsuk-text-color !important;
 }

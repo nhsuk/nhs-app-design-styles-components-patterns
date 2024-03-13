@@ -46,14 +46,36 @@
   text-decoration: none;
 
   &:hover {
+    text-decoration: underline;
+
+    .app-icon--chevron {
+      fill: $nhsuk-link-hover-color;
+    }
+  }
+
+  // Makes the entire card clickable
+  &::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}
+
+.app-card-link__link--wrap {
+  // Removes the hover and focus states from all elements inside th anchor tag
+  &:hover {
+    text-decoration: none;
+
     .app-card-link__title-text {
       color: $nhsuk-link-hover-color;
       text-decoration: underline;
     }
 
-    .app-icon--chevron {
-      fill: $nhsuk-link-hover-color;
-    }
   }
 
   &:focus {
@@ -66,21 +88,6 @@
       // Add focus style to title text
       @include nhsuk-focused-text;
     }
-  }
-
-  &:visited {
-    color: $color_nhsuk-blue;
-  }
-
-  // Makes the entire card clickable
-  &::after {
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
 }
@@ -130,6 +137,91 @@
   
   }
 
+}
+
+//Media
+.app-card-link__img {
+  max-width: 100%;
+}
+
+// Colours
+.app-card-link--blue {
+  background-color: $nhsuk-link-color;
+}
+
+.app-card-link--dark-blue {
+  background-color: $nhsuk-link-active-color;
+}
+
+.app-card-link--blue,
+.app-card-link--dark-blue {
+  border: 0;
+  color: $color_nhsuk-white;
+
+  a {
+    color: currentColor;
+
+    &:hover {
+      .app-icon--chevron {
+        fill: $color_nhsuk-white;
+      }
+    }
+  }
+
+  .nhsuk-card-link__link {
+    color: $color_nhsuk-white;
+  }
+
+  .app-card-link__link--wrap {
+    &:hover {
+      .app-card-link__title-text {
+        color: $color_nhsuk-white;
+      }
+    }
+    &:focus {
+      .app-card-link__title-text {
+        color: $nhsuk-focus-text-color;
+      }
+    }
+  }
+
+  .nhsuk-card-link__img {
+    border-bottom: 0;
+  }
+
+  .app-icon--chevron {
+    fill: $color_nhsuk-white;
+  }
+}
+
+// Large card with image
+// Used for new campaign card
+.app-card-link--large {
+  @include mq($from: desktop) {
+    display: flex;
+
+    .app-card-link__media {
+      display: flex;
+      flex: 3 0;
+    }
+
+    .app-card-link__img {
+      flex: none;
+    }
+
+    .app-card-link__content {
+      flex: 2 0;
+    }
+
+  }
+  @include mq($from: large-desktop) {
+    .app-card-link__media {
+      flex-grow: 2;
+    }
+    .app-card-link__content {
+      flex-grow: 3;
+    }
+  }
 }
 
 // Spacing modifiers for card content

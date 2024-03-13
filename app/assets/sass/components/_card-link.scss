@@ -4,7 +4,7 @@
 
 .app-cards {
   @include nhsuk-responsive-margin(5, "bottom");
-
+  // Resets default list styles
   list-style: none;
   padding: 0;
 }
@@ -14,7 +14,6 @@
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
-  padding: 0;
   position: relative;
 }
 
@@ -31,6 +30,7 @@
   }
 
   .app-icon {
+    // Could set icon sizes as a variable?
     height: 24px;
     flex: none; // Prevents icons from shrinking
     width: 24px;
@@ -96,25 +96,9 @@
   }
 }
 
-.app-card-link__main--gap-4 {
-  gap: 4px;
-}
-
-.app-card-link__main--gap-8 {
-  gap: 8px;
-}
-
-.app-card-link__main--gap-12 {
-  gap: 12px;
-}
-
 .app-card-link__title {
   @include nhsuk-typography-responsive(22);
   font-weight: bold;
-}
-
-.nhsuk-u-text-color {
-  color: $nhsuk-text-color !important;
 }
 
 // Stacked
@@ -145,4 +129,24 @@
   
   }
 
+}
+
+// Spacing modifiers for card content
+// Could possibly be utility classes?
+.app-card-link__main--gap-4 {
+  gap: nhsuk-spacing(1);
+}
+
+.app-card-link__main--gap-8 {
+  gap: nhsuk-spacing(2);
+}
+
+.app-card-link__main--gap-12 {
+  gap: 12px;
+}
+
+// Utility class (to be added somewhere else!)
+
+.nhsuk-u-text-color {
+  color: $nhsuk-text-color !important;
 }

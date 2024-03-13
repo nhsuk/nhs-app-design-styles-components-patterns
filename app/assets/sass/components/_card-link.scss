@@ -14,22 +14,19 @@
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
-  padding: 0 nhsuk-spacing(3);
+  padding: 0;
   position: relative;
-
-  @include mq($from: tablet) {
-    padding: 0 nhsuk-spacing(4);
-  }
-
 }
 
 .app-card-link__content {
   align-items: center;
   display: flex;
-  padding: nhsuk-spacing(3) 0;
   gap: nhsuk-spacing(3);
+  margin: 0 nhsuk-spacing(3);
+  padding: nhsuk-spacing(3) 0;
 
   @include mq($from: tablet) {
+    margin: 0 nhsuk-spacing(4);
     padding: nhsuk-spacing(4) 0;
   }
 

@@ -4,13 +4,12 @@
 
 .app-cards {
   @include nhsuk-responsive-margin(5, "bottom");
-  // Resets default list styles
-  list-style: none;
-  padding: 0;
+  list-style: none; // Removes default list style
+  padding: 0; // Removes default list padding
 }
 
 .app-card-link {
-  @include nhsuk-responsive-margin(5, "bottom");
+  @include nhsuk-responsive-margin(3, "bottom");
 
   background-color: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
@@ -30,8 +29,7 @@
   }
 
   .app-icon {
-    // Could set icon sizes as a variable?
-    height: 24px;
+    height: 24px; // Could set icon sizes as a variable?
     flex: none; // Prevents icons from shrinking
     width: 24px;
 
@@ -52,7 +50,6 @@
       fill: $nhsuk-link-hover-color;
     }
   }
-
   // Makes the entire card clickable
   &::after {
     bottom: 0;
@@ -66,34 +63,7 @@
 
 }
 
-.app-card-link__link--wrap {
-  // Removes the hover and focus states from all elements inside th anchor tag
-  &:hover {
-    text-decoration: none;
-
-    .app-card-link__title-text {
-      color: $nhsuk-link-hover-color;
-      text-decoration: underline;
-    }
-
-  }
-
-  &:focus {
-    // Remove focus styles
-    background-color: transparent;
-    box-shadow: none;
-    outline: 0;
-
-    .app-card-link__title-text {
-      // Add focus style to title text
-      @include nhsuk-focused-text;
-    }
-  }
-
-}
-
-.app-card-link__main,
-.app-card-link__link--flex {
+.app-card-link__main {
   display: flex;
   flex-grow: 2;
   flex-wrap: wrap;
@@ -168,23 +138,6 @@
     }
   }
 
-  .nhsuk-card-link__link {
-    color: $color_nhsuk-white;
-  }
-
-  .app-card-link__link--wrap {
-    &:hover {
-      .app-card-link__title-text {
-        color: $color_nhsuk-white;
-      }
-    }
-    &:focus {
-      .app-card-link__title-text {
-        color: $nhsuk-focus-text-color;
-      }
-    }
-  }
-
   .nhsuk-card-link__img {
     border-bottom: 0;
   }
@@ -237,6 +190,11 @@
 .app-card-link__main--gap-12 {
   gap: 12px;
 }
+
+.app-card-link__main--gap-16 {
+  gap: nhsuk-spacing(3);
+}
+
 
 // Utility class (to be added somewhere else!)
 .nhsuk-u-text-color {

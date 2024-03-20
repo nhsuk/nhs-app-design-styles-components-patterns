@@ -53,6 +53,8 @@ $color_tag-yellow-text: #5B4701;
 @import 'components/tag';
 @import 'components/timeline';
 
+@import 'components/nhsuk-frontend-extensions';
+
 // Prototype specific styles
 @import 'prototype-specific/example';
 
@@ -120,10 +122,6 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nhsuk-link {
-  @include nhsuk-typography-responsive(19);
 }
 
 // Custom CSS for appointment labels

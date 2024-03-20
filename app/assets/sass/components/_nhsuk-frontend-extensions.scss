@@ -1,0 +1,108 @@
+// Give the nhsuk link a font size
+.nhsuk-link {
+  @include nhsuk-typography-responsive(19);
+}
+
+//
+// Static spacing
+//
+// Padding
+.nhsuk-u-static-padding-1 { padding: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-padding-2 { padding: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-padding-3 { padding: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-padding-4 { padding: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-padding-5 { padding: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-padding-6 { padding: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-padding-7 { padding: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-padding-8 { padding: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-padding-9 { padding: nhsuk-spacing(9) !important; }
+// Padding - Top
+.nhsuk-u-static-padding-top-1 { padding-top: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-padding-top-2 { padding-top: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-padding-top-3 { padding-top: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-padding-top-4 { padding-top: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-padding-top-5 { padding-top: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-padding-top-6 { padding-top: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-padding-top-7 { padding-top: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-padding-top-8 { padding-top: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-padding-top-9 { padding-top: nhsuk-spacing(9) !important; }
+// Padding - Right
+.nhsuk-u-static-padding-right-1 { padding-right: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-padding-right-2 { padding-right: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-padding-right-3 { padding-right: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-padding-right-4 { padding-right: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-padding-right-5 { padding-right: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-padding-right-6 { padding-right: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-padding-right-7 { padding-right: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-padding-right-8 { padding-right: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-padding-right-9 { padding-right: nhsuk-spacing(9) !important; }
+// Padding - Bottom
+.nhsuk-u-static-padding-bottom-1 { padding-bottom: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-padding-bottom-2 { padding-bottom: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-padding-bottom-3 { padding-bottom: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-padding-bottom-4 { padding-bottom: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-padding-bottom-5 { padding-bottom: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-padding-bottom-6 { padding-bottom: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-padding-bottom-7 { padding-bottom: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-padding-bottom-8 { padding-bottom: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-padding-bottom-9 { padding-bottom: nhsuk-spacing(9) !important; }
+// Padding - Left
+.nhsuk-u-static-padding-left-1 { padding-left: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-padding-left-2 { padding-left: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-padding-left-3 { padding-left: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-padding-left-4 { padding-left: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-padding-left-5 { padding-left: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-padding-left-6 { padding-left: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-padding-left-7 { padding-left: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-padding-left-8 { padding-left: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-padding-left-9 { padding-left: nhsuk-spacing(9) !important; }
+// Margin
+.nhsuk-u-static-margin-1 { margin: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-margin-2 { margin: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-margin-3 { margin: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-margin-4 { margin: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-margin-5 { margin: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-margin-6 { margin: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-margin-7 { margin: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-margin-8 { margin: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-margin-9 { margin: nhsuk-spacing(9) !important; }
+// Margin - Top
+.nhsuk-u-static-margin-top-1 { margin-top: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-margin-top-2 { margin-top: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-margin-top-3 { margin-top: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-margin-top-4 { margin-top: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-margin-top-5 { margin-top: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-margin-top-6 { margin-top: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-margin-top-7 { margin-top: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-margin-top-8 { margin-top: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-margin-top-9 { margin-top: nhsuk-spacing(9) !important; }
+// Margin - Right
+.nhsuk-u-static-margin-right-1 { margin-right: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-margin-right-2 { margin-right: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-margin-right-3 { margin-right: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-margin-right-4 { margin-right: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-margin-right-5 { margin-right: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-margin-right-6 { margin-right: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-margin-right-7 { margin-right: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-margin-right-8 { margin-right: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-margin-right-9 { margin-right: nhsuk-spacing(9) !important; }
+// Margin - Bottom
+.nhsuk-u-static-margin-bottom-1 { margin-bottom: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-margin-bottom-2 { margin-bottom: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-margin-bottom-3 { margin-bottom: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-margin-bottom-4 { margin-bottom: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-margin-bottom-5 { margin-bottom: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-margin-bottom-6 { margin-bottom: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-margin-bottom-7 { margin-bottom: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-margin-bottom-8 { margin-bottom: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-margin-bottom-9 { margin-bottom: nhsuk-spacing(9) !important; }
+// Margin - Left
+.nhsuk-u-static-margin-left-1 { margin-left: nhsuk-spacing(1) !important; }
+.nhsuk-u-static-margin-left-2 { margin-left: nhsuk-spacing(2) !important; }
+.nhsuk-u-static-margin-left-3 { margin-left: nhsuk-spacing(3) !important; }
+.nhsuk-u-static-margin-left-4 { margin-left: nhsuk-spacing(4) !important; }
+.nhsuk-u-static-margin-left-5 { margin-left: nhsuk-spacing(5) !important; }
+.nhsuk-u-static-margin-left-6 { margin-left: nhsuk-spacing(6) !important; }
+.nhsuk-u-static-margin-left-7 { margin-left: nhsuk-spacing(7) !important; }
+.nhsuk-u-static-margin-left-8 { margin-left: nhsuk-spacing(8) !important; }
+.nhsuk-u-static-margin-left-9 { margin-left: nhsuk-spacing(9) !important; }

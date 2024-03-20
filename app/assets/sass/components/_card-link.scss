@@ -132,7 +132,11 @@
   border: 0;
   color: $color_nhsuk-white;
 
-  a {
+  .app-card-link__container {
+    border-color: $color_nhsuk-white;
+  }
+
+  .app-card-link__link {
     color: currentColor;
   }
 

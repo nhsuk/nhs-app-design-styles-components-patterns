@@ -32,17 +32,11 @@
 .app-badge-small {
   position: relative;
   color: $color_nhsuk-blue;
-
-  &:before {
-      content: "●";  
-  }
 }
 
 .app-badge-small--absolute {
-  &:before {
-      position: absolute;
-      left: -1em;
-  }
+  position: absolute;
+  left: -1em;
 }
 
 .app-badge--purple {

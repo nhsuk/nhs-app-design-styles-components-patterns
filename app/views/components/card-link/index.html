@@ -52,14 +52,18 @@
     <div class="app-card-link__container">
 
       <div class="app-card-link__content">
-        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#" aria-label="Hospital appointments, you have 2 appointments that need action">
+        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
           Hospital appointments
         </a>
       </div>
 
-      <span aria-hidden="true">
-        <span class="app-badge">
-          2
+      <span class="app-badge">
+        <span class="nhsuk-u-visually-hidden">
+          You have
+        </span>
+        2
+        <span class="nhsuk-u-visually-hidden">
+          appointments that need action
         </span>
       </span>
 
@@ -102,14 +106,18 @@
       {% include "components/icons/messages-with-badge.html" %}
 
       <div class="app-card-link__content">
-        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#" aria-label="View your messages, you have 24 unread messages">
+        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
           View your messages
         </a>
       </div>
 
-      <span aria-hidden="true">
-        <span class="app-badge">
-          9+
+      <span class="app-badge">
+        <span class="nhsuk-u-visually-hidden">
+          You have
+        </span>
+        9+
+        <span class="nhsuk-u-visually-hidden">
+          unread messages
         </span>
       </span>
 
@@ -212,12 +220,18 @@
       <div class="app-card-link__content">
 
         <div class="app-card-link__above">
-          <span class="app-badge nhsuk-u-margin-bottom-3" aria-hidden="true">
+          <span class="app-badge nhsuk-u-margin-bottom-3">
+            <span class="nhsuk-u-visually-hidden">
+              You have
+            </span>
             4
+            <span class="nhsuk-u-visually-hidden">
+              unread messages
+            </span>
           </span>
         </div>
 
-        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#" aria-label="Your NHS healthcare services, you have 4 unread messages">
+        <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
           Your NHS healthcare services
         </a>
 
@@ -262,6 +276,7 @@
           <p class="nhsuk-u-margin-bottom-3">The Willows, Croydon University Hospital</p>
           <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
             <span class="app-badge-small app-badge-small--red nhsuk-u-margin-right-1">
+              <span aria-hidden="true">●</span>
               <span class="nhsuk-u-visually-hidden">New </span>
             </span>
             Document(s) and questionnaire(s) attached
@@ -321,7 +336,7 @@
         </a>
 
         <div class="app-card-link__below">
-          <p class="nhsuk-u-margin-top-3">You need to select a clinic for your orthopaedic refferal</p>
+          <p class="nhsuk-u-margin-top-3">You need to select a clinic for your orthopaedic referral</p>
         </div>
 
       </div>
@@ -356,7 +371,7 @@
       </div>
 
       {% include "components/icons/chevron.html" %}
-      
+
     </div>
   </li>
 
@@ -373,12 +388,16 @@
       <div class="app-card-link__content">
 
         <div class="app-card-link__above">
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">1:02pm</p>
+          <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">1:02pm</p>
         </div>
 
         <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
-          <span class="app-badge-small app-badge-small--absolute"></span>
+          <span class="app-badge-small">
+            <span class="app-badge-small--absolute" aria-hidden="true">●</span>
+            <span class="nhsuk-u-visually-hidden">Unread message from </span>
+          </span>
           Portland Street Great Westood Surgery
+          <span class="nhsuk-u-visually-hidden">received today at 1:02pm</span>
         </a>
 
         <div class="app-card-link__below">
@@ -395,12 +414,16 @@
       <div class="app-card-link__content">
 
         <div class="app-card-link__above">
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Thursday</p>
+          <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Thursday</p>
         </div>
 
         <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
-          <span class="app-badge-small app-badge-small--absolute"></span>
+          <span class="app-badge-small">
+            <span class="app-badge-small--absolute" aria-hidden="true">●</span>
+            <span class="nhsuk-u-visually-hidden">Unread message from </span>
+          </span>
           Range Surgery
+          <span class="nhsuk-u-visually-hidden">received on Thursday at 11:00am</span>
         </a>
 
         <div class="app-card-link__below">
@@ -417,11 +440,12 @@
       <div class="app-card-link__content">
 
         <div class="app-card-link__above">
-          <p class="nhsuk-u-margin-bottom-0">15 Mar 2024</p>
+          <p aria-hidden="true" class="nhsuk-u-margin-bottom-0">15 Mar 2024</p>
         </div>
 
         <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
           Hughenden Valley Surgery
+          <span class="nhsuk-u-visually-hidden">received on 15 March 2024 at 9:00am</span>
         </a>
 
         <div class="app-card-link__below">
@@ -438,11 +462,12 @@
       <div class="app-card-link__content">
 
         <div class="app-card-link__above">
-          <p class="nhsuk-u-margin-bottom-0">12 Dec 2023</p>
+          <p aria-hidden="true" class="nhsuk-u-margin-bottom-0">12 Dec 2023</p>
         </div>
 
         <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
           NHS App
+          <span class="nhsuk-u-visually-hidden">received on 12 december 2023 at 8:00am</span>
         </a>
 
         <div class="app-card-link__below">

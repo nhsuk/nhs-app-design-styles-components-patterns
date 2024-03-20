@@ -1,15 +1,15 @@
 {% if data['messages'] > 0 %}
+<span class="app-badge">
   <span class="nhsuk-u-visually-hidden">
     You have
   </span>
-  <span class="app-badge">
-    {% if data['messages'] > 9 %}
-    9+
-    {% else %}
-      {{ data['messages'] }}
-    {% endif %}
-  </span>
+  {% if data['messages'] > 9 %}
+  9+
+  {% else %}
+    {{ data['messages'] }}
+  {% endif %}
   <span class="nhsuk-u-visually-hidden">
     unread {% if data['messages'] > 1 %}messages{% else %}message{% endif %}
   </span>
+</span>
 {% endif %}

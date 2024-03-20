@@ -106,3 +106,15 @@
 .nhsuk-u-static-margin-left-7 { margin-left: nhsuk-spacing(7) !important; }
 .nhsuk-u-static-margin-left-8 { margin-left: nhsuk-spacing(8) !important; }
 .nhsuk-u-static-margin-left-9 { margin-left: nhsuk-spacing(9) !important; }
+
+//
+// Truncate a paragraph onto two lines
+//
+.app-truncate-two-lines {
+  margin-right: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

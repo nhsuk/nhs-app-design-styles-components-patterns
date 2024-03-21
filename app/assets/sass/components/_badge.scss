@@ -21,12 +21,18 @@
   background-color: $color_nhsuk-blue;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 4px;
   position: relative;
-  height: 10px;
+  height: 8px;
   top: -1px;
   vertical-align: middle;
-  width: 10px;
+  width: 8px;
+
+  @include mq($from: tablet) {
+    height: 12px;
+    margin-right: 8px;
+    width: 12px;
+  }
 }
 
 .app-badge-small {
@@ -39,6 +45,28 @@
   left: -1em;
 }
 
+.app-badge-indicator {
+  align-items: center;
+  display: flex;
+}
+
+.app-badge-indicator__dot {
+  background-color: $color_nhsuk-blue;
+  border-radius: 50%;
+  display: flex;
+  flex: none;
+  height: 8px;
+  margin-right: 8px;
+  width: 8px;
+
+  @include mq($from: tablet) {
+    height: 12px;
+    margin-right: 12px;
+    width: 12px;
+  }
+}
+
+// Colours
 .app-badge--purple {
   background-color: $color_tag-purple-text;
 }

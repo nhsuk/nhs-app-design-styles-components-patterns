@@ -17,6 +17,11 @@
   }
 }
 
+// With inline-block
+.app-badge-status-dot__wrapper {
+  position: relative;
+}
+
 .app-badge-status-dot {
   background-color: $color_nhsuk-blue;
   border-radius: 50%;
@@ -35,6 +40,17 @@
   }
 }
 
+.app-badge-status-dot--absolute {
+  position: absolute;
+  left: -18px;
+  top: 7px;
+
+  @include mq($from: tablet) {
+    left: -22px;
+  }
+}
+
+// With special character
 .app-badge-small {
   position: relative;
   color: $color_nhsuk-blue;
@@ -45,6 +61,7 @@
   left: -1em;
 }
 
+// With flexbox
 .app-badge-indicator {
   align-items: center;
   display: flex;
@@ -57,12 +74,22 @@
   flex: none;
   height: 8px;
   margin-right: 8px;
+  top: -1px;
   width: 8px;
 
   @include mq($from: tablet) {
     height: 12px;
     margin-right: 12px;
     width: 12px;
+  }
+}
+
+.app-badge-indicator__dot--absolute {
+  margin-left: -16px;
+
+  @include mq($from: tablet) {
+    margin-left: -24px;
+    margin-right: 8px;
   }
 }
 

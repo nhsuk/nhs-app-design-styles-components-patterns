@@ -52,13 +52,14 @@
 
 // With special character
 .app-badge-small {
-  position: relative;
   color: $color_nhsuk-blue;
+  position: relative;
+  top: -1px;
 }
 
 .app-badge-small--absolute {
-  position: absolute;
   left: -1em;
+  position: absolute;
 }
 
 // With flexbox
@@ -74,7 +75,6 @@
   flex: none;
   height: 8px;
   margin-right: 8px;
-  top: -1px;
   width: 8px;
 
   @include mq($from: tablet) {

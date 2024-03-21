@@ -82,6 +82,13 @@
   @include nhsuk-typography-responsive(22);
 }
 
+// Smaller gap
+.app-cards--spaced-small {
+  .app-card-link {
+    @include nhsuk-responsive-margin(1, "bottom");
+  }
+}
+
 // Stacked
 .app-cards--stacked {
   @include nhsuk-responsive-margin(5, "bottom");

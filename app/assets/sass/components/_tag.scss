@@ -5,34 +5,15 @@
 .app-tag {
   @include nhsuk-font($size: 16, $weight: normal, $line-height: 1.25);
   background-color: tint($color_nhsuk-blue, 80%);
-  border: 1px solid shade($color_nhsuk-blue, 30%);
   border-radius: 2px;
   color: shade($color_nhsuk-blue, 30%);
   margin-bottom: -2px;
   margin-top: -2px;
-  padding: 3px 10px;
+  padding: 4px 10px;
 
   @include mq($from: tablet) {
     line-height: 1.4285em;
   }
-}
-
-.app-tag--new {
-  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1.25);
-  background-color: tint($color_nhsuk-blue, 80%);
-  border: 1px solid shade($color_nhsuk-blue, 30%);
-  border-radius: 2px;
-  color: shade($color_nhsuk-blue, 30%);
-  letter-spacing: 0.01rem;
-  padding: 3px 10px;
-
-  @include mq($until: tablet) {
-    line-height: 1.4285em;
-  }
-}
-
-.app-tag--uppercase {
-  text-transform: uppercase;
 }
 
 /* Colour variants
@@ -108,17 +89,4 @@
   background-color: transparent;
   border-color: transparent;
   color: $nhsuk-secondary-text-color;
-}
-
-.app-tag--no-border {
-  border: 0;
-  padding: 4px 10px;
-
-  &.app-tag--new {
-    padding: 4px 10px;
-  }
-}
-  
-.nhsuk-tag--normal {
-  font-weight: normal;
 }

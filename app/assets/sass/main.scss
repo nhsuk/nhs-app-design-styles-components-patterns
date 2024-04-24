@@ -143,7 +143,7 @@ hr {
 
 // Form group
 .nhsuk-form-group {
-  margin-bottom: 32px;
+  @include nhsuk-responsive-margin(5, "bottom");
 }
 
 // Pagination

@@ -1,0 +1,94 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/messages/your-messages" %}
+
+{% set pageHeading = "Filter by" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSmall: true
+      })}}
+
+      <form id="form" method="post" action="/pages/messages/your-messages" novalidate="novalidate">
+
+        {{ checkboxes({
+          idPrefix: "message-status",
+          name: "message-status",
+          fieldset: {
+            legend: {
+              text: "Message status",
+              classes: "nhsuk-label--m"
+            }
+          },
+          "items": [
+            {
+              value: "Read",
+              text: "Read",
+              checked: checked("message-status", "Read")
+            },
+            {
+              value: "Unread",
+              text: "Unread",
+              checked: checked("message-status", "Unread")
+            }
+          ]
+        }) }}
+
+        {{ checkboxes({
+          idPrefix: "sender",
+          name: "sender",
+          fieldset: {
+            legend: {
+              text: "Sender",
+              classes: "nhsuk-label--m"
+            }
+          },
+          "items": [
+            {
+              value: "Portland Street Great Westood Surgery",
+              text: "Portland Street Great Westood Surgery",
+              checked: checked("sender", "Portland Street Great Westood Surgery")
+            },
+            {
+              value: "Range Surgery",
+              text: "Range Surgery",
+              checked: checked("sender", "Range Surgery")
+            },
+            {
+              value: "Hughenden Valley Surgery",
+              text: "Hughenden Valley Surgery",
+              checked: checked("sender", "Hughenden Valley Surgery")
+            },
+            {
+              value: "NHS App",
+              text: "NHS App",
+              checked: checked("sender", "NHS App")
+            }
+          ]
+        }) }}
+
+        <div class="app-button-group">
+          <button class="nhsuk-button app-button app-button--full-width" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
+          <a href="/pages/messages/your-messages" class="nhsuk-link nhsuk-link--no-visited-state">Clear all</a>
+        </div>
+        
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

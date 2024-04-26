@@ -1,0 +1,54 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+
+{% set pageHeading = "Have you been invited to this appointment?" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/services/gp-appointment-invite-answer" novalidate="novalidate">
+
+        {{ radios({
+          idPrefix: "gp-appointment-invite",
+          name: "gp-appointment-invite",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--xl",
+              isPageHeading: true
+            }
+          },
+          "items": [
+            {
+              value: "Yes",
+              text: "Yes",
+              checked: checked("gp-appointment-invite", "Yes")
+            },
+            {
+              value: "No",
+              text: "No",
+              checked: checked("gp-appointment-invite", "No")
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button app-button--full-width"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

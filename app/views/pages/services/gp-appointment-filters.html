@@ -1,0 +1,121 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/services/gp-appointment-select-appointment-v3" %}
+
+{% set pageHeading = "Filter by" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSmall: true
+      })}}
+
+      <form id="form" method="post" action="/pages/services/gp-appointment-select-appointment-v3" novalidate="novalidate">
+
+        {{ checkboxes({
+          idPrefix: "gp-appointment-location",
+          name: "gp-appointment-location",
+          fieldset: {
+            legend: {
+              text: "Location",
+              classes: "nhsuk-label--s"
+            }
+          },
+          "items": [
+            {
+              value: "York Road Practice",
+              text: "York Road Practice",
+              checked: checked("gp-appointment-location", "York Road Practice")
+            },
+            {
+              value: "Southbank Practice",
+              text: "Southbank Practice",
+              checked: checked("gp-appointment-location", "Southbank Practice")
+            },
+            {
+              value: "Phone",
+              text: "Phone",
+              checked: checked("gp-appointment-location", "Phone")
+            }
+
+          ]
+        }) }}
+
+        {{ checkboxes({
+          idPrefix: "gp-appointment-sex",
+          name: "gp-appointment-sex",
+          fieldset: {
+            legend: {
+              text: "Sex of healthcare professional",
+              classes: "nhsuk-label--s"
+            }
+          },
+          "items": [
+            {
+              value: "Female",
+              text: "Female",
+              checked: checked("gp-appointment-sex", "Female")
+            },
+            {
+              value: "Male",
+              text: "Male",
+              checked: checked("gp-appointment-sex", "Male")
+            }
+          ]
+        }) }}
+
+        {{ checkboxes({
+          idPrefix: "gp-appointment-clinician",
+          name: "gp-appointment-clinician",
+          fieldset: {
+            legend: {
+              text: "Healthcare professional",
+              classes: "nhsuk-label--s"
+            }
+          },
+          "items": [
+            {
+              value: "Dr Max Smith (Male)",
+              text: "Dr Max Smith (Male)",
+              checked: checked("gp-appointment-clinician", "Dr Max Smith (Male)")
+            },
+            {
+              value: "Dr Sarah Clarke (Female)",
+              text: "Dr Sarah Clarke (Female)",
+              checked: checked("gp-appointment-clinician", "Dr Sarah Clarke (Female)")
+            },
+            {
+              value: "Louise Williams (Female)",
+              text: "Louise Williams (Female)",
+              checked: checked("gp-appointment-clinician", "Louise Williams (Female)"),
+              hint: {
+                text: "Nurse"
+              }
+            }
+          ]
+        }) }}
+
+        <div class="app-button-group">
+          <button class="nhsuk-button app-button app-button--full-width" data-module="nhsuk-button" type="submit">
+            Apply
+          </button>
+          <a href="/pages/services/gp-appointment-select-appointment-v3" class="nhsuk-link nhsuk-link--no-visited-state">Clear all</a>
+        </div>
+        
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

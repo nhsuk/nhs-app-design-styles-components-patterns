@@ -1,0 +1,29 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+
+{% set pageHeading = "We recommend contacting your GP about this health problem" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <p>If you have not been invited to an appointment the healthcare professional associated with this type of appointment may not be the most appropriate for your particular health problem.</p>
+
+      <p>Please consider the following actions.</p>
+
+    </div>
+  </div>
+
+  {% endblock %}

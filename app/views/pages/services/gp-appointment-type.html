@@ -13,7 +13,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-location" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-type-answer" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-type",
@@ -27,34 +27,57 @@
           },
           "items": [
             {
-              value: "General",
-              text: "General",
-              checked: checked("gp-appointment-type", "General")
+              value: "Routine GP",
+              text: "Routine GP",
+              checked: checked("gp-appointment-type", "Routine GP")
             },
             {
-              value: "BABY IMMS 1yr and 3yr4mnths Other ages via reception",
-              text: "BABY IMMS 1yr and 3yr4mnths Other ages via reception",
-              checked: checked("gp-appointment-type", "BABY IMMS 1yr and 3yr4mnths Other ages via reception")
+              value: "Asthma clinic",
+              text: "Asthma clinic",
+              checked: checked("gp-appointment-type", "Asthma clinic")
             },
             {
-              value: "Diabetes or Asthma Review F2F by Invitation",
-              text: "Diabetes or Asthma Review F2F by Invitation",
-              checked: checked("gp-appointment-type", "Diabetes or Asthma Review F2F by Invitation")
+              value: "Blood test",
+              text: "Blood test",
+              checked: checked("gp-appointment-type", "Blood test")
             },
             {
-              value: "Blood Test by Invitation or Blood Monitoring",
-              text: "Blood Test by Invitation or Blood Monitoring",
-              checked: checked("gp-appointment-type", "Blood Test by Invitation or Blood Monitoring")
+              value: "B12 Injection",
+              text: "B12 Injection",
+              checked: checked("gp-appointment-type", "B12 Injection")
             },
             {
-              value: "NHS Healthcheck by Invitation NOT routine annual review",
-              text: "NHS Healthcheck by Invitation NOT routine annual review",
-              checked: checked("gp-appointment-type", "NHS Healthcheck by Invitation NOT routine annual review")
+              value: "Childhood vaccinations",
+              text: "Childhood vaccinations",
+              checked: checked("gp-appointment-type", "Childhood vaccinations")
             },
             {
-              value: "Phone call",
-              text: "Phone call",
-              checked: checked("gp-appointment-type", "Phone call")
+              value: "Contraception appointment",
+              text: "Contraception appointment",
+              checked: checked("gp-appointment-type", "Contraception appointment")
+            },
+            {
+              value: "Carer health check",
+              text: "Carer health check",
+              checked: checked("gp-appointment-type", "Carer health check")
+            },
+            {
+              value: "Diabetic review",
+              text: "Diabetic review",
+              checked: checked("gp-appointment-type", "Diabetic review")
+            },
+            {
+              value: "Dressing/wound care",
+              text: "Dressing/wound care",
+              checked: checked("gp-appointment-type", "Dressing/wound care")
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None of these",
+              checked: checked("gp-appointment-type", "none")
             }
           ]
         }) }}

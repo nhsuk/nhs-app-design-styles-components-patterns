@@ -9,3 +9,14 @@
 .app-icon--no-fill {
   fill: none; // Removes fill colour
 }
+
+.app-icon--16 {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.text-with-icon {
+  align-items: center;
+  display: inline-flex;
+  gap: nhsuk-spacing(2);
+}

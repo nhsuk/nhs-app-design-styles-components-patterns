@@ -4,20 +4,14 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-select-appointment" %}
+{% set backLinkURL = "/pages/services/gp-appointment-select-appointment-v3" %}
 
-{% set pageHeading = "Why do you need an appointment?" %}
+{% set pageHeading = "Tell us how we can help" %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-
-      <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true
-      })}}
 
       <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
 
@@ -25,11 +19,12 @@
           name: "gp-appointment-reason",
           id: "gp-appointment-reason",
           label: {
-            text: "Add notes for your GP",
-            classes: "nhsuk-label--m nhsuk-u-margin-bottom-2"
+            text: pageHeading,
+            classes: "nhsuk-label--xl nhsuk-u-margin-bottom-2",
+            isPageHeading: true
           },
           hint: {
-            text: "You can add a note about your appointment here. Your note may not be seen or replied to."
+            text: "Describe your problem in a few words. Your note may not be seen or replied to."
           }
         }) }}
 

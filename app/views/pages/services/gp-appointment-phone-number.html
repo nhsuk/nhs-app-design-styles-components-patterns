@@ -1,0 +1,68 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+
+{% set pageHeading = "Select a phone number for this appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
+
+        {% set phoneHtml %}
+          {{ input({
+            id: "phone",
+            name: "phone",
+            classes: "nhsuk-u-width-two-thirds",
+            label: {
+              text: "Phone number"
+            }
+          }) }}
+        {% endset -%}
+
+        {{ radios({
+          idPrefix: "gp-appointment-phone-number",
+          name: "gp-appointment-phone-number",
+          fieldset: {
+            legend: {
+              text: pageHeading,
+              classes: "nhsuk-fieldset__legend--xl",
+              isPageHeading: true
+            }
+          },
+          "items": [
+            {
+              value: "Current",
+              text: "********534",
+              checked: checked("gp-appointment-phone-number", "Current")
+            },
+            {
+              value: "New",
+              text: "Use a different phone number",
+              checked: checked("gp-appointment-phone-number", "New"),
+              conditional: {
+                html: phoneHtml
+              }
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button app-button--full-width"
+        }) }}
+        
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

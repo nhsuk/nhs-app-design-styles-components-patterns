@@ -39,7 +39,16 @@
         </a>-->
       </div>
 
+      {% if "Unread" in data['message-status'] and data['message1read'] === "true" and data['message2read'] === "true" or "Unread" in data['message-status'] and "Hughenden Valley Surgery" in data['message-sender'] or "Unread" in data['message-status'] and "NHS App" in data['message-sender'] %}
+
+      <p>No messages</p>
+
+      {% else %}
+
       <ul class="app-panel-link-card-stacked">
+
+        {% if "Unread" in data['message-status'] and data['message1read'] === "false" or data['message-status'] == "" or "Read" in data['message-status'] and data['message1read'] === "true" %}
+        {% if "Portland Street Great Westood Surgery" in data['message-sender'] or data['message-sender'] == "" %}
         <!-- MESSAGE 1 -->
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
@@ -68,6 +77,11 @@
             </p>
           </div>
         </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Unread" in data['message-status'] and data['message2read'] === "false" or data['message-status'] == "" or "Read" in data['message-status'] and data['message2read'] === "true" %}
+        {% if "Range Surgery" in data['message-sender'] or data['message-sender'] == "" %}
         <!-- MESSAGE 2 -->
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
@@ -99,6 +113,11 @@
             </p>
           </div>
         </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Read" in data['message-status'] or data['message-status'] == "" %}
+        {% if "Hughenden Valley Surgery" in data['message-sender'] or data['message-sender'] == "" %}
         <!-- MESSAGE 3 -->
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
@@ -116,6 +135,11 @@
             </p>
           </div>
         </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Read" in data['message-status'] or data['message-status'] == "" %}
+        {% if "NHS App" in data['message-sender'] or data['message-sender'] == "" %}
         <!-- MESSAGE 4 -->
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content app-panel-link-card__content--message">
@@ -133,7 +157,11 @@
             </p>
           </div>
         </li>
+        {% endif %}
+        {% endif %}
+
       </ul>
+      {% endif %}
 
     </div>
   </div>

@@ -45,8 +45,8 @@
         }) }}
 
         {{ checkboxes({
-          idPrefix: "sender",
-          name: "sender",
+          idPrefix: "message-sender",
+          name: "message-sender",
           fieldset: {
             legend: {
               text: "Sender",
@@ -57,22 +57,22 @@
             {
               value: "Hughenden Valley Surgery",
               text: "Hughenden Valley Surgery",
-              checked: checked("sender", "Hughenden Valley Surgery")
+              checked: checked("message-sender", "Hughenden Valley Surgery")
             },
             {
               value: "NHS App",
               text: "NHS App",
-              checked: checked("sender", "NHS App")
+              checked: checked("message-sender", "NHS App")
             },
             {
               value: "Portland Street Great Westood Surgery",
               text: "Portland Street Great Westood Surgery",
-              checked: checked("sender", "Portland Street Great Westood Surgery")
+              checked: checked("message-sender", "Portland Street Great Westood Surgery")
             },
             {
               value: "Range Surgery",
               text: "Range Surgery",
-              checked: checked("sender", "Range Surgery")
+              checked: checked("message-sender", "Range Surgery")
             }
           ]
         }) }}
@@ -81,12 +81,16 @@
           <button class="nhsuk-button app-button app-button--full-width" data-module="nhsuk-button" type="submit">
             Apply
           </button>
-          <a href="/pages/messages/your-messages" class="nhsuk-link nhsuk-link--no-visited-state">Clear all</a>
+        </form>
+          <form id="form-clear" method="post" action="/pages/messages/your-messages" novalidate="novalidate">
+            <input type="hidden" name="message-status" value="">
+            <input type="hidden" name="message-sender" value="">
+            {{ button({
+              text: "Clear all",
+              classes: "app-button--link"
+            }) }}
+          </form>
         </div>
-        
-      </form>
-
-
 
     </div>
   </div>

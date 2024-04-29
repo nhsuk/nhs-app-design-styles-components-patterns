@@ -30,4 +30,7 @@ module.exports = {
   "gp-appointment-clinician": "",
   "gp-appointment-location": "",
 
+  "message-sender": "",
+  "message-status": "",
+
 }

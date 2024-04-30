@@ -52,7 +52,7 @@
         {% endif %}
       </div>
 
-      {% if "Unread" in data['message-status'] and data['message1read'] === "true" and data['message2read'] === "true" or "Unread" in data['message-status'] and "Hughenden Valley Surgery" in data['message-sender'] or "Unread" in data['message-status'] and "NHS App" in data['message-sender'] %}
+      {% if "Unread" in data['message-status'] and "Read" not in data['message-status'] and data['message1read'] === "true" and data['message2read'] === "true" %}
 
       <p>No messages</p>
 

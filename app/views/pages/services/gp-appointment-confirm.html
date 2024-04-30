@@ -54,8 +54,12 @@
           <dt class="nhsuk-summary-list__key">
             Phone number
           </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-phone-number-new'] or '********534' }}
+          <dd class="nhsuk-summary-list__value"> 
+            {% if data['appointment-phone-number'] == "Current"  %}
+              ********534
+            {% else %}
+              {{ data['appointment-phone-number-new'] or '07866767898' }}
+            {% endif %}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-phone-number">

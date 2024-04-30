@@ -48,7 +48,11 @@
             Phone number
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-phone-number-new'] or '********534' }}
+            {% if data['appointment-phone-number'] == "Current"  %}
+              ********534
+            {% else %}
+              {{ data['appointment-phone-number-new'] or '07866767898' }}
+            {% endif %}
           </dd>
         </div>
         {% else %}

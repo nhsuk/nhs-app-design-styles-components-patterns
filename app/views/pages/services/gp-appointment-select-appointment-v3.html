@@ -4,7 +4,12 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+
+{% if data['gp-appointment-type'] == "Routine GP"  %}
+  {% set backLinkURL = "/pages/services/gp-appointment-type" %}
+{% else %}
+  {% set backLinkURL = "/pages/services/gp-appointment-invite" %}
+{% endif %}
 
 {% set pageHeading = "Select your appointment" %}
 
@@ -26,11 +31,15 @@
             <path d="M17.6598 11.24H6.33984C6.20177 11.24 6.08984 11.3519 6.08984 11.49V12.51C6.08984 12.6481 6.20177 12.76 6.33984 12.76H17.6598C17.7979 12.76 17.9098 12.6481 17.9098 12.51V11.49C17.9098 11.3519 17.7979 11.24 17.6598 11.24Z" />
             <path d="M15.0397 15.24H8.96973C8.83166 15.24 8.71973 15.3519 8.71973 15.49V16.51C8.71973 16.6481 8.83166 16.76 8.96973 16.76H15.0397C15.1778 16.76 15.2897 16.6481 15.2897 16.51V15.49C15.2897 15.3519 15.1778 15.24 15.0397 15.24Z" />
           </svg>
-          Filters
-          {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
-          {% else %}
-            ({{ data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length }})
-          {% endif %}
+          <span class="app-u-gap-0">
+            Filter
+            {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+            {% else %}
+              <span class="nhsuk-u-visually-hidden"> results </span>
+              ({{ data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length }})
+              <span class="nhsuk-u-visually-hidden"> filters currently selected</span>
+            {% endif %}
+          </span>
         </a>
         {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
           {% else %}
@@ -39,7 +48,7 @@
             <input type="hidden" name="gp-appointment-clinician-sex" value="">
             <input type="hidden" name="gp-appointment-location" value="">
             {{ button({
-              text: "Clear filters",
+              text: "Clear all filters",
               classes: "app-button--link nhsuk-u-margin-bottom-0"
             }) }}
           </form>

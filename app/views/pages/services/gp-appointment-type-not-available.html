@@ -4,7 +4,12 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+
+{% if data['gp-appointment-invite'] == "No"  %}
+  {% set backLinkURL = "/pages/services/gp-appointment-invite" %}
+{% else %}
+  {% set backLinkURL = "/pages/services/gp-appointment-type" %}
+{% endif %}
 
 {% set pageHeading = "We recommend contacting your GP about this health problem" %}
 

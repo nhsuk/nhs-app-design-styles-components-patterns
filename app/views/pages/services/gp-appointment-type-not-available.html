@@ -21,7 +21,24 @@
 
       <p>If you have not been invited to an appointment the healthcare professional associated with this type of appointment may not be the most appropriate for your particular health problem.</p>
 
-      <p>Please consider the following actions.</p>
+      {{ sectionTitle({
+        title: "Other things you can do"
+      })}}
+
+      <!-- PANEL LINK CARD - Your health -->
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Contact GP about a health problem",
+            URL: "#"
+          },
+          {
+            title: "Check for available GP appointments",
+            URL: "/pages/services/gp-appointment-type"
+          }
+          
+        ]
+      })}}
 
     </div>
   </div>

@@ -41,6 +41,7 @@
       {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         <ul class="app-cards app-cards--stacked">
           
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
           <li class="app-card-link">
             <form id="appointmentForm1" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Morning">
@@ -61,7 +62,9 @@
               </div>
             </form>
           </li>
+          {% endif %}
 
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
           <li class="app-card-link">
             <form id="appointmentForm2" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Afternoon">
@@ -82,6 +85,7 @@
               </div>
             </form>
           </li>
+          {% endif %}
 
         </ul>
       {% endif %}
@@ -186,16 +190,14 @@
         {% endif %}
       </ul>
 
-      {% if "York Road Practice" in data['gp-appointment-location'] and "Southbank Practice" not in data['gp-appointment-location'] and "Phone" not in data['gp-appointment-location'] %}
-      {% else %}
       <h2 class="nhsuk-heading-m">
         Thursday 30 May 2024
       </h2>
-      {% endif %}
 
       {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         <ul class="app-cards app-cards--stacked">
           
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
           <li class="app-card-link">
             <form id="appointmentForm7" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Morning">
@@ -216,7 +218,8 @@
               </div>
             </form>
           </li>
-
+          {% endif %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}   
           <li class="app-card-link">
             <form id="appointmentForm8" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Afternoon">
@@ -237,7 +240,7 @@
               </div>
             </form>
           </li>
-
+          {% endif %}
         </ul>
       {% endif %}
 
@@ -291,6 +294,30 @@
         </li>
         {% endif %}
         {% endif %}
+        {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+        {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
+        <li class="app-card-link">
+          <form id="appointmentForm5" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="10:00am">
+            <input type="hidden" name="appointment-date" value="Wednesday 29 May 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+            <input type="hidden" name="appointment-location" value="York Road Practice">   
+            <div class="app-card-link__container">
+              <div class="app-card-link__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm5').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
+                </a>
+                <div class="app-card-link__below">
+                  <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                  <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">York Road Practice</p>
+                </div>
+              </div>
+              {% include "components/icons/chevron.html" %}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% endif %}
       </ul>
 
       <h2 class="nhsuk-heading-m">
@@ -299,7 +326,7 @@
 
       {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         <ul class="app-cards app-cards--stacked">
-          
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
           <li class="app-card-link">
             <form id="appointmentForm11" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Morning">
@@ -320,7 +347,8 @@
               </div>
             </form>
           </li>
-
+          {% endif %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
           <li class="app-card-link">
             <form id="appointmentForm12" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Afternoon">
@@ -341,7 +369,7 @@
               </div>
             </form>
           </li>
-
+          {% endif %}
         </ul>
       {% endif %}
 
@@ -399,14 +427,14 @@
         {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
         <li class="app-card-link">
           <form id="appointmentForm15" method="post" action="/pages/services/gp-appointment-reason">
-            <input type="hidden" name="appointment-time" value="10am">
+            <input type="hidden" name="appointment-time" value="10:00am">
             <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
             <input type="hidden" name="appointment-location" value="York Road Practice">   
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm15').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
@@ -422,10 +450,6 @@
       </ul>
 
       {% endif %}
-
-      <p>{{ data['gp-appointment-clinician'] }}</p>
-      <p>{{ data['gp-appointment-clinician-sex'] }}</p>
-      <p>{{ data['gp-appointment-location'] }}</p>
 
     </div>
   </div>

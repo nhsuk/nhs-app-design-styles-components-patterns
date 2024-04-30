@@ -13,8 +13,11 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      {% if data['appointment-location'] == "Phone"  %}
+      <form id="form" method="post" action="/pages/services/gp-appointment-phone-number" novalidate="novalidate">
+        {% else %}
       <form id="form" method="post" action="/pages/services/gp-appointment-confirm" novalidate="novalidate">
-
+      {% endif %}
         {{ textarea({
           name: "gp-appointment-reason",
           id: "gp-appointment-reason",

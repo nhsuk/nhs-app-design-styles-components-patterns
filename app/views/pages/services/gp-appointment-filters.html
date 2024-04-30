@@ -51,8 +51,8 @@
         }) }}
 
         {{ checkboxes({
-          idPrefix: "gp-appointment-sex",
-          name: "gp-appointment-sex",
+          idPrefix: "gp-appointment-clinician-sex",
+          name: "gp-appointment-clinician-sex",
           fieldset: {
             legend: {
               text: "Sex of healthcare professional",
@@ -63,12 +63,12 @@
             {
               value: "Female",
               text: "Female",
-              checked: checked("gp-appointment-sex", "Female")
+              checked: checked("gp-appointment-clinician-sex", "Female")
             },
             {
               value: "Male",
               text: "Male",
-              checked: checked("gp-appointment-sex", "Male")
+              checked: checked("gp-appointment-clinician-sex", "Male")
             }
           ]
         }) }}
@@ -108,13 +108,18 @@
           <button class="nhsuk-button app-button app-button--full-width" data-module="nhsuk-button" type="submit">
             Apply
           </button>
-          <a href="/pages/services/gp-appointment-select-appointment-v3" class="nhsuk-link nhsuk-link--no-visited-state">Clear all</a>
+        </form>
+          <form id="form-clear" method="post" action="/pages/services/gp-appointment-select-appointment-v3" novalidate="novalidate">
+            <input type="hidden" name="gp-appointment-clinician" value="">
+            <input type="hidden" name="gp-appointment-clinician-sex" value="">
+            <input type="hidden" name="gp-appointment-location" value="">
+            {{ button({
+              text: "Clear all",
+              classes: "app-button--link"
+            }) }}
+          </form>
         </div>
         
-      </form>
-
-
-
     </div>
   </div>
 

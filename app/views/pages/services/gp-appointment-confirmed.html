@@ -38,38 +38,51 @@
             Location
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-location'] or 'York Road Practice' }}
+            {{ data['appointment-location'] or 'York Road Practice' }}
           </dd>
         </div>
 
+        {% if data['appointment-location'] == "Phone"  %}
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['appointment-phone-number-new'] or '********534' }}
+          </dd>
+        </div>
+        {% else %}
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {% if data['gp-appointment-time'] in ["1", "4", "5", "9", "13", "16", "17", "21", "25", "29", "33", "37"] %}
-              Dr Max Smith
+            {{ data['appointment-clinician'] or 'Dr Max Smith' }}
+          </dd>
+        </div>
+        {% endif %}
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}
+          </dd>
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {% if data['appointment-time'] == "Morning"  %}
+              Morning between 8am and 11am
+            {% elif data['appointment-time'] == "Afternoon" %}
+              Afternoon between 1pm and 4pm
             {% else %}
-              Dr Emily Taylor
+              {{ data['appointment-time'] or '9:00am' }}
             {% endif %}
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Date of appointment
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-              Monday 20 November 2023
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Time of appointment
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-              9:00am
           </dd>
         </div>
 
@@ -83,6 +96,13 @@
         </div>
    
       </dl>
+
+      {% if data['appointment-location'] == "Phone"  %}
+      <div class="nhsuk-inset-text">
+        <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
+        <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
+      </div>
+      {% endif %}
 
       {{ button({
         text: "View all appointments",

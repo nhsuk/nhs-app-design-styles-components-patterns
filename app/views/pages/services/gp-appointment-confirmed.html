@@ -22,12 +22,13 @@
 
       </div>
 
-
+      {% if data['appointment-location'] == "Phone"  %}
       <h2 class="nhsuk-heading-m">What happens next</h2>
       <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
       <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
-
       <h2 class="nhsuk-heading-m nhsuk-u-padding-top-4">Appointment details</h2>
+      {% endif %}
+
       <dl class="nhsuk-summary-list">
 
         <div class="nhsuk-summary-list__row">

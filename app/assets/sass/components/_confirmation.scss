@@ -3,10 +3,21 @@
 // ==========================================================================
 
 .app-confirmation {
-  margin-bottom: nhsuk-spacing(7);
+  margin-bottom: nhsuk-spacing(5);
   text-align: center;
 
   .app-icon--confirmation {
-    margin: nhsuk-spacing(2) 0;
+    margin: 0 nhsuk-spacing(2) 0;
+
+    @include mq($until: desktop) {
+      height: 80px;
+      width: 80px;
+    }
   }
+}
+
+.app-confirmation--blue {
+  @include nhsuk-responsive-padding(5);
+
+  background: $color_nhsuk-white;
 }

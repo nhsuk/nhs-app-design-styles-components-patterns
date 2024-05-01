@@ -9,7 +9,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <div class="app-confirmation">
+      <div class="app-confirmation app-confirmation--blue">
 
         <svg class="app-icon app-icon--confirmation" aria-hidden="true" width="119" height="118" viewBox="0 0 119 118" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="59.5" cy="59" r="59" fill="#005EB8" fill-opacity="0.14"/>
@@ -18,10 +18,16 @@
           <path d="M75.7314 49.8984L57.038 68.372L47.5813 59.1352" stroke="white" stroke-width="5.66667" stroke-linecap="round"/>
         </svg>
 
-        <h1 class="nhsuk-heading-l">{{ pageHeading }}</h1>
+        <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">{{ pageHeading }}</h1>
 
       </div>
 
+
+      <h2 class="nhsuk-heading-m">What happens next</h2>
+      <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
+      <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
+
+      <h2 class="nhsuk-heading-m nhsuk-u-padding-top-4">Appointment details</h2>
       <dl class="nhsuk-summary-list">
 
         <div class="nhsuk-summary-list__row">
@@ -100,13 +106,6 @@
         </div>
    
       </dl>
-
-      {% if data['appointment-location'] == "Phone"  %}
-      <div class="nhsuk-inset-text">
-        <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
-        <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
-      </div>
-      {% endif %}
 
       {{ button({
         text: "View all appointments",

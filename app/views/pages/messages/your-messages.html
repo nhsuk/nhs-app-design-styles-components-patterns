@@ -34,10 +34,9 @@
             <path d="M15.0397 15.24H8.96973C8.83166 15.24 8.71973 15.3519 8.71973 15.49V16.51C8.71973 16.6481 8.83166 16.76 8.96973 16.76H15.0397C15.1778 16.76 15.2897 16.6481 15.2897 16.51V15.49C15.2897 15.3519 15.1778 15.24 15.0397 15.24Z" />
           </svg>
           <span class="app-u-gap-0">
-            Filter
+            Filter <span class="nhsuk-u-visually-hidden"> messages </span>
             {% if data['message-sender'] == "" and data['message-status'] == "" %}
             {% else %}
-              <span class="nhsuk-u-visually-hidden">results</span>
               ({{ data['message-sender'] | length + data['message-status'] | length }})
               <span class="nhsuk-u-visually-hidden"> filters currently selected</span>
             {% endif %}

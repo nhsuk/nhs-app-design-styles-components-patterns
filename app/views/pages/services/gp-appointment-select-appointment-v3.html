@@ -32,10 +32,9 @@
             <path d="M15.0397 15.24H8.96973C8.83166 15.24 8.71973 15.3519 8.71973 15.49V16.51C8.71973 16.6481 8.83166 16.76 8.96973 16.76H15.0397C15.1778 16.76 15.2897 16.6481 15.2897 16.51V15.49C15.2897 15.3519 15.1778 15.24 15.0397 15.24Z" />
           </svg>
           <span class="app-u-gap-0">
-            Filter
+            Filter <span class="nhsuk-u-visually-hidden"> appointments </span>
             {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
             {% else %}
-              <span class="nhsuk-u-visually-hidden"> results </span>
               ({{ data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length }})
               <span class="nhsuk-u-visually-hidden"> filters currently selected</span>
             {% endif %}
@@ -75,10 +74,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm1').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Wednesday 29 May 2024</span>
                   </a>
                 </div>
                 {% include "components/icons/chevron.html" %}
@@ -96,10 +95,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm2').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Wednesday 29 May 2024</span>
                   </a>
                   
                 </div>
@@ -124,7 +123,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm3').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice</span>
+                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Wednesday 29 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
@@ -148,7 +147,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm4').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice</span>
+                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Wednesday 29 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
@@ -173,7 +172,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm5').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Wednesday 29 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
@@ -197,7 +196,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm6').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  10:30am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice</span>
+                  10:30am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Wednesday 29 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
@@ -228,10 +227,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm7').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Thursday 30 May 2024</span>
                   </a>
                   
                 </div>
@@ -249,10 +248,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm8').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Thursday 30 May 2024</span>
                   </a>
                   
                 </div>
@@ -276,7 +275,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm9').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice</span>
+                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Thursday 30 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
@@ -300,7 +299,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm10').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice</span>
+                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Thursday 30 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
@@ -325,7 +324,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm5').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Thursday 30 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
@@ -355,10 +354,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm11').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Friday 31 May 2024</span>
                   </a>
                   
                 </div>
@@ -376,10 +375,10 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <div class="app-card-link__above">
-                    <strong class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
+                    <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Phone</strong>
                   </div>
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm12').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone</span>
+                    Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Friday 31 May 2024</span>
                   </a>
                   
                 </div>
@@ -403,7 +402,7 @@
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
                   <a href="javascript:{}" onclick="document.getElementById('appointmentForm13').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                    8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice</span>
+                    8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Friday 31 May 2024</span>
                   </a>
                   <div class="app-card-link__below">
                     <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
@@ -427,7 +426,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm14').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice</span>
+                  8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Friday 31 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
@@ -452,7 +451,7 @@
             <div class="app-card-link__container">
               <div class="app-card-link__content">
                 <a href="javascript:{}" onclick="document.getElementById('appointmentForm15').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
-                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice</span>
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Friday 31 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
                   <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>

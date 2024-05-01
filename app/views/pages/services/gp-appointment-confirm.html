@@ -4,7 +4,12 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-reason" %}
+
+{% if data['appointment-location'] == "Phone"  %}
+  {% set backLinkURL = "/pages/services/gp-appointment-phone-number" %}
+{% else %}
+  {% set backLinkURL = "/pages/services/gp-appointment-reason" %}
+{% endif %}
 
 {% set pageHeading = "Confirm appointment details" %}
 
@@ -56,7 +61,7 @@
           </dt>
           <dd class="nhsuk-summary-list__value"> 
             {% if data['appointment-phone-number'] == "Current"  %}
-              ********534
+              Phone number that ends with 534
             {% else %}
               {{ data['appointment-phone-number-new'] or '07866767898' }}
             {% endif %}

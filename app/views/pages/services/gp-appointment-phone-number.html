@@ -4,7 +4,7 @@
 
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
-{% set backLinkURL = "/pages/services/gp-appointment-type" %}
+{% set backLinkURL = "/pages/services/gp-appointment-reason" %}
 
 {% set pageHeading = "Select a phone number for this appointment" %}
 
@@ -21,6 +21,8 @@
             name: "appointment-phone-number-new",
             classes: "nhsuk-u-width-two-thirds",
             value: data['appointment-phone-number-new'],
+            type: "tel",
+            autocomplete: "tel",
             label: {
               text: "Phone number"
             }
@@ -40,7 +42,7 @@
           "items": [
             {
               value: "Current",
-              text: "********534",
+              text: "Phone number that ends with 534",
               checked: checked("appointment-phone-number", "Current")
             },
             {

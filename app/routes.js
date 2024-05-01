@@ -34,7 +34,7 @@ router.post('/pages/services/gp-appointment-type-answer', function (req, res) {
   if (install == "Routine GP"){
     res.redirect('/pages/services/gp-appointment-select-appointment-v3')
   } else if (install == "none") {
-    res.redirect('/pages/services/gp-appointment-type-not-available')
+    res.redirect('/pages/services/gp-appointment-type')
   } else {
     res.redirect('/pages/services/gp-appointment-invite')
   }

@@ -80,6 +80,8 @@
         <div class="app-button-group">
           <button class="nhsuk-button app-button app-button--full-width" data-module="nhsuk-button" type="submit">
             Apply
+            <span id="count"></span>
+            <span class="nhsuk-u-visually-hidden"> filters</span>
           </button>
         </form>
           <form id="form-clear" method="post" action="/pages/messages/your-messages" novalidate="novalidate">
@@ -94,5 +96,24 @@
 
     </div>
   </div>
+
+  {% endblock %}
+
+  {% block pageScripts %}
+
+  <script>
+
+    function updateCount() { 
+      let count = $('input[type="checkbox"]:checked').length;
+      if(count) {
+      $('#count').text('(' + count + ')');
+      } else {
+        $('#count').text('')
+      }
+     }
+    $('input[type="checkbox"]').change(updateCount)
+    $(document).ready(updateCount);
+
+  </script>
 
   {% endblock %}

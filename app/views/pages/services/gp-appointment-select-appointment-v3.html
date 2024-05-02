@@ -24,7 +24,7 @@
         titleSecondary: true
       })}}
 
-      <div class="app-section-title">
+      <div class="app-section-title nhsuk-u-margin-bottom-6">
         <a href="/pages/services/gp-appointment-filters" class="app-link--with-icon app-link nhsuk-link--no-visited-state nhsuk-u-margin-bottom-0">
           <svg class="app-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.3302 7.19995H3.66016C3.52209 7.19995 3.41016 7.31188 3.41016 7.44995V8.46995C3.41016 8.60802 3.52209 8.71995 3.66016 8.71995H20.3302C20.4682 8.71995 20.5802 8.60802 20.5802 8.46995V7.44995C20.5802 7.31188 20.4682 7.19995 20.3302 7.19995Z" />
@@ -36,7 +36,13 @@
             {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
             {% else %}
               ({{ data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length }})
-              <span class="nhsuk-u-visually-hidden"> filters currently selected</span>
+              <span class="nhsuk-u-visually-hidden"> 
+                {% if data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length > 1 %}
+                filters 
+                {% else %}
+                filter
+                {% endif %}
+                currently selected</span>
             {% endif %}
           </span>
         </a>
@@ -46,10 +52,17 @@
             <input type="hidden" name="gp-appointment-clinician" value="">
             <input type="hidden" name="gp-appointment-clinician-sex" value="">
             <input type="hidden" name="gp-appointment-location" value="">
-            {{ button({
-              text: "Clear filters",
-              classes: "app-button--link nhsuk-u-margin-bottom-0"
-            }) }}
+            {% if data['gp-appointment-location'] | length + data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length > 1 %}
+              {{ button({
+                text: "Clear filters",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }} 
+            {% else %}
+              {{ button({
+                text: "Clear filter",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }}
+            {% endif %}
           </form>
         {% endif %}
       </div>

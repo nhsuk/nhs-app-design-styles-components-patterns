@@ -8,10 +8,11 @@
 
 {% set pageHeading = "Your messages" %}
 
-{% if data['messages'] == 1 %}
+
+{% if data['messages'] > 1 %}
   {% set pageDescription = "You have " + data['messages'] + " unread message" %}
 {% else %}
-  {% set pageDescription = "You have " + data['messages'] + " unread messages" %}
+  {% set pageDescription = "" %}
 {% endif %}
 
 {% block content %}
@@ -26,7 +27,7 @@
         description: pageDescription
       })}}
 
-      <div class="app-section-title">
+      <div class="app-section-title nhsuk-u-margin-bottom-6">
         <a href="/pages/messages/message-filters" class="app-link app-link--with-icon nhsuk-link--no-visited-state nhsuk-u-margin-bottom-0">
           <svg class="app-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.3302 7.19995H3.66016C3.52209 7.19995 3.41016 7.31188 3.41016 7.44995V8.46995C3.41016 8.60802 3.52209 8.71995 3.66016 8.71995H20.3302C20.4682 8.71995 20.5802 8.60802 20.5802 8.46995V7.44995C20.5802 7.31188 20.4682 7.19995 20.3302 7.19995Z" />
@@ -38,7 +39,13 @@
             {% if data['message-sender'] == "" and data['message-status'] == "" %}
             {% else %}
               ({{ data['message-sender'] | length + data['message-status'] | length }})
-              <span class="nhsuk-u-visually-hidden"> filters currently selected</span>
+              <span class="nhsuk-u-visually-hidden"> 
+                {% if data['message-sender'] | length + data['message-status'] | length > 1 %}
+                filters 
+                {% else %}
+                filter
+                {% endif %}
+                currently selected</span>
             {% endif %}
           </span>
         </a>
@@ -47,17 +54,25 @@
           <form id="form-clear" method="post" action="/pages/messages/your-messages" novalidate="novalidate">
             <input type="hidden" name="message-sender" value="">
             <input type="hidden" name="message-status" value="">
-            {{ button({
-              text: "Clear filters",
-              classes: "app-button--link nhsuk-u-margin-bottom-0"
-            }) }}
+            {% if data['message-sender'] | length + data['message-status'] | length > 1 %}
+              {{ button({
+                text: "Clear filters",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }} 
+            {% else %}
+              {{ button({
+                text: "Clear filter",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }}
+            {% endif %}
           </form>
         {% endif %}
       </div>
+      
 
       {% if "Unread" in data['message-status'] and "Read" not in data['message-status'] and data['message1read'] === "true" and data['message2read'] === "true" %}
 
-      <p>No messages</p>
+      <p>There are no results matching this filter.</p>
 
       {% else %}
 

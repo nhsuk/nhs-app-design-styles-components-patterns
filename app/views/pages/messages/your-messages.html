@@ -9,7 +9,7 @@
 {% set pageHeading = "Your messages" %}
 
 
-{% if data['messages'] > 1 %}
+{% if data['messages'] > 0 %}
   {% set pageDescription = "You have " + data['messages'] + " unread message" %}
 {% else %}
   {% set pageDescription = "" %}

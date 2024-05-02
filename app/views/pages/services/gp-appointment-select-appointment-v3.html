@@ -54,7 +54,9 @@
         {% endif %}
       </div>
 
-      {% if "Southbank Practice" in data['gp-appointment-location'] and "York Road Practice" not in data['gp-appointment-location'] and "Male" in data['gp-appointment-clinician-sex'] and "Female" not in data['gp-appointment-clinician-sex'] and "Louise Williams (Female)" not in data['gp-appointment-clinician'] and "Dr Sarah Clarke (Female)" not in data['gp-appointment-clinician'] %}
+      {% if "Southbank Practice" in data['gp-appointment-location'] and "York Road Practice" not in data['gp-appointment-location'] and "Male" in data['gp-appointment-clinician-sex'] and "Female" not in data['gp-appointment-clinician-sex'] and "Louise Williams (Female)" not in data['gp-appointment-clinician'] and "Dr Sarah Clarke (Female)" not in data['gp-appointment-clinician']
+      or data['gp-appointment-location'] == "York Road Practice" and data['gp-appointment-clinician-sex'] == "Female" 
+      or data['gp-appointment-location'] == "Southbank Practice" and data['gp-appointment-clinician-sex'] == "Male" %}
       <p>No appointments available</p>
       {% else %}
 

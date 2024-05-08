@@ -24,7 +24,7 @@
         titleSecondary: true
       })}}
 
-      <div class="app-section-title nhsuk-u-margin-bottom-6">
+      <div class="app-section-title nhsuk-u-margin-bottom-5">
         <a href="/pages/services/gp-appointment-filters" class="app-link--with-icon app-link nhsuk-link--no-visited-state nhsuk-u-margin-bottom-0">
           <svg class="app-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.3302 7.19995H3.66016C3.52209 7.19995 3.41016 7.31188 3.41016 7.44995V8.46995C3.41016 8.60802 3.52209 8.71995 3.66016 8.71995H20.3302C20.4682 8.71995 20.5802 8.60802 20.5802 8.46995V7.44995C20.5802 7.31188 20.4682 7.19995 20.3302 7.19995Z" />
@@ -331,14 +331,14 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
         <li class="app-card-link">
-          <form id="appointmentForm5" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm11" method="post" action="/pages/services/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10am">
             <input type="hidden" name="appointment-date" value="Wednesday 29 May 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
             <input type="hidden" name="appointment-location" value="York Road Practice">   
             <div class="app-card-link__container">
               <div class="app-card-link__content">
-                <a href="javascript:{}" onclick="document.getElementById('appointmentForm5').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm11').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                   10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Thursday 30 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
@@ -362,7 +362,7 @@
         <ul class="app-cards app-cards--stacked">
           {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
           <li class="app-card-link">
-            <form id="appointmentForm11" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm12" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Morning">
               <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
               <input type="hidden" name="appointment-location" value="Phone">
@@ -371,7 +371,7 @@
                   <div class="app-card-link__above">
                     <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
                   </div>
-                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm11').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm12').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                     Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Friday 31 May 2024</span>
                   </a>
                   
@@ -383,7 +383,7 @@
           {% endif %}
           {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
           <li class="app-card-link">
-            <form id="appointmentForm12" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm13" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="Afternoon">
               <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
               <input type="hidden" name="appointment-location" value="Phone">
@@ -392,7 +392,7 @@
                   <div class="app-card-link__above">
                     <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
                   </div>
-                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm12').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm13').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                     Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Friday 31 May 2024</span>
                   </a>
                   
@@ -409,14 +409,14 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
           <li class="app-card-link">
-            <form id="appointmentForm13" method="post" action="/pages/services/gp-appointment-reason">
+            <form id="appointmentForm14" method="post" action="/pages/services/gp-appointment-reason">
               <input type="hidden" name="appointment-time" value="8am">
               <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
               <input type="hidden" name="appointment-location" value="Southbank Practice">
               <div class="app-card-link__container">
                 <div class="app-card-link__content">
-                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm13').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm14').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                     8am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Friday 31 May 2024</span>
                   </a>
                   <div class="app-card-link__below">
@@ -433,14 +433,14 @@
         {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Louise Williams (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
         <li class="app-card-link">
-          <form id="appointmentForm14" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm15" method="post" action="/pages/services/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="8:30am">
             <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
             <input type="hidden" name="appointment-clinician" value="Louise Williams (Female)">
             <input type="hidden" name="appointment-location" value="Southbank Practice">
             <div class="app-card-link__container">
               <div class="app-card-link__content">
-                <a href="javascript:{}" onclick="document.getElementById('appointmentForm14').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm15').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                   8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Friday 31 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
@@ -458,14 +458,14 @@
         {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
         {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
         <li class="app-card-link">
-          <form id="appointmentForm15" method="post" action="/pages/services/gp-appointment-reason">
+          <form id="appointmentForm16" method="post" action="/pages/services/gp-appointment-reason">
             <input type="hidden" name="appointment-time" value="10am">
             <input type="hidden" name="appointment-date" value="Friday 31 May 2024">
             <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
             <input type="hidden" name="appointment-location" value="York Road Practice">   
             <div class="app-card-link__container">
               <div class="app-card-link__content">
-                <a href="javascript:{}" onclick="document.getElementById('appointmentForm15').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm16').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
                   10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Friday 31 May 2024</span>
                 </a>
                 <div class="app-card-link__below">
@@ -481,10 +481,460 @@
         {% endif %}
       </ul>
 
+      {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+      <!-- MORE APPOINTMENTS -->
+      <div id="moreAppointments" tabindex="0" style="display:none;">
+        {% else %}
+        {% endif %}
+        <h2 class="nhsuk-heading-m nhsuk-u-padding-top-1">
+          Monday 3 June 2024
+        </h2>
+
+        {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          <ul class="app-cards app-cards--stacked">
+            
+            {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
+            <li class="app-card-link">
+              <form id="appointmentForm17" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Morning">
+                <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm17').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Monday 3 June 2024</span>
+                    </a>
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+
+            {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
+            <li class="app-card-link">
+              <form id="appointmentForm18" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Afternoon">
+                <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm18').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Monday 3 June 2024</span>
+                    </a>
+                    
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+
+          </ul>
+        {% endif %}
+
+        <ul class="app-cards app-cards--stacked">
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm19" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8am">
+              <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm19').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    8am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Monday 3 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Louise Williams (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm20" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Louise Williams (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm20').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Monday 3 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Nurse practitioner</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm21" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10am">
+              <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+              <input type="hidden" name="appointment-location" value="York Road Practice">   
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm21').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Monday 3 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">York Road Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm22" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10:30am">
+              <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm22').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    10:30am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Monday 3 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+        </ul>
+
+        <h2 class="nhsuk-heading-m">
+          Tuesday 4 June 2024
+        </h2>
+
+        {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          <ul class="app-cards app-cards--stacked">
+            
+            {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}
+            <li class="app-card-link">
+              <form id="appointmentForm23" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Morning">
+                <input type="hidden" name="appointment-date" value="Tuesday 4 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm23').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Tuesday 4 June 2024</span>
+                    </a>
+                    
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+            {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %}   
+            <li class="app-card-link">
+              <form id="appointmentForm24" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Afternoon">
+                <input type="hidden" name="appointment-date" value="Tuesday 4 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm24').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Tuesday 4 June 2024</span>
+                    </a>
+                    
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+
+        <ul class="app-cards app-cards--stacked">
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm25" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8am">
+              <input type="hidden" name="appointment-date" value="Tuesday 4 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm25').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    8am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Tuesday 4 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Louise Williams (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm26" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Tuesday 4 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Louise Williams (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm26').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Tuesday 4 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Nurse practitioner</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm27" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10am">
+              <input type="hidden" name="appointment-date" value="Monday 3 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+              <input type="hidden" name="appointment-location" value="York Road Practice">   
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm27').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Tuesday 4 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">York Road Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+        </ul>
+
+        <h2 class="nhsuk-heading-m">
+          Wednesday 5 June 2024
+        </h2>
+
+        {% if "Phone" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          <ul class="app-cards app-cards--stacked">
+            {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
+            <li class="app-card-link">
+              <form id="appointmentForm28" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Morning">
+                <input type="hidden" name="appointment-date" value="Wednesday 5 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm28').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Morning appointment <span class="nhsuk-u-visually-hidden">over the phone on Wednesday 5 June 2024</span>
+                    </a>
+                    
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+            {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" %} 
+            <li class="app-card-link">
+              <form id="appointmentForm29" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="Afternoon">
+                <input type="hidden" name="appointment-date" value="Wednesday 5 June 2024">
+                <input type="hidden" name="appointment-location" value="Phone">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <div class="app-card-link__above">
+                      <strong aria-hidden="true" class="app-tag app-tag--blue nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-2">By phone</strong>
+                    </div>
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm29').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      Afternoon appointment <span class="nhsuk-u-visually-hidden">over the phone on Wednesday 5 June 2024</span>
+                    </a>
+                    
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+
+        <ul class="app-cards app-cards--stacked">
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+            <li class="app-card-link">
+              <form id="appointmentForm30" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="8am">
+                <input type="hidden" name="appointment-date" value="Wednesday 5 June 2024">
+                <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+                <input type="hidden" name="appointment-location" value="Southbank Practice">
+                <div class="app-card-link__container">
+                  <div class="app-card-link__content">
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm30').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                      8am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) at Southbank Practice on Wednesday 5 June 2024</span>
+                    </a>
+                    <div class="app-card-link__below">
+                      <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                      <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                    </div>
+                  </div>
+                  {% include "components/icons/chevron.html" %}
+                </div>
+              </form>
+            </li>
+          {% endif %}
+          {% endif %}
+          {% if "Southbank Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Female" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Louise Williams (Female)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm31" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Wednesday 5 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Louise Williams (Female)">
+              <input type="hidden" name="appointment-location" value="Southbank Practice">
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm31').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Louise Williams (Female) at Southbank Practice on Wednesday 5 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Louise Williams (Female)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Nurse practitioner</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">Southbank Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% if "York Road Practice" in data['gp-appointment-location'] or data['gp-appointment-location'] == "" %}
+          {% if "Male" in data['gp-appointment-clinician-sex'] or data['gp-appointment-clinician-sex'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] %}
+          <li class="app-card-link">
+            <form id="appointmentForm32" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10am">
+              <input type="hidden" name="appointment-date" value="Wednesday 5 June 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+              <input type="hidden" name="appointment-location" value="York Road Practice">   
+              <div class="app-card-link__container">
+                <div class="app-card-link__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm32').submit();" class="app-card-link__link nhsuk-link--no-visited-state">
+                    10am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Wednesday 5 June 2024</span>
+                  </a>
+                  <div class="app-card-link__below">
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                    <p aria-hidden="true" class="app-panel-link-card__description nhsuk-u-secondary-text-color nhsuk-u-margin-top-1">York Road Practice</p>
+                  </div>
+                </div>
+                {% include "components/icons/chevron.html" %}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% endif %}
+        </ul>
+      
+      {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+        <p id="loadMoreCount" style="display:none;">You have viewed 32 of 32 appointments</p>
+      </div>
+      <div id="loadMore">
+        <p>You have viewed 16 of 32 appointments</p>
+        <button id="loadMoreBtn" class="nhsuk-button app-button app-button--full-width app-button--secondary">
+          Load more <span class="nhsuk-u-visually-hidden">appointments</span>
+        </button>
+      </div>
+      {% else %}
       {% endif %}
+
+    {% endif %}
 
     </div>
   </div>
 
   {% endblock %}
 
+  {% block pageScripts %}
+    {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+      
+      <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
+      <script>
+        document.getElementById('loadMoreBtn').addEventListener('click', function() {
+          // Get a reference to the hidden div
+          var hiddenDiv = document.getElementById('moreAppointments');
+    
+          // Check if the div is currently hidden
+          if (hiddenDiv.style.display === 'none') {
+            // If hidden, show the div
+            hiddenDiv.style.display = 'block';
+            hiddenDiv.focus()
+            loadMore.style.display = 'none';
+            loadMoreCount.style.display = 'block';
+          } else {
+            // If visible, hide the div
+            hiddenDiv.style.display = 'none';
+          }
+        });
+      </script>
+    {% else %}
+    {% endif %}
+  {% endblock %}

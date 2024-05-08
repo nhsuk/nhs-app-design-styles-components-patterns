@@ -25,3 +25,33 @@
     right: 0;
     top: calc(50% - 32px);
   }
+
+  .nhsuk-loader {
+    @include nhsuk-responsive-margin(4, bottom);
+    @include nhsuk-responsive-margin(4, top);
+    
+    position: relative;
+    text-align: center;
+  }
+  
+  .nhsuk-loader__spinner {
+    animation: spin 2s linear infinite;
+    border: nhsuk-spacing(3) solid darken(#f0f4f5, 10%);
+    border-radius: 50%;
+    border-top: nhsuk-spacing(3) solid tint($color_nhsuk-blue, 15%);
+    display: inline-block;
+    height: 120px;
+    margin: auto;
+    width: 120px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .nhsuk-loader__spinner--btn {
+    border-width: nhsuk-spacing(1);
+    height: 20px;
+    width: 20px;
+  }

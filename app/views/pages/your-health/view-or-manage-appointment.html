@@ -1,0 +1,47 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "This service is provided by HealthCall" %}
+{% set pageDescription = "Your hospital has chosen this personal health record service provider" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <div class="app-card-link app-card-link--dark-blue nhsuk-u-margin-top-5">
+      
+        <div class="app-card-link__container">
+          
+          <div class="app-card-link__content">
+      
+            <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">
+              <span class="nhsuk-caption-l nhsuk-u-margin-bottom-5">
+                View or manage this appointment
+                <span class="nhsuk-u-visually-hidden"> - </span>
+              </span>
+              {{ pageHeading }}
+            </h1>
+
+            <p class="nhsuk-u-margin-bottom-5">{{ pageDescription }}</p>
+
+            {{ button({
+              text: "Continue",
+              classes: "nhsuk-button--reverse app-button app-button--full-width"
+            }) }}
+
+            <p class="nhsuk-u-margin-bottom-0"><a class="nhsuk-link" href="#">Find out more about personal health record services</a></p>
+      
+          </div>
+      
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

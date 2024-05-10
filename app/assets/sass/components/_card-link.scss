@@ -23,6 +23,8 @@
 }
 
 .app-card-link__container {
+  @include reading-width();
+
   align-items: center;
   display: flex;
   gap: nhsuk-spacing(3);
@@ -190,5 +192,16 @@
 
   .app-icon--chevron {
     fill: $color_nhsuk-white;
+  }
+
+  .nhsuk-caption-s,
+  .nhsuk-caption-m,
+  .nhsuk-caption-l,
+  .nhsuk-caption-xl {
+    color: $color_nhsuk-white;
+  }
+
+  .nhsuk-link {
+    color: currentColor;
   }
 }

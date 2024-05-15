@@ -32,70 +32,45 @@
 
   <h2 class="nhsuk-heading-m">Small</h2>
 
-  <h3 class="nhsuk-heading-xs">Default</h3>
-
   <div class="example">
-    <p>
-      <span class="app-badge-small nhsuk-u-margin-right-1">
-        <span aria-hidden="true">●</span>
+    <div class="badge-small__container">
+      <div class="badge-small__dot">
         <span class="nhsuk-u-visually-hidden">New </span>
-      </span>
-      Badge text
-    </p>
-  </div>
-
-  <h3 class="nhsuk-heading-xs">Colours</h3>
-
-  <div class="example">
-    <p>
-      <span class="app-badge-small app-badge-small--red nhsuk-u-margin-right-1">
-        <span aria-hidden="true">●</span>
-        <span class="nhsuk-u-visually-hidden">New </span>
-      </span>
-      Red
-    </p>
-  </div>
-
-  <h3 class="nhsuk-heading-xs">Sizes</h3>
-
-  <p>The dot size is relative to the text size.</p>
-
-  <div class="example">
-    <p class="nhsuk-body-s">
-      <span class="app-badge-small nhsuk-u-margin-right-1">
-        <span aria-hidden="true">●</span>
-        <span class="nhsuk-u-visually-hidden">New </span>
-      </span>
-      Small text
-    </p>
+      </div>
+      <div class="badge-small__text nhsuk-u-secondary-text-color">Badge text</div>
+    </div>
   </div>
 
   <div class="example">
-    <p class="nhsuk-body-l">
-      <span class="app-badge-small nhsuk-u-margin-right-1">
-        <span aria-hidden="true">●</span>
+    <div class="badge-small__container">
+      <div class="badge-small__dot">
         <span class="nhsuk-u-visually-hidden">New </span>
-      </span>
-      Large text
-    </p>
+      </div>
+      <div class="badge-small__text nhsuk-u-secondary-text-color">Badge text that is really long that goes over two lines</div>
+    </div>
   </div>
 
-  <h3 class="nhsuk-heading-xs">Positioned absolute</h3>
+  <h3 class="nhsuk-heading-xs">Card link (messages)</h3>
 
   <p>Used on messages inbox.</p>
 
   <div class="example">
     <div class="app-card-link">
-      <div class="app-card-link__container nhsuk-u-margin-left-6">  
+      <div class="app-card-link__container nhsuk-u-margin-left-6">
         <div class="app-card-link__content">
+          <div class="app-card-link__above">
+            <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Thursday</p>
+          </div>
           <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
-            <span class="app-badge-small">
-              <span class="app-badge-small--absolute" aria-hidden="true">●</span>
-              <span class="nhsuk-u-visually-hidden">Unread message from </span>
+            <span class="badge-small__container">
+              <div class="badge-small__dot badge-small__dot--blue"></div>
             </span>
-            Title
-            <span class="nhsuk-u-visually-hidden">received today at 1:02pm</span>
+            Message title
+            <span class="nhsuk-u-visually-hidden">received on Thursday at 11:00am</span>
           </a>
+          <div class="app-card-link__below">
+            <p class="nhsuk-u-margin-top-2 app-truncate-two-lines">Dear Mary, we would like to ask you a few questions about smoking.</p>
+          </div>
         </div>
       </div>
     </div>

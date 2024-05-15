@@ -93,31 +93,66 @@
   }
 }
 
+// Badge small (dot)
+
+$badge-dot-size-mobile: nhsuk-spacing(2);
+$badge-dot-size-desktop: 12px;
+
+.badge-small__container {
+  position: relative;
+}
+
+.badge-small__dot {
+  background-color: $color_nhsuk-red;
+  border-radius: 50%;
+  height: $badge-dot-size-mobile;
+  left: 0;
+  position: absolute;
+  top: nhsuk-spacing(2);
+  width: $badge-dot-size-mobile;
+
+  @include mq($from: tablet) {
+    height: $badge-dot-size-desktop;
+    top: 6px;
+    width: $badge-dot-size-desktop;
+  }
+}
+
+.badge-small__text {
+  @include nhsuk-typography-responsive(16);
+  padding-left: 20px;
+
+  @include mq($from: tablet) {
+    padding-left: nhsuk-spacing(4);
+  }
+}
+
+// Hides badge dot and correctly aligns badge text by removing left padding
+.badge-small--hidden {
+
+  .badge-small__dot {
+    display: none; // might not need this if logic hides dot
+  }
+
+  .badge-small__text {
+    padding-left: 0;
+  }
+}
+
+// Style for card link (messages inbox)
+.app-card-link__link {
+  .badge-small__dot {
+    left: -18px;
+    top: 7px;
+
+    @include mq($from: tablet) {
+      left: - nhsuk-spacing(4);
+    }
+  }
+}
+
 // Colours
-.app-badge--purple {
-  background-color: $color_tag-purple-text;
+.badge-small__dot--blue {
+  background-color: $color_nhsuk-blue;
 }
 
-.app-badge--yellow {
-  background-color: $color_tag-yellow-text;
-}
-
-.app-badge--green {
-  background-color: $color_tag-green-text;
-}
-
-.app-badge--grey {
-  background-color: $color_tag-grey-text;
-}
-
-.app-badge--red {
-  background-color: $nhsuk-error-color;
-}
-
-.app-badge--orange {
-  background-color: $color_tag-orange-text;
-}
-
-.app-badge-small--red {
-  color: $nhsuk-error-color;
-}

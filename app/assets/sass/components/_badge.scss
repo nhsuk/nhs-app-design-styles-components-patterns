@@ -128,7 +128,7 @@ $badge-dot-size-desktop: 12px;
 }
 
 // Hides badge dot and correctly aligns badge text by removing left padding
-.badge-small--hidden {
+.badge-small__container--hidden {
 
   .badge-small__dot {
     display: none; // might not need this if logic hides dot

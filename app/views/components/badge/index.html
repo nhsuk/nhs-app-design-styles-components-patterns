@@ -1,8 +1,10 @@
 {% extends 'components/layout.html' %}
 
-{% set pageHeading = "Badge" %}
+{% set pageHeading = "Notification badge" %}
 
 {% block innerContent %}
+
+  <p>A notification badge lets the user know that there is new information to view, like unread messages, and how many of them there are.</p>
 
   <h2 class="nhsuk-heading-m">Large</h2>
 
@@ -30,6 +32,38 @@
     </span>
   </div>
 
+  <h3 class="nhsuk-heading-xs">On a card link</h3>
+
+  <div class="example">
+    <ul class="app-cards">
+      <li class="app-card-link">
+        <div class="app-card-link__container">
+
+          {% include "components/icons/messages-with-badge.html" %}
+
+          <div class="app-card-link__content">
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+              View your messages
+            </a>
+          </div>
+
+          <span class="app-badge">
+            <span class="nhsuk-u-visually-hidden">
+              You have
+            </span>
+            9+
+            <span class="nhsuk-u-visually-hidden">
+              unread messages
+            </span>
+          </span>
+
+          {% include "components/icons/chevron.html" %}
+
+        </div>
+      </li>
+    </ul>
+  </div>
+
   <h2 class="nhsuk-heading-m">Small</h2>
 
   <div class="example">
@@ -37,22 +71,22 @@
       <div class="badge-small__dot">
         <span class="nhsuk-u-visually-hidden">New </span>
       </div>
-      <div class="badge-small__text nhsuk-u-secondary-text-color">Badge text</div>
+      <div class="badge-small__text nhsuk-u-secondary-text-color">Document attached</div>
     </div>
   </div>
 
+  <p>When the notifcation has been read, do not show the badge.</p>
+
   <div class="example">
-    <div class="badge-small__container">
+    <div class="badge-small__container badge-small__container--hidden">
       <div class="badge-small__dot">
         <span class="nhsuk-u-visually-hidden">New </span>
       </div>
-      <div class="badge-small__text nhsuk-u-secondary-text-color">Badge text that is really long that goes over two lines</div>
+      <div class="badge-small__text nhsuk-u-secondary-text-color">Document attached</div>
     </div>
   </div>
 
-  <h3 class="nhsuk-heading-xs">Card link (messages)</h3>
-
-  <p>Used on messages inbox.</p>
+  <h3 class="nhsuk-heading-xs">On a card link (message inbox)</h3>
 
   <div class="example">
     <div class="app-card-link">

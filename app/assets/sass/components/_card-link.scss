@@ -23,8 +23,6 @@
 }
 
 .app-card-link__container {
-  @include reading-width();
-
   align-items: center;
   display: flex;
   gap: nhsuk-spacing(3);

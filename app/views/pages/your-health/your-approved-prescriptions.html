@@ -20,6 +20,79 @@
         description: pageDescription
       })}}
 
+      <ul class="app-cards app-cards--spaced">
+        <li class="app-card-link">
+          <div class="app-card-link__container">   
+            <div class="app-card-link__content">
+              <div class="app-card-link__above">
+                <strong class="app-tag app-tag--green nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Ready for delivery</strong>
+              </div>
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+                Repeat prescription
+              </a>
+              <div class="app-card-link__below">
+                <ul class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">
+                  <li>Bisoprolol fumarate 5mg tablets</li>
+                  <li>Codeine phosphate 30mg tablets</li>
+                </ul>
+                <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Prescribed on 3 May 2024</p>
+              </div>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+        <li class="app-card-link">
+          <div class="app-card-link__container">   
+            <div class="app-card-link__content">
+              <div class="app-card-link__above">
+                <strong class="app-tag app-tag--grey nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Pharmacy does not provide tracking</strong>
+              </div>
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+                Repeat prescription
+              </a>
+              <div class="app-card-link__below">
+                <ul class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">
+                  <li>Ramipril 5mg capsules</li>
+                  <li>Warfarin 5mg tablets</li>
+                </ul>
+                <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Prescribed on 7 May 2024</p>
+              </div>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+        <li class="app-card-link">
+          <div class="app-card-link__container">   
+            <div class="app-card-link__content">
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+                Repeat prescription
+              </a>
+              <div class="app-card-link__below">
+                <p class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">Atorvastatin 500mg capsules</p>
+                <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Prescribed on 7 May 2024</p>
+              </div>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+      </ul>
+
+      <!-- SECTION TITLE -->
+      {{ sectionTitle({
+        title: "Past prescriptions",
+        description: "Your prescription history will show for 36 days after collection or home delivery."
+      })}}
+
+      <div class="app-card-link">
+        <div class="app-card-link__container">
+          <div class="app-card-link__content">
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/past-prescriptions">
+              Past prescriptions
+            </a>
+          </div>
+          {% include "components/icons/chevron.html" %}
+        </div>
+      </div>
 
     </div>
   </div>

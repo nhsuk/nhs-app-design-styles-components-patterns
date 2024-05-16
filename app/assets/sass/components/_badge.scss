@@ -64,11 +64,17 @@
 
 // With flexbox
 .app-badge-indicator {
-  align-items: center;
+  align-items: baseline;
   display: flex;
 }
 
 .app-badge-indicator__dot {
+
+  position: relative;
+  $badge-height: 8px; // The height of the badge dot
+  $font-height: 0.7em; // The height of a capital letter in the specific font we use (Frutiger)
+  bottom: calc(0.5 * ($font-height - $badge-height));
+
   background-color: $color_nhsuk-blue;
   border-radius: 50%;
   display: flex;

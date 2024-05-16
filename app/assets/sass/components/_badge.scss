@@ -63,24 +63,30 @@
 }
 
 // With flexbox
+$badge-height-mobile: 8px; // The height of the badge dot on mobile
+$badge-height-desktop: 12px; // The height of the badge dot on desktop
+$font-height: 0.7em; // The height of a capital letter in the specific font we use (Frutiger)
+
 .app-badge-indicator {
-  align-items: center;
+  align-items: baseline;
   display: flex;
+  gap: 12px;
 }
 
 .app-badge-indicator__dot {
   background-color: $color_nhsuk-blue;
   border-radius: 50%;
+  bottom: calc(0.5 * ($font-height - $badge-height-mobile));
   display: flex;
   flex: none;
-  height: 8px;
-  margin-right: 8px;
-  width: 8px;
+  height: $badge-height-mobile;
+  position: relative;
+  width: $badge-height-mobile;
 
   @include mq($from: tablet) {
-    height: 12px;
-    margin-right: 12px;
-    width: 12px;
+    bottom: calc(0.5 * ($font-height - $badge-height-desktop));
+    height: $badge-height-desktop;
+    width: $badge-height-desktop;
   }
 }
 
@@ -92,6 +98,11 @@
     margin-right: 8px;
   }
 }
+
+.app-badge-indicator__dot--red {
+  background-color: $color_nhsuk-red;
+}
+
 
 // Badge small (dot)
 

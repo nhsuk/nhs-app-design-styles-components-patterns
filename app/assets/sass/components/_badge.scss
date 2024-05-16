@@ -99,6 +99,11 @@ $font-height: 0.7em; // The height of a capital letter in the specific font we u
   }
 }
 
+.app-badge-indicator__dot--red {
+  background-color: $color_nhsuk-red;
+}
+
+
 // Badge small (dot)
 
 $badge-dot-size-mobile: nhsuk-spacing(2);

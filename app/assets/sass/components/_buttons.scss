@@ -116,7 +116,7 @@
   box-shadow: none;
   color: $nhsuk-link-active-color;
 
-  &:link
+  &:link,
   &:visited {
     color: $nhsuk-link-active-color;
   }

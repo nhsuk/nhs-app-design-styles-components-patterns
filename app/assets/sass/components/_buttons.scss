@@ -116,6 +116,10 @@
   box-shadow: none;
   color: $nhsuk-link-active-color;
 
+  &:link {
+    color: $nhsuk-link-active-color;
+  }
+
   &:hover {
     background-color: $nhsuk-link-active-color;
     color: $color_nhsuk-white;

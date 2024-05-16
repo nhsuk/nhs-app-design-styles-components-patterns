@@ -163,3 +163,11 @@ hr {
 .app-u-gap-0 {
   gap: 0 !important;
 }
+
+// Remove border from ul within the list-border
+.nhsuk-list--border li {
+  ul > li {
+    border: 0;
+    padding: 0;
+  }
+}

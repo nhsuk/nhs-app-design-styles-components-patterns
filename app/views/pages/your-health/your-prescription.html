@@ -22,7 +22,39 @@
         "classes": "nhsuk-expander",
         "text": "Your prescription barcode",
         "HTML": "
-        <p>Add barcode</p>"
+        <img class='' src='/images/precsription-barcode.png' alt=''>
+        <p class='nhsuk-u-font-weight-bold'>ID: 1234 5678 9101</p>
+        <p>Only show this barcode if your pharmacist asks.</p>
+        "
+      }) }}
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Pharmacy"
+            },
+            value: {
+              html: "Boots Pharmacy"
+            }
+          },
+          {
+            key: {
+              text: "Date prescribed"
+            },
+            value: {
+              text: "3 May 2024"
+            }
+          },
+          {
+            key: {
+              text: "Prescription type"
+            },
+            value: {
+              html: "Repeat"
+            }
+          }
+        ]
       }) }}
 
 

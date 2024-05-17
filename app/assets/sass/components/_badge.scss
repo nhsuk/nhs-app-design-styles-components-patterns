@@ -70,7 +70,11 @@ $font-height: 0.7em; // The height of a capital letter in the specific font we u
 .app-badge-indicator {
   align-items: baseline;
   display: flex;
-  gap: 12px;
+  gap: nhsuk-spacing(2);
+
+  @include mq($from: tablet) {
+    gap: 12px;
+  }
 }
 
 .app-badge-indicator__dot {
@@ -91,11 +95,11 @@ $font-height: 0.7em; // The height of a capital letter in the specific font we u
 }
 
 .app-badge-indicator__dot--absolute {
-  margin-left: -16px;
+  margin-left: - nhsuk-spacing(3);
 
   @include mq($from: tablet) {
-    margin-left: -24px;
-    margin-right: 8px;
+    margin-left: - nhsuk-spacing(5);
+    margin-right: nhsuk-spacing(2);
   }
 }
 

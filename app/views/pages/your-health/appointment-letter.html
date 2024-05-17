@@ -1,0 +1,76 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Appointment letter" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {% include "components/provider-banner/include.html" %}
+
+      <p>You chose paperless healthcare. You can <a href="#">update your preference</a>.</p>
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      <img style="max-width:100%; margin-bottom: 32px;" class="" src="/images/pdf-viewer.png" alt="">
+
+      <ul class="nhsuk-list">
+        <li>
+          <a href="#" class="app-link app-link--with-icon nhsuk-link--no-visited-state">
+            <svg class="app-icon app-icon--no-fill" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 5.5V22C20 22.5523 19.5523 23 19 23H5C4.44772 23 4 22.5523 4 22V2C4 1.44772 4.44772 1 5 1H14.7247M20 5.5L14.7247 1M20 5.5H15.7247C15.1724 5.5 14.7247 5.05228 14.7247 4.5V1" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6H11.5556M8 9.33333H16M8 12.6667H16M8 16H16" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>              
+            Download document
+          </a>
+        </li>
+        <li>
+          <a href="#" class="app-link app-link--with-icon nhsuk-link--no-visited-state">
+            <svg class="app-icon app-icon--no-fill" aria-hidden="true" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.75 24.4V11.0205C0.75 11.0122 0.759599 11.0075 0.766163 11.0126L12.25 20L23.2337 11.0134C23.2402 11.008 23.25 11.0127 23.25 11.0211V24.4C23.25 24.4552 23.2052 24.5 23.15 24.5H0.85C0.794772 24.5 0.75 24.4552 0.75 24.4Z" stroke-width="1.5"/>
+              <path d="M8.25 10.5H11.8056M8.25 13.8333H16.25M8.75 17.1667H15.75" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12.25 20L4.61941 13.8001C4.3857 13.6103 4.25 13.3252 4.25 13.024V6.5C4.25 5.94772 4.69772 5.5 5.25 5.5H19.25C19.8023 5.5 20.25 5.94772 20.25 6.5V13.5" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M0.75 11L4.25 8M7.25 5.5L9.75 3.5L12.1875 1.54998C12.2241 1.52076 12.2759 1.52076 12.3125 1.54998L17.25 5.5M20.25 8L23.25 11" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Get a copy of your document by email
+          </a>
+        </li>
+        <li>
+          <a href="#" class="app-link app-link--with-icon nhsuk-link--no-visited-state">
+            <svg class="app-icon app-icon--no-fill" aria-hidden="true" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.9375 18.65V5.27052C0.9375 5.26219 0.947099 5.25751 0.953663 5.26265L12.4375 14.25L23.4212 5.26336C23.4277 5.25802 23.4375 5.26267 23.4375 5.2711V18.65C23.4375 18.7052 23.3927 18.75 23.3375 18.75H1.0375C0.982272 18.75 0.9375 18.7052 0.9375 18.65Z" stroke-width="1.5"/>
+              <path d="M1.19088 5.49913C-1.30912 5.49913 4.45755 5.49913 4.45755 5.49913C4.45755 5.49913 8.58167 5.49913 11.2242 5.49913C14.3224 5.49913 19.1575 5.49913 19.1575 5.49913M19.3909 5.49913C19.3909 5.49913 23.6875 5.62413 22.1909 5.49913" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>     
+            Get a copy of your document by post
+          </a>
+        </li>
+      </ul>
+
+      <div class="app-button-group">
+        <a class="nhsuk-button nhsuk-button--secondary app-button app-button--full-width">
+          Ask to reschedule appointment
+        </button>
+        <a href="#" class="nhsuk-link">Ask to cancel appointment</a>
+      </div>
+
+      <!-- SECTION TITLE -->
+      {{ sectionTitle({
+        title: "Get help with this task",
+        description: "Contact the booking team on 01234 567 891",
+        headingSize: "m"
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

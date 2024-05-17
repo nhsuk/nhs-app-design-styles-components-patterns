@@ -22,9 +22,8 @@
         titleSecondary: true
       })}}
 
-
-
       {{ summaryList({
+        classes: "nhsuk-u-margin-bottom-3",
         rows: [
         {
           key: {
@@ -61,11 +60,20 @@
         ]
       }) }}
 
-      <!-- SECTION TITLE -->
-      {{ sectionTitle({
-        title: "Things to do before your appointment",
-        description: "You have 1 task to complete"
-      })}}
+      <p class="nhsuk-u-margin-bottom-7"><a href="#" class="nhsuk-link">Map and directions</a></p>
+
+      <div class="app-button-group">
+        <a class="nhsuk-button nhsuk-button--secondary app-button app-button--full-width">
+          Ask to reschedule appointment
+        </button>
+        <a href="#" class="nhsuk-link">Ask to cancel appointment</a>
+      </div>
+
+      <hr>
+
+      <h2 class="nhsuk-heading-m">Things to do</h2>
+
+      <h3 class="nhsuk-heading-s">To do</h3>
 
       <div class="app-card-link">
         <div class="app-card-link__container">   
@@ -73,8 +81,27 @@
             <div class="app-card-link__above">
               <strong class="app-tag app-tag--red nhsuk-u-static-margin-bottom-3">Not read</strong>
             </div>
-            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription">
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/appointment-letter">
               Appointment letter
+            </a>
+            <div class="app-card-link__below">
+              <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
+            </div>
+          </div>
+          {% include "components/icons/chevron.html" %}
+        </div>
+      </div>
+
+      <h3 class="nhsuk-heading-s">Finished</h3>
+
+      <div class="app-card-link">
+        <div class="app-card-link__container">   
+          <div class="app-card-link__content">
+            <div class="app-card-link__above">
+              <strong class="app-tag app-tag--green nhsuk-u-static-margin-bottom-3">Finished</strong>
+            </div>
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+              Pre-appointment questionnaire
             </a>
             <div class="app-card-link__below">
               <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
@@ -98,7 +125,8 @@
       <!-- SECTION TITLE -->
       {{ sectionTitle({
         title: "Get help with this task",
-        description: "Contact the booking team on 01234 567 891"
+        description: "Contact the booking team on 01234 567 891",
+        headingSize: "m"
       })}}
 
     </div>

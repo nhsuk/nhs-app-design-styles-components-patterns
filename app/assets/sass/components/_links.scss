@@ -24,6 +24,11 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
       width: $app-link-with-icon-size-tablet;
     }
   }
+
+  .app-icon--no-fill {
+    fill: none; // Removes fill colour
+    stroke: currentColor;
+  }
 }
 
 .nhsuk-link--no-visited-state {

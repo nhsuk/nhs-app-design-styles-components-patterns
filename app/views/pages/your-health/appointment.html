@@ -1,0 +1,107 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Orthopaedics appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {% include "components/provider-banner/include.html" %}
+
+      <strong class="app-tag app-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+
+
+      {{ summaryList({
+        rows: [
+        {
+          key: {
+            text: "Date"
+          },
+          value: {
+            html: "Wednesday 1 May 2024"
+          }
+        },
+        {
+          key: {
+            text: "Time"
+          },
+          value: {
+            html: "9:40am"
+          }
+        },
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              html: "Croydon University Hospital, The Willows, Croydon, RJ6"
+            }
+          },
+          {
+            key: {
+              text: "Clinician"
+            },
+            value: {
+              text: "Dr Donald Glover"
+            }
+          }
+        ]
+      }) }}
+
+      <!-- SECTION TITLE -->
+      {{ sectionTitle({
+        title: "Things to do before your appointment",
+        description: "You have 1 task to complete"
+      })}}
+
+      <div class="app-card-link">
+        <div class="app-card-link__container">   
+          <div class="app-card-link__content">
+            <div class="app-card-link__above">
+              <strong class="app-tag app-tag--red nhsuk-u-static-margin-bottom-3">Not read</strong>
+            </div>
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription">
+              Appointment letter
+            </a>
+            <div class="app-card-link__below">
+              <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
+            </div>
+          </div>
+          {% include "components/icons/chevron.html" %}
+        </div>
+      </div>
+
+      {{ card({
+        "type": "non-urgent",
+        "heading": "Contact your care provider if:",
+        "descriptionHtml": "
+        <ul>
+          <li>your condition has changed</li>
+          <li>you think you have a different condition</li>
+        </ul>
+        "
+      }) }}
+
+      <!-- SECTION TITLE -->
+      {{ sectionTitle({
+        title: "Get help with this task",
+        description: "Contact the booking team on 01234 567 891"
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

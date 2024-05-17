@@ -98,8 +98,7 @@ $font-height: 0.7em; // The height of a capital letter in the specific font we u
   margin-left: - nhsuk-spacing(3);
 
   @include mq($from: tablet) {
-    margin-left: - nhsuk-spacing(5);
-    margin-right: nhsuk-spacing(2);
+    margin-left: - nhsuk-spacing(4);
   }
 }
 

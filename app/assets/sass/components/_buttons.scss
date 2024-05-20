@@ -136,3 +136,10 @@
     box-shadow: none;
   }
 }
+
+.app-button--with-loader {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}

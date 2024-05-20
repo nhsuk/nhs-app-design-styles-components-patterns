@@ -899,8 +899,9 @@
       </div>
       <div id="loadMore">
         <p>You have viewed 16 of 32 appointments</p>
-        <button id="loadMoreBtn" class="nhsuk-button app-button app-button--full-width app-button--secondary">
+        <button id="loadMoreBtn" class="nhsuk-button app-button app-button--full-width app-button--secondary app-button--with-loader">
           Load more <span class="nhsuk-u-visually-hidden">appointments</span>
+          <span style="display:none" id="loader" class="nhsuk-loader__spinner nhsuk-loader__spinner--btn"></span>
         </button>
       </div>
       {% else %}
@@ -921,11 +922,15 @@
         document.getElementById('loadMoreBtn').addEventListener('click', function() {
           // Get a reference to the hidden div
           var hiddenDiv = document.getElementById('moreAppointments');
-    
-          // Check if the div is currently hidden
+
+          loader.style.display = 'inline';
+
+          window.setTimeout(function () {
+            // Check if the div is currently hidden
           if (hiddenDiv.style.display === 'none') {
             // If hidden, show the div
             hiddenDiv.style.display = 'block';
+            hiddenDiv.scrollTo({top: 0, behavior: 'smooth'});
             hiddenDiv.focus()
             loadMore.style.display = 'none';
             loadMoreCount.style.display = 'block';
@@ -933,6 +938,7 @@
             // If visible, hide the div
             hiddenDiv.style.display = 'none';
           }
+        }, 1500);
         });
       </script>
     {% else %}

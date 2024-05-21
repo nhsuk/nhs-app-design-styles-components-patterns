@@ -898,11 +898,15 @@
         <p id="loadMoreCount" style="display:none;">You have viewed 32 of 32 appointments</p>
       </div>
       <div id="loadMore">
-        <p>You have viewed 16 of 32 appointments</p>
+        <p id="loadMoreText">You have viewed 16 of 32 appointments</p>
         <button id="loadMoreBtn" class="nhsuk-button app-button app-button--full-width app-button--secondary app-button--with-loader">
           Load more <span class="nhsuk-u-visually-hidden">appointments</span>
-          <span style="display:none" id="loader" class="nhsuk-loader__spinner nhsuk-loader__spinner--btn"></span>
         </button>
+        <span id="loader" style="display:none" class="nhsuk-loader">
+          <span class="nhsuk-loader__spinner">
+            <span class="nhsuk-u-visually-hidden">Loading appointments</span>
+          </span>
+        </span>
       </div>
       {% else %}
       {% endif %}
@@ -923,14 +927,15 @@
           // Get a reference to the hidden div
           var hiddenDiv = document.getElementById('moreAppointments');
 
-          loader.style.display = 'inline';
+          loader.style.display = 'block';
+          loadMoreBtn.style.display = 'none';
+          loadMoreText.style.display = 'none';
 
           window.setTimeout(function () {
             // Check if the div is currently hidden
           if (hiddenDiv.style.display === 'none') {
             // If hidden, show the div
             hiddenDiv.style.display = 'block';
-            hiddenDiv.scrollTo({top: 0, behavior: 'smooth'});
             hiddenDiv.focus()
             loadMore.style.display = 'none';
             loadMoreCount.style.display = 'block';

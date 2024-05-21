@@ -36,13 +36,13 @@
   
   .nhsuk-loader__spinner {
     animation: spin 2s linear infinite;
-    border: nhsuk-spacing(3) solid darken(#f0f4f5, 10%);
+    border: nhsuk-spacing(2) solid darken(#f0f4f5, 10%);
     border-radius: 50%;
-    border-top: nhsuk-spacing(3) solid tint($color_nhsuk-blue, 15%);
+    border-top: nhsuk-spacing(2) solid tint($color_nhsuk-blue, 15%);
     display: inline-block;
-    height: 120px;
+    height: 56px;
     margin: auto;
-    width: 120px;
+    width: 56px;
   }
   
   @keyframes spin {

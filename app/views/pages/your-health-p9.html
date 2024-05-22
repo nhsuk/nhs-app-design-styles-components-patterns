@@ -18,7 +18,7 @@
       })}}
 
       {% if data['testResultsShowJumpOffPage'] === "true" %}
-        {% set gpHealthRecordUrl = "/pages/your-health/test-results/jump-off" %}
+        {% set gpHealthRecordUrl = "/pages/your-health/test-results/jump-to-gp-health-record" %}
       {% else %}
         {% set gpHealthRecordUrl = "/pages/your-health/test-results/gp-health-record" %}
       {% endif %}
@@ -39,8 +39,8 @@
             URL: "/pages/your-health/upcoming-and-past-appointments-p9"
           },
           {
-            title: "Test results and imaging",
-            URL: "/pages/your-health/test-results/results-and-imaging"
+            title: "Test results",
+            URL: "/pages/your-health/test-results/jump-to-gp-tests"
           },
           {
             title: "COVID-19 vaccine record",

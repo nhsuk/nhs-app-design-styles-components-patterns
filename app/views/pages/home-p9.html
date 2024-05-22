@@ -45,7 +45,7 @@
       })}}
 
       {% if data['testResultsShowJumpOffPage'] === "true" %}
-        {% set gpHealthRecordUrl = "/pages/your-health/test-results/jump-off" %}
+        {% set gpHealthRecordUrl = "/pages/your-health/test-results/jump-to-gp-health-record" %}
       {% else %}
         {% set gpHealthRecordUrl = "/pages/your-health/test-results/gp-health-record" %}
       {% endif %}
@@ -60,10 +60,6 @@
           {
             title: "View and manage prescriptions",
             URL: "/pages/your-health/prescriptions-p9"
-          },
-          {
-            title: "View test results",
-            URL: "/pages/your-health/test-results/results-and-imaging"
           },
           {
             title: "Upcoming and past appointments",

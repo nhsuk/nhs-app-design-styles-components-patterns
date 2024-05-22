@@ -1,0 +1,33 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your GP health record" %}
+
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-card app-card--dark-blue">
+      <div class="nhsuk-card__content app-card__content">
+        <p class="nhsuk-u-font-weight-regular nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12 my-text-width"><font size="+1">Messages and online consultations</font></p>
+        <h2 class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-padding-top-2">This service is provided by Patients Know Best</h2>
+        <p class="nhsuk-card__description">Your GP surgery or hospital has chosen this personal health record service provider.</p>
+        <a class="nhsuk-button nhsuk-button--reverse app-button" href="/pages/your-health/test-results/pkb-test-result">
+          Continue
+          <span class="nhsuk-u-visually-hidden">to get full access</span>
+        </a>
+        <a href="" style="display: inline-block"><font color="white"><u>Find out more about personal health and record services</u></font></a>
+      </div>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}
+

@@ -1,5 +1,3 @@
-{% from 'components/test-result-marker-summary/macro.njk' import testResultMarkerSummary %}
-
 {% extends 'layout-app.html' %}
 
 {% set hub = "Your health" %}
@@ -17,16 +15,15 @@
     <!-- DYNAMIC PAGE TITLE -->
     {{ dynamicPageTitle({
     title: pageHeading
+
     })}}
-
     <dl class="nhsuk-summary-list">
-
       <div class="no-border-summary-list__row">
         <dt class="nhsuk-heading-m nhsuk-summary-list__key">
           Test date
         </dt>
         <dd class="nhsuk-summary-list__value">
-          12 February 2024
+          24 April 2024
         </dd>
         <div>
           {{ tag({
@@ -63,30 +60,39 @@
       </div>
     </dl>
 
-    <hr aria-hidden="true" style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
+    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
 
-    <h2 class="nhsuk-heading-l" style="padding-bottom:16px;">Your results</h2>
-
-    {{ testResultMarkerSummary({
-      testResultMarkerName: "Haemoglobin A1c",
-      resultResultMarkerValue: 46,
-      resultResultMarkerValueUnits: "mmol/mol",
-      minimumReferenceRange: 20,
-      maximumReferenceRange: 42
-    })}}
+    <h2 class="nhsuk-heading-l" ; style="padding-bottom:16px;">Your results</h2>
 
     <div>
-      <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-      <img src="/images/documentation-example/indicator-range-bar-forty-six.png" alt="Your result is outside this range at 46" width="342"
+      <h4 style="line-height: 24px; margin-bottom: 0px;">Haemoglobin A1c:</h4>
+      <h4 style="line-height: 28px; margin-bottom: 12px;">169 mmol/mol</h4>
+      <p>The reference range is between 115 to 165 g/L</p>
+    </div>
+    <div>
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
+      <img src="/images/documentation-example/indicator-range-bar-one-hundred-sixty-nine.png" alt="Result within reference range" width="342"
         height="109">
-      <hr aria-hidden="true" style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;">
       <a href="https://labtestsonline.org.uk/tests/haemoglobin"
-        style="display: inline-block; padding-bottom: 16px;">What is a haemoglobin A1c (HbA1c) test?</a>
-      <a href="/pages/your-health/test-results/hba1c-test-history.html"
-        style="display: inline-block; padding-bottom: 16px;">View haemoglobin A1c (HbA1c) test result history</a>
-
-      <hr aria-hidden="true" style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
+        style="display: inline-block; padding-bottom: 16px;">What is a haemoglobin A1c test?</a>
+      <a href="/pages/your-health/test-results/hba1c-24-4-test-history.html"
+        style="display: inline-block; padding-bottom: 16px;">View test result history</a>
+      <hr style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
 
     </div>
 
-    {% endblock %}
+    {{ panelLinkCard({
+    items: [
+    {
+    title: "View in Patients Know Best",
+    URL: "/pages/your-health/test-results/pkb-intercept",
+    description: "View your result and access other services in Patients Know Best"
+    }
+    ]
+    })}}
+
+  </div>
+</div>
+
+{% endblock %}

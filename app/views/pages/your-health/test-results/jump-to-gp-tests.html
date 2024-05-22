@@ -1,0 +1,49 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your GP health record" %}
+
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading
+    })}}
+
+    {{ warningCallout({
+    "heading": "Important",
+    "HTML": "<p>Your record may contain sensitive information. If someone is pressuring you for this information,
+      contact your GP surgery immediately.<br /><br />You have a legal right to access the information in your record.
+    </p>"
+    }) }}
+
+    <div>
+      <p class="nhsuk-body-m">Your record shows personal data, such as your details, allergies and medications.
+        <br>
+        <br>
+
+        Depending on what your GP surgery shares, you may also see:
+      </p>
+      <ul>
+        <li>your medical history, including problems and consultation notes</li>
+        <li>test results that you may not have discussed with your doctor</li>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <a href="/pages/your-health/test-results/gp-tests" class="nhsuk-button app-button">Continue</a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

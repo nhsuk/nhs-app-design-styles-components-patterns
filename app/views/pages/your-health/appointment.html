@@ -14,7 +14,7 @@
 
       {% include "components/provider-banner/include.html" %}
 
-      <strong class="app-tag app-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>
+      <!--<strong class="app-tag app-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>-->
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
@@ -23,7 +23,7 @@
       })}}
 
       {{ summaryList({
-        classes: "nhsuk-u-margin-bottom-3",
+        classes: "app-summary-list--two-columns-on-mobile nhsuk-u-margin-bottom-4",
         rows: [
         {
           key: {
@@ -65,8 +65,8 @@
       <div class="app-button-group">
         <a class="nhsuk-button nhsuk-button--secondary app-button app-button--full-width">
           Ask to reschedule appointment
-        </button>
-        <a href="#" class="nhsuk-link">Ask to cancel appointment</a>
+        </a>
+        <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Ask to cancel appointment</a>
       </div>
 
       <hr>

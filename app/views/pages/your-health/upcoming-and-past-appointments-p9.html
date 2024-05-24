@@ -20,28 +20,56 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD -->
-      {{ panelLinkCard({
-        items: [
-          {
-            title: "GP surgery appointments",
-            URL: "#"
-          },
-          {
-            title: "Referrals",
-            URL: "/pages/your-health/referrals"
-          },
-          {
-            title: "Hospital appointments",
-            URL: "/pages/your-health/hospital-appointments",
-            notifications: "1"
-          },
-          {
-            title: "Waiting lists",
-            URL: "/pages/your-health/treatment-waiting-lists"
-          }
-        ]
-      })}}
+      <ul class="app-cards app-cards--stacked">
+        <li class="app-card-link">
+          <div class="app-card-link__container">
+            <div class="app-card-link__content">
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+                GP surgery appointments
+              </a>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+        <li class="app-card-link">
+          <div class="app-card-link__container">
+            <div class="app-card-link__content">
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/referrals">
+                Referrals
+              </a>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+        <li class="app-card-link">
+          <div class="app-card-link__container">
+            <div class="app-card-link__content">
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/hospital-appointments">
+                Hospital appointments
+              </a>
+            </div>
+            {% if data['appointment-letter'] != "read" %}
+            <span class="app-badge">
+              1
+              <span class="nhsuk-u-visually-hidden">
+                new notification
+              </span>
+            </span>
+            {% endif %}
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+        <li class="app-card-link">
+          <div class="app-card-link__container">
+            <div class="app-card-link__content">
+              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+                Waiting lists
+              </a>
+            </div>
+            {% include "components/icons/chevron.html" %}
+          </div>
+        </li>
+      </ul>
 
       <!-- RELATED CONTENT CARD -->
       {{ relatedContentCard({

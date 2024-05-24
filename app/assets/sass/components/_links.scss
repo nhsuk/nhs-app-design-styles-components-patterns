@@ -8,7 +8,7 @@ $app-link-with-icon-size-mobile: nhsuk-spacing(4);
 $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
 
 .app-link--with-icon {
-  @include nhsuk-responsive-margin(4, "bottom");
+  @include nhsuk-responsive-margin(3, "bottom");
 
   align-items: center;
   display: inline-flex;
@@ -34,5 +34,14 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
 .nhsuk-link--no-visited-state {
   .nhsuk-icon {
     fill: currentColor !important;
+  }
+}
+
+.app-link--with-icon-bold {
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

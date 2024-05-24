@@ -36,9 +36,11 @@
         <li class="app-card-link">
           <div class="app-card-link__container">
             <div class="app-card-link__content">
+              {% if data['appointment-letter'] != "read" %}
               <div class="app-card-link__above">
                 <strong class="app-tag app-tag--red nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Action needed</strong>
               </div>
+              {% endif %}
               <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/view-or-manage-appointment" aria-label="Orthopaedic appointment on Monday 3 June 2024 at 9:40am">
                 Orthopaedic appointment
               </a>
@@ -46,10 +48,12 @@
                 <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-3">Monday 3 June 2024 <br> 9:40am</p>
                 <p class="nhsuk-u-margin-bottom-3">The Willows, Croydon University Hospital</p>
                 <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+                  {% if data['appointment-letter'] != "read" %}
                   <span class="app-badge-indicator">
                     <span class="app-badge-indicator__dot app-badge-indicator__dot--red">
                       <span class="nhsuk-u-visually-hidden">New </span>
                     </span>
+                  {% endif %}
                     Questionnaire(s) attached
                   </span>
                 </p>

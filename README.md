@@ -10,7 +10,7 @@ The NHS App uses the [NHS design system](https://service-manual.nhs.uk/design-sy
 
 ## Documenting NHS App design styles, components and patterns
 
-We use a GitHub project board to document design styles, components and patterns being used on the NHS app, along with any work, including visual design changes, hypotheses, user insights etc. All this information then links back to the [NHS digital service manual community backlog](https://github.com/nhsuk/nhsuk-service-manual-community-backlog/projects/1) for others to learn from the work.
+We use a GitHub project board to document design styles, components and patterns being used on the NHS app, along with any work, including visual design changes, hypotheses, user insights etc. All this information then links back to the [NHS digital service manual community backlog](https://github.com/nhsuk/nhsuk-service-manual-community-backlog/projects/1) for others to learn from the wo rk.
 
 ---
 

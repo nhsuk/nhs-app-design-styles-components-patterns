@@ -49,6 +49,7 @@ $timeline-border-width: 2px;
 }
 
 .app-timeline__badge {
+  flex-shrink: 0;
   height: $timeline-badge-size-mobile;
   margin-left: - calc(($timeline-badge-size-mobile / 2) + ($timeline-border-width / 2));
   margin-right: nhsuk-spacing(4);

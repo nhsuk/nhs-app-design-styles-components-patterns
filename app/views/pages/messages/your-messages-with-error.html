@@ -1,0 +1,207 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Messages" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+{% set backLinkURL = "/pages/messages-" + data['accountType'] %}
+
+{% set pageHeading = "Your messages" %}
+
+
+{% if data['messages'] > 1 %}
+  {% set pageDescription = "You have " + data['messages'] + " unread messages" %} 
+{% elif data['messages'] == 1 %}
+  {% set pageDescription = "You have " + data['messages'] + " unread message" %}
+{% else %}
+  {% set pageDescription = "" %}
+{% endif %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div class="app-section-title nhsuk-u-margin-bottom-5">
+        <a href="/pages/messages/message-filters" class="app-link app-link--with-icon nhsuk-link--no-visited-state nhsuk-u-margin-bottom-0">
+          <svg class="app-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.3302 7.19995H3.66016C3.52209 7.19995 3.41016 7.31188 3.41016 7.44995V8.46995C3.41016 8.60802 3.52209 8.71995 3.66016 8.71995H20.3302C20.4682 8.71995 20.5802 8.60802 20.5802 8.46995V7.44995C20.5802 7.31188 20.4682 7.19995 20.3302 7.19995Z" />
+            <path d="M17.6598 11.24H6.33984C6.20177 11.24 6.08984 11.3519 6.08984 11.49V12.51C6.08984 12.6481 6.20177 12.76 6.33984 12.76H17.6598C17.7979 12.76 17.9098 12.6481 17.9098 12.51V11.49C17.9098 11.3519 17.7979 11.24 17.6598 11.24Z" />
+            <path d="M15.0397 15.24H8.96973C8.83166 15.24 8.71973 15.3519 8.71973 15.49V16.51C8.71973 16.6481 8.83166 16.76 8.96973 16.76H15.0397C15.1778 16.76 15.2897 16.6481 15.2897 16.51V15.49C15.2897 15.3519 15.1778 15.24 15.0397 15.24Z" />
+          </svg>
+          <span class="app-u-gap-0">
+            Filter <span class="nhsuk-u-visually-hidden"> messages </span>
+            {% if data['message-sender'] == "" and data['message-status'] == "" %}
+            {% else %}
+              ({{ data['message-sender'] | length + data['message-status'] | length }})
+              <span class="nhsuk-u-visually-hidden"> 
+                {% if data['message-sender'] | length + data['message-status'] | length > 1 %}
+                filters 
+                {% else %}
+                filter
+                {% endif %}
+                currently selected</span>
+            {% endif %}
+          </span>
+        </a>
+        {% if data['message-sender'] == "" and data['message-status'] == "" %}
+          {% else %}
+          <form id="form-clear" method="post" action="/pages/messages/your-messages" novalidate="novalidate">
+            <input type="hidden" name="message-sender" value="">
+            <input type="hidden" name="message-status" value="">
+            {% if data['message-sender'] | length + data['message-status'] | length > 1 %}
+              {{ button({
+                text: "Clear filters",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }} 
+            {% else %}
+              {{ button({
+                text: "Clear filter",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }}
+            {% endif %}
+          </form>
+        {% endif %}
+      </div>
+      
+
+      {% if "Unread" in data['message-status'] and "Read" not in data['message-status'] and data['message1read'] === "true" and data['message2read'] === "true" %}
+
+      <p>There are no results matching this filter.</p>
+
+      {% else %}
+
+      <ul class="app-panel-link-card-stacked">
+
+        {% if "Unread" in data['message-status'] and data['message1read'] === "false" or data['message-status'] == "" or "Read" in data['message-status'] and data['message1read'] === "true" %}
+        {% if "Portland Street Great Westood Surgery" in data['message-sender'] or data['message-sender'] == "" %}
+        <!-- MESSAGE 1 -->
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content app-panel-link-card__content--message">
+            <span aria-hidden="true" class="nhsuk-u-display-block {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">
+              1:02pm
+            </span>
+            <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
+            <form id="message1" method="post" action="/pages/messages/message-1">
+              {% if data['message1read'] === "false" %}
+              <input type="hidden" name="message1read" value="true">
+              <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
+              {% endif %}
+              <a href="#1" onclick="document.getElementById('message1').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+                <span class="nhsuk-u-visually-hidden">{% if data['message1read'] === "true" %}Read {% else %}Unread {% endif %} message from </span>
+                {% if data['message1read'] === "true" %}
+                  Portland Street Great Westood Surgery
+                {% else %}
+                  <span class="app-panel-link-card__link--with-badge">Portland Street Great Westood Surgery</span>
+                {% endif %}
+                <span class="nhsuk-u-visually-hidden"> received today at 1:02pm</span> 
+              </a>
+            </form>
+            <p class="app-panel-link-card__description {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color{% endif %}">
+              <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+              Patient survey reminder. The Patient feedback survey is about to close. Have your say about Portland Street Great Westood Surgery by providing us with your thoughts. 
+            </p>
+          </div>
+        </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Unread" in data['message-status'] and data['message2read'] === "false" or data['message-status'] == "" or "Read" in data['message-status'] and data['message2read'] === "true" %}
+        {% if "Range Surgery" in data['message-sender'] or data['message-sender'] == "" %}
+        <!-- MESSAGE 2 -->
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content app-panel-link-card__content--message">
+            <span aria-hidden="true" class="nhsuk-u-display-block {% if data['message1read'] === 'true' %}nhsuk-u-secondary-text-color {% else %}nhsuk-u-font-weight-bold{% endif %}">
+              Thursday
+            </span>
+            <!-- FORM AND HIDDEN INPUT ONLY USED FOR PROTOTYPING PURPOSES TO PASS DATA -->
+            <form id="message2" method="post" action="/pages/messages/message-2">
+              {% if data['message2read'] === "false" %}
+              <input type="hidden" name="message2read" value="true">
+              <input type="hidden" name="messages" value="{{ data['messages'] - 1 }}">
+              {% endif %}
+              {% if data['replySent'] === "true" %}
+              <input type="hidden" name="replySentFocus" value="flase">
+              {% endif %}
+              <a href="#2" onclick="document.getElementById('message2').submit();" class="app-panel-link-card__link nhsuk-heading-s">
+                <span class="nhsuk-u-visually-hidden">{% if data['message2read'] === "true" %}Read {% else %}Unread {% endif %} message from </span>
+                {% if data['message2read'] === "true" %}
+                Range Surgery
+                {% else %}
+                <span class="app-panel-link-card__link--with-badge">Range Surgery</span>
+                {% endif %}
+                <span class="nhsuk-u-visually-hidden"> received on Thursday at 2:45pm </span> 
+              </a>
+            </form>
+            <p class="app-panel-link-card__description {% if data['message2read'] === 'true' %}nhsuk-u-secondary-text-color{% endif %}">
+              <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+              Dear <span class="app-name-format">{{ data['userFirstName'] }}</span>, we would like to ask you a few questions about smoking. 
+            </p>
+          </div>
+        </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Read" in data['message-status'] or data['message-status'] == "" %}
+        {% if "Hughenden Valley Surgery" in data['message-sender'] or data['message-sender'] == "" %}
+        <!-- MESSAGE 3 -->
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content app-panel-link-card__content--message">
+            <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+              4 Oct 2023
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="/pages/messages/message-3">
+              <span class="nhsuk-u-visually-hidden">Read message from </span>
+              Hughenden Valley Surgery
+              <span class="nhsuk-u-visually-hidden"> received 4 October 2023 at 6:30pm</span> 
+            </a>
+            <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">
+              <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+              Reminder of your telephone appointment with your GP on Friday 23 October at 1:30pm.
+            </p>
+          </div>
+        </li>
+        {% endif %}
+        {% endif %}
+
+        {% if "Read" in data['message-status'] or data['message-status'] == "" %}
+        {% if "NHS App" in data['message-sender'] or data['message-sender'] == "" %}
+        <!-- MESSAGE 4 -->
+        <li class="app-panel-link-card">
+          <div class="app-panel-link-card__content app-panel-link-card__content--message">
+            <span aria-hidden="true" class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+              18 Sep 2023
+            </span>
+            <a class="app-panel-link-card__link nhsuk-heading-s" href="/pages/messages/message-4">
+              <span class="nhsuk-u-visually-hidden">Read message from </span>
+              NHS APP
+              <span class="nhsuk-u-visually-hidden"> received 18 September 2023 at 2:15pm </span> 
+            </a>
+            <p class="app-panel-link-card__description nhsuk-u-secondary-text-color">
+              <span class="nhsuk-u-visually-hidden"> with preview message of </span>
+              Your next COVID-19 vaccination. I'd like to invite you to get your COVID-19 vaccination this spring.
+            </p>
+          </div>
+        </li>
+        {% endif %}
+        {% endif %}
+
+      </ul>
+      {% endif %}
+
+      <div class="nhsuk-form-group--error">
+        <h3>Cannot load messages</h3>
+        <p>There is a problem loading messages.</p>
+        <p>If the problem continues, try again later.</p>
+        <button class="nhsuk-button nhsuk-button--secondary app-button--full-width nhsuk-u-margin-bottom-0">Try again</button>
+    </div>
+  </div>
+
+  {% endblock %}

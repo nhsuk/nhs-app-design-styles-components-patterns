@@ -2,6 +2,13 @@
   #TIMELINE
   ========================================================================== */
 
+$timeline-badge-size-mobile: 16px;
+$timeline-badge-size-tablet: 20px;
+$timeline-badge-small-size-mobile: 12px;
+$timeline-badge-small-size-tablet: 16px;
+
+$timeline-border-width: 2px;
+
 .app-timeline {
   list-style: none;
   margin: 0;
@@ -9,15 +16,16 @@
 }
   
 .app-timeline__item {
+  @include nhsuk-responsive-padding(5, "bottom");
+
   display: flex;
   margin-bottom: 0;
   margin-left: 12px;
-  margin-top: -4px;
-  padding-bottom: 24px;
+  margin-top: -6px;
   position: relative;
 
  &:last-child {
-    padding-bottom: 24px;
+  @include nhsuk-responsive-padding(6, "bottom");
 
     &:before {
       border: none;
@@ -26,62 +34,57 @@
 }
 
 .app-timeline__item:before {
-  /*background-image: url('data:image/svg+xml,<svg width="2" height="400" viewBox="0 0 2 400" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="0.75" x2="0.749983" y2="399.25" stroke="%23005EB8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/></svg>');*/
-  border-left: 4px solid $color_nhsuk-blue;
+  border-left: $timeline-border-width solid $color_nhsuk-grey-3;
   bottom: 0;
   content: "";
   display: block;
-  left: -2px;
+  left: - $timeline-border-width;
   position: absolute;
-  top: 8px;
-  width: 4px;
-
-  @include mq($from: tablet) {
-    top: 8px;
-  }
+  top: nhsuk-spacing(2);
+  width: $timeline-border-width;
 }
 
-.app-timeline__item--grey:before {
-  border-left: 4px dashed $color_nhsuk-grey-3;
+.app-timeline__item--past:before {
+  border-color: $color_nhsuk-blue;
 }
 
 .app-timeline__badge {
-  align-items: center;
-  height: 28px;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  margin-left: -14px;
-  margin-right: 16px;
-  margin-top: 0;
-  width: 28px;
+  height: $timeline-badge-size-mobile;
+  margin-left: - calc(($timeline-badge-size-mobile / 2) + ($timeline-border-width / 2));
+  margin-right: nhsuk-spacing(4);
+  margin-top: 4px;
+  width: $timeline-badge-size-mobile;
   z-index: 1;
 
   @include mq($from: tablet) {
-    margin-top: 2px;
+    height: $timeline-badge-size-tablet;
+    margin-left: - calc(($timeline-badge-size-tablet / 2) + ($timeline-border-width / 2));
+    margin-top: 3px;
+    width: $timeline-badge-size-tablet;
   }
 }
 
 .app-timeline__badge--small {
-  height: 14px;
-  margin-left: -7px;
-  margin-right: 23px;
-  margin-top: 7px;
-  width: 14px;
+  height: $timeline-badge-small-size-mobile;
+  margin-left: - calc(($timeline-badge-small-size-mobile / 2) + ($timeline-border-width / 2));
+  margin-top: 6px;
+  width: $timeline-badge-small-size-mobile;
 
   @include mq($from: tablet) {
-    margin-top: 8px;
+    height: $timeline-badge-small-size-tablet;
+    margin-left: - calc(($timeline-badge-small-size-tablet / 2) + ($timeline-border-width / 2));
+    margin-top: 5px;
+    width: $timeline-badge-small-size-tablet;
   }
 }
 
-.app-timeline__body {
-  margin-top: 0;
-  max-width: 100%;
-  min-width: 0;
+.app-timeline__header {
+  @include nhsuk-typography-responsive(19);
+  margin-bottom: 0;
 }
 
-.app-timeline__item--past {
-  .app-timeline__badge-fill {
-    fill: $color_nhsuk-blue;
-  }
+.app-timeline__description {
+  @include nhsuk-typography-responsive(16);
+  margin-bottom: nhsuk-spacing(1);
+  padding-top: 0;
 }

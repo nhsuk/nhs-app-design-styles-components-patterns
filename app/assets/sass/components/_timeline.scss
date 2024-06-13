@@ -10,8 +10,9 @@ $timeline-badge-small-size-tablet: 16px;
 $timeline-border-width: 2px;
 
 .app-timeline {
+  @include nhsuk-responsive-margin(6, "bottom");
+
   list-style: none;
-  margin: 0;
   padding: 0;
 }
   
@@ -25,7 +26,7 @@ $timeline-border-width: 2px;
   position: relative;
 
  &:last-child {
-  @include nhsuk-responsive-padding(6, "bottom");
+  padding: 0;
 
     &:before {
       border: none;

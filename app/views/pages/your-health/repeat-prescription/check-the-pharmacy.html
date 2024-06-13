@@ -18,6 +18,102 @@
         titleSecondary: true
       })}}
 
+      <p>
+        <span class="nhsuk-u-font-weight-bold">Menston Pharmacy</span><br />
+        88 Main Street<br />
+        Menston<br />
+        Ilkley<br />
+        West Yorkshire<br />
+        LS29 6HY<br />
+        01943873862
+      </p>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Opening hours",
+        "HTML": "
+        <dl class='nhsuk-summary-list app-summary-list--two-columns-on-mobile'>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Sunday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              Closed
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Monday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              9am to 12:30pm <br />
+              1:30pm to 6pm
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Tuesday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              9am to 12:30pm <br />
+              1:30pm to 6pm
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Wednesday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              9am to 12:30pm <br />
+              1:30pm to 6pm
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Thursday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              9am to 12:30pm <br />
+              1:30pm to 6pm
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Friday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              9am to 12:30pm <br />
+              1:30pm to 6pm
+            </dd>
+          </div>
+
+          <div class='nhsuk-summary-list__row'>
+            <dt class='nhsuk-summary-list__key'>
+              Saturday
+            </dt>
+            <dd class='nhsuk-summary-list__value'>
+              Closed
+            </dd>
+          </div>
+        
+        </dl>
+        "
+      }) }}
+
+      <p class="nhsuk-u-margin-bottom-5"><a class="nhsuk-link" href="#">Change your nominated pharmacy</a></p>
+
+      {{ button({
+        text: "Continue",
+        classes: "app-button app-button--full-width",
+        href: "/pages/your-health/repeat-prescription/select-medicines"
+      }) }}
+
     </div>
   </div>
 

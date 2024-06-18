@@ -84,6 +84,7 @@ $timeline-border-width: 2px;
 
 .app-timeline__header {
   @include nhsuk-typography-responsive(19);
+  font-weight: normal;
   margin-bottom: 0;
 }
 

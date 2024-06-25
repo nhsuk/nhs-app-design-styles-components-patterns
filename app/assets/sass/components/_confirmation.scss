@@ -2,22 +2,47 @@
 // COMPONENTS / #CONFIRMATION
 // ==========================================================================
 
+$nhsuk-border-width: 1px;
+
 .app-confirmation {
+  @include nhsuk-typography-responsive(32);
+
+  background: $color_nhsuk-green;
+  border: $nhsuk-border-width solid transparent;
+  box-sizing: border-box;
+  color: $color_nhsuk-white;
   margin-bottom: nhsuk-spacing(5);
-  text-align: center;
+  padding: nhsuk-spacing(7) - $nhsuk-border-width;
 
-  .app-icon--confirmation {
-    margin: 0 nhsuk-spacing(2) 0;
+  @include mq($until: tablet) {
+    padding: nhsuk-spacing(3) - $nhsuk-border-width;
 
-    @include mq($until: desktop) {
-      height: 80px;
-      width: 80px;
-    }
+    // This is an if-all-else-fails attempt to stop long words from overflowing the container
+    // on very narrow viewports by forcing them to break and wrap instead. This
+    // overflowing is more likely to happen when user increases text size on a mobile eg. using
+    // iOS Safari text resize controls.
+    //
+    // The overflowing is a particular problem with the panel component since it uses white
+    // text: when the text overflows the container, it is invisible on the white (page)
+    // background. When the text in our other components overflow, the user might have to scroll
+    // horizontally to view it but the the text remains legible.
+    overflow-wrap: break-word;
+    word-wrap: break-word; // Support IE (autoprefixer doesn't add this as it's not a prefix)
+  }
+
+  @include mq($media-type: print) {
+    border-color: currentcolor;
+    color: $nhsuk-print-text-color;
+    background: none;
   }
 }
 
-.app-confirmation--blue {
-  @include nhsuk-responsive-padding(5);
+.app-confirmation__title {
+  @include nhsuk-typography-responsive(48);
+  margin-top: 0;
+  margin-bottom: nhsuk-spacing(6);
+}
 
-  background: $color_nhsuk-white;
+.app-confirmation__title:last-child {
+  margin-bottom: 0;
 }

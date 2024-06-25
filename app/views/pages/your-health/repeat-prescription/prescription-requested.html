@@ -12,11 +12,78 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <!-- DYNAMIC PAGE TITLE -->
+      <!-- DYNAMIC PAGE TITLE 
       {{ dynamicPageTitle({
         title: pageHeading,
         titleSecondary: true
-      })}}
+      })}}-->
+
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+      </div>
+
+      <h2 class="nhsuk-u-margin-bottom-2">Medicines</h2>
+
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Atorvastatin 500mg capsules</p>
+          <p class="nhsuk-u-margin-bottom-0">Quantity: 10 capsules</p>
+        </li>
+        <li>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Codeine phosphate 30mg tablets</p>
+          <p class="nhsuk-u-margin-bottom-0">Quantity: 10 capsules</p>
+        </li>
+      </ul>
+
+
+      <h2>Your nominated pharmacy</h2>
+
+      <p>
+        <span class="nhsuk-u-font-weight-bold">Menston Pharmacy</span><br />
+        88 Main Street<br />
+        Menston<br />
+        Ilkley<br />
+        West Yorkshire<br />
+        LS29 6HY<br />
+        01943873862
+      </p>
+
+      <h2>What you can do next</h2>
+
+      <ol class="app-timeline">
+        <li class="app-timeline__item">
+          <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
+          </svg>
+          <div class="app-timeline__content">
+            <h3 class="app-timeline__header nhsuk-u-font-weight-bold">Await approval</h3>
+            <p class="app-timeline__description">The request will either be approved or rejected. If rejected please contact your Healthcare Professional.</p>
+          </div>
+        </li>
+        <li class="app-timeline__item">
+          <svg class="app-timeline__badge app-timeline__badge--small" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+            <circle cx="7" cy="7" r="6" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 14 14)" fill="white" stroke="#AEB7BD" stroke-width="2"/>
+          </svg>
+          <div class="app-timeline__content">
+            <h3 class="app-timeline__header">Collect prescription</h3>
+            <p class="app-timeline__description">Once approved, it can take 3 to 5 working days for a nominated pharmacy to prepare your prescription.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="app-card-link">
+        <div class="app-card-link__container">
+          <div class="app-card-link__content">
+            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/requested-medicines">
+              Requested medicines
+            </a>
+            <div class="app-card-link__below">
+              <p class="nhsuk-u-margin-top-1">Check if your GP surgery has reviewed medicines requested in the app</p>
+            </div>
+          </div>
+          {% include "components/icons/chevron.html" %}
+        </div>
+      </div>
 
     </div>
   </div>

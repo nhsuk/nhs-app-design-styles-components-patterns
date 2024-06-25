@@ -14,7 +14,7 @@ $timeline-border-width: 2px;
   @include nhsuk-responsive-padding(2, "top");
 
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
   
 .app-timeline__item {

@@ -1,0 +1,41 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Add notes for your GP surgery (optional)" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <form id="form" method="post" action="/pages/your-health/repeat-prescription/check-request" novalidate="novalidate">
+
+        {{ characterCount({
+          "name": "more-detail",
+          "id": "more-detail",
+          "maxlength": 200,
+          "label": {
+            "text": pageHeading,
+            "classes": "nhsuk-label--l",
+            isPageHeading: true
+          },
+          "hint": {
+            "text": "You can add a note about your prescription here. Your note may not be seen or replied to, so if you have an important request for this prescription, contact your GP surgery."
+          }
+        }) }}
+
+        {{ button({
+          text: "Continue",
+          classes: "app-button app-button--full-width"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

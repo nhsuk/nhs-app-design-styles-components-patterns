@@ -173,3 +173,12 @@ hr {
     padding: 0;
   }
 }
+
+// List spaced
+.app-list--spaced > li {
+  margin-bottom: nhsuk-spacing(3);
+
+  @include mq($from: tablet) {
+    margin-bottom: nhsuk-spacing(4);
+  }
+}

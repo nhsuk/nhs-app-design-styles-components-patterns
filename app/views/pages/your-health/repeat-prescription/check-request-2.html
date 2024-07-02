@@ -10,7 +10,7 @@
 {% block content %}
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-two-thirds">
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
@@ -18,44 +18,62 @@
         titleSecondary: true
       })}}
 
-      <h2>Medicines</h2>
+      <dl class="nhsuk-summary-list">
 
-      <ul class="nhsuk-list app-list--spaced">
-        <li>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Atorvastatin 500mg capsules</p>
-          <p class="nhsuk-u-margin-bottom-0">Quantity: 10 capsules</p>
-        </li>
-        <li>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Codeine phosphate 30mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-0">Quantity: 10 capsules</p>
-        </li>
-      </ul>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Medicines
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <ul class="nhsuk-list">
+              <li>
+                Atorvastatin 500mg capsules
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
+              </li>
+              <li>
+                Codeine phosphate 30mg tablets
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
+              </li>
+            </ul>
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">Change<span class="nhsuk-u-visually-hidden"> medicines</span></a>
+          </dd>
+        </div>
 
-      <p><a href="#">Edit <span class="nhsuk-u-visually-hidden">medicines</span></a></p>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Notes for your GP surgery
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            No notes added
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">Change<span class="nhsuk-u-visually-hidden"> Notes for your GP surgery</span></a>
+          </dd>
+        </div>
 
-      <hr>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Your nominated pharmacy
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>
+              Menston Pharmacy<br />
+              88 Main Street<br />
+              Menston<br />
+              Ilkley<br />
+              West Yorkshire<br />
+              LS29 6HY<br />
+              01943873862
+            </p>
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">Change<span class="nhsuk-u-visually-hidden"> Your nominated pharmacy</span></a>
+          </dd>
+        </div>
 
-      <h2>Notes for your GP surgery</h2>
-
-      <p>No notes added</p>
-
-      <p><a href="#">Edit <span class="nhsuk-u-visually-hidden">notes</span></a></p>
-
-      <hr>
-
-      <h2>Your nominated pharmacy</h2>
-
-      <p>
-        <span class="nhsuk-u-font-weight-bold">Menston Pharmacy</span><br />
-        88 Main Street<br />
-        Menston<br />
-        Ilkley<br />
-        West Yorkshire<br />
-        LS29 6HY<br />
-        01943873862
-      </p>
-
-      <hr>
+      </dl>
 
       {{ button({
         text: "Request prescriptions",

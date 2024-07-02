@@ -112,22 +112,22 @@
 
 .app-button--tertiary {
   background-color: transparent;
-  border: 2px solid $nhsuk-link-active-color;
+  border: 2px solid $nhsuk-link-color;
   box-shadow: none;
-  color: $nhsuk-link-active-color;
+  color: $nhsuk-link-color;
 
   &:link,
   &:visited {
-    color: $nhsuk-link-active-color;
+    color: $nhsuk-link-color;
   }
 
   &:hover {
-    background-color: $nhsuk-link-active-color;
+    background-color: $nhsuk-link-color;
     color: $color_nhsuk-white;
   }
 
   &:active {
-    background-color: $nhsuk-link-active-color;
+    background-color: $nhsuk-link-color;
     box-shadow: none;
     top: 0;
   }

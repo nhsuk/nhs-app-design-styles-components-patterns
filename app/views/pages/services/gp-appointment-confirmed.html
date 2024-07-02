@@ -9,108 +9,18 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <div class="app-confirmation app-confirmation--blue">
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
 
-        <svg class="app-icon app-icon--confirmation" aria-hidden="true" width="119" height="118" viewBox="0 0 119 118" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="59.5" cy="59" r="59" fill="#005EB8" fill-opacity="0.14"/>
-          <circle cx="59.5" cy="59" r="47" fill="#005EB8" fill-opacity="0.46"/>
-          <circle cx="59.5" cy="59" r="32" fill="#005EB8"/>
-          <path d="M75.7314 49.8984L57.038 68.372L47.5813 59.1352" stroke="white" stroke-width="5.66667" stroke-linecap="round"/>
-        </svg>
-
-        <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">{{ pageHeading }}</h1>
-
-      </div>
-
-      {% if data['appointment-location'] == "Phone"  %}
-      <h2 class="nhsuk-heading-m">What happens next</h2>
+      <h2 class="nhsuk-heading-l">What happens next</h2>
       <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
       <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
-      <h2 class="nhsuk-heading-m nhsuk-u-padding-top-4">Appointment details</h2>
-      {% endif %}
-
-      <dl class="nhsuk-summary-list">
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Appointment type
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-type'] or 'General' }}
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-location'] or 'York Road Practice' }}
-          </dd>
-        </div>
-
-        {% if data['appointment-location'] == "Phone"  %}
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Phone number
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {% if data['appointment-phone-number'] == "Current"  %}
-              Phone ending with 3456
-            {% else %}
-              {{ data['appointment-phone-number-new'] or '07866767898' }}
-            {% endif %}
-          </dd>
-        </div>
-        {% else %}
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Clinician
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-clinician'] or 'Dr Max Smith' }}
-          </dd>
-        </div>
-        {% endif %}
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Date
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Time
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {% if data['appointment-time'] == "Morning"  %}
-              Morning between 8am and 11am
-            {% elif data['appointment-time'] == "Afternoon" %}
-              Afternoon between 1pm and 4pm
-            {% else %}
-              {{ data['appointment-time'] or '9:00am' }}
-            {% endif %}
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Reason for appointment
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['gp-appointment-reason'] or 'Pain in my foot' }}
-          </dd>
-        </div>
-   
-      </dl>
-
+        
       {{ button({
         text: "View all appointments",
-        classes: "nhsuk-button--secondary app-button app-button--full-width"
+        classes: "nhsuk-u-margin-top-1 app-button app-button--tertiary app-button--full-width"
       }) }}
 
     </div>

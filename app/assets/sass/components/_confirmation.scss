@@ -11,7 +11,7 @@ $nhsuk-border-width: 1px;
   border: $nhsuk-border-width solid transparent;
   box-sizing: border-box;
   color: $color_nhsuk-white;
-  margin-bottom: nhsuk-spacing(5);
+  margin-bottom: nhsuk-spacing(4);
   padding: nhsuk-spacing(7) - $nhsuk-border-width;
 
   @include mq($until: tablet) {

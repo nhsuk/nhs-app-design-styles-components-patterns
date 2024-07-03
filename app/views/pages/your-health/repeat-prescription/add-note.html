@@ -15,9 +15,10 @@
       <form id="form" method="post" action="/pages/your-health/repeat-prescription/check-the-pharmacy" novalidate="novalidate">
 
         {{ characterCount({
-          "name": "more-detail",
-          "id": "more-detail",
+          "name": "prescription-request-note",
+          "id": "prescription-request-note",
           "maxlength": 200,
+          value: data['prescription-request-note'],
           "label": {
             "text": pageHeading,
             "classes": "nhsuk-label--xl nhsuk-u-margin-bottom-2",

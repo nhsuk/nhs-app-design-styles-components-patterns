@@ -26,14 +26,18 @@
           </dt>
           <dd class="nhsuk-summary-list__value">
             <ul class="nhsuk-list nhsuk-list--bullet">
+              {% if "select-medicines-1" in data['select-medicines'] or data['select-medicines'] == "" %}
               <li>
                 Atorvastatin 500mg capsules
                 <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
               </li>
+              {% endif %}
+              {% if "select-medicines-2" in data['select-medicines'] or data['select-medicines'] == "" %}
               <li>
                 Codeine phosphate 30mg tablets
                 <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
               </li>
+              {% endif %}
             </ul>
           </dd>
           <dd class="nhsuk-summary-list__actions">
@@ -46,7 +50,7 @@
             Notes for your GP surgery
           </dt>
           <dd class="nhsuk-summary-list__value">
-            No notes added
+            {{ data['prescription-request-note'] or "No notes added" }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a href="/pages/your-health/repeat-prescription/add-note">Change<span class="nhsuk-u-visually-hidden"> Notes for your GP surgery</span></a>

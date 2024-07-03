@@ -31,6 +31,8 @@ module.exports = {
   "gp-appointment-clinician-sex": "",
   "gp-appointment-location": "",
 
+  "select-medicines": "",
+
   "message-sender": "",
   "message-status": "",
 

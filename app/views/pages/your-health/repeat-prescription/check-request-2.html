@@ -25,7 +25,7 @@
             Medicines
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <ul class="nhsuk-list">
+            <ul class="nhsuk-list nhsuk-list--bullet">
               <li>
                 Atorvastatin 500mg capsules
                 <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
@@ -37,7 +37,7 @@
             </ul>
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="#">Change<span class="nhsuk-u-visually-hidden"> medicines</span></a>
+            <a href="/pages/your-health/repeat-prescription/select-medicines">Change<span class="nhsuk-u-visually-hidden"> medicines</span></a>
           </dd>
         </div>
 
@@ -49,7 +49,7 @@
             No notes added
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="#">Change<span class="nhsuk-u-visually-hidden"> Notes for your GP surgery</span></a>
+            <a href="/pages/your-health/repeat-prescription/add-note">Change<span class="nhsuk-u-visually-hidden"> Notes for your GP surgery</span></a>
           </dd>
         </div>
 
@@ -69,17 +69,22 @@
             </p>
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="#">Change<span class="nhsuk-u-visually-hidden"> Your nominated pharmacy</span></a>
+            <a href="/pages/your-health/repeat-prescription/check-the-pharmacy">Change<span class="nhsuk-u-visually-hidden"> Your nominated pharmacy</span></a>
           </dd>
         </div>
 
       </dl>
 
-      {{ button({
-        text: "Request prescriptions",
-        classes: "app-button app-button--full-width",
-        href: "/pages/your-health/repeat-prescription/prescription-requested"
-      }) }}
+      <form id="form" method="post" action="/pages/your-health/repeat-prescription/prescription-requested-2" novalidate="novalidate">
+
+        <input type="hidden" name="prescription-checked" value="true">
+
+        {{ button({
+          text: "Request prescriptions",
+          classes: "app-button app-button--full-width"
+        }) }}
+
+      </form>
 
     </div>
   </div>

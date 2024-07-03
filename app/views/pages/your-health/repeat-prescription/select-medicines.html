@@ -12,21 +12,19 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true
-      })}}
-
-      <form id="form" method="post" action="/pages/your-health/repeat-prescription/check-request" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/your-health/repeat-prescription/add-note" novalidate="novalidate">
 
         <div class="nhsuk-form-group">
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
-            Select medicines
+          <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading">
+              Select medicines you want to request
+            </h1>
           </legend>
+        
           <div class="nhsuk-checkboxes">
+            
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="select-medicines-1" name="select-medicines" type="checkbox" value="Atorvastatin 500mg capsules">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-1">
@@ -34,6 +32,7 @@
                 <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
               </label>
             </div>
+
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="select-medicines-2" name="select-medicines" type="checkbox" value="Codeine phosphate 30mg tablets">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-2">
@@ -41,22 +40,12 @@
                 <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
               </label>
             </div>
-          </div>
-          </fieldset>
-        </div>
 
-        {{ characterCount({
-          "name": "more-detail",
-          "id": "more-detail",
-          "maxlength": 200,
-          "label": {
-            "text": "Add notes for your GP surgery (optional)",
-            "classes": "nhsuk-label--m nhsuk-u-margin-bottom-3"
-          },
-          "hint": {
-            "text": "You can add a note about your prescription here. Your note may not be seen or replied to, so if you have an important request for this prescription, contact your GP surgery."
-          }
-        }) }}
+          </div>
+        </fieldset>
+        
+        
+        </div>
 
         {{ button({
           text: "Continue",

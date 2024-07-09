@@ -120,6 +120,14 @@
 }
 
 // List border
-.nhsuk-list--border li:last-of-type {
-  border: 0;
+.nhsuk-list--border {
+  li {
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
 }

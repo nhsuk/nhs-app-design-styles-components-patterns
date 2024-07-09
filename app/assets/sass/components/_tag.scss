@@ -2,92 +2,89 @@
   #TAG
   ========================================================================== */
 
-.app-tag {
-  @include nhsuk-font($size: 16, $weight: normal, $line-height: 1.25);
-  background-color: tint($color_nhsuk-blue, 80%);
-  border-radius: 2px;
-  color: shade($color_nhsuk-blue, 30%);
-  display: inline-block;
-  margin-bottom: -2px;
-  margin-top: -2px;
-  padding: 4px 10px;
-
-  @include mq($from: tablet) {
-    line-height: 1.4285em;
+  $color_tag-aqua-green-background: #cce7e6;
+  $color_tag-aqua-green-text: #004642;
+  $color_tag-blue-background: #d2e1ef;
+  $color_tag-blue-text: #01407d;
+  $color_tag-green-text: #03501d;
+  $color_tag-green-background: #c9e6d8;
+  $color_tag-grey-background: #e6e2e2;
+  $color_tag-grey-text: #303e4f;
+  $color_tag-purple-background: #d9d7eb;
+  $color_tag-purple-text: #532d8b;
+  $color_tag-orange-background: #fae1bc;
+  $color_tag-orange-text: #533c00;
+  $color_tag-pink-background: #efd3e3;
+  $color_tag-pink-text: #57133a;
+  $color_tag-red-background: #f8d9d9;
+  $color_tag-red-text: #7e0d04;
+  $color_tag-yellow-background: #eee8a7;
+  $color_tag-yellow-text: #5b4701;
+  
+  .app-tag {
+    @include nhsuk-font($size: 16, $weight: normal, $line-height: 1.25);
+    background-color: $color_tag-blue-background;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: $color_tag-blue-text;
+    display: inline-block;
+    padding: 3px 9px; // Minus the border width
+  
+    @include mq($from: tablet) {
+      line-height: 1.4285em;
+    }
   }
-}
-
-/* Colour variants
-  ========================================================================== */
-
-.app-tag--white {
-  background-color: $color_nhsuk-white;
-  border-color: $color_nhsuk-black;
-  color: $color_nhsuk-black;
-}
-
-.app-tag--grey {
-  background-color: $color_tag-grey-background;
-  border-color: $color_tag-grey-text;
-  color: $color_tag-grey-text;
-}
-
-.app-tag--green {
-  background-color: $color_tag-green-background;
-  border-color: $color_tag-green-text;
-  color: $color_tag-green-text;
-}
-
-.app-tag--aqua-green {
-  background-color: $color_tag-aqua-green-background;
-  border-color: $color_tag-aqua-green-text;
-  color: $color_tag-aqua-green-text;
-}
-
-.app-tag--blue {
-  background-color: $color_tag-blue-background;
-  border-color: $color_tag-blue-text;
-  color: $color_tag-blue-text;
-}
-
-.app-tag--purple {
-  background-color: $color_tag-purple-background;
-  border-color: $color_tag-purple-text;
-  color: $color_tag-purple-text;
-}
-
-.app-tag--pink {
-  background-color: $color_tag-pink-background;
-  border-color: $color_tag-pink-text;
-  color: $color_tag-pink-text;
-}
-
-.app-tag--red {
-  background-color: $color_tag-red-background;
-  border-color: $color_tag-red-text;
-  color: $color_tag-red-text;
-}
-
-.app-tag--orange {
-  background-color: $color_tag-orange-background;
-  border-color: $color_tag-orange-text;
-  color: $color_tag-orange-text;
-}
-
-.app-tag--yellow {
-  background-color: $color_tag-yellow-background;
-  border-color: $color_tag-yellow-text;
-  color: $color_tag-yellow-text;
-}
-
-.app-tag--text-color {
-  background-color: transparent;
-  border-color: transparent;
-  color: $nhsuk-text-color;
-}
-
-.app-tag--secondary-text-color {
-  background-color: transparent;
-  border-color: transparent;
-  color: $nhsuk-secondary-text-color;
-}
+  
+  /* Colour variants
+      ========================================================================== */
+  
+  .app-tag--white {
+    background-color: $color_nhsuk-white;
+    border-color: $color_nhsuk-grey-4;
+    color: $color_nhsuk-black;
+  }
+  
+  .app-tag--grey {
+    background-color: $color_tag-grey-background;
+    color: $color_tag-grey-text;
+  }
+  
+  .app-tag--green {
+    background-color: $color_tag-green-background;
+    color: $color_tag-green-text;
+  }
+  
+  .app-tag--aqua-green {
+    background-color: $color_tag-aqua-green-background;
+    color: $color_tag-aqua-green-text;
+  }
+  
+  .app-tag--blue {
+    background-color: $color_tag-blue-background;
+    color: $color_tag-blue-text;
+  }
+  
+  .app-tag--purple {
+    background-color: $color_tag-purple-background;
+    color: $color_tag-purple-text;
+  }
+  
+  .app-tag--pink {
+    background-color: $color_tag-pink-background;
+    color: $color_tag-pink-text;
+  }
+  
+  .app-tag--red {
+    background-color: $color_tag-red-background;
+    color: $color_tag-red-text;
+  }
+  
+  .app-tag--orange {
+    background-color: $color_tag-orange-background;
+    color: $color_tag-orange-text;
+  }
+  
+  .app-tag--yellow {
+    background-color: $color_tag-yellow-background;
+    color: $color_tag-yellow-text;
+  }

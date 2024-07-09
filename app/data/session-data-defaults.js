@@ -36,4 +36,23 @@ module.exports = {
   "message-sender": "",
   "message-status": "",
 
+  // Medicines
+  "medicine1": "Felodipine 2.5micrograms tablets",
+  "medicine1description": "10 tablet",
+
+  "medicine2": "Atorvastatin 500mg capsules",
+  "medicine2description": "Take ONE capsule THREE times daily for 7 days, 28 capsules",
+
+  "medicine3": "Nuelin SA 175mg tablets (Meda Pharmaceuticals Ltd)",
+  "medicine3description": "Two to be taken twice a day 60 tablets",
+
+  "medicine4": "Warfarin 500microgram tablets",
+  "medicine4description": "take as instructed by anticoagulant clinic 2 tablets",
+
+  "medicine5": "Tamsulosin 400microgram modified release capsules",
+  "medicine5description": "1 OD - 56 capsules",
+
+  "medicine6": "Ramipril 5mg capsules",
+  "medicine6description": "take as instructed 10 tablets",
+
 }

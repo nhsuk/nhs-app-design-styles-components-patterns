@@ -25,19 +25,62 @@
             Medicines
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <ul class="nhsuk-list nhsuk-list--bullet">
+            <ul class="nhsuk-list nhsuk-list--border">
+
               {% if "select-medicines-1" in data['select-medicines'] or data['select-medicines'] == "" %}
               <li>
-                Atorvastatin 500mg capsules
-                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
+                {{ data['medicine1'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine1description'] }}
+                </span>
               </li>
               {% endif %}
+
               {% if "select-medicines-2" in data['select-medicines'] or data['select-medicines'] == "" %}
               <li>
-                Codeine phosphate 30mg tablets
-                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
+                {{ data['medicine2'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine2description'] }}
+                </span>
               </li>
               {% endif %}
+
+              {% if "select-medicines-3" in data['select-medicines'] or data['select-medicines'] == "" %}
+              <li>
+                {{ data['medicine3'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine3description'] }}
+                </span>
+              </li>
+              {% endif %}
+
+              {% if "select-medicines-4" in data['select-medicines'] or data['select-medicines'] == "" %}
+              <li>
+                {{ data['medicine4'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine4description'] }}
+                </span>
+              </li>
+              {% endif %}
+
+              {% if "select-medicines-5" in data['select-medicines'] or data['select-medicines'] == "" %}
+              <li>
+                {{ data['medicine5'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine5description'] }}
+                </span>
+              </li>
+              {% endif %}
+
+              {% if "select-medicines-6" in data['select-medicines'] or data['select-medicines'] == "" %}
+              <li>
+                {{ data['medicine6'] }}
+                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                  {{ data['medicine6description'] }}
+                </span>
+              </li>
+              {% endif %}
+
             </ul>
           </dd>
           <dd class="nhsuk-summary-list__actions">
@@ -63,13 +106,11 @@
           </dt>
           <dd class="nhsuk-summary-list__value">
             <p>
-              Menston Pharmacy<br />
-              88 Main Street<br />
-              Menston<br />
-              Ilkley<br />
-              West Yorkshire<br />
-              LS29 6HY<br />
-              01943873862
+              BAKERS CHEMIST<br />
+              219 - 223 UPPER TOOTING RD<br />
+              LONDON<br />
+              SW17 7TG<br />
+              02086726116
             </p>
           </dd>
           <dd class="nhsuk-summary-list__actions">
@@ -81,7 +122,7 @@
 
       <form id="form" method="post" action="/pages/your-health/repeat-prescription/prescription-requested-2" novalidate="novalidate">
 
-        <input type="hidden" name="prescription-checked" value="true">
+        <input type="hidden" name="prescription-requested" value="true">
 
         {{ button({
           text: "Request prescriptions",

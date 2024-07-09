@@ -118,3 +118,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+// List border
+.nhsuk-list--border li:last-of-type {
+  border: 0;
+}

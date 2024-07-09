@@ -24,7 +24,7 @@
         "HTML": "
         <div style='text-align:center;'>
           <img style='max-width:100%;' class='nhsuk-u-margin-bottom-4' src='/images/precsription-barcode.png' alt=''>
-          <p class='nhsuk-u-font-weight-bold'>ID: 1234 5678 9101</p>
+          <p class='nhsuk-u-font-weight-bold'>ID: 1234 5678 9102</p>
           <p class='nhsuk-u-margin-bottom-0'>Only show this barcode if your pharmacist asks.</p>
           <button class='apple-add-to-wallet__button'>
             <img class='apple-add-to-wallet__image' src='/images/apple-add-to-wallet-one-line.png' alt=''>
@@ -37,16 +37,39 @@
       <h2>Medicines</h2>
 
       <ul class="nhsuk-list nhsuk-list--border">
+
+        {% if "select-medicines-1" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Ready to collect</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Atorvastatin 500mg capsules</p>
-          <p class="nhsuk-u-margin-bottom-0">Quantity: 28 capsules</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine1'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0">{{ data['medicine1description'] }}</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-2" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
-          <strong class="app-tag app-tag--red nhsuk-u-margin-bottom-2">Cancelled</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Codeine phosphate 30mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-0">Quantity: 10 capsules</p>
+          <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Ready to collect</strong>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine2'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0">{{ data['medicine2description'] }}</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-3" in data['select-medicines'] or data['select-medicines'] == "" %}
+        <li>
+          <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Ready to collect</strong>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine3'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0">{{ data['medicine3description'] }}</p>
+        </li>
+        {% endif %}
+
+        {% if "select-medicines-4" in data['select-medicines'] or data['select-medicines'] == "" %}
+        <li>
+          <strong class="app-tag app-tag--blue nhsuk-u-margin-bottom-2">Part ready to collect</strong>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine4'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0">{{ data['medicine4description'] }}</p>
+        </li>
+        {% endif %}
+
       </ul>
 
       <p>For instructions on how to take your medicine, read the label on the packet or container. </p>
@@ -61,7 +84,7 @@
               text: "Pharmacy"
             },
             value: {
-              html: "<a href='#'>Boots Pharmacy</a><br />Balham<br />London<br />SW12 73G<br />080867766155"
+              html: "<a href='#'>BAKERS CHEMIST</a><br />219 - 223 UPPER TOOTING RD<br />LONDON<br />SW17 7TG<br />02086726116"
             }
           },
           {
@@ -69,7 +92,7 @@
               text: "Date prescribed"
             },
             value: {
-              text: "18 July 2024"
+              text: "19 July 2024"
             }
           },
           {
@@ -77,7 +100,7 @@
               text: "Prescription type"
             },
             value: {
-              html: "One off"
+              html: "Repeat"
             }
           },
           {

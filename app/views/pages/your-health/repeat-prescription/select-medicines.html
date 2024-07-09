@@ -5,7 +5,7 @@
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Select medicines you want to request" %}
+{% set pageHeading = "Which repeat prescriptions do you want?" %}
 
 {% block content %}
 
@@ -16,34 +16,81 @@
 
         <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
-            <h1 class="nhsuk-fieldset__heading">
-              Select medicines you want to request
-            </h1>
-          </legend>
-        
-          <div class="nhsuk-checkboxes">
-            
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="select-medicines-1" name="select-medicines" type="checkbox" value="select-medicines-1" {{ checked('select-medicines','select-medicines-1') }}>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-1">
-                Atorvastatin 500mg capsules
-                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
-              </label>
-            </div>
+          <fieldset class="nhsuk-fieldset" aria-describedby="select-medicines-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+              <h1 class="nhsuk-fieldset__heading">
+                {{ pageHeading }}
+              </h1>
+            </legend>
 
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="select-medicines-2" name="select-medicines" type="checkbox" value="select-medicines-2" {{ checked('select-medicines','select-medicines-2') }}>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-2">
-                Codeine phosphate 30mg tablets
-                <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">Quantity: 10 capsules</span>
-              </label>
+            <div class="nhsuk-hint" id="select-medicines-hint">
+              Select all the medicines you want to request
             </div>
+          
+            <div class="nhsuk-checkboxes">
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-1" name="select-medicines" type="checkbox" value="select-medicines-1" {{ checked('select-medicines','select-medicines-1') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-1">
+                  {{ data['medicine1'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine1description'] }}
+                  </span>
+                </label>
+              </div>
 
-          </div>
-        </fieldset>
-        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-2" name="select-medicines" type="checkbox" value="select-medicines-2" {{ checked('select-medicines','select-medicines-2') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-2">
+                  {{ data['medicine2'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine2description'] }}
+                  </span>
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-3" name="select-medicines" type="checkbox" value="select-medicines-3" {{ checked('select-medicines','select-medicines-3') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-3">
+                  {{ data['medicine3'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine3description'] }}
+                  </span>
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-4" name="select-medicines" type="checkbox" value="select-medicines-4" {{ checked('select-medicines','select-medicines-4') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-4">
+                  {{ data['medicine4'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine4description'] }}
+                  </span>
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-5" name="select-medicines" type="checkbox" value="select-medicines-5" {{ checked('select-medicines','select-medicines-5') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-5">
+                  {{ data['medicine5'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine5description'] }}
+                  </span>
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="select-medicines-6" name="select-medicines" type="checkbox" value="select-medicines-6" {{ checked('select-medicines','select-medicines-6') }}>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="select-medicines-6">
+                  {{ data['medicine6'] }}
+                  <span class="nhsuk-u-display-block nhsuk-u-secondary-text-color">
+                    {{ data['medicine6description'] }}
+                  </span>
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
         
         </div>
 

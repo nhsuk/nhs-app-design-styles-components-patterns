@@ -5,8 +5,8 @@
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Requested medicines" %}
-{% set pageDescription = "The medicines your GP approves may be different to your request" %}
+{% set pageHeading = "Requested repeat prescriptions" %}
+{% set pageDescription = "Your GP needs to approve the repeat prescriptions you requested in the app" %}
 
 {% block content %}
 
@@ -24,51 +24,75 @@
         <div class="app-card-link__container">
           <div class="app-card-link__content">
             <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-approved-prescriptions">
-              Your approved prescriptions
+              Check if your prescriptions are ready
             </a>
           </div>
           {% include "components/icons/chevron.html" %}
         </div>
       </div>
 
+      {% if data['prescription-requested'] == "true" %}
+
       <ul class="nhsuk-list nhsuk-list--border">
+
+        {% if "select-medicines-1" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Approved by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Atorvastatin 500mg capsules</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 10 capsules</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 1 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine1'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine1description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-2" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Approved by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Codeine phosphate 30mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 10 capsules</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 1 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine2'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine2description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-3" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Approved by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Bisoprolol fumarate 5mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 28 Tablets</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 3 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine3'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine3description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-4" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Approved by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Warfarin 5mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 28 Tablets</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 3 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine4'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine4description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-5" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--green nhsuk-u-margin-bottom-2">Approved by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Ramipril 5mg capsules</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 28 Tablets</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 3 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine5'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine5description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
+        {% if "select-medicines-6" in data['select-medicines'] or data['select-medicines'] == "" %}
         <li>
           <strong class="app-tag app-tag--red nhsuk-u-margin-bottom-2">Rejected by GP</strong>
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Lorazepam 1mg tablets</p>
-          <p class="nhsuk-u-margin-bottom-3">Quantity: 28 Tablets</p>
-          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 2 May 2024</p>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">{{ data['medicine6'] }}</p>
+          <p class="nhsuk-u-margin-bottom-3">{{ data['medicine6description'] }}</p>
+          <p class="nhsuk-u-margin-bottom-0 nhsuk-u-secondary-text-color">Requested: 17 July 2024</p>
         </li>
+        {% endif %}
+
       </ul>
+
+      {% else%}
+      {% endif %}
 
     </div>
   </div>

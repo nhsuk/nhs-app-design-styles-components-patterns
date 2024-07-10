@@ -5,7 +5,8 @@
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Check the pharmacy your prescriptions will be collected or delivered from" %}
+{% set pageHeading = "Check your chosen pharmacy" %}
+{% set pageDescription = "This is the pharmacy the medicines will be collected or delivered from." %}
 
 {% block content %}
 
@@ -15,7 +16,8 @@
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
         title: pageHeading,
-        titleSecondary: true
+        titleSecondary: true,
+        description: pageDescription
       })}}
 
       <p class="nhsuk-u-margin-bottom-5">

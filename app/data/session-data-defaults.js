@@ -38,8 +38,8 @@ module.exports = {
 
   // Medicines
   "medicine1": "Felodipine 2.5micrograms tablets",
-  "medicine1description": "10 tablet",
-  "medicine1quantity": "10 tablet",
+  "medicine1description": "10 tablets",
+  "medicine1quantity": "10 tablets",
 
   "medicine2": "Atorvastatin 500mg capsules",
   "medicine2description": "Take ONE capsule THREE times daily for 7 days, 28 capsules",
@@ -50,8 +50,8 @@ module.exports = {
   "medicine3quantity": "60 tablets",
 
   "medicine4": "Warfarin 500microgram tablets",
-  "medicine4description": "take as instructed by anticoagulant clinic 2 tablets",
-  "medicine4quantity": "2 tablets",
+  "medicine4description": "take as instructed by anticoagulant clinic 10 tablets",
+  "medicine4quantity": "10 tablets",
 
   "medicine5": "Ramipril 5mg capsules",
   "medicine5description": "take as instructed 10 tablets",

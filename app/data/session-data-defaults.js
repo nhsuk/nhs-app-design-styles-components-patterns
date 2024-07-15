@@ -38,7 +38,7 @@ module.exports = {
 
   // Medicines
   "medicine1": "Felodipine 2.5micrograms tablets",
-  "medicine1description": "10 tablets",
+  "medicine1description": "use as directed - 10 tablets",
   "medicine1quantity": "10 tablets",
 
   "medicine2": "Atorvastatin 500mg capsules",

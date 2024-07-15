@@ -6,7 +6,7 @@
 {% set backLinkText = "Back" %}
 
 {% set pageHeading = "View and manage prescriptions" %}
-{% set pageDescription = "Check your ordered medicines and choose the pharmacy you collect them from" %}
+{% set pageDescription = "Check your prescriptions and choose the pharmacy they are collected or delivered from" %}
 
 {% block content %}
 
@@ -50,9 +50,9 @@
        {{ relatedContentCard({
         icon: "cross",
         title: "Access services",
-        description: "Place an order for a medicine you take often",
-        URL: "#",
-        linkText: "Request repeat prescriptions"
+        description: "Request medicines you take often",
+        URL: "/pages/your-health/repeat-prescription/select-medicines",
+        linkText: "Request medicines"
       })}}
 
     </div>

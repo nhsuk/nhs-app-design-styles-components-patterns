@@ -1,0 +1,21 @@
+.app-expander-group {
+  .nhsuk-expander {
+    background: transparent;
+    border-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+    margin-top: -1px;
+
+    &:hover {
+      border-color: #d8dde0;
+    }
+
+    .nhsuk-details__summary,
+    .nhsuk-details__text {
+      background: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

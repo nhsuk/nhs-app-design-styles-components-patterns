@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <h1>NHS App components</h1>
+
+      <h2>Badge</h2>
+
+      {{ badgeLarge({
+        count: 3,
+        label: 'notifications'
+      }) }}
+
+
+    </div>
+  </div>
+{% endblock %}

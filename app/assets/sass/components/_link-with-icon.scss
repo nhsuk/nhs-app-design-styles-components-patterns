@@ -1,0 +1,27 @@
+// Link with an icon
+$app-link-with-icon-size-mobile: nhsuk-spacing(4);
+$app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
+
+.app-link--with-icon {
+  @include nhsuk-responsive-margin(3, "bottom");
+
+  align-items: center;
+  display: inline-flex;
+  gap: nhsuk-spacing(2);
+
+  .app-icon {
+    fill: currentColor;
+    height: $app-link-with-icon-size-mobile;
+    width: $app-link-with-icon-size-mobile;
+    
+    @include mq($from: tablet) {
+      height: $app-link-with-icon-size-tablet;
+      width: $app-link-with-icon-size-tablet;
+    }
+  }
+
+  .app-icon--no-fill {
+    fill: none; // Removes fill colour
+    stroke: currentColor;
+  }
+}

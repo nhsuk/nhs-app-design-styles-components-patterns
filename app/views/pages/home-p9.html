@@ -23,19 +23,20 @@
         hiddenText: "services"
       })}}
 
-      <!-- PANEL LINK CARD - SERVICES -->
-      {{ panelLinkCard({
-        items: [
+      <!-- NHS APP FRONTEND CARD GROUP -->
+      {{ cardGroup({
+        stacked: true,
+        cards: [
           {
-            title: "Request medicines",
-            URL: "/pages/your-health/repeat-prescription/select-medicines"
+            title: 'Request medicines',
+            href: '/pages/your-health/repeat-prescription/select-medicines'
           },
           {
-            title: "Check if you need urgent medical help using 111 online",
-            URL: "#"
+            title: 'Check if you need urgent medical help using 111 online',
+            href: '#'
           }
         ]
-      })}}
+      }) }}
 
       <!-- SECTION TITLE - YOUR HEALTH -->
       {{ sectionTitle({

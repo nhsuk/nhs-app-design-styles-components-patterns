@@ -17,6 +17,8 @@
 
       <h2>Badge</h2>
 
+      {% from "components/badge/large/macro.njk" import badgeLarge %}
+
       {{ badgeLarge({
         count: 3,
         label: 'notifications'

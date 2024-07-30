@@ -1,8 +1,11 @@
 {% extends 'components/layout.html' %}
 
-{% set pageHeading = "Provider banner" %}
+{% set pageHeading = "Related content card" %}
+{% set backlogID = "23" %}
 
 {% block innerContent %}
+
+  <h2>Example</h2>
 
   {{ relatedContentCard({
     icon: "cross",
@@ -12,7 +15,7 @@
     linkText: "Link text"
   })}}
 
-  <h2 class="nhsuk-heading-m">Examples in context</h2>
+  <h2>Examples in context</h2>
 
   <ul clas="nhsuk-list">
     <li>

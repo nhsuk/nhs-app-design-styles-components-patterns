@@ -39,8 +39,8 @@ $nhsuk-border-width: 1px;
 
 .app-confirmation__title {
   @include nhsuk-typography-responsive(48);
+  @include nhsuk-responsive-margin(5, "bottom");
   margin-top: 0;
-  margin-bottom: nhsuk-spacing(6);
 }
 
 .app-confirmation__title:last-child {

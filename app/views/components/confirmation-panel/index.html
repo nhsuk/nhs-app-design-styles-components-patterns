@@ -1,0 +1,31 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Confirmation panel" %}
+{% set backlogID = "32" %}
+
+{% block innerContent %}
+
+  <h2>Example</h2>
+
+  <div class="example">
+    <div class="app-confirmation">
+      <h1 class="app-confirmation__title">Appointment confirmed</h1>
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="app-confirmation">
+      <h1 class="app-confirmation__title">Application complete</h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong>DH1503</strong>
+      </div>
+    </div>
+  </div>
+
+  <h2>Code on GitHub</h2>
+  <ul>
+    <li><a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/blob/main/app/assets/sass/components/_confirmation.scss">Sass (CSS) - Confirmation</a></li>
+    <li><a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/blob/main/app/views/components/confirmation-panel/index.html">HTML - Confirmation</a></li>
+  </ul>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your blood pressure history" %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading,
+    titleSecondary: true,
+    description: pageDescription
+    })}}
+
+    <div>
+
+      <p>A blood pressure reading is shown as 2 numbers: systolic (higher) and diastolic (lower).</p>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          {{ table({
+          panel: false,
+          firstCellIsHeader: false,
+          head: [
+          {
+          text: "Date"
+          },
+          {
+          text: "Result"
+          }
+          ],
+          rows: [
+          [
+          {
+          text: "13 April 2024"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">101<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>59 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "21 February 2024"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">101<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>59 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "14 January 2024"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">109<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>66 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "13 December 2023"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">137<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>78 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "29 November 2023"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">126<span
+              class="nhsuk-u-visually-hidden">over</span><spanaria-hidden="true">/</span>81 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "22 September 2023"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">122<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>73 mmhg</p>'
+          }
+          ],
+          [
+          {
+          text: "1 September 2023"
+          },
+          {
+          html: '<p class="nhsuk-u-margin-bottom-0">110<span class="nhsuk-u-visually-hidden">over</span><span
+              aria-hidden="true">/</span>83 mmhg</p>'
+          }
+          ]
+          ]
+          }) }}
+
+          
+          {% from 'details/macro.njk' import details %}
+
+          {{ details({
+          text: "Why are my hospital test results missing?",
+          HTML: "
+          <p>Results from tests ordered by your hospital are unavailable in the NHS App.</p>
+          <p>Would you expect to see hospital results here?</p>
+          <a href=\"#\" class=\"nhsuk-button nhsuk-button--reverse app-button\">Yes</a> <a href=\"#\"
+            class=\"nhsuk-button nhsuk-button--reverse app-button\">No</a>
+          "
+          }) }}
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

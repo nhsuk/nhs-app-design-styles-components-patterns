@@ -1,0 +1,91 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Blood pressure" %}
+
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading
+
+    })}}
+    <dl class="nhsuk-summary-list">
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Test date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          13 August 2024
+        </dd>
+      </div>
+    </dl>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Healthcare professional's comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          No comment
+        </dd>
+
+      </div>
+    </dl>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Laboratory comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          No comment
+        </dd>
+
+      </div>
+    </dl>
+
+    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;" aria-hidden="true">
+
+    <h2 class="nhsuk-heading-l" ; style="padding-bottom:16px;">Your results</h2>
+
+    <div>
+      <h4 style="line-height: 24px; margin-bottom: 0px;">Blood pressure:</h4>
+      <h4 style="line-height: 28px; margin-bottom: 12px;">140<span class="nhsuk-u-visually-hidden">over</span><span
+          aria-hidden="true">/</span>90</h4>
+      <p>Systolic arterial pressure: 140 mmHg</p>
+      <p>Diastolic arterial pressure: 90 mmHg</p>
+    </div>
+    <div>
+
+      {{ insetText({
+      HTML: "<p>View your blood pressure reading on this <a
+          href=\"/pages/your-health/test-results/blood-pressure-live\">chart.</a></p>"
+      })}}
+
+    </div>
+    <a href="https://www.nhs.uk/conditions/blood-pressure-test/" style="display: inline-block; padding-bottom: 16px;">
+      What is a blood pressure test?
+    </a>
+    <br>
+    <a href="/pages/your-health/test-results/blood-pressure-history.html"
+      style="display: inline-block; padding-bottom: 16px;">
+      View test result history
+    </a>
+  </div>
+
+</div>
+
+
+{% endblock %}

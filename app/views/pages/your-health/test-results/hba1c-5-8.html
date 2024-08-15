@@ -25,14 +25,8 @@
           Test date
         </dt>
         <dd class="nhsuk-summary-list__value">
-          9 May 2024
+          5 August 2024
         </dd>
-        <div>
-          {{ tag({
-          text: "Hospital-ordered test",
-          classes: "app-tag--no-border app-tag app-tag--purple"
-          })}}
-        </div>
       </div>
     </dl>
 
@@ -62,39 +56,29 @@
       </div>
     </dl>
 
-    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;">
+    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;" aria-hidden="true">
 
     <h2 class="nhsuk-heading-l" ; style="padding-bottom:16px;">Your results</h2>
 
     <div>
       <h4 style="line-height: 24px; margin-bottom: 0px;">Haemoglobin A1c:</h4>
-      <h4 style="line-height: 28px; margin-bottom: 12px;">25 mmol/mol</h4>
+      <h4 style="line-height: 28px; margin-bottom: 12px;">39 mmol/mol</h4>
       <p>The reference range is between 20 to 42 mmol/mol</p>
     </div>
     <div>
-      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;">
-      <img src="/images/documentation-example/indicator-range-bar-twenty-five.png"
-        alt="Result within reference range" width="342" height="109">
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;" aria-hidden="true">
+      <img src="/images/documentation-example/indicator-range-bar-thirty-nine.png"
+        alt="Your result 39 mmol/mol represented visually on a range indicator bar within the normal range" width="342" height="109" aria-hidden="true">
       <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;" />
-      <a href="https://labtestsonline.org.uk/tests/haemoglobin" style="display: inline-block; padding-bottom: 16px;">
+      <a href="https://labtestsonline.org.uk/tests/hba1c-test" style="display: inline-block; padding-bottom: 16px;">
         What is a haemoglobin A1c test?
       </a>
-      <a href="/pages/your-health/test-results/hba1c-9-5-test-history.html"
+    </div>
+    <a href="/pages/your-health/test-results/hba1c-9-5-test-history.html"
         style="display: inline-block; padding-bottom: 16px;">
         View test result history
       </a>
-      <hr style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;">
-    </div>
-
-    {{ panelLinkCard({
-    items: [
-    {
-    title: "View in Patients Know Best",
-    URL: "/pages/your-health/test-results/pkb-intercept",
-    description: "View your result and access other services in Patients Know Best"
-    }
-    ]
-    })}}
+      <hr style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;" aria-hidden="true">
 
   </div>
 </div>

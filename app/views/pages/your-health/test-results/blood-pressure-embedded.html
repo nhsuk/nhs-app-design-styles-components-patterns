@@ -1,0 +1,116 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Blood pressure" %}
+
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading
+
+    })}}
+    <dl class="nhsuk-summary-list">
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Test date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          21 June 2024
+        </dd>
+      </div>
+    </dl>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Healthcare professional's comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          No comment
+        </dd>
+
+      </div>
+    </dl>
+
+    <dl class="nhsuk-summary-list">
+
+      <div class="no-border-summary-list__row">
+        <dt class="nhsuk-heading-m nhsuk-summary-list__key">
+          Laboratory comments
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          No comment
+        </dd>
+
+      </div>
+    </dl>
+
+    <hr style="height: 4px; background-color: #4C6272; border: none; margin-bottom: 40px;" aria-hidden="true">
+
+    <h2 class="nhsuk-heading-l" ; style="padding-bottom:16px;">Your results</h2>
+
+    <div>
+      <h4 style="line-height: 24px; margin-bottom: 0px;">Blood pressure:</h4>
+      <h4 style="line-height: 28px; margin-bottom: 12px;">101/59</h4>
+      <p>Systolic arterial pressure: 101 mmHg</p>
+      <p>Diastolic arterial pressure: 59 mmHg</p>
+      <br>
+      <h4 style="line-height: 24px; margin-bottom: 0px;">Your blood pressure reading is healthy</h4>
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 12px;" aria-hidden="true">
+      <img aria-label="Your blood pressure reading is shown on a chart here. A full description can be found in the text below it." role="img" src="/images/documentation-example/blood-pressure-graph.jpg"
+        alt="Your blood pressure reading is shown on a chart here. A full description can be found in the text below it." width="343" height="540">
+    </div>
+    <div>
+<br>
+
+<details {%- if params.id %} id="{{params.id}}"{% endif %} class="nhsuk-details        
+{%- if params.classes %} {{ params.classes }}{% endif %}"
+{%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %} {{- " open" if params.open }}>
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Chart description
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>This blood pressure chart shows your reading of 101/59 as a cross in the healthy blood pressure area.</p>
+    <p>The vertical line (Y-axis) shows systolic blood pressure numbers. The horizontal line (X-axis) shows diastolic blood pressure numbers.</p>
+    <p>The chart is divided into 4 areas.</p>
+    <ul>
+        <li>Low blood pressure is shown in purple. Ir ranges from 70/40 to 89/59.</li>
+        <li>Healthy blood pressure is shown in green. It ranges from 90/60 to 120/80.</li>
+        <li>Slightly raised blood pressure is shown in yellow. It ranges from 121/81 to 134.84.</li>
+        <li>High blood pressure is shown in red. It ranges from 135/85 to 169/99.</li>
+    </ul>
+  </div>
+</details>
+        
+
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;" aria-hidden="true">
+    </div>
+    <a href="https://www.nhs.uk/health-assessment-tools/check-your-blood-pressure-reading/result"
+        style="display: inline-block; padding-bottom: 16px;">
+        What is a blood pressure test?
+      </a>
+      <br>
+    <a href="/pages/your-health/test-results/blood-pressure-history.html"
+        style="display: inline-block; padding-bottom: 16px;">
+        View test result history
+      </a>
+      
+
+  </div>
+</div>
+
+
+{% endblock %}

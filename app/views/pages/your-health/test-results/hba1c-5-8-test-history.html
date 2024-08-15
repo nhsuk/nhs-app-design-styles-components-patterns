@@ -1,0 +1,153 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your haemoglobin A1c history" %}
+{% set pageDescription = "View your Haemoglobin A1c test history and trends for the past 6 months in the graph below. The additional table contains your full Haemoglobin A1c test history." %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- DYNAMIC PAGE TITLE -->
+    {{ dynamicPageTitle({
+    title: pageHeading,
+    titleSecondary: true,
+    description: pageDescription
+    })}}
+
+    <div>
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 0px; margin-bottom: 12px;" aria-hidden="true">
+      <img src="/images/documentation-example/graph-reference-range.jpg" alt="Your haemoglobin A1c test results from February 2024 to August 2024 displayed as a line graph with a reference range. Refer to the table below for details." width="343.08"
+        height="544">
+      <br>
+      <hr style="height: 1px; background-color: #D8DDE0; border: none; margin-top: 12px; margin-bottom: 24px;" aria-hidden="true">
+    </div>
+
+    <div>
+      <a href="https://labtestsonline.org.uk/tests/hba1c-test"
+        style="display: inline-block; padding-bottom: 32px;">What is a haemoglobin A1c test?</a>
+    </div>
+
+    <div>
+      <h2 class="nhsuk-heading-l" ; style="padding-bottom:16px;">Your result history</h2>
+      <p>The table below shows your haemoglobin A1c test result(s) from 1 February 2021 to 5 August 2024.</p>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          {{ table({
+          panel: false,
+          firstCellIsHeader: false,
+          head: [
+          {
+          text: "Date"
+          },
+          {
+          text: "Result"
+          }
+          ],
+          rows: [
+          [
+          {
+          text: "5 August 2024"
+          },
+          {
+          text: "39 mmol/mol"
+
+          }
+          ],
+          [
+          {
+          text: "17 June 2024"
+          },
+          {
+          text: "35 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "8 June 2024"
+          },
+          {
+          text: "32 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "13 May 2024"
+          },
+          {
+          text: "38 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "29 April 2024"
+          },
+          {
+          text: "33 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "12 April 2024"
+          },
+          {
+          text: "31 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "26 February 2024"
+          },
+          {
+          text: "48 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "5 February 2024"
+          },
+          {
+          text: "38 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "3 November 2023"
+          },
+          {
+          text: "32 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "3 April 2023"
+          },
+          {
+          text: "33 mmol/mol"
+          }
+          ],
+          [
+          {
+          text: "1 February 2021"
+          },
+          {
+          text: "34 mmol/mol"
+          }
+          ]
+          ]
+          }) }}
+          <hr style="height: 1px; background-color: #768692; border: none; margin-top: 40px; margin-bottom: 40px;" aria-hidden="true">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

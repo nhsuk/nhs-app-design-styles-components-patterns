@@ -1,0 +1,87 @@
+{% extends 'blood-pressure-layout.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = false %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <div id="bpt-result-graph-panel_nhsuk-bpt-chart__uJsoM">
+              <h2 class="nhsuk-heading-l">140<span class="nhsuk-u-visually-hidden">over</span><span
+                  aria-hidden="true">/</span>90</h2>
+              <h3 class="nhsuk-heading-m">Your blood pressure reading is high</h3>
+              <img
+                aria-label="Your blood pressure reading is shown on a chart here. A full description can be found in the text below it."
+                role="img" src="/images/documentation-example/blood-pressure-live.png"
+                alt="Your blood pressure reading is shown on a chart here. A full description can be found in the text below it."
+                width="308" height="540">
+
+              <details class="nhsuk-details nhsuk-u-margin-top-4" open="">
+                <summary class="nhsuk-details__summary"><span class="nhsuk-details__summary-text">Chart
+                    description</span></summary>
+                <div class="nhsuk-details__text">
+                  <p>This blood pressure chart shows your reading of <!-- -->140<span
+                      class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>90<!-- --> as a cross
+                    in the<!-- --> <!-- -->high<!-- --> blood pressure<!-- --> <!-- -->area.</p>
+                  <p>The vertical line (Y-axis) shows systolic blood pressure numbers.<!-- --> <!-- -->The horizontal
+                    line (X-axis) shows diastolic blood pressure<!-- --> <!-- -->numbers.</p>
+                  <p>The chart is divided into 4 areas.</p>
+                  <ul>
+                    <li>Low blood pressure is shown in purple. It ranges from<!-- --> <!-- -->70<span
+                        class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>40<!-- -->
+                      to<!-- --> <!-- -->89<span class="nhsuk-u-visually-hidden">over</span><span
+                        aria-hidden="true">/</span>59<!-- -->.</li>
+                    <li>Healthy blood pressure is shown in green. It ranges from<!-- --> <!-- -->90<span
+                        class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>60<!-- -->
+                      to<!-- --> <!-- -->120<span class="nhsuk-u-visually-hidden">over</span><span
+                        aria-hidden="true">/</span>80<!-- -->.</li>
+                    <li>Slightly raised blood pressure is shown in yellow. It ranges<!-- --> <!-- -->from
+                      <!-- -->121<span class="nhsuk-u-visually-hidden">over</span><span
+                        aria-hidden="true">/</span>81<!-- --> to<!-- --> <!-- -->139<span
+                        class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>89<!-- -->.
+                    </li>
+                    <li>High blood pressure is shown in red. It ranges from<!-- --> <!-- -->140<span
+                        class="nhsuk-u-visually-hidden">over</span><span aria-hidden="true">/</span>90<!-- -->
+                      to<!-- --> <!-- -->179<span class="nhsuk-u-visually-hidden">over</span><span
+                        aria-hidden="true">/</span>119<!-- -->.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                <h2>Follow the advice given to you</h2>
+                <p>Follow the advice given to you by the healthcare professional who took your blood pressure reading.
+                </p>
+                <p>If you start to feel unwell call 111 for advice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <h2>Lowering your blood pressure</h2>
+            <p>Making changes to your lifestyle, like eating healthily and exercising more, can have a positive effect
+              on your blood pressure.</p>
+            <p>Start by choosing a habit to focus on and get advice on how to make changes.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    {% endblock %}

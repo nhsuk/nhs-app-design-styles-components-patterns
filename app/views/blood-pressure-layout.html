@@ -5,9 +5,9 @@
 {% from 'components/related-content-card/macro.njk' import relatedContentCard %}
 {% from 'components/section-title/macro.njk' import sectionTitle %}
 
-<!-- 
+<!--
   This is the main layout where you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
@@ -31,11 +31,13 @@
 <!-- Edit the header -->
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <a class="nhsuk-u-margin-4" href="/pages/your-health/test-results/blood-pressure-high">Done</a>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a href="javascript: window.history.go(-1)" class="app-link nhsuk-link--no-visited-state nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4">
+        Done
+      </a>
     </div>
-    </div>
+  </div>
   <header class="nhsuk-header nhsuk-header--logo-only" role="banner">
     <div class="nhsuk-width-container nhsuk-header__container">
       <div class="nhsuk-header__logo">

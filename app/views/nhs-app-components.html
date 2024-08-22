@@ -105,53 +105,7 @@
 
       <h2>Card links</h2>
 
-      {% from "nhsapp/components/card/macro.njk" import nhsappCard %}
-
-      {{ nhsappCard({
-        title: 'Request repeat prescriptions',
-        href: '#'
-      }) }}
-
-      {% from "nhsapp/components/card/macro.njk" import nhsappCard %}
-
-      {{ nhsappCard({
-        title: 'Switch profiles',
-        href: '#',
-        prefixIcon: 'switchProfile'
-      }) }}
-
-      {% from "nhsapp/components/card/macro.njk" import nhsappCard %}
-
-      {{ nhsappCard({
-        title: 'Messages',
-        href: '#',
-        prefixIcon: 'messages',
-        badgeLarge: {
-          count: 4,
-          label: 'unread messages'
-        }
-      }) }}
-
-      {% from "nhsapp/components/card/macro.njk" import nhsappCardGroup %}
-      {% from "nhsapp/components/card/macro.njk" import nhsappCard %}
-
-      {{ nhsappCardGroup({
-        stacked: true,
-        cards: [
-          {
-            title: 'GP health record',
-            href: '#'
-          },
-          {
-            title: 'View and manage prescriptions',
-            href: '#'
-          },
-          {
-            title: 'Upcoming and past appointments',
-            href: '#'
-          }
-        ]
-      }) }}
+      <p>To do</p>
 
       <hr>
 

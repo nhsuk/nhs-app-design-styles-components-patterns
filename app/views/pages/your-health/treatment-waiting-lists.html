@@ -26,35 +26,24 @@
             <p class="nhsuk-u-secondary-text-color">Manchester University NHS Trust</p>
             <p class="nhsuk-body-s nhsuk-u-margin-bottom-6">You do not need to do anything. You'll be contacted when an appointment is available.</p>
 
-            <ol class="app-timeline">
-              <li class="app-timeline__item app-timeline__item--past">
-                <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header">Date referred</h3>
-                  <p class="app-timeline__description">14 May 2024</p>
-                </div>
-              </li>
-              <li class="app-timeline__item">
-                <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header nhsuk-u-font-weight-bold">Current status</h3>
-                  <p class="app-timeline__description">Waiting for treatment</p>
-                </div>
-              </li>
-              <li class="app-timeline__item">
-                <svg class="app-timeline__badge app-timeline__badge--small" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                  <circle cx="7" cy="7" r="6" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 14 14)" fill="white" stroke="#AEB7BD" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header">Estimated treatment start date</h3>
-                  <p class="app-timeline__description">August 2024</p>
-                </div>
-              </li>
-            </ol>
+            {{ nhsappTimeline({
+              items: [
+                {
+                  headingText: "Date referred",
+                  text: "14 May 2024",
+                  isPastItem: true
+                },
+                {
+                  headingText: "Current status",
+                  text: "Waiting for treatment",
+                  active: true
+                },
+                {
+                  headingText: "Estimated treatment start date",
+                  text: "August 2024"
+                }
+              ]
+            }) }}
 
             <p class="nhsuk-body-s nhsuk-u-margin-bottom-3">This is the average waiting time for this department at Croydon University Hospital.</p>
             <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Last updated: 14 Nov 2023</p>
@@ -69,35 +58,24 @@
             <p class="nhsuk-u-secondary-text-color">Manchester University NHS Trust</p>
             <p class="nhsuk-body-s nhsuk-u-margin-bottom-6">You do not need to do anything. You'll be contacted when an appointment is available.</p>
 
-            <ol class="app-timeline">
-              <li class="app-timeline__item app-timeline__item--past">
-                <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header">Date referred</h3>
-                  <p class="app-timeline__description">8 June 2024</p>
-                </div>
-              </li>
-              <li class="app-timeline__item">
-                <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header nhsuk-u-font-weight-bold">Current status</h3>
-                  <p class="app-timeline__description">Waiting for treatment</p>
-                </div>
-              </li>
-              <li class="app-timeline__item">
-                <svg class="app-timeline__badge app-timeline__badge--small" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                  <circle cx="7" cy="7" r="6" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 14 14)" fill="white" stroke="#AEB7BD" stroke-width="2"/>
-                </svg>
-                <div class="app-timeline__content">
-                  <h3 class="app-timeline__header">Estimated treatment start date</h3>
-                  <p class="app-timeline__description">Sepetember 2024</p>
-                </div>
-              </li>
-            </ol>
+            {{ nhsappTimeline({
+              items: [
+                {
+                  headingText: "Date referred",
+                  text: "8 June 2024",
+                  isPastItem: true
+                },
+                {
+                  headingText: "Current status",
+                  text: "Waiting for treatment",
+                  active: true
+                },
+                {
+                  headingText: "Estimated treatment start date",
+                  text: "Sepetember 2024"
+                }
+              ]
+            }) }}
 
             <p class="nhsuk-body-s nhsuk-u-margin-bottom-3">This is the average waiting time for this department at Osset Hospital.</p>
             <p class="nhsuk-body-s nhsuk-u-secondary-text-color">Last updated: 14 Nov 2023</p>

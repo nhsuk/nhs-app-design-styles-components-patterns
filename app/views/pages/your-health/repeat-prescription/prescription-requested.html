@@ -46,26 +46,19 @@
 
       <h2>What you can do next</h2>
 
-      <ol class="app-timeline">
-        <li class="app-timeline__item">
-          <svg class="app-timeline__badge" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <circle cx="14" cy="14" r="13" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 28 28)" fill="#005EB8" stroke="#005EB8" stroke-width="2"/>
-          </svg>
-          <div class="app-timeline__content">
-            <h3 class="app-timeline__header nhsuk-u-font-weight-bold">Await approval</h3>
-            <p class="app-timeline__description">The request will either be approved or rejected. If rejected please contact your Healthcare Professional.</p>
-          </div>
-        </li>
-        <li class="app-timeline__item">
-          <svg class="app-timeline__badge app-timeline__badge--small" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-            <circle cx="7" cy="7" r="6" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 14 14)" fill="white" stroke="#AEB7BD" stroke-width="2"/>
-          </svg>
-          <div class="app-timeline__content">
-            <h3 class="app-timeline__header">Collect prescription</h3>
-            <p class="app-timeline__description">Once approved, it can take 3 to 5 working days for a nominated pharmacy to prepare your prescription.</p>
-          </div>
-        </li>
-      </ol>
+      {{ nhsappTimeline({
+        items: [
+          {
+            headingText: "Wait for approval",
+            text: "The medicines you have requested will need to be approved by your GP. If your request is rejected, contact your GP surgery.",
+            active: true
+          },
+          {
+            headingText: "Collect prescription",
+            text: "Once your medicines are approved, it can take 3 to 5 working days for your chosen pharmacy to prepare your prescription."
+          }
+        ]
+      }) }}
 
       <div class="app-card-link">
         <div class="app-card-link__container">

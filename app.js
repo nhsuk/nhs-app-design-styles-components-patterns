@@ -46,6 +46,7 @@ app.locals.serviceName = config.serviceName;
 const appViews = [
   path.join(__dirname, 'app/views/'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'node_modules/nhsapp-frontend/dist'),
   path.join(__dirname, 'docs/views/'),
 ];
 
@@ -148,6 +149,7 @@ documentationApp.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
+app.use('/nhsapp-frontend', express.static(path.join(__dirname, 'node_modules/nhsapp-frontend/dist/nhsapp')));
 
 // Check if the app is documentation only
 if (onlyDocumentation === 'true') {

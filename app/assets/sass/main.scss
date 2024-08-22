@@ -1,6 +1,9 @@
 // Import NHS.UK frontend library
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
+// Import all styles from the NHS App frontend library
+@import 'node_modules/nhsapp-frontend/dist/nhsapp/all';
+
 // Components that are not in the NHS.UK frontend library
 @import 'components/list-border';
 @import 'components/related-nav';
@@ -50,13 +53,9 @@ $color_tag-yellow-text: #5B4701;
 @import 'components/loader';
 @import 'components/panel-link-card';
 @import 'components/provider-banner';
-@import 'components/section-title';
 @import 'components/sticky-footer';
 @import 'components/summary-list';
 @import 'components/switch-profile-banner';
-@import 'components/tag-new';
-@import 'components/tag';
-@import 'components/timeline';
 
 @import 'components/nhsuk-frontend-extensions';
 

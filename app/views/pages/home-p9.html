@@ -17,14 +17,15 @@
       })}}
 
       <!-- SECTION TITLE - SERVICES -->
-      {{ sectionTitle({
-        title: "Services",
-        URL: "/pages/services-p9",
-        hiddenText: "services"
-      })}}
+      {{ nhsappSectionHeading({
+        headingText: "Services",
+        linkText: "View all",
+        linkUrl: "/pages/services-p9",
+        linkAriaLabel: "View all services"
+      }) }}
 
-      <!-- PANEL LINK CARD - SERVICES -->
-      {{ panelLinkCard({
+       <!-- PANEL LINK CARD - SERVICES -->
+       {{ panelLinkCard({
         items: [
           {
             title: "Request medicines",
@@ -38,11 +39,12 @@
       })}}
 
       <!-- SECTION TITLE - YOUR HEALTH -->
-      {{ sectionTitle({
-        title: "Your health",
-        URL: "/pages/your-health-p9",
-        hiddenText: "your health"
-      })}}
+      {{ nhsappSectionHeading({
+        headingText: "Your health",
+        linkText: "View all",
+        linkUrl: "/pages/your-health-p9",
+        linkAriaLabel: "View all your health"
+      }) }}
 
       <!-- PANEL LINK CARD - YOUR HEALTH -->
       {{ panelLinkCard({
@@ -63,9 +65,9 @@
       })}}
 
       <!-- SECTION TITLE - MESSAGES -->
-      {{ sectionTitle({
-        title: "Messages"
-      })}}
+      {{ nhsappSectionHeading({
+        headingText: "Messages"
+      }) }}
 
       <!-- PANEL LINK CARD - MESSAGES -->
      {{ panelLinkCard({
@@ -80,9 +82,9 @@
       })}}
 
       <!-- SECTION TITLE - SWITCH PROFILES -->
-      {{ sectionTitle({
-        title: "Manage services for another person"
-      })}}
+      {{ nhsappSectionHeading({
+        headingText: "Manage services for another person"
+      }) }}
 
       <!-- PANEL LINK CARD - SWITCH PROFILES -->
       {{ panelLinkCard({

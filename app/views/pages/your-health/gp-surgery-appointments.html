@@ -19,8 +19,8 @@
       })}}
 
       <!-- SECTION TITLE - SERVICES -->
-      {{ sectionTitle({
-        title: "Upcoming appointments"
+      {{ nhsappSectionHeading({
+        headingText: "Upcoming appointments"
       })}}
 
       <!-- CARDS -->
@@ -28,9 +28,9 @@
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content">
             <span class="app-panel-link-card__tag">
-              {{ tag({
+              {{ nhsappTag({
                 text: "Action needed",
-                classes: "app-tag--no-border app-tag--new app-tag--red"
+                classes: "nhsapp-tag--new app-tag--red"
               })}}
             </span>
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
@@ -42,15 +42,20 @@
             </a>
             <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-0">Tuesday 5 November 2023 <br> 10.30am</p>
             <p class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12">The Willows, Croydon University Hospital</p>
-            <p class="nhsuk-body-s nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12 nhsuk-u-secondary-text-color"><span class="app-badge-status-dot app-badge--red"></span>1 document attached</p>
+            {{ nhsappBadgeSmall({
+              label: 'New',
+              color: 'red',
+              text: '1 document attached',
+              classes: 'nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-12 nhsuk-body-s nhsuk-u-secondary-text-color'
+            }) }}
           </div>
         </li>
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content">
             <span class="app-panel-link-card__tag">
-              {{ tag({
+              {{ nhsappTag({
                 text: "Upcoming",
-                classes: "app-tag--no-border app-tag--new app-tag--green"
+                classes: "nhsapp-tag--new app-tag--green"
               })}}
             </span>
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
@@ -67,9 +72,9 @@
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content">
             <span class="app-panel-link-card__tag">
-              {{ tag({
+              {{ nhsappTag({
                 text: "Cancelled",
-                classes: "app-tag--no-border app-tag--new app-tag--grey"
+                classes: "nhsapp-tag--new app-tag--grey"
               })}}
             </span>
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">
@@ -86,9 +91,9 @@
         <li class="app-panel-link-card">
           <div class="app-panel-link-card__content">
             <span class="app-panel-link-card__tag">
-              {{ tag({
+              {{ nhsappTag({
                 text: "Pending",
-                classes: "app-tag--no-border app-tag--new app-tag--yellow"
+                classes: "nhsapp-tag--new app-tag--yellow"
               })}}
             </span>
             <a class="app-panel-link-card__link nhsuk-heading-s" href="#">

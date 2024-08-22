@@ -34,5 +34,14 @@
       {% block innerContent %}
       {% endblock %}
 
+
+      {% if backlogID %}
+        <h2>Help improve this component</h2>
+        <ul clas="nhsuk-list">
+          <li><a href="https://github.com/nhsuk/nhsapp-frontend/issues/{{ backlogID }}">Discuss this component on GitHub</a></li>
+          <li><a href="https://nhsdigitalcorporate.enterprise.slack.com/archives/C06GY1LRP19">Discuss this component on the #forum-app-design-system NHS England Slack channel</a></li>
+        </ul>
+      {% endif %}
+
   </div>
 {% endblock %}

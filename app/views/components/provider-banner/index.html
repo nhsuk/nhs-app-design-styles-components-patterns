@@ -1,17 +1,19 @@
 {% extends 'components/layout.html' %}
 
 {% set pageHeading = "Switch Profile Banner" %}
+{% set backlogID = "40" %}
 
 {% block innerContent %}
 
+  <h2>Example</h2>
+
   {% include "components/provider-banner/include.html" %}
 
-  <h2 class="nhsuk-heading-m">Examples in context</h2>
-
-  <ul clas="nhsuk-list">
-    <li>
-      <a href="/pages/home-linked-profiles">Homepage - Linked profiles</a>
-    </li>
+  <h2>Code on GitHub</h2>
+  <ul>
+    <li><a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/blob/main/app/assets/sass/components/_provider-banner.scss">Sass (CSS) - Provider banner</a></li>
+    <li><a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/blob/main/app/assets/sass/components/_full-width-component-utility.scss">Sass (CSS) - Full width component helper class</a></li>
+    <li><a href="https://github.com/nhsuk/nhs-app-design-styles-components-patterns/blob/main/app/views/components/provider-banner/include.html">HTML - Provider banner</a></li>
   </ul>
 
 {% endblock %}

@@ -9,10 +9,9 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true
-      })}}
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+      </div>
 
       <h2 class="nhsuk-heading-l">What happens next</h2>
       <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>

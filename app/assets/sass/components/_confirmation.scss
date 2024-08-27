@@ -2,7 +2,7 @@
 // COMPONENTS / #CONFIRMATION
 // ==========================================================================
 
-$nhsuk-border-width: 1px;
+$nhsuk-border-width: 5px;
 
 .app-confirmation {
   @include nhsuk-typography-responsive(32);
@@ -15,7 +15,7 @@ $nhsuk-border-width: 1px;
   padding: nhsuk-spacing(7) - $nhsuk-border-width;
 
   @include mq($until: tablet) {
-    padding: nhsuk-spacing(3) - $nhsuk-border-width;
+    padding: nhsuk-spacing(4) - $nhsuk-border-width;
 
     // This is an if-all-else-fails attempt to stop long words from overflowing the container
     // on very narrow viewports by forcing them to break and wrap instead. This

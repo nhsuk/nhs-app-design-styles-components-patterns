@@ -31,7 +31,8 @@
 .app-button--secondary {
   background-color: transparent;
   border: 2px solid $nhsuk-link-color;
-  box-shadow: none;
+  border-bottom: 0;
+  box-shadow: 0 4px 0 $nhsuk-link-color;
   color: $nhsuk-link-color;
 
   &:link,
@@ -46,11 +47,9 @@
 
   &:active {
     background-color: $nhsuk-link-color;
-    box-shadow: none;
-    top: 0;
   }
 
   &:focus {
-    box-shadow: none;
+    border-color: $nhsuk-focus-color;
   }
 }

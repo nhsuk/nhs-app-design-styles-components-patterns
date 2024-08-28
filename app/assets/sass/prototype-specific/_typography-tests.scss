@@ -1,0 +1,26 @@
+// These classes are tests to evaluate the proposed NHS design system changes related to heading sizes and line heights
+
+h1.app-dynamic-page-title__heading,
+h1.app-confirmation__title {
+    font-size: 32px;
+    line-height: 38px;
+}
+
+h1.nhsuk-fieldset__heading,
+.nhsuk-label--l,
+h2.nhsuk-heading-l { 
+    font-size: 27px;
+    line-height: 33px;
+}
+
+.nhsuk-heading-s, 
+.app-card-link__link {
+    font-size: 19px;
+    line-height: 27px;
+}
+
+// This isn't part of the proposed changes
+
+.app-dynamic-page-title__description {
+    color: rgb(76, 98, 114);
+}

@@ -10,42 +10,43 @@
       </svg>
       </a>
     </div>
+    <div style="color:white" data-v-3e6c377a="" data-v-2907a3a6="" class="HeaderLinks_header-links_Sx73j"><span data-v-0837c6cc="" data-v-3e6c377a="" class="HeaderLink_header-link_hc7Ob"><a data-v-0837c6cc="" id="help-and-support-link" href="#">Help and support</a></span><strong data-v-3e6c377a="" aria-hidden="true"> | </strong><span data-v-0837c6cc="" data-v-3e6c377a="" class="HeaderLink_header-link_hc7Ob"><a data-v-0837c6cc="" href="/pages/account-and-settings-{{ data['accountType'] }}" class="" id="more-link" tabindex="0">Account and settings</a></span><strong data-v-3e6c377a="" aria-hidden="true"> | </strong><span data-v-0837c6cc="" data-v-3e6c377a="" class="HeaderLink_header-link_hc7Ob"><a data-v-0837c6cc="" href="#" class="" id="account-logout" tabindex="0">Log out</a></span></div>
   </div>
 
   <div class="nhsuk-navigation-container">
     <nav class="nhsuk-navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
       <ul class="nhsuk-header__navigation-list">
         <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="/">
+          <a class="nhsuk-header__navigation-link {% if hub === 'Home' %}app-header__navigation-link--current{% endif %}" href="/pages/home-{{ data['accountType'] }}">
             Home
           </a>
         </li>
         <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="#">
+          <a class="nhsuk-header__navigation-link {% if hub === 'Services' %}app-header__navigation-link--current{% endif %}" href="/pages/services-{{ data['accountType'] }}">
             Services
           </a>
         </li>
         <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link app-header__navigation-link--current" href="#">
+          <a class="nhsuk-header__navigation-link {% if hub === 'Your health' %}app-header__navigation-link--current{% endif %}" href="/pages/your-health-{{ data['accountType'] }}">
             Your health
           </a>
         </li>
         <li class="nhsuk-header__navigation-item">
-          <a class="nhsuk-header__navigation-link" href="#">
+          <a class="nhsuk-header__navigation-link {% if hub === 'Messages' %}app-header__navigation-link--current{% endif %}" href="/pages/messages-{{ data['accountType'] }}">
             Messages
           </a>
         </li>
-        <li class="nhsuk-header__navigation-item app-header__navigation-item--right-aligned">
+        <li class="nhsuk-header__navigation-item app-header__navigation-item--right-aligned nhsuk-header__navigation-item--home">
           <a class="nhsuk-header__navigation-link" href="#">
             Help and support
           </a>
         </li>
-        <li class="nhsuk-header__navigation-item app-header__navigation-item--right-aligned">
-          <a class="nhsuk-header__navigation-link" href="#">
+        <li class="nhsuk-header__navigation-item app-header__navigation-item--right-aligned nhsuk-header__navigation-item--home">
+          <a class="nhsuk-header__navigation-link" href="/pages/account-and-settings-{{ data['accountType'] }}">
             Account and settings
           </a>
         </li>
-        <li class="nhsuk-header__navigation-item ">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--home">
           <a class="nhsuk-header__navigation-link" href="#">
             Sign out
           </a>

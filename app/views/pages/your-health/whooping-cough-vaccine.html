@@ -1,0 +1,49 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Whooping cough vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          Whooping cough (pertussis) rates have risen recently. Pregnant women can help protect their babies by getting vaccinated.
+         </p>
+      </div>
+
+      <!-- PANEL LINK CARD -->
+     <div>
+
+{{ panelLinkCard({
+        items: [
+          {
+            title: "About the whooping cough vaccine",
+            URL: "https://www.nhs.uk/conditions/whooping-cough/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

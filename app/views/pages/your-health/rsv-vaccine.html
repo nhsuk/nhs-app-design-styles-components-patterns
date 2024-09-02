@@ -1,0 +1,48 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "RSV vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          Respiratory syncytial virus (RSV) is a common cause of coughs and colds. It usually gets better by itself, but it can be serious for some babies and older adults.
+          </p>
+     <div>
+
+      <!-- PANEL LINK CARD -->
+
+{{ panelLinkCard({
+        items: [
+          {
+            title: "About the RSV vaccine",
+            URL: "https://www.nhs.uk/conditions/respiratory-syncytial-virus-rsv/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

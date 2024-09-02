@@ -2,12 +2,12 @@
 
 {% set hub = "Your health" %}
 
-{% set linkedProfile = false %}
-
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Cervical screening" %}
+{% set pageHeading = "Your GP health record" %}
+
+
 
 {% block content %}
 
@@ -16,34 +16,31 @@
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true,
-        description: pageDescription
-      })}}
+        title: pageHeading
+    })}}
 
-      <div>
-        <p>
-          All women and people with a cervix between the ages of 25 and 64 should go for regular cervical screening. You'll get a letter inviting you to make an appointment.
-        </p>
+    {{ warningCallout({
+      "heading": "Important",
+      "HTML": "<p>Your record may contain sensitive information. If someone is pressuring you for this information, contact your GP surgery immediately.<br/><br/>You have a legal right to access the information in your record.</p>"
+    }) }}
+
+    <div>
+        <p class="nhsuk-body-m">Your record shows personal data, such as your details, allergies and medications.
+            <br>
+            <br>
+        
+            Depending on what your GP surgery shares, you may also see:</p>
+            <ul>
+            <li>your medical history, including problems and consultation notes</li>
+            <li>test results that you may not have discussed with your doctor</li>
+            </ul>
+    </div>
+    <br>
+    <div>
+        <a href="/pages/your-health/gp-health-record" class="nhsuk-button app-button">Continue</a>
       </div>
 
-      <!-- PANEL LINK CARD -->
-     <div>
+</div>
+</div>
 
-{{ panelLinkCard({
-        items: [
-          {
-            title: "About cervical screening",
-            URL: "https://www.nhs.uk/conditions/cervical-screening/",
-            newWindow: true
-          }
-        ]
-      })}}
-
-    </div> 
-
-
-    </div>
-  </div>
-
-  {% endblock %}
+{% endblock %}

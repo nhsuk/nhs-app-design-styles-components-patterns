@@ -2,12 +2,12 @@
 
 {% set hub = "Your health" %}
 
-{% set linkedProfile = false %}
-
 {% set backLink = true %}
 {% set backLinkText = "Back" %}
 
-{% set pageHeading = "Cervical screening" %}
+{% set pageHeading = "Your GP health record" %}
+
+
 
 {% block content %}
 
@@ -16,34 +16,63 @@
 
       <!-- DYNAMIC PAGE TITLE -->
       {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true,
-        description: pageDescription
-      })}}
+        title: pageHeading
+    })}}
 
-      <div>
-        <p>
-          All women and people with a cervix between the ages of 25 and 64 should go for regular cervical screening. You'll get a letter inviting you to make an appointment.
-        </p>
-      </div>
+       <!-- USER INFO -->
+    <div>
+        <h2> Miss Mary Swanson</h2>
+    </div>
+    <div>
+        <h5 style="margin-bottom: 4px; font-size: 18px;">Date of birth</h5>
+        <p style="font-size: 16px;">11 August 1989</p>
+    </div>
+    <div>
+        <h5 style="padding-top: 16px; margin-bottom: 4px; font-size: 18px;">NHS number:</h5>
+        <p style="font-size: 16px;">123 456 7890</p>
+    </div>
+    <div>
+        <h5 style="padding-top: 16px; margin-bottom: 4px; font-size: 18px;">Address:</h5>
+        <p style="font-size: 16px;">73 Hamilton Terrace, London. NW8 9QX</p>
+    </div>
 
-      <!-- PANEL LINK CARD -->
-     <div>
-
-{{ panelLinkCard({
+    <!-- PANEL LINK CARD - Your GP health record-->
+    <div class="padding-top:40px; padding-bottom:32px;">
+    {{ panelLinkCard({
         items: [
           {
-            title: "About cervical screening",
-            URL: "https://www.nhs.uk/conditions/cervical-screening/",
-            newWindow: true
+            title: "Allergies and adverse reactions",
+            URL: "#"
+          },
+          {
+            title: "Medicines",
+            URL: "#"
+          },
+          {
+            title: "Immunisations",
+            URL: "#"
+          },
+          {
+            title: "Health conditions",
+            URL: "#"
+          },
+          {
+            title: "Test results",
+            URL: "/pages/your-health/test-results/gp-tests"
+          },
+          {
+            title: "Consultations and events",
+            URL: "#"
+          },
+          {
+            title: "Your health choices",
+            URL: "#"
           }
+    
         ]
       })}}
-
-    </div> 
-
-
     </div>
-  </div>
+</div>
+</div>
 
-  {% endblock %}
+{% endblock %}

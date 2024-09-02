@@ -1,0 +1,49 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "MMR vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          The MMR vaccine gives long-term protection against measles, mumps and rubella.
+         </p>
+      </div>
+
+      <!-- PANEL LINK CARD -->
+     <div>
+
+{{ panelLinkCard({
+        items: [
+          {
+            title: "About the MMR vaccine",
+            URL: "https://www.nhs.uk/vaccinations/mmr-vaccine/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

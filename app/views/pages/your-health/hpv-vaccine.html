@@ -1,0 +1,48 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "HPV vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          The HPV vaccine reduces your chances of getting human papillomavirus (HPV), a common virus that's spread through skin contact (usually when having sex).        </p>
+      </div>
+
+      <!-- PANEL LINK CARD -->
+     <div>
+
+{{ panelLinkCard({
+        items: [
+          {
+            title: "About the HPV vaccine",
+            URL: "https://www.nhs.uk/vaccinations/hpv-vaccine/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

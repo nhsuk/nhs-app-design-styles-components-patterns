@@ -1,0 +1,53 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "COVID-19 vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+     <div>
+
+{{ panelLinkCard({
+        items: [
+        {
+          title: "Book, manage or cancel a COVID-19 vaccine appointment",
+          URL: "#",
+          newWindow: true
+        },
+        {
+          title: "View COVID-19 vaccine record",
+          URL: "#",
+          newWindow: true
+        },
+          {
+            title: "About the COVID-19 vaccine",
+            URL: "https://www.nhs.uk/vaccinations/hpv-vaccine/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

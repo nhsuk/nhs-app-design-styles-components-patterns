@@ -1,0 +1,52 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Flu vaccine" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          The flu vaccine helps protect against flu, which can be a serious or life-threatening illness. It's offered on the NHS every year in autumn or early winter to people at higher risk of getting seriously ill from flu.      </div>
+
+      <!-- PANEL LINK CARD -->
+     <div>
+
+{{ panelLinkCard({
+        items: [
+        {
+          title: "Book or manage a flu vaccine appointment",
+          URL: "#",
+          newWindow: true
+        },
+          {
+            title: "About the flu vaccine",
+            URL: "https://www.nhs.uk/vaccinations/flu-vaccine/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

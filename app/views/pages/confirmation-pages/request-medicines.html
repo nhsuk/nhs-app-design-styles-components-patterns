@@ -1,0 +1,25 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Your medicines have been requested" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+      </div>
+
+      <h2>What to do next</h2>
+
+      <p>Your request has been sent to your GP surgery for approval.</p>
+
+      <p>Once approved, it can take 3 to 5 working days for a pharmacy to prepare your prescription.</p>
+
+    </div>
+  </div>
+
+  {% endblock %}

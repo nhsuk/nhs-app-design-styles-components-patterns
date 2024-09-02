@@ -1,0 +1,40 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Request sent" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+      </div>
+
+      <p>Thank you, Peter. Your request has been securely sent to NHS App Test Practice.</p>
+
+      <h2 class="nhsuk-heading-l">What happens next</h2>
+
+      <p>We have emailed you a confirmation of your request.</p>
+
+      <p>The practice will aim to respond <strong>before 6:30pm on 2 February 2024</strong>.</p>
+
+      <p>If a health problem develops or gets worse before the practice responds:</p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>
+          call the practice on 01234567891 or, if the practice is closed, call 111
+        </li>
+        <li>
+          in emergencies, call 999 or go to A&E
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

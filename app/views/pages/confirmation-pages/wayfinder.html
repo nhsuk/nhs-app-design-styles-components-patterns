@@ -1,0 +1,63 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Your request to cancel has been submitted" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {% include "components/provider-banner/include.html" %}
+
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+      </div>
+
+      <ul class="nhsuk-list">
+        <li class="nhsuk-u-font-size-22 nhsuk-u-font-weight-bold"><span class="nhsuk-u-visually-hidden">Appointment date </span> Friday 7 June 2024</li>
+        <li class="nhsuk-u-font-size-22 nhsuk-u-font-weight-bold"><span class="nhsuk-u-visually-hidden">Appointment time </span> 10:30am</li>
+        <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Appointment type </span>Cardiology</li>
+        <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Location </span>Croydon University Hospital, The Willows, Croydon, RJ6</li>
+        <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Clinician </span>Dr Donald Glover</li>
+      </ul>
+
+      <h2>What happens now</h2>
+
+      <p>The booking team will review and process your request in approximately 48 hours.</p>
+
+      <p>The cancelled appointmnet may remain visible until the date has passed</p>
+
+      <div class="nhsapp-button-group nhsuk-u-margin-bottom-0">
+        <a class="nhsuk-button app-button--secondary nhsapp-button">
+          View this appointment
+        </a>
+        <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View all appointments</a>
+      </div>
+
+      <div class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent nhsuk-u-margin-top-4">
+        <div class="nhsuk-card--care__heading-container">
+          <h2 class="nhsuk-card--care__heading">
+            <span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>Contact your care providers if:</span>
+          </h2>
+          <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
+        </div>
+        <div class="nhsuk-card__content">
+          <ul>
+            <li>your condition changes</li>
+            <li>you think you have a different condition</li>
+            <li>you change your mind and need care</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Get help with this task</h2>
+      <p>Contact the booking team on <a href="tel:07931234567">0XXXX XXX XXX</a></p>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

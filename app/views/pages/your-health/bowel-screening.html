@@ -1,0 +1,49 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Bowel cancer screening" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          The NHS sends a bowel cancer screening kit every two years to anyone aged between 60 and 74, living in England and registered with a GP.
+        </p>
+      </div>
+
+      <!-- PANEL LINK CARD -->
+      <div>
+
+        {{ panelLinkCard({
+                items: [
+                  {
+                    title: "About bowel cancer screening",
+                    URL: "https://www.nhs.uk/conditions/bowel-cancer-screening/"",
+                    newWindow: true
+                  }
+                ]
+              })}}
+        
+            </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

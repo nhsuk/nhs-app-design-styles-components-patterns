@@ -2,46 +2,26 @@
 
 {% set hub = "Services" %}
 
-{% set pageHeading = "Booking complete" %}
+{% set pageHeading = "Your request has been sent" %}
 
 {% block content %}
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      {% include "components/provider-banner/include.html" %}
+
       <div class="app-confirmation">
         <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
-        <div class="govuk-panel__body">
-          Your reference number<br><strong>1583033</strong>
-        </div>
       </div>
 
-      <p>Make a of your booking reference number. You may need this if you neef to cancel or reschedule your appointment.</p>
+      <p>Your admin query request has ben successfully sent to myGP Medical Centre.</p>
 
-      <h2 class="nhsuk-heading-l">Your appointment details</h2>
+      <h2>What happens next</h2>
 
-      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Site location
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            <p>St Georges Pharmacy<br>
-            46 St George's Rd,<br> Elephant and Castle,<br> London<br> SE1 6ET<p></p>
-            <p><a href="#">Map and directions (opens in a new window)</a></p>
-          </dd>
-        </div>     
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Date and time
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            Thursday 15 June at 9:10am
-          </dd>    
-        </div> 
-      </dl>
+      <p>Your GP surgery will review your request within <strong>5 working days</strong>.</p>
 
-      <p><a href="#">Tell us about your experience using this service (opens in a new window)</a></p>
+      <p><a href="#">Make another request to your GP surgery</a></p>
 
     </div>
   </div>

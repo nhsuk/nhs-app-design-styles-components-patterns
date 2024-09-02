@@ -1,0 +1,47 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Abdominal aortic aneurysm (AAA) screening" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <div>
+        <p>
+          In England, screening for AAA is offered to men during the year they turn 65. Men aged 65 or over are most at risk of getting AAAs. Screening can help spot a swelling in the aorta early on when it can usually be treated.
+        </p>
+      </div>
+
+      <!-- PANEL LINK CARD -->
+     <div>
+{{ panelLinkCard({
+        items: [
+          {
+            title: "About AAA screening",
+            URL: "https://www.nhs.uk/conditions/abdominal-aortic-aneurysm-screening/"
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+    </div>
+  </div>
+
+  {% endblock %}

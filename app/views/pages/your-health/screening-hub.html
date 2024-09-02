@@ -1,0 +1,56 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Screenings" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+     <div>
+{{ panelLinkCard({
+        items: [
+          {
+            title: "Abdominal aortic aneurysm (AAA) screening ",
+            URL: "/pages/your-health/aaa-screening"
+          },
+          {
+            title: "Breast screening (mammogram) ",
+            URL: "#"
+          },
+          {
+            title: "Bowel cancer screening",
+            URL: "#"
+          },
+          {
+            title: "Cervical screening",
+            URL: "#"
+          }
+        ]
+      })}}
+
+    </div> 
+
+    <div>
+      <p>Find out more information about <a href="https://www.nhs.uk/conditions/nhs-screening/" title="Screenings page">screenings offered by the NHS</a>.</p>
+    </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Vaccinations" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <!-- PANEL LINK CARD -->
+     <div>
+{{ panelLinkCard({
+        items: [
+          {
+            title: "COVID-19 vaccine ",
+            URL: "#"
+          },
+          {
+            title: "Flu vaccine ",
+            URL: "#"
+          },
+          {
+            title: "HPV vaccine ",
+            URL: "#"
+          },
+          {
+            title: "MMR vaccine ",
+            URL: "#"
+          },
+          {
+            title: "RSV vaccine ",
+            URL: "#"
+          },
+          {
+            title: "Whooping cough vaccine ",
+            URL: "#"
+          }
+        ]
+      })}}
+
+    </div> 
+
+
+      <div>
+        <p>Find out more information about vaccinations for babies, children or adults, on the <a href="https://www.nhs.uk/vaccinations/" title="Vaccinantions page">Vaccinations page</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

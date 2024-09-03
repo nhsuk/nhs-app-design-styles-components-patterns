@@ -11,23 +11,72 @@
 
       {% include "components/provider-banner/include.html" %}
 
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
       <div class="app-confirmation">
         <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
       </div>
 
-      <ul class="nhsuk-list">
+      <!--<ul class="nhsuk-list">
         <li class="nhsuk-u-font-size-22 nhsuk-u-font-weight-bold"><span class="nhsuk-u-visually-hidden">Appointment date </span> Friday 7 June 2024</li>
         <li class="nhsuk-u-font-size-22 nhsuk-u-font-weight-bold"><span class="nhsuk-u-visually-hidden">Appointment time </span> 10:30am</li>
         <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Appointment type </span>Cardiology</li>
         <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Location </span>Croydon University Hospital, The Willows, Croydon, RJ6</li>
         <li><span class="nhsuk-u-font-weight-bold nhsuk-u-display-block">Clinician </span>Dr Donald Glover</li>
-      </ul>
+      </ul>-->
+
+      <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Friday 7 June 2024
+          </dd>
+        </div>     
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Time
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            10:30am
+          </dd>    
+        </div> 
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Appointment type
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Cardiology
+          </dd>
+        </div>     
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Croydon University Hospital, The Willows, Croydon, RJ6
+          </dd>    
+        </div> 
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Dr Donald Glover
+          </dd>    
+        </div> 
+      </dl>
 
       <h2>What happens now</h2>
 
       <p>The booking team will review and process your request in approximately 48 hours.</p>
 
-      <p>The cancelled appointmnet may remain visible until the date has passed</p>
+      <p>The cancelled appointment may remain visible until the date has passed</p>
 
       <div class="nhsapp-button-group nhsuk-u-margin-bottom-0">
         <a class="nhsuk-button app-button--secondary nhsapp-button">

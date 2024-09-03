@@ -34,6 +34,8 @@
   border-bottom: 0;
   box-shadow: 0 4px 0 $nhsuk-link-color;
   color: $nhsuk-link-color;
+  padding-bottom: 13px; // To make correct height due to removing 2px bottom border
+  padding-top: 13px; // To make correct height due to removing 2px bottom border
 
   &:link,
   &:visited {
@@ -51,5 +53,17 @@
 
   &:focus {
     border-color: $nhsuk-focus-color;
+  }
+}
+
+// NHS button margin top
+.nhsapp-button {
+  margin-top: nhsuk-spacing(2);
+}
+
+.nhsapp-button-group {
+  padding-top: nhsuk-spacing(2);
+  .nhsapp-button {
+    margin-top: 0;
   }
 }

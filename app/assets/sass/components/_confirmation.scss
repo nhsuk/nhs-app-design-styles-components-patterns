@@ -6,12 +6,12 @@ $nhsuk-border-width: 5px;
 
 .app-confirmation {
   @include nhsuk-typography-responsive(32);
+  @include nhsuk-responsive-margin(5, "bottom");
 
   background: $color_nhsuk-green;
   border: $nhsuk-border-width solid transparent;
   box-sizing: border-box;
   color: $color_nhsuk-white;
-  margin-bottom: nhsuk-spacing(4);
   padding: nhsuk-spacing(6) - $nhsuk-border-width;
 
   @include mq($until: tablet) {

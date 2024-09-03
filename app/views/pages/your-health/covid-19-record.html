@@ -1,0 +1,74 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your COVID-19 record" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+      <h3 class="nhsuk-card__heading">
+        Your vaccinations
+      </h3>
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+         
+
+          <h2 class="nhsuk-heading-xs">Date</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> 23 May 2021 </p> 
+          <div style="margin-top:-5px;"></div>
+          <h2 class="nhsuk-heading-xs">Name of vaccine</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> Moderna Inc </p> 
+          <div style="margin-top:-5px;"></div>
+          <h2 class="nhsuk-heading-xs">Batch number</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> 3002332 </p> 
+      
+        </div>
+      </div>
+      <div style="margin-top:-20px;"></div>
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+         
+
+          <h2 class="nhsuk-heading-xs">Date</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> 15 march 2021 </p> 
+          <div style="margin-top:-5px;"></div>
+          <h2 class="nhsuk-heading-xs">Name of vaccine</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> Moderna Inc </p> 
+          <div style="margin-top:-5px;"></div>
+          <h2 class="nhsuk-heading-xs">Batch number</h2>
+          <div style="margin-top:-20px;"></div>
+          <p class="nhsuk-card__description"> 3044332 </p> 
+      
+        </div>
+      </div>
+
+      <a href="https://www.nhs.uk/nhs-app/nhs-app-help-and-support/health-records-in-the-nhs-app/get-help-with-the-check-your-covid-19-vaccine-record-service/">If you have questions about your vaccine record, or to report an error, visit our help and support page</a>
+     <br><br>
+      <a href="https://coronavirus-yellowcard.mhra.gov.uk/">Report suspected side effects to a vaccine on the Yellow Card reporting site at GOV.UK </a>
+      <br><br>
+      <a href="https://www.gov.uk/government/publications/covid-19-vaccination-what-to-expect-after-vaccination/what-to-expect-after-your-covid-19-vaccination">Find out what to expect after your COVID-19 vaccination at GOV.UK </a>
+    </div>
+  </div>
+
+  {% endblock %}

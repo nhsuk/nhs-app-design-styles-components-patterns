@@ -1,0 +1,116 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Book, cancel or change a COVID-19 vaccination appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+     <p>
+      Use this service to:
+     </p>
+     <ul>
+      <li>
+        check if you need a vaccine
+      </li>
+      <li>
+        book a vaccine
+      </li>
+      <li>
+        check your existing appointment details
+      </li>
+      <li>
+        change your appointment
+      </li>
+      <li>
+        cancel your appointment
+      </li>
+     </ul>
+
+     <p>
+      You can use this service if you're registered with a GP surgery in England. Find out <a href="https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/" title="How to register with GP">how to register with a GP surgery</a> if you're not registered.
+     </p>
+
+     <!-- how it works -->
+
+     <h2 class="nhsuk-heading-m">How it works</h2>
+
+     <p>
+      The service will check if you need a vaccine before you book. To change or cancel your appointment, you’ll need the booking reference number we sent you. 
+     </p>
+     <p>
+      You may also be offered a  flu vaccination in the same appointment, if you are eligible.
+     </p>
+
+     <div>
+      <a href="#" class="nhsuk-button app-button">Start now</a>
+    </div>
+
+     <!-- book over the phone -->
+
+     <h2 class="nhsuk-heading-m">Book over the phone</h2>
+
+     <p>
+      You can call 119 free of charge to book over the phone if you are not able to book online.
+     </p>
+     <p>
+      You can speak to a translator if you need to.
+     </p>
+
+     <!-- if you have difficulties -->
+
+     <h2 class="nhsuk-heading-m">If you have difficulties communicating or hearing</h2>
+
+     <p>
+      You can use textphone 18001 or the NHS 119 British Sign Language (BSL) interpreter service if you have difficulties communicating or hearing, or if you are a BSL user.
+     </p>
+
+     <!-- find a walk-in centre -->
+
+     <h2 class="nhsuk-heading-m">Find a walk-in centre</h2>
+
+     <p>
+      You can find a <a href="https://www.nhs.uk/nhs-services/covid-19-services/covid-19-vaccination-services/find-a-walk-in-covid-19-vaccination-site/">walk-in COVID-19 vaccination site</a> to get a vaccine without an appointment.
+     </p>
+     <p>
+      You do not need to be registered with a GP.
+     </p>
+
+     <!-- more links -->
+
+     <h2 class="nhsuk-heading-m">More information</h2>
+     <ul>
+      <li>
+        <a href="https://www.nhs.uk/conditions/covid-19/covid-19-vaccination/getting-a-covid-19-vaccine/">How to get a 1st and 2nd dose of the coronavirus (COVID-19) vaccine</a>
+      </li>
+      <li>
+        <a href="https://www.nhs.uk/conditions/covid-19/covid-19-vaccination/getting-a-covid-19-vaccine/">How to get a booster dose of the coronavirus (COVID-19) vaccine</a>
+      </li>
+      <li>
+        <a href="https://www.nhs.uk/conditions/covid-19/covid-19-vaccination/getting-a-covid-19-vaccine/">How to get an additional primary dose of the coronavirus (COVID-19) vaccine</a>
+      </li>
+     </ul>
+
+
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

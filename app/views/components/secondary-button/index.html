@@ -1,0 +1,63 @@
+{% extends 'components/layout.html' %}
+
+{% set pageHeading = "Secondary button" %}
+{% set backlogID = "12" %}
+
+{% block innerContent %}
+
+  <h2>Current design</h2>
+
+  <div class="example">
+    {{ button({
+      text: "Try again",
+      classes: "nhsuk-button--secondary nhsapp-button"
+    }) }}
+  </div>
+
+  <h2>Proposed design</h2>
+
+  <div class="example">
+    {{ button({
+      text: "Try again",
+      classes: "app-button--secondary nhsapp-button"
+    }) }}
+  </div>
+
+  <p>Button group: Primary and secondary.</p>
+
+  <div class="example">
+    <div class="nhsapp-button-group">
+
+      {{ button({
+        text: "Save and continue",
+        classes: "nhsapp-button"
+      }) }}
+      
+      {{ button({
+        text: "Save as draft",
+        classes: "app-button--secondary nhsapp-button"
+      }) }}
+      
+      </div>
+  </div>
+
+  <p>Button group: Secondary and a text link.</p>
+
+  <div class="example">
+    <div class="nhsapp-button-group nhsuk-u-margin-bottom-0">
+      <a href="#" class="nhsuk-button app-button--secondary nhsapp-button">
+        View this appointment
+      </a>
+      <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View all appointments</a>
+    </div>
+  </div>
+
+  <h2>Examples in context</h2>
+
+  <ul clas="nhsuk-list">
+    <li>
+      <a href="/pages/home-p9">Homepage - P9</a>
+    </li>
+  </ul>
+
+{% endblock %}

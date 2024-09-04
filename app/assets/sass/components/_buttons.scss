@@ -34,8 +34,8 @@
   border-bottom: 0;
   box-shadow: 0 4px 0 $nhsuk-link-color;
   color: $nhsuk-link-color;
-  padding-bottom: 13px; // To make correct height due to removing 2px bottom border
-  padding-top: 13px; // To make correct height due to removing 2px bottom border
+  padding-bottom: 13px; // Added 1px to make correct height due to removing 2px bottom border
+  padding-top: 13px; // Added 1px to make correct height due to removing 2px bottom border
 
   &:link,
   &:visited {
@@ -43,16 +43,27 @@
   }
 
   &:hover {
-    background-color: $nhsuk-link-color;
-    color: $color_nhsuk-white;
-  }
-
-  &:active {
-    background-color: $nhsuk-link-color;
+    background-color: rgba($nhsuk-link-color, 10%);
+    color: $nhsuk-link-color;
   }
 
   &:focus {
+    background-color: $nhsuk-focus-color;
     border-color: $nhsuk-focus-color;
+    color: $nhsuk-focus-text-color;
+  }
+
+  &:active {
+    background-color: rgba($nhsuk-link-color, 20%);
+    border-bottom: 2px solid; // Adds the 2px bottom border to make the design look right
+    border-color: $nhsuk-link-color;
+    color: $nhsuk-link-color;
+    padding-bottom: 12px; // To make correct height due to adding 2px bottom border
+    padding-top: 12px; // To make correct height due to adding 2px bottom border
+  }
+
+  &:focus:visited:active {
+    color: $nhsuk-link-color; // Overrides NHSUK Button turning the colour white
   }
 }
 
@@ -62,6 +73,7 @@
 }
 
 .nhsapp-button-group {
+  align-items: center; // Fixes alignment 
   padding-top: nhsuk-spacing(2);
   .nhsapp-button {
     margin-top: 0;

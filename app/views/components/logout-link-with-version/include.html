@@ -1,2 +1,6 @@
-<p class="nhsuk-u-margin-bottom-2"><a href="/clear-data">Log-out</a></p>
+{{ button({
+  text: "Log out",
+  classes: "app-button--secondary nhsapp-button",
+  href: "/clear-data"
+}) }}
 <p>Version: {{ data['version'] }}</p>

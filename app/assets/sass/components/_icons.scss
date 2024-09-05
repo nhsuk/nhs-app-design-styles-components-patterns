@@ -20,3 +20,15 @@
   display: inline-flex;
   gap: nhsuk-spacing(2);
 }
+
+.app-icon--warning {
+  @include nhsuk-responsive-margin(2, "bottom");
+
+  height: 40px;
+  width: 40px;
+
+  @include mq($from: tablet) {
+    height: 56px;
+    width: 56px;
+  }
+}

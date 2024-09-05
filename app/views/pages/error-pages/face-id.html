@@ -1,0 +1,46 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Touch ID or Face ID did not work" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% include "components/icons/warning.html" %}
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>This may be because Touch ID or Face ID is turned off. It could also be because we could not find a fingerprint or face scan.</p>
+
+      <h2 class="nhsuk-heading-l">What you can do</h2>
+
+      <ol class="nhsuk-list nhsuk-list--number">
+        <li>Log in using your email and password.</li>
+        <li>Turn on Touch ID or Face ID in the account and settings area of the NHS App.</li>
+        <li>Check you have added a fingerprint or face scan in your device settings.</li>
+      </ol>
+
+      {{ button({
+        text: "Go back to login",
+        classes: "nhsapp-button"
+      }) }}
+
+      <h2>Find out more</h2>
+
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Read more about logging in",
+            URL: "#"
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

@@ -79,3 +79,17 @@
     margin-top: 0;
   }
 }
+
+// Add spacing between button and heading
+.nhsuk-button + %nhsuk-heading-l {
+  @include nhsuk-responsive-padding(4, "top");
+}
+
+.nhsuk-button + %nhsuk-heading-m,
+.nhsuk-button + %nhsuk-heading-s {
+  padding-top: nhsuk-spacing(1);
+
+  @include mq($from: tablet) {
+    padding-top: nhsuk-spacing(2);
+  }
+}

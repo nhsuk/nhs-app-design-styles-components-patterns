@@ -2,11 +2,11 @@
 // COMPONENTS / #CONFIRMATION
 // ==========================================================================
 
-$nhsuk-border-width: 5px;
+$nhsuk-border-width: nhsuk-spacing(1);
 
 .app-confirmation {
   @include nhsuk-typography-responsive(32);
-  @include nhsuk-responsive-margin(5, "bottom");
+  @include nhsuk-responsive-margin(4, "bottom");
 
   background: $color_nhsuk-green;
   border: $nhsuk-border-width solid transparent;

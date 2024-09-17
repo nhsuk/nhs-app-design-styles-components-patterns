@@ -32,15 +32,16 @@
       })}}
 
       <!-- PANEL LINK CARD - Your health -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Contact GP about a health problem",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Check for available GP appointments",
-            URL: "/pages/services/gp-appointment-type"
+            href: "/pages/services/gp-appointment-type"
           }
           
         ]

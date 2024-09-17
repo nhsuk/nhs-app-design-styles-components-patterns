@@ -61,4 +61,7 @@ module.exports = {
   "medicine6description": "1 OD - 56 capsules",
   "medicine6quantity": "1 OD - 56 capsules",
 
+  // Upcoming and past appointments
+  "appointments": 4,
+
 }

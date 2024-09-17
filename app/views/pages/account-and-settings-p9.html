@@ -18,31 +18,32 @@
       })}}
 
       <!-- PANEL LINK CARD - Your health -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Manage services for another person",
-            URL: "/pages/account-and-settings/linked-profiles"
+            href: "/pages/account-and-settings/linked-profiles"
           },
           {
             title: "Change your contact or login details",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Turn on fingerprint, face or iris login",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Manage your notifications",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Manage cookies and read legal information",
-            URL: "/pages/account-and-settings/cookies-and-legal-agreement"
+            href: "/pages/account-and-settings/cookies-and-legal-agreement"
           },
           {
             title: "Update your GP surgery on changes to your personal details",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}

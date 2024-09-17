@@ -31,11 +31,12 @@
       }) }}
 
       <!-- PANEL LINK CARD - MESSAGES -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "View your messages",
-            URL: "/pages/messages-p5",
+            href: "/pages/messages-p5",
             icon: true,
             messages: data['messages']
           }

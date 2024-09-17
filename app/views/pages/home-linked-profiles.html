@@ -29,11 +29,12 @@
       }) }}
 
       <!-- PANEL LINK CARD - SERVICES -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Find NHS services near you",
-            URL: "/pages/services-linked-profiles"
+            href: "/pages/services-linked-profiles"
           }
         ]
       })}}

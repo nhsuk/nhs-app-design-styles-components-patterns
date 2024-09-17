@@ -24,19 +24,19 @@
         linkAriaLabel: "View all services"
       }) }}
 
-       <!-- PANEL LINK CARD - SERVICES -->
-       {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Request medicines",
-            URL: "/pages/your-health/repeat-prescription/select-medicines"
+            href: "/pages/your-health/repeat-prescription/select-medicines"
           },
           {
             title: "Check if you need urgent medical help using 111 online",
-            URL: "#"
+            href: "#"
           }
         ]
-      })}}
+      }) }}
 
       <!-- SECTION TITLE - YOUR HEALTH -->
       {{ nhsappSectionHeading({
@@ -46,59 +46,59 @@
         linkAriaLabel: "View all your health"
       }) }}
 
-      <!-- PANEL LINK CARD - YOUR HEALTH -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "GP health record",
-            URL: "#"
+            href: "#"
           },
           {
             title: "View and manage prescriptions",
-            URL: "/pages/your-health/prescriptions-p9"
+            href: "/pages/your-health/prescriptions-p9"
           },
           {
             title: "Upcoming and past appointments",
-            URL: "/pages/your-health/upcoming-and-past-appointments-p9"
+            href: "/pages/your-health/upcoming-and-past-appointments-p9"
           }
         ]
-      })}}
+      }) }}
 
       <!-- SECTION TITLE - MESSAGES -->
       {{ nhsappSectionHeading({
         headingText: "Messages"
       }) }}
 
-      <!-- PANEL LINK CARD - MESSAGES -->
-     {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
-            title: "View your messages",
-            URL: "/pages/messages-p9",
-            icon: true,
-            notifications: data['messages']
+            title: 'View your messages',
+            href: '/pages/messages-p9',
+            prefixIcon: 'messages',
+            linkAriaLabel: 'Messages, you have 4 unread messages',
+            badgeLarge: {
+              count: data['messages'],
+              label: 'unread messages',
+              ariaHidden: true
+            }
           }
         ]
-      })}}
+      }) }}
 
       <!-- SECTION TITLE - SWITCH PROFILES -->
       {{ nhsappSectionHeading({
         headingText: "Manage services for another person"
       }) }}
 
-      <!-- PANEL LINK CARD - SWITCH PROFILES -->
-      {{ panelLinkCard({
-        items: [
-          {
-            title: "Switch profiles",
-            URL: "/pages/account-and-settings/linked-profiles",
-            icon: true
-          }
-        ]
-      })}}
+      {{ nhsappCard({
+        title: 'Switch profiles',
+        href: '/pages/account-and-settings/linked-profiles',
+        prefixIcon: 'switchProfile'
+      }) }}
 
       <!-- CAMPAIGN CARD -->
-      <div class="app-card-link app-card-link--dark-blue app-card-link--full-width">
+      <div class="app-card-link app-card-link--dark-blue app-card-link--full-width nhsuk-u-margin-top-7">
         <div class="app-card-link__media">
           <img class="app-card-link__img" src="/images/campaigns/campaign-card-image-2.jpg" alt="">
         </div>

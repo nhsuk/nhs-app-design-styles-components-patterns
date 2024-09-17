@@ -23,11 +23,12 @@
         headingText: "People you can access services for"
       }) }}
 
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: data['linkedProfileFirstName'] + " " + data['linkedProfileLastName'],
-            URL: "/pages/account-and-settings/switch-profiles",
+            href: "/pages/account-and-settings/switch-profiles",
             description: data['linkedProfileAge'] + " years old"
           }
         ]

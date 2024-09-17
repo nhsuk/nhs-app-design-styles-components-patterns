@@ -17,67 +17,64 @@
         description: pageDescription
       })}}
 
-      <!-- SECTION TITLE - Your GP services -->
       {{ nhsappSectionHeading({
         headingText: "Your GP services"
       })}}
 
-      <!-- PANEL LINK CARD - Your GP services -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Request medicines",
-            URL: "/pages/your-health/repeat-prescription/select-medicines"
+            href: "/pages/your-health/repeat-prescription/select-medicines"
           },
           {
             title: "Contact your GP surgery for a document or update",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Check for available GP appointments",
-            URL: "/pages/services/gp-appointment-type"
+            href: "/pages/services/gp-appointment-type"
           }
         ]
-      })}}
+      }) }}
 
-      <!-- SECTION TITLE - Other NHS services -->
       {{ nhsappSectionHeading({
         headingText: "Other NHS services"
       })}}
 
-      <!-- PANEL LINK CARD - Other NHS services -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Check if you need urgent medical help using 111 online",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Find NHS services near you",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}
 
-      <!-- SECTION TITLE - Find health information -->
       {{ nhsappSectionHeading({
         headingText: "Find health information"
       })}}
 
-      <!-- PANEL LINK CARD - Find health information -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Browse NHS health information",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Browse NHS medicines information",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Find COVID-19 guidance",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}

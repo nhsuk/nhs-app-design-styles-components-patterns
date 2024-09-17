@@ -77,18 +77,18 @@
     {% if data['appointment-letter'] != "read" %}
       <h3 class="nhsuk-heading-s">To do</h3>
 
-      <div class="app-card-link"> 
+      <div class="nhsapp-card"> 
         <form id="appointmentForm1" method="post" action="/pages/your-health/appointment-letter">
           <input type="hidden" name="appointment-letter" value="read">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-3">Not read</strong>
               </div>
-              <a  href="javascript:{}" onclick="document.getElementById('appointmentForm1').submit();" class="app-card-link__link nhsuk-link--no-visited-state" href="">
+              <a  href="javascript:{}" onclick="document.getElementById('appointmentForm1').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state" href="">
                 Appointment letter
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
               </div>
             </div>
@@ -100,18 +100,18 @@
 
       <h3 class="nhsuk-heading-s">Finished</h3>
 
-      <ul class="app-cards app-cards--spaced">
+      <ul class="nhsapp-cards">
         {% if data['appointment-letter'] == "read" %}
-        <li class="app-card-link">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Finished</strong>
               </div>
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/appointment-letter">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/appointment-letter">
                 Appointment letter
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
               </div>
             </div>
@@ -119,16 +119,16 @@
           </div>
         </li>
         {% endif %}
-        <li class="app-card-link">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Finished</strong>
               </div>
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="#">
                 Pre-appointment questionnaire
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <p class="nhsuk-u-secondary-text-color nhsuk-u-margin-top-3">Received 29 March 2024</p>
               </div>
             </div>

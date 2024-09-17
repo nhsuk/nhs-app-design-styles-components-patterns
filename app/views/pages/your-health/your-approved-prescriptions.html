@@ -20,18 +20,18 @@
         description: pageDescription
       })}}
 
-      <ul class="app-cards app-cards--spaced">
+      <ul class="nhsapp-cards">
 
-        <li class="app-card-link">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Ready to collect</strong>
               </div>
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription">
                 One off prescription 
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <ul class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">
                   <li>Cephalexin 500mg capsules</li>
                   <li>Codeine phosphate 30mg tablets</li>
@@ -50,20 +50,20 @@
 
         {% if data['prescription-requested'] == "true" or "select-medicines-1" in data['select-medicines'] or "select-medicines-2" in data['select-medicines'] or "select-medicines-3" in data['select-medicines'] or "select-medicines-4" in data['select-medicines'] or "select-medicines-5" in data['select-medicines']%}
 
-        <li class="app-card-link">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 {% if "select-medicines-5" in data['select-medicines'] or data['select-medicines'] == "" %}
                   <strong class="nhsapp-tag nhsapp-tag--blue nhsuk-u-static-margin-bottom-3">Part ready to collect</strong>
                 {% else %}
                   <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Ready to collect</strong>
                 {% endif %}
               </div>
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription-2" aria-label="Repeat prescription 1 of 2">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription-2" aria-label="Repeat prescription 1 of 2">
                 Repeat prescription
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <ul class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">
 
                   {% if "select-medicines-1" in data['select-medicines'] or data['select-medicines'] == "" %}
@@ -91,16 +91,16 @@
         </li>
 
         {% if "select-medicines-5" in data['select-medicines'] or data['select-medicines'] == "" %}
-        <li class="app-card-link">
-          <div class="app-card-link__container">   
-            <div class="app-card-link__content">
-              <div class="app-card-link__above">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">   
+            <div class="nhsapp-card__content">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--purple nhsuk-u-static-margin-bottom-3">Pharmacy preparing prescription</strong>
               </div>
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription-3" aria-label="Repeat prescription 2 of 2">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/your-prescription-3" aria-label="Repeat prescription 2 of 2">
                 Repeat prescription
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <ul class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-0">
                   <li>{{ data['medicine5'] }}</li>
                 </ul>
@@ -119,10 +119,10 @@
 
       <hr>
 
-      <div class="app-card-link">
-        <div class="app-card-link__container">
-          <div class="app-card-link__content">
-            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/past-prescriptions">
+      <div class="nhsapp-card">
+        <div class="nhsapp-card__container">
+          <div class="nhsapp-card__content">
+            <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/past-prescriptions">
               Past prescriptions
             </a>
           </div>

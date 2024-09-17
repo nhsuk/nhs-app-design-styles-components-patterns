@@ -20,47 +20,48 @@
         description: pageDescription
       })}}
 
-      <ul class="app-cards app-cards--stacked">
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+      <ul class="nhsapp-cards nhsapp-cards--stacked">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="#">
                 GP surgery appointments
               </a>
             </div>
             {% include "components/icons/chevron.html" %}
           </div>
         </li>
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/referrals">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/referrals">
                 Referrals
               </a>
             </div>
             {% include "components/icons/chevron.html" %}
           </div>
         </li>
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/hospital-appointments">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/hospital-appointments">
                 Hospital appointments
               </a>
             </div>
             {% if data['appointment-letter'] != "read" %}
-            <span class="nhsapp-badge">
+            <p class="nhsapp-badge">
+              <span class="nhsuk-u-visually-hidden">You have</span>
               1
-              <span class="nhsuk-u-visually-hidden">new notification</span>
-            </span>
+              <span class="nhsuk-u-visually-hidden">notifications</span> 
+            </p>
             {% endif %}
             {% include "components/icons/chevron.html" %}
           </div>
         </li>
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="#">
                 Waiting lists
               </a>
             </div>

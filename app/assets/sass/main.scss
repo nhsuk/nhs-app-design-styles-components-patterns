@@ -178,3 +178,10 @@ hr {
     max-height: nhsuk-spacing(8);
   }
 }
+
+// Card hotfix
+// Bug raised in nhsapp-frontend
+.nhsapp-cards + .nhsapp-section-heading,
+.nhsapp-card + .nhsapp-section-heading {
+  padding-top: nhsuk-spacing(2);
+}

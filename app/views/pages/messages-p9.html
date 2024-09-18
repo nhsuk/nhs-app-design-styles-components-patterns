@@ -17,13 +17,16 @@
         description: pageDescription
       })}}
 
-      {% set badge %}
-        {{ nhsappBadgeLarge({
-          count: data['messages'],
-          label: 'notifications',
-          classes: "nhsuk-u-margin-bottom-3"
-        }) }}
-      {% endset %}
+      {% if data['messages'] > 0 %}
+        {% set badge %}
+          {{ nhsappBadgeLarge({
+            count: data['messages'],
+            label: 'notifications',
+            classes: "nhsuk-u-margin-bottom-3"
+          }) }}
+        {% endset %}
+      {% else %}
+      {% endif %}
 
       {{ nhsappCardGroup({
         cards: [

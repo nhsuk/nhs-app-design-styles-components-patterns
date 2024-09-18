@@ -1,161 +1,24 @@
 {% extends 'components/layout.html' %}
 
-{% set pageHeading = "Cards" %}
+{% set pageHeading = "Campaign card" %}
 
 {% block innerContent %}
 
-<h2 class="nhsuk-heading-l">Cards with images</h2>
-
-<h3 class="nhsuk-heading-s">Default</h3>
-
-<div class="app-card-link">
-
+<div class="nhsapp-card app-card-link--dark-blue app-card-link--full-width">
   <div class="app-card-link__media">
     <img class="app-card-link__img" src="/images/campaigns/campaign-card-image-2.jpg" alt="">
   </div>
-
-  <div class="app-card-link__container">
-    
-    <div class="app-card-link__content">
-
-      <a href="#" class="app-card-link__link nhsuk-link--no-visited-state nhsuk-u-font-size-32">
+  <div class="nhsapp-card__container">   
+    <div class="nhsapp-card__content">
+      <a href="#" class="nhsapp-card__link nhsuk-u-font-size-32">
         Research changes lives
       </a>
-
-      <div class="app-card-link__below">
+      <div class="nhsapp-card__below">
         <p class="nhsuk-u-margin-top-2">Register with Be Part of Research to find and join health studies</p>
       </div>
-
     </div>
-
-    <svg class="app-icon app-icon--chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-      <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
-    </svg>
-
+    {{ nhsappIcon('chevronRight') }}
   </div>
 </div>
-
-<h3 class="nhsuk-heading-s">Full width</h3>
-
-<div class="app-card-link app-card-link--dark-blue app-card-link--full-width">
-
-  <div class="app-card-link__media">
-    <img class="app-card-link__img" src="/images/campaigns/campaign-card-image-2.jpg" alt="">
-  </div>
-
-  <div class="app-card-link__container">
-    
-    <div class="app-card-link__content">
-
-      <a href="#" class="app-card-link__link nhsuk-u-font-size-32">
-        Research changes lives
-      </a>
-
-      <div class="app-card-link__below">
-        <p class="nhsuk-u-margin-top-2">Register with Be Part of Research to find and join health studies</p>
-      </div>
-
-    </div>
-
-    <svg class="app-icon app-icon--chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-      <path d="M8.82264 19.11C8.56264 19.11 8.29264 19.01 8.10264 18.8C7.72264 18.4 7.73264 17.77 8.13264 17.39L13.7426 12.01L8.14264 6.75999C7.74264 6.37999 7.72264 5.74999 8.09264 5.34999C8.47264 4.94999 9.10264 4.92999 9.50264 5.29999L15.8726 11.27C16.0726 11.46 16.1826 11.72 16.1926 11.99C16.2026 12.26 16.0826 12.53 15.8826 12.72L9.51264 18.83C9.32264 19.02 9.07264 19.11 8.82264 19.11Z"></path>
-    </svg>
-
-  </div>
-</div>
-
-<hr>
-
-<h2 class="nhsuk-heading-l">Colour variations</h2>
-
-<p>These colour variations are not used on the NHS App but are used on 111 Online and the NHS website home page.</p>
-
-<h3 class="nhsuk-heading-s">Blue - spaced small</h3>
-
-<ul class="app-cards app-cards--spaced-small">
-  <li class="app-card-link app-card-link--blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-  <li class="app-card-link app-card-link--blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-  <li class="app-card-link app-card-link--blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-</ul>
-
-<h3 class="nhsuk-heading-s">Dark blue - spaced small</h3>
-
-<ul class="app-cards app-cards--spaced-small">
-  <li class="app-card-link app-card-link--dark-blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-  <li class="app-card-link app-card-link--dark-blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-  <li class="app-card-link app-card-link--dark-blue">
-    <div class="app-card-link__container">
-      
-      <div class="app-card-link__content">
-        <a class="app-card-link__link" href="#">
-          Title
-        </a>
-      </div>
-
-      {% include "components/icons/chevron.html" %}
-
-    </div>
-  </li>
-</ul>
 
 {% endblock %}

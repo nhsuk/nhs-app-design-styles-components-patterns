@@ -25,15 +25,16 @@
       })}}
 
       <!-- PANEL LINK CARD - Your GP services -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Request repeat prescriptions",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Check for available GP appointments",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}
@@ -44,11 +45,12 @@
       })}}
       
       <!-- PANEL LINK CARD - Other NHS services -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Find NHS services near you",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}

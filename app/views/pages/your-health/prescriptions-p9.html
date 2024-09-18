@@ -20,28 +20,28 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Requested medicines",
             description: "Check if your GP has approved the medicines you requested in the app",
-            URL: "/pages/your-health/requested-medicines"
+            href: "/pages/your-health/requested-medicines"
           },
           {
             title: "Check if your prescriptions are ready",
             description: "View prescriptions being prepared by the pharmacy",
-            URL: "/pages/your-health/your-approved-prescriptions"
+            href: "/pages/your-health/your-approved-prescriptions"
           },
           {
             title: "Choose a pharmacy",
             description: "Choose or change a pharmacy for your prescriptions to be collected or delivered from",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Hospital and other medicines",
             description: "View your current and past medicines",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}

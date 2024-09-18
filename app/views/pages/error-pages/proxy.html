@@ -20,11 +20,12 @@
 
       <p>Contact the NHS App team and mention <strong>the error code < xxxxxx ></strong>.</p>
 
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Contact the NHS App team",
-            URL: "#"
+            href: "#"
           }
         ]
       })}}

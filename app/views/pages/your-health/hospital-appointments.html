@@ -33,19 +33,19 @@
       })}}
 
       <!-- CARDS -->
-      <ul class="app-cards app-cards--spaced">
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
+      <ul class="nhsapp-cards">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
               {% if data['appointment-letter'] != "read" %}
-              <div class="app-card-link__above">
+              <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-display-inline-block nhsuk-u-static-margin-bottom-3">Action needed</strong>
               </div>
               {% endif %}
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/view-or-manage-appointment" aria-label="Orthopaedic appointment on Monday 3 June 2024 at 9:40am">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/view-or-manage-appointment" aria-label="Orthopaedic appointment on Monday 3 June 2024 at 9:40am">
                 Orthopaedic appointment
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-3">Monday 3 June 2024 <br> 9:40am</p>
                 <p class="nhsuk-u-margin-bottom-3">The Willows, Croydon University Hospital</p>
                 <p class="nhsapp-badge-small nhsapp-badge-small--red nhsuk-body-s nhsuk-u-secondary-text-color">
@@ -57,7 +57,7 @@
                 </p>
               </div>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
       </ul>
@@ -71,14 +71,14 @@
       })}}
 
       <!-- CARDS -->
-      <ul class="app-cards app-cards--spaced">
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="#" aria-label="Rheumatology appointment on Tuesday 18 February 2024 at 3:20pm">
+      <ul class="nhsapp-cards">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="#" aria-label="Rheumatology appointment on Tuesday 18 February 2024 at 3:20pm">
                 Rheumatology appointment
               </a>
-              <div class="app-card-link__below">
+              <div class="nhsapp-card__below">
                 <p aria-hidden="true" class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-3">Tuesday 18 February 2024 <br> 3:20pm</p>
                 <p class="nhsuk-u-margin-bottom-3">The Willows, Croydon University Hospital</p>
                 <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
@@ -86,18 +86,18 @@
                 </p>
               </div>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
 
-        <li class="app-card-link">
-          <div class="app-card-link__container">
-            <div class="app-card-link__content">
-              <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/past-appointments">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/past-appointments">
                 View more past appointments
               </a>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
 

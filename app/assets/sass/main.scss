@@ -17,15 +17,11 @@
 
 @import 'components/header';
 @import 'components/app-bottom-navigation';
-@import 'components/badge';
 @import 'components/bottom-sheet';
 @import 'components/buttons';
 @import 'components/card';
-@import 'components/card-v2';
-@import 'components/card-link';
 @import 'components/confirmation';
 @import 'components/date-picker';
-@import 'components/details';
 @import 'components/dynamic-page-title';
 @import 'components/expander';
 @import 'components/global-navigation-native';
@@ -33,7 +29,6 @@
 @import 'components/links';
 @import 'components/link-with-icon';
 @import 'components/loader';
-@import 'components/panel-link-card';
 @import 'components/provider-banner';
 @import 'components/sticky-footer';
 @import 'components/summary-list';
@@ -182,4 +177,11 @@ hr {
   @include mq($from: tablet) {
     max-height: nhsuk-spacing(8);
   }
+}
+
+// Card hotfix
+// Bug raised in nhsapp-frontend
+.nhsapp-cards + .nhsapp-section-heading,
+.nhsapp-card + .nhsapp-section-heading {
+  padding-top: nhsuk-spacing(2);
 }

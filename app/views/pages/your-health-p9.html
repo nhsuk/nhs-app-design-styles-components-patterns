@@ -18,39 +18,40 @@
       })}}
 
       <!-- PANEL LINK CARD - Your health -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "GP health record",
-            URL: "#"
+            href: "#"
           },
           {
             title: "View and manage prescriptions",
-            URL: "/pages/your-health/prescriptions-p9"
+            href: "/pages/your-health/prescriptions-p9"
           },
           {
             title: "Upcoming and past appointments",
-            URL: "/pages/your-health/upcoming-and-past-appointments-p9"
+            href: "/pages/your-health/upcoming-and-past-appointments-p9"
           },
           {
             title: "Test results and imaging",
-            URL: "#"
+            href: "#"
           },
           {
             title: "COVID-19 vaccine record",
-            URL: "#"
+            href: "#"
           },
           {
             title: "NHS COVID Pass",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Your health choices",
-            URL: "/pages/your-health/your-health-choices-p9"
+            href: "/pages/your-health/your-health-choices-p9"
           },
           {
             title: "Care plans",
-            URL: "/pages/your-health/care-plans-p9"
+            href: "/pages/your-health/care-plans-p9"
           }
         ]
       })}}

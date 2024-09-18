@@ -29,17 +29,17 @@
         ]
       }) }}
 
-      <div class="app-card-link">
-        <div class="app-card-link__container">
-          <div class="app-card-link__content">
-            <a class="app-card-link__link nhsuk-link--no-visited-state" href="/pages/your-health/requested-medicines">
+      <div class="nhsapp-card">
+        <div class="nhsapp-card__container">
+          <div class="nhsapp-card__content">
+            <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/requested-medicines">
               Requested medicines
             </a>
-            <div class="app-card-link__below">
+            <div class="nhsapp-card__below">
               <p class="nhsuk-u-margin-top-1">Check if your GP has approved the medicines you requested </p>
             </div>
           </div>
-          {% include "components/icons/chevron.html" %}
+          {{ nhsappIcon('chevronRight') }}
         </div>
       </div>
 

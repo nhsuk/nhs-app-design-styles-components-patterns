@@ -17,26 +17,13 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD - MESSAGES -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        cards: [
           {
             title: "Your NHS healthcare services",
-            URL: "/pages/messages/your-messages",
-            icon: false,
-            messages: data['messages'],
-            description: "You may receive messages:",
-            list: [
-              {
-                text: "from your GP surgery"
-              },
-              {
-                text: "about hospital and specialist care appointments"
-              },
-              {
-                text: "about invitations and reminders"
-              }
-            ]
+            href: "/pages/messages/your-messages",
+            html: "<p class='nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3'>You may receive messages:</p>
+            <ul><li>from your GP surgery</li><li>about hospital and specialist care appointments</li><li>about invitations and reminders</li></ul>"
           }
         ]
       })}}

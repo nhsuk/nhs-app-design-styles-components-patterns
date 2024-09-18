@@ -18,3 +18,14 @@
   text-decoration: none;
   border-bottom-color: $nhsuk-border-color;
 }
+
+// Fixes header logo width issue
+.nhsuk-header__link {
+  display: inline-block;
+}
+
+@media (max-width: 40.0525em) {
+  .nhsuk-header__logo--only {
+      padding-bottom: 12px;
+  }
+}

@@ -20,19 +20,20 @@
       })}}
 
       <!-- PANEL LINK CARD - Your health -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "GP health record",
-            URL: "#"
+            href: "#"
           },
           {
             title: "View and manage prescriptions",
-            URL: "/pages/your-health/prescriptions-linked-profiles"
+            href: "/pages/your-health/prescriptions-linked-profiles"
           },
           {
             title: "Upcoming and past appointments",
-            URL: "/pages/your-health/upcoming-and-past-appointments-linked-profiles"
+            href: "/pages/your-health/upcoming-and-past-appointments-linked-profiles"
           }
         ]
       })}}

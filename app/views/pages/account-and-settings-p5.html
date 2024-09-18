@@ -17,16 +17,16 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD - Your health -->
-      {{ panelLinkCard({
-        items: [
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
           {
             title: "Change your contact or login details",
-            URL: "#"
+            href: "#"
           },
           {
             title: "Manage cookies and read legal information",
-            URL: "pages/account-and-settings/cookies-and-legal-agreement"
+            href: "pages/account-and-settings/cookies-and-legal-agreement"
           }
         ]
       })}}

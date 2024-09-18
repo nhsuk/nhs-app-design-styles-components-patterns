@@ -28,7 +28,7 @@
                 GP surgery appointments
               </a>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
         <li class="nhsapp-card">
@@ -38,7 +38,7 @@
                 Referrals
               </a>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
         <li class="nhsapp-card">
@@ -49,13 +49,13 @@
               </a>
             </div>
             {% if data['appointment-letter'] != "read" %}
-            <p class="nhsapp-badge">
+            <p class="nhsapp-badge" aria-hidden="true">
               <span class="nhsuk-u-visually-hidden">You have</span>
               1
               <span class="nhsuk-u-visually-hidden">notifications</span> 
             </p>
             {% endif %}
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
         <li class="nhsapp-card">
@@ -65,7 +65,7 @@
                 Waiting lists
               </a>
             </div>
-            {% include "components/icons/chevron.html" %}
+            {{ nhsappIcon('chevronRight') }}
           </div>
         </li>
       </ul>

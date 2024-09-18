@@ -17,15 +17,11 @@
         description: pageDescription
       })}}
 
-      <!-- PANEL LINK CARD - MESSAGES -->
       {{ nhsappCardGroup({
-        stacked: true,
         cards: [
           {
             title: "Your NHS healthcare services",
             href: "/pages/messages/your-messages",
-            icon: false,
-            messages: data['messages'],
             html: "<p class='nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3'>You may receive messages:</p>
             <ul><li>from your GP surgery</li><li>about hospital and specialist care appointments</li><li>about invitations and reminders</li></ul>"
           }

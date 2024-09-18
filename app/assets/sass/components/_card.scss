@@ -2,6 +2,92 @@
 // COMPONENTS / #CARD
 // ==========================================================================
 
+//Media
+.app-card-link__img {
+  display: block;
+  max-width: 100%;
+}
+
+// Large card with image
+// Used for new campaign card
+.app-card-link--full-width {
+  @include mq($from: desktop) {
+    display: flex;
+
+    .app-card-link__media {
+      display: flex;
+      flex: 2 0;
+    }
+
+    .app-card-link__img {
+      flex: none;
+    }
+
+    .nhsapp-card__container {
+      flex: 2 0;
+      gap: nhsuk-spacing(5);
+    }
+
+  }
+  @include mq($from: large-desktop) {
+    .app-card-link__media {
+      flex-grow: 2;
+    }
+    .nhsapp-card__container {
+      flex-grow: 3;
+    }
+  }
+}
+
+// Colours
+.app-card-link--blue {
+  background-color: $nhsuk-link-color;
+}
+
+.app-card-link--dark-blue {
+  background-color: $nhsuk-link-active-color;
+}
+
+.app-card-link--blue,
+.app-card-link--dark-blue {
+  border: 0;
+  color: $color_nhsuk-white;
+
+  .nhsapp-card__container {
+    border-color: $color_nhsuk-white;
+  }
+
+  .nhsapp-card__link {
+    color: currentColor;
+  }
+
+  &:hover {
+    .nhsapp-icon--chevron {
+      fill: $color_nhsuk-white;
+    }
+  }
+
+  .nhsuk-card-link__img {
+    border-bottom: 0;
+  }
+
+  .nhsapp-icon--chevron {
+    fill: $color_nhsuk-white;
+  }
+
+  .nhsuk-caption-s,
+  .nhsuk-caption-m,
+  .nhsuk-caption-l,
+  .nhsuk-caption-xl {
+    color: $color_nhsuk-white;
+  }
+
+  .nhsuk-link {
+    color: currentColor;
+  }
+}
+
+// NEEDS CLEANING UP
 .app-card--blue {
   background-color: $nhsuk-link-color;
 }
@@ -49,22 +135,6 @@
   position: relative;
 }
 
-.app-card__chevron {
-  fill: $nhsuk-link-color;
-  height: nhsuk-spacing(4);
-  position: absolute;
-  right: nhsuk-spacing(3);
-  top: calc(50% - 12px);
-  width: nhsuk-spacing(4);
-
-  @include mq($from: tablet) {
-    height: 32px;
-    right: nhsuk-spacing(4);
-    top: calc(50% - 16px);
-    width: 32px;
-  }
-}
-
 // Gives correct padding left and right when full width
 .app-u-full-width-tablet {
   .app-card__content {
@@ -86,30 +156,5 @@
 
   .app-card__content {
     margin: 0 auto;
-  }
-}
-
-// Large card
-.app-card--large {
-  @include mq($from: desktop) {
-    display: flex;
-
-    .app-card__img-wrapper {
-      flex: 3 0;
-    }
-
-    .app-card__content {
-      flex: 2 0;
-      padding-right: 80px;
-    }
-
-  }
-  @include mq($from: large-desktop) {
-    .app-card__img-wrapper {
-      flex-grow: 2;
-    }
-    .app-card__content {
-      flex-grow: 3;
-    }
   }
 }

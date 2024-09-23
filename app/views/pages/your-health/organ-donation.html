@@ -1,0 +1,84 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set linkedProfile = false %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% set pageHeading = "Your organ donation decision" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        description: pageDescription
+      })}}
+
+
+      <!-- PANEL LINK CARD -->
+
+{{ panelLinkCard({
+        items: [
+          {
+            title: "Find out more abour organ donation",
+            URL: "https://www.organdonation.nhs.uk/app/app-donation/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+      
+        <p>If you have not registered your decision,  <a href="https://www.organdonation.nhs.uk/app/app-law/" title="External website">changes to the law around organ donation may affect you</a>.</p>
+      </div>     
+
+   
+<h2>Register your decision</h2>
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            No, I do not want to donate my organs
+          </label>
+        </div>
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            Yes, I want to donate all or some of my organs
+          </label>
+        </div>
+  
+      </div>
+
+      <br>
+
+      {{ button({
+        text: "Continue",
+        classes: "nhsuk-button--primary app-button app-button--full-width"
+      }) }}
+
+      {{ panelLinkCard({
+        items: [
+          {
+            title: "Think you have registered already?",
+            URL: "https://www.organdonation.nhs.uk/app/app-check/",
+            newWindow: true
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}

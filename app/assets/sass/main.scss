@@ -182,6 +182,16 @@ hr {
 // Card hotfix
 // Bug raised in nhsapp-frontend
 .nhsapp-cards + .nhsapp-section-heading,
-.nhsapp-card + .nhsapp-section-heading {
-  padding-top: nhsuk-spacing(3);
+.nhsapp-card + .nhsapp-section-heading,
+.nhsapp-card + .nhsuk-heading-l {
+  @include nhsuk-responsive-padding(4, "top");
+}
+
+.nhsapp-card + .nhsuk-heading-m,
+.nhsapp-card + .nhsuk-heading-s {
+  padding-top: nhsuk-spacing(1);
+
+  @include mq($from: tablet) {
+    padding-top: nhsuk-spacing(2);
+  }
 }

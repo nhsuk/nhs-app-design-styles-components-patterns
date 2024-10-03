@@ -1,0 +1,31 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "We could not connect to your GP" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!--{% include "components/icons/warning.html" %}-->
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>You are not currently able to request or view repeat prescriptions online.</p>
+
+      <p>This may be a temporary problem.</p>
+
+      {{ button({
+        text: "Try again",
+        classes: "nhsapp-button"
+      }) }}
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

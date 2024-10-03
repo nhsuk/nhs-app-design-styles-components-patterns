@@ -1,0 +1,30 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "We could not connect to your GP" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!--{% include "components/icons/warning.html" %}-->
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <h2 class="nhsuk-heading-m">What you can do</h2>
+
+      <p>Try again in a few hours, or contact the GP surgery of the person you were trying to access health services for.</p>
+
+      <h2 class="nhsuk-heading-m">If the problem continues</h2>
+
+      <p>If you keep seeing this message, <a href="#">contact the NHS App team</a> and mention the <strong>error code 32[xxx]</strong>.</p>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

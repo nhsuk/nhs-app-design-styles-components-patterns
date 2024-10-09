@@ -1,4 +1,4 @@
-# NHS App: Design components and patterns
+# NHS App: Design styles, components and patterns
 
 A prototype to test new design styles, components and patterns for the NHS App.
 
@@ -6,6 +6,6 @@ Built using the [NHS prototype kit](https://nhsuk-prototype-kit.azurewebsites.ne
 
 ---
 
-### **[View and discuss NHS App design components and patterns](https://github.com/orgs/nhsuk/projects/8/views/1)**
+### **[View and discuss NHS App design styles, components and patterns](https://github.com/orgs/nhsuk/projects/8/views/1)**
 
 ---

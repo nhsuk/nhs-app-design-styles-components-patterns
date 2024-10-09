@@ -1,0 +1,29 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set pageHeading = "Request sent" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="app-confirmation">
+        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
+        Your reference number<br><strong>A338BHE</strong>
+      </div>
+
+      <p>We have sent you a confirmation email.</p>
+
+      <h2 class="nhsuk-heading-m">What happens next</h2>
+      <p>We've sent your application to Hackney Electoral Register Office.</p>
+      <p>They will contact you either to confirm your registration, or to ask for more information.</p>
+      <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

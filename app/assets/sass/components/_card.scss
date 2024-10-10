@@ -158,3 +158,15 @@
     margin: 0 auto;
   }
 }
+
+// Secondary card link
+.app-cards--secondary .nhsapp-card,
+.app-card--secondary {
+  background: transparent;
+}
+
+// Border alignment
+.nhsapp-card__container {
+  margin: 0 0 0 16px;
+  padding: 20px 16px 20px 0;
+}

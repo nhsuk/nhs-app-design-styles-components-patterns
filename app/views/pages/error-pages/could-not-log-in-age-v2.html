@@ -33,10 +33,22 @@
         ]
       })}}
 
-      {{ insetText({
-        html: "<p>For urgent medical advice, use <a href='#'>111 online</a> or call <a href='#'>111</a>.</p>",
-        classes: "nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5"
-      }) }}
+      <h2 class="nhsuk-heading-m">For urgent medical advice</h2>
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "Use 111 online",
+            href: "#"
+          },
+          {
+            title: "Call 111",
+            href: "#"
+          }
+        ]
+      })}}
 
     </div>
   </div>

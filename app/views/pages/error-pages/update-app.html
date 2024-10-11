@@ -14,13 +14,10 @@
 
       {{ button({
         text: "Update the NHS App",
-        classes: "nhsapp-button"
+        classes: "nhsapp-button app-button--secondary"
       }) }}
 
-      {{ insetText({
-        html: "<p>For urgent medical advice, use <a href='#'>111 online</a> or call <a href='#'>111</a>.</p>",
-        classes:"nhsuk-u-margin-top-4"
-      }) }}
+      {% include "pages/error-pages/medical-note.html" %}
 
     </div>
   </div>

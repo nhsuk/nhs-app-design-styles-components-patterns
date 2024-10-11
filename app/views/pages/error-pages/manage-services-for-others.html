@@ -14,21 +14,13 @@
 
       <p>We could not connect to your GP system.</p>
 
+      <h2>What you can do</h2>
+
       <p>If you need to use health services on behalf of someone else, contact their GP surgery or try again later.</p>
 
-      <h2>If you keep seeing this message</h2>
+      {% include "pages/error-pages/error-code.html" %}
 
-      <p>Contact the NHS App team and mention <strong>the error code [xxxxxx]</strong>.</p>
-
-      {{ nhsappCardGroup({
-        stacked: true,
-        cards: [
-          {
-            title: "Contact the NHS App team",
-            href: "#"
-          }
-        ]
-      })}}
+      {% include "pages/error-pages/medical-note.html" %}
 
     </div>
   </div>

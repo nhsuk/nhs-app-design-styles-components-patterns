@@ -1,0 +1,37 @@
+{% extends 'layout-app-not-signed-in.html' %}
+
+{% set pageHeading = "We could not connect you to the NHS App" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!--{% include "components/icons/warning.html" %}-->
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>You may be offline, or your services may be having connection problems.</p>
+
+      <h2 class="nhsuk-heading-m">What you can do</h2>
+
+      <ol class="nhsuk-list nhsuk-list--number">
+        <li>Try checking your internet connection.</li>
+        <li>Refresh this page.</li>
+      </ol>
+
+      {{ button({
+        text: "Refresh page",
+        classes: "nhsapp-button app-button--secondary"
+      }) }}
+
+      <h2 class="nhsuk-heading-m">If the problem continues</h2>
+      <p>If you still cannot connect and need GP services, use your GP surgery website or call the surgery.</p>
+
+      {% include "pages/error-pages/medical-note.html" %}
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

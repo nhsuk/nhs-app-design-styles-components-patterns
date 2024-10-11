@@ -29,3 +29,24 @@
       padding-bottom: 12px;
   }
 }
+
+.app-header--native {
+  .nhsuk-header__container {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .nhsuk-logo {
+    display: block;
+    height: 32px;
+    width: 80px;
+    border: 0;
+
+    .nhsuk-logo__background {
+      fill: white;
+    }
+    .nhsuk-logo__text {
+      fill: $color_nhsuk-blue;
+    }
+  }
+}

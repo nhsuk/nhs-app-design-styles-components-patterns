@@ -16,18 +16,10 @@
 
       <p>You'll need to contact your GP surgery to book an appointment.</p>
 
-      <h2 class="nhsuk-heading-m">What you can do next</h2>
-
-      {{ nhsappCardGroup({
-        stacked: true,
-        classes: "app-cards--secondary",
-        cards: [
-          {
-            title: "Find GP surgery contact details",
-            href: "#"
-          }
-        ]
-      })}}
+      {{ button({
+        text: "Find GP surgery contact details",
+        classes: "nhsapp-button app-button--secondary"
+      }) }}
 
       {% include "pages/error-pages/medical-note.html" %}
 

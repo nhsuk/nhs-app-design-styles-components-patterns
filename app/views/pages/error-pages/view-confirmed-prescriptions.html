@@ -1,0 +1,39 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "We could not show your confirmed prescriptions" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!--{% include "components/icons/warning.html" %}-->
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>If you need help with a prescription now, contact your GP or pharmacy directly.</p>
+
+      {% include "pages/error-pages/error-code.html" %}
+
+      <h2 class="nhsuk-heading-m">What else you can do</h2>
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "Request an emergency repeat prescription using 111 online",
+            href: "#"
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

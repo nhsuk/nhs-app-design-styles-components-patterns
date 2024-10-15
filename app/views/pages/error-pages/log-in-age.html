@@ -16,19 +16,16 @@
 
       <p>Your parent or guardian may be able to use the NHS App for you until you are aged 13. You both need to be registered at the same GP surgery. Contact your GP surgery to find out more.</p>
 
-      {{ button({
-        text: "Find GP surgery contact details",
-        classes: "nhsapp-button app-button--secondary"
-      }) }}
-
-      <h2 class="nhsuk-heading-m">Find out more</h2>
-
       {{ nhsappCardGroup({
         stacked: true,
         classes: "app-cards--secondary",
         cards: [
           {
             title: "Who can use the NHS App?",
+            href: "#"
+          },
+          {
+            title: "Find GP surgery contact details",
             href: "#"
           }
         ]

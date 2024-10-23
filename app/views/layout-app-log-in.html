@@ -1,0 +1,30 @@
+{% extends 'layout-app.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper red" %}
+
+{% block pageTitle %}
+  {{ pageHeading }} - NHS App redesign work
+{% endblock %}
+
+<!-- HEADER -->
+{% block header %}
+{% endblock %}
+
+{% block main %}
+{% if overlay === true %}
+  <div class="app-login-wrapper app-login-wrapper--overlay">
+{% else %}
+  <div class="app-login-wrapper">
+{% endif %}
+  <div class="nhsuk-width-container">
+    {% block outerContent %}{% endblock %}
+    <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</div>
+{% endblock %}
+
+<!-- FOOTER -->
+{% block footer %}
+{% endblock %}

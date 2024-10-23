@@ -12,10 +12,16 @@
 
       <p>This may be a temporary problem. You can go back and try logging in again.</p>
 
-      {{ button({
-        text: "Go back to login",
-        classes: "nhsapp-button app-button--secondary"
-      }) }}
+      <form id="form" method="post" action="/pages/login" novalidate="novalidate">
+
+        <input type="hidden" name="login" value="true">
+
+        {{ button({
+          text: "Go back to login",
+          classes: "nhsapp-button app-button--secondary"
+        }) }}
+        
+      </form>
 
       {% include "pages/error-pages/error-code.html" %}
 

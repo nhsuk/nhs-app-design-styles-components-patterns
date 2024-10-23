@@ -67,12 +67,16 @@ $app-login-face-id-height: 236px;
   }
 
   .app-login-face-id__img--face-id {
+    height: 158px;
     margin-bottom: nhsuk-spacing(6);
+    width: 156px;
   }
 
   .app-login-face-id__img--spinner {
     align-self: center;
     animation: rotateSpinner 800ms linear infinite;
+    height: 30px;
+    width: 30px;
   }
 
   @keyframes rotateSpinner {

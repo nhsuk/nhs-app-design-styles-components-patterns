@@ -13,7 +13,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <form id="form" method="post" action="/pages/services/gp-appointment-type-answer" novalidate="novalidate">
+      <form id="form" method="post" action="/pages/services/gp-appointment-select-appointment-v4" novalidate="novalidate">
 
         {{ radios({
           idPrefix: "gp-appointment-type",
@@ -45,42 +45,6 @@
               value: "B12 Injection",
               text: "B12 Injection",
               checked: checked("gp-appointment-type", "B12 Injection")
-            },
-            {
-              value: "Childhood vaccinations",
-              text: "Childhood vaccinations",
-              checked: checked("gp-appointment-type", "Childhood vaccinations")
-            },
-            {
-              value: "Contraception appointment",
-              text: "Contraception appointment",
-              checked: checked("gp-appointment-type", "Contraception appointment")
-            },
-            {
-              value: "Carer health check",
-              text: "Carer health check",
-              checked: checked("gp-appointment-type", "Carer health check")
-            },
-            {
-              value: "Diabetic review",
-              text: "Diabetic review",
-              checked: checked("gp-appointment-type", "Diabetic review")
-            },
-            {
-              value: "Dressing/wound care",
-              text: "Dressing/wound care",
-              checked: checked("gp-appointment-type", "Dressing/wound care")
-            },
-            {
-              divider: "or"
-            },
-            {
-              value: "none",
-              text: "Contact GP about a health problem",
-              checked: checked("gp-appointment-type", "none"),
-              hint: {
-                text: "This service is provided by Engage"
-              }
             }
           ]
         }) }}

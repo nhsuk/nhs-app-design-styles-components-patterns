@@ -1,0 +1,655 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+{% set backLinkText = "Back" %}
+
+{% if data['gp-appointment-type'] == "Routine GP"  %}
+  {% set backLinkURL = "/pages/services/gp-appointment-type" %}
+{% else %}
+  {% set backLinkURL = "/pages/services/gp-appointment-invite" %}
+{% endif %}
+
+{% set pageHeading = "Select an appointment" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true,
+        titleSmall: true
+      })}}
+
+      <div class="nhsapp-section-heading nhsuk-u-margin-bottom-5" style="align-items: center;">
+        <a href="/pages/services/gp-appointment-filters-v2" class="app-link--with-icon app-link nhsuk-link--no-visited-state nhsuk-u-margin-bottom-0">
+          <svg class="app-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.3302 7.19995H3.66016C3.52209 7.19995 3.41016 7.31188 3.41016 7.44995V8.46995C3.41016 8.60802 3.52209 8.71995 3.66016 8.71995H20.3302C20.4682 8.71995 20.5802 8.60802 20.5802 8.46995V7.44995C20.5802 7.31188 20.4682 7.19995 20.3302 7.19995Z" />
+            <path d="M17.6598 11.24H6.33984C6.20177 11.24 6.08984 11.3519 6.08984 11.49V12.51C6.08984 12.6481 6.20177 12.76 6.33984 12.76H17.6598C17.7979 12.76 17.9098 12.6481 17.9098 12.51V11.49C17.9098 11.3519 17.7979 11.24 17.6598 11.24Z" />
+            <path d="M15.0397 15.24H8.96973C8.83166 15.24 8.71973 15.3519 8.71973 15.49V16.51C8.71973 16.6481 8.83166 16.76 8.96973 16.76H15.0397C15.1778 16.76 15.2897 16.6481 15.2897 16.51V15.49C15.2897 15.3519 15.1778 15.24 15.0397 15.24Z" />
+          </svg>
+          <span class="app-u-gap-0">
+            Filter <span class="nhsuk-u-visually-hidden"> appointments </span>
+            {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+            {% else %}
+              ({{ data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length }})
+              <span class="nhsuk-u-visually-hidden"> 
+                {% if data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length > 1 %}
+                filters 
+                {% else %}
+                filter
+                {% endif %}
+                currently selected</span>
+            {% endif %}
+          </span>
+        </a>
+        {% if data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+          {% else %}
+          <form id="form-clear" method="post" action="/pages/services/gp-appointment-select-appointment-v4" novalidate="novalidate">
+            <input type="hidden" name="gp-appointment-clinician" value="">
+            <input type="hidden" name="gp-appointment-clinician-sex" value="">
+            <input type="hidden" name="gp-appointment-location" value="">
+            {% if data['gp-appointment-clinician-sex'] | length + data['gp-appointment-clinician'] | length > 1 %}
+              {{ button({
+                text: "Clear filters",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }} 
+            {% else %}
+              {{ button({
+                text: "Clear filter",
+                classes: "app-button--link nhsuk-u-margin-bottom-0"
+              }) }}
+            {% endif %}
+          </form>
+        {% endif %}
+      </div>
+
+      <h2 class="nhsuk-heading-s">
+        Wednesday 6 November 2024
+      </h2>
+
+      <ul class="nhsapp-cards nhsapp-cards--stacked">
+        {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or 
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm3" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:00am">
+            <input type="hidden" name="appointment-date" value="Wednesday 6 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm3').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Wednesday 6 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+          data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+          "Female" in data['gp-appointment-clinician-sex'] or 
+          "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] 
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm4" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:30am">
+            <input type="hidden" name="appointment-date" value="Wednesday 6 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm4').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Wednesday 6 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+          data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+          "Male" in data['gp-appointment-clinician-sex'] or 
+          "Dr Max Smith (Male)" in data['gp-appointment-clinician'] 
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm5" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="10:00am">
+            <input type="hidden" name="appointment-date" value="Wednesday 6 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm5').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Wednesday 6 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm6" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="10:30am">
+            <input type="hidden" name="appointment-date" value="Wednesday 6 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm6').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  10:30am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Wednesday 6 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+      </ul>
+
+      <h2 class="nhsuk-heading-s">
+        Thursday 7 November 2024
+      </h2>
+
+      <ul class="nhsapp-cards nhsapp-cards--stacked">
+        {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm9" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:00am">
+            <input type="hidden" name="appointment-date" value="Thursday 7 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm9').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Thursday 7 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+          data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+          "Female" in data['gp-appointment-clinician-sex'] or 
+          "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] 
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm10" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:30am">
+            <input type="hidden" name="appointment-date" value="Thursday 7 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm10').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Thursday 7 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+          data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+          "Male" in data['gp-appointment-clinician-sex'] or 
+          "Dr Max Smith (Male)" in data['gp-appointment-clinician'] 
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm11" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="10:00am">
+            <input type="hidden" name="appointment-date" value="Wednesday 6 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)"> 
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm11').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Thursday 7 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+      </ul>
+
+      <h2 class="nhsuk-heading-s">
+        Friday 8 November 2024
+      </h2>
+
+      <ul class="nhsapp-cards nhsapp-cards--stacked">
+        {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm14" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:00am">
+              <input type="hidden" name="appointment-date" value="Friday 8 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm14').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Friday 8 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Female" in data['gp-appointment-clinician-sex'] or 
+            "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] 
+          %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm15" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="8:30am">
+            <input type="hidden" name="appointment-date" value="Friday 8 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm15').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Friday 8 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+        {% if 
+          data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+          "Male" in data['gp-appointment-clinician-sex'] or 
+          "Dr Max Smith (Male)" in data['gp-appointment-clinician'] 
+        %}
+        <li class="nhsapp-card">
+          <form id="appointmentForm16" method="post" action="/pages/services/gp-appointment-reason">
+            <input type="hidden" name="appointment-time" value="10:00am">
+            <input type="hidden" name="appointment-date" value="Friday 8 November 2024">
+            <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">  
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('appointmentForm16').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Friday 8 November 2024</span>
+                </a>
+                <div class="nhsapp-card__below">
+                  <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                </div>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+        {% endif %}
+      </ul>
+
+      <!-- MORE APPOINTMENTS -->
+      <div id="moreAppointments" tabindex="0" style="display:none;">
+        <h2 class="nhsuk-heading-m nhsuk-u-padding-top-1">
+          Monday 11 November 2024
+        </h2>
+
+        <ul class="nhsapp-cards nhsapp-cards--stacked">
+          {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm19" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:00am">
+              <input type="hidden" name="appointment-date" value="Monday 11 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm19').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Monday 11 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Female" in data['gp-appointment-clinician-sex'] or 
+            "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] 
+          %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm20" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Monday 11 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm20').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Monday 11 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Male" in data['gp-appointment-clinician-sex'] or 
+            "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] 
+          %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm21" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10:00am">
+              <input type="hidden" name="appointment-date" value="Monday 11 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)"> 
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm21').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Monday 11 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm22" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10:30am">
+              <input type="hidden" name="appointment-date" value="Monday 11 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm22').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    10:30am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Monday 11 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+        </ul>
+
+        <h2 class="nhsuk-heading-s">
+          Tuesday 12 November 2024
+        </h2>
+
+        <ul class="nhsapp-cards nhsapp-cards--stacked">
+          {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm25" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:00am">
+              <input type="hidden" name="appointment-date" value="Tuesday 12 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm25').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Tuesday 12 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Female" in data['gp-appointment-clinician-sex'] or 
+            "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] 
+          %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm26" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Tuesday 12 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm26').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Tuesday 12 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Male" in data['gp-appointment-clinician-sex'] or 
+            "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] 
+          %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm27" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10:00am">
+              <input type="hidden" name="appointment-date" value="Monday 11 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm27').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Tuesday 12 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+        </ul>
+
+        <h2 class="nhsuk-heading-s">
+          Wednesday 13 November 2024
+        </h2>
+
+        <ul class="nhsapp-cards nhsapp-cards--stacked">
+          {% if 
+        data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+        "Female" in data['gp-appointment-clinician-sex'] or 
+        "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician']  
+        %}
+            <li class="nhsapp-card">
+              <form id="appointmentForm30" method="post" action="/pages/services/gp-appointment-reason">
+                <input type="hidden" name="appointment-time" value="8:00am">
+                <input type="hidden" name="appointment-date" value="Wednesday 13 November 2024">
+                <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
+                <div class="nhsapp-card__container">
+                  <div class="nhsapp-card__content">
+                    <a href="javascript:{}" onclick="document.getElementById('appointmentForm30').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                      8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Wednesday 13 November 2024</span>
+                    </a>
+                    <div class="nhsapp-card__below">
+                      <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Sarah Clarke (Female)</p>
+                    </div>
+                  </div>
+                  {{ nhsappIcon('chevronRight') }}
+                </div>
+              </form>
+            </li>
+            {% endif %}
+            {% if 
+              data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+              "Female" in data['gp-appointment-clinician-sex'] or 
+              "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] or 
+              data['gp-appointment-clinician'] == "" and "Male" not in data['gp-appointment-clinician-sex'] 
+            %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm31" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="8:30am">
+              <input type="hidden" name="appointment-date" value="Wednesday 13 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Louise Williams (Female)">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm31').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    8:30am <span class="nhsuk-u-visually-hidden">with Dr Louise Williams (Female) on Wednesday 13 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Louise Williams (Female)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+          {% if 
+            data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" or
+            "Male" in data['gp-appointment-clinician-sex'] or 
+            "Dr Max Smith (Male)" in data['gp-appointment-clinician'] or 
+            data['gp-appointment-clinician'] == "" and "Female" not in data['gp-appointment-clinician-sex'] 
+          %}
+          <li class="nhsapp-card">
+            <form id="appointmentForm32" method="post" action="/pages/services/gp-appointment-reason">
+              <input type="hidden" name="appointment-time" value="10:00am">
+              <input type="hidden" name="appointment-date" value="Wednesday 13 November 2024">
+              <input type="hidden" name="appointment-clinician" value="Dr Max Smith (Male)">  
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm32').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                    10:00am <span class="nhsuk-u-visually-hidden">with Dr Max Smith (Male) at York Road Practice on Wednesday 13 November 2024</span>
+                  </a>
+                  <div class="nhsapp-card__below">
+                    <p aria-hidden="true" class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-1">Dr Max Smith (Male)</p>
+                  </div>
+                </div>
+                {{ nhsappIcon('chevronRight') }}
+              </div>
+            </form>
+          </li>
+          {% endif %}
+        </ul>
+      
+      {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+        <p id="loadMoreCount" style="display:none;">You have viewed 20 of 20 appointments</p>
+      </div>
+      <div id="loadMore">
+        <p id="loadMoreText" class="nhsuk-u-margin-bottom-2">You have viewed 10 of 20 appointments</p>
+        <button id="loadMoreBtn" class="nhsuk-button nhsapp-button app-button--secondary">
+          Load more <span class="nhsuk-u-visually-hidden">appointments</span>
+        </button>
+        <span id="loader" style="display:none" class="nhsuk-loader">
+          <span class="nhsuk-loader__spinner">
+            <span class="nhsuk-u-visually-hidden">Loading appointments</span>
+          </span>
+        </span>
+      </div>
+      {% else %}
+      {% endif %}
+
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block pageScripts %}
+    {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+      
+      <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
+      <script>
+        document.getElementById('loadMoreBtn').addEventListener('click', function() {
+          // Get a reference to the hidden div
+          var hiddenDiv = document.getElementById('moreAppointments');
+
+          loader.style.display = 'block';
+          loadMoreBtn.style.display = 'none';
+          loadMoreText.style.display = 'none';
+
+          window.setTimeout(function () {
+            // Check if the div is currently hidden
+          if (hiddenDiv.style.display === 'none') {
+            // If hidden, show the div
+            hiddenDiv.style.display = 'block';
+            hiddenDiv.focus()
+            loadMore.style.display = 'none';
+            loadMoreCount.style.display = 'block';
+          } else {
+            // If visible, hide the div
+            hiddenDiv.style.display = 'none';
+          }
+        }, 1500);
+        });
+      </script>
+    {% else %}
+    {% endif %}
+  {% endblock %}

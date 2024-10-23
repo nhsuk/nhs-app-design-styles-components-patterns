@@ -11,7 +11,7 @@
   {% set backLinkURL = "/pages/services/gp-appointment-type" %}
 {% endif %}
 
-{% set pageHeading = "We recommend contacting your GP about this health problem" %}
+{% set pageHeading = "You have not been asked to book this appointment by your GP surgery" %}
 
 {% block content %}
 
@@ -25,10 +25,10 @@
         titleSmall: true
       })}}
 
-      <p>If you have not been invited to an appointment the healthcare professional associated with this type of appointment may not be the most appropriate for your particular health problem.</p>
+      <p>This appointment may not be relevant for your health problem.</p>
 
       {{ nhsappSectionHeading({
-        headingText: "Other things you can do"
+        headingText: "What you can do next"
       })}}
 
       <!-- PANEL LINK CARD - Your health -->
@@ -36,12 +36,12 @@
         stacked: true,
         cards: [
           {
-            title: "Contact GP about a health problem",
-            href: "#"
+            title: "Select an appointment type",
+            href: "/pages/services/gp-appointment-type"
           },
           {
-            title: "Check for available GP appointments",
-            href: "/pages/services/gp-appointment-type"
+            title: "Contact GP about a health problem",
+            href: "#"
           }
           
         ]

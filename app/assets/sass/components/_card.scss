@@ -159,35 +159,7 @@
   }
 }
 
-// Border alignment
-.nhsapp-card__container {
-  margin: 0;
-  padding: 16px 20px;
-}
-
 // Secondary card link
-
-.app-cards--primary .nhsapp-card,
-.app-cards--secondary .nhsapp-card {
-
-  &:first-of-type {
-    border-radius: 4px 4px 0 0;
-  }
-
-  &:last-of-type {
-    border-radius: 0 0 4px 4px;
-  }
-}
-
-.app-cards--primary .nhsapp-card {
-
-  &:first-of-type,
-  &:last-of-type {
-    border: none;
-  }
-
-}
-
 .app-cards--secondary .nhsapp-card,
 .app-card--secondary {
   background: transparent;

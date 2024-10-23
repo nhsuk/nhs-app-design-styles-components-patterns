@@ -13,14 +13,34 @@
         <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
       </div>
 
-      <h2 class="nhsuk-heading-l">What happens next</h2>
-      <p>You will be called by your GP surgery between 8am and 11am on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}.</p>
-      <p>Keep your phone with you at all times, and be aware the GP number may be withheld.</p>
+      <p>
+        <span class="nhsuk-u-visually-hidden">Date: </span>{{ data['appointment-date'] or 'Wednesday 29 May 2024' }}<br>
+        <span class="nhsuk-u-visually-hidden">Time: </span>{{ data['appointment-time'] or '9:00am' }}</span>
+      </p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p>
+        <span class="nhsuk-u-visually-hidden">Location: </span>{{ data['appointment-location'] or 'York Road Practice' }} <br>
+        <span class="nhsuk-u-visually-hidden">Clinician: </span>{{ data['appointment-clinician'] or 'Dr Max Smith (Male)' }} 
+      </p>
         
       {{ button({
-        text: "View all appointments",
+        text: "Add to calendar",
         classes: "nhsuk-u-margin-top-1 nhsapp-button app-button--secondary"
       }) }}
+
+      <h2 class="nhsuk-heading-s">What you can do next</h2>
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "View upcoming appointments",
+            href: "#"
+          }
+        ]
+      }) }}
+
 
     </div>
   </div>

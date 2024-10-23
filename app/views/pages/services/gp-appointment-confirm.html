@@ -11,7 +11,7 @@
   {% set backLinkURL = "/pages/services/gp-appointment-reason" %}
 {% endif %}
 
-{% set pageHeading = "Confirm appointment details" %}
+{% set pageHeading = "Check appointment details" %}
 
 {% block content %}
 
@@ -41,20 +41,6 @@
           </dd>
         </div>
 
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-location'] or 'York Road Practice' }}
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment-v3">
-              Change<span class="nhsuk-u-visually-hidden"> location</span>
-            </a>
-          </dd>
-        </div>
-
         {% if data['appointment-location'] == "Phone"  %}
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
@@ -79,7 +65,7 @@
             Clinician
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-clinician'] or 'Dr Max Smith' }}
+            {{ data['appointment-clinician'] or 'Dr Max Smith (Male)' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
             <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment-v3">
@@ -91,34 +77,14 @@
 
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Date
+            Time and date
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}
+            {{ data['appointment-time'] or '9:00am' }} on {{ data['appointment-date'] or 'Wednesday 29 May 2024' }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment-v3">
-              Change <span class="nhsuk-u-visually-hidden"> date of appointment</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="nhsuk-summary-list__row">
-          <dt class="nhsuk-summary-list__key">
-            Time
-          </dt>
-          <dd class="nhsuk-summary-list__value">
-            {% if data['appointment-time'] == "Morning"  %}
-              Morning between 8am and 11am
-            {% elif data['appointment-time'] == "Afternoon" %}
-              Afternoon between 1pm and 4pm
-            {% else %}
-              {{ data['appointment-time'] or '9:00am' }}
-            {% endif %}
-          </dd>
-          <dd class="nhsuk-summary-list__actions">
-            <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment-v3">
-              Change <span class="nhsuk-u-visually-hidden"> time of appointment</span>
+            <a class="nhsuk-link--no-visited-state" href="/pages/services/gp-appointment-select-appointment-v4">
+              Change <span class="nhsuk-u-visually-hidden"> time and date of appointment</span>
             </a>
           </dd>
         </div>

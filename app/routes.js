@@ -32,7 +32,7 @@ router.post('/pages/services/gp-appointment-type-answer', function (req, res) {
   var install = req.session.data['gp-appointment-type']
 
   if (install == "Routine GP"){
-    res.redirect('/pages/services/gp-appointment-select-appointment-v3')
+    res.redirect('/pages/services/gp-appointment-select-appointment-v4')
   } else if (install == "none") {
     res.redirect('/pages/services/gp-appointment-type')
   } else {
@@ -48,7 +48,7 @@ router.post('/pages/services/gp-appointment-invite-answer', function (req, res) 
   if (install == "No"){
     res.redirect('/pages/services/gp-appointment-type-not-available')
   } else {
-    res.redirect('/pages/services/gp-appointment-select-appointment-v3')
+    res.redirect('/pages/services/gp-appointment-select-appointment-v4')
   }
 })
 

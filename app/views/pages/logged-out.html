@@ -1,0 +1,35 @@
+{% extends 'layout-app-log-in.html' %}
+
+{% set pageHeading = "You have logged out" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="app-login-actions">
+
+      <form id="form" method="post" action="/pages/login" novalidate="novalidate">
+
+        <h1 class="nhsuk-heading-s">You have logged out</h1>
+
+        <input type="hidden" name="login" value="false">
+
+        {{ button({
+          text: "Log back in",
+          classes: "nhsapp-button nhsuk-button--reverse"
+        }) }}
+        
+      </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+
+  
+
+

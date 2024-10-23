@@ -1,0 +1,72 @@
+// Login wrapper
+$app-login-logo-height: 40px;
+$app-login-logo-width: 100px;
+$app-login-face-id-width: 156px;
+$app-login-face-id-height: 236px;
+
+.app-login-wrapper {
+  background-color: $color_nhsuk-blue;
+  color: white;
+  height: 100vh;
+
+  .nhsuk-logo {
+    height: $app-login-logo-height;
+    left: calc(50% - ($app-login-logo-width/2));
+    position: absolute;
+    top: calc(30% - ($app-login-logo-height/2));
+    width: $app-login-logo-width;
+  }
+
+  .nhsuk-main-wrapper {
+    height: 100vh;
+    margin: auto 0;
+    position: relative;
+  }
+
+  .app-login-face-id {
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - ($app-login-face-id-width/2));
+    position: absolute;
+    top:  calc(50% - ($app-login-face-id-height/2));
+  }
+
+  .app-login-face-id__img {
+    display: block;
+  }
+
+  .app-login-face-id__img--face-id {
+    height: 158px;
+    margin-bottom: nhsuk-spacing(6);
+    width: 156px;
+  }
+
+  .app-login-face-id__img--spinner {
+    align-self: center;
+    animation: rotateSpinner 800ms linear infinite;
+    height: 30px;
+    width: 30px;
+  }
+
+  @keyframes rotateSpinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+}
+
+.app-login-wrapper--overlay {
+  background-color: #004B93;
+
+  .nhsuk-logo {
+    opacity: .5;
+  }
+}
+
+.app-login-actions {
+  bottom: 50px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}

@@ -5,7 +5,6 @@
 .app-bottom-navigation {
   background-color: $nhsuk-link-color;
   bottom: 0;
-  padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
   left: 0;
   width: 100%;

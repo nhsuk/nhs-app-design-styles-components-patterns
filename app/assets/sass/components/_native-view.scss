@@ -26,7 +26,6 @@
     flex-direction: column;
     /* Adjust for the status bar */
     padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* Scrollable content area */

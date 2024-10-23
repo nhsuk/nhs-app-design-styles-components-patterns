@@ -1,6 +1,14 @@
 {% extends 'layout-app.html' %}
 
-{% set mainClasses = "nhsuk-main-wrapper red" %}
+{% set mainClasses = "nhsuk-main-wrapper" %}
+
+{% block customStyles %}
+<style>
+  html {
+    background-color: red !important;
+  }
+</style>
+{% endblock %}
 
 {% block pageTitle %}
   {{ pageHeading }} - NHS App redesign work

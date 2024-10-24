@@ -3,6 +3,8 @@
 <!-- ADDS CUSTOM CLASSES ON MAIN TO GIVE CORRECT SPACING FOR NATIVE PAGES -->
 {% if data['web'] === "yes" %}
 
+  {% set bodyClasses = "nhs-app-web" %}
+
   {% if linkedProfile === true or backLink === true %}
     {% set mainClasses = "app-main-wrapper--no-top-padding" %}
   {% else %}
@@ -13,6 +15,8 @@
   {% endif %}
 
 {% else %}
+
+  {% set bodyClasses = "nhs-app-native" %}
 
   {% if containerFullWidth === true %}
     {% set containerClasses = "app-width-container app-width-container--full" %}

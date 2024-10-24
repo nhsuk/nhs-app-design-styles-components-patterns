@@ -15,7 +15,7 @@
       </svg>
 
       <div class="app-login-face-id">
-        <img class="app-login-face-id__img app-login-face-id__img--face-id" src='/images/login/face-id.png' alt="">
+        <img class="app-login-face-id__img app-login-face-id__img--face-id" src='/images/login/face-id-success.png' alt="">
         <img class="app-login-face-id__img app-login-face-id__img--spinner" src='/images/login/spinner.png' alt="">
       </div>
 
@@ -25,14 +25,26 @@
   {% endblock %}
 
   {% block pageScripts %}
-  <script>
-    $(document).ready(function () {
-        // Handler for .ready() called.
-        window.setTimeout(function () {
-            location.href = "/pages/login-face-id-success";
-        }, 1000);
-    });
-  </script>
+
+    {% if data['login'] === "true" %}
+      <script>
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            window.setTimeout(function () {
+                location.href = "/pages/home-p9";
+            }, 1000);
+        });
+      </script>
+    {% else %}
+      <script>
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            window.setTimeout(function () {
+                location.href = "/pages/error-pages/log-in";
+            }, 1000);
+        });
+      </script>
+    {% endif %}
 {% endblock %}
 
 

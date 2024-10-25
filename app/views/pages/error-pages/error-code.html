@@ -1,2 +1,2 @@
 <h2 class="nhsuk-heading-m">If the problem continues</h2>
-<p>If you keep seeing this message, <a href="#">contact the NHS App team</a> and mention the <strong>error code 32[xxx]</strong>.</p>
+<p>If you keep seeing this message, <a href="#">contact the NHS App team</a> and mention the <strong>error code {% if errorCode %}{{ errorCode }}{% else %}32[xxx]{% endif %}</strong>.</p>

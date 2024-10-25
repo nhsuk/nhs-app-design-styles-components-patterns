@@ -1,0 +1,44 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Services" %}
+
+{% set backLink = true %}
+
+{% set errorCode = "3ezxja" %}
+
+{% set pageHeading = "You are not currently able to book GP appointments online" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!--{% include "components/icons/warning.html" %}-->
+      <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
+
+      <p>If you need to book an appointment now, contact your GP surgery.</p>
+
+      {% include "pages/error-pages/medical-note.html" %}
+
+      {% include "pages/error-pages/error-code.html" %}
+
+      <h2 class="nhsuk-heading-m">Other things you can do</h2>
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "Ask your GP for advice",
+            description: "Answer questions online and get a response from your GP surgery",
+            href: "#"
+          }
+        ]
+      })}}
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+

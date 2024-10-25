@@ -80,11 +80,13 @@
     document.getElementById('logoutButton').addEventListener('click', function() {
       // Get a reference to the hidden div
       var hiddenDiv = document.getElementById('logoutActionSheet');
+      var bottomNav = document.getElementById('bottomNav');
 
       // Check if the div is currently hidden
       if (hiddenDiv.style.display === 'none') {
         // If hidden, show the div
         hiddenDiv.style.display = 'block';
+        bottomNav.style.display = 'none';
         hiddenDiv.focus()
       } else {
         // If visible, hide the div
@@ -95,11 +97,13 @@
     document.getElementById('cancelButton').addEventListener('click', function() {
       // Get a reference to the hidden div
       var hiddenDiv = document.getElementById('logoutActionSheet');
+      var bottomNav = document.getElementById('bottomNav');
 
       // Check if the div is currently hidden
       if (hiddenDiv.style.display === 'block') {
         // If hidden, show the div
         hiddenDiv.style.display = 'none';
+        bottomNav.style.display = 'block';
         hiddenDiv.focus()
       } else {
         // If visible, hide the div

@@ -64,4 +64,7 @@ module.exports = {
   // Upcoming and past appointments
   "appointments": 4,
 
+  // GP appointments
+  "gpAppointmentError": "true",
+
 }

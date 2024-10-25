@@ -20,24 +20,46 @@
       {{ nhsappSectionHeading({
         headingText: "Your GP services"
       })}}
-
-      {{ nhsappCardGroup({
-        stacked: true,
-        cards: [
-          {
-            title: "Request medicines",
-            href: "/pages/your-health/repeat-prescription/select-medicines"
-          },
-          {
-            title: "Contact your GP surgery for a document or update",
-            href: "#"
-          },
-          {
-            title: "Check for available GP appointments",
-            href: "/pages/services/gp-appointment-type"
-          }
-        ]
-      }) }}
+      
+      <ol class="nhsapp-cards nhsapp-cards--stacked">
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a href="/pages/your-health/repeat-prescription/select-medicines" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                Request medicines
+              </a>
+            </div>
+            {{ nhsappIcon('chevronRight') }}
+          </div>
+        </li>
+        <li class="nhsapp-card">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <a href="/" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                Contact your GP surgery for a document or update
+              </a>
+            </div>
+            {{ nhsappIcon('chevronRight') }}
+          </div>
+        </li>
+        <li class="nhsapp-card">
+          {% if data['gpAppointmentError'] == "true"  %}
+          <form id="gpAppointment" method="post" action="/pages/error-pages/book-gp-appointment">
+          {% else %}
+          <form id="gpAppointment" method="post" action="/pages/services/gp-appointment-type">
+          {% endif %}
+            <input type="hidden" name="gpAppointmentError" value="false">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="javascript:{}" onclick="document.getElementById('gpAppointment').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  Check for available GP appointments
+                </a>
+              </div>
+              {{ nhsappIcon('chevronRight') }}
+            </div>
+          </form>
+        </li>
+      </ol>
 
       {{ nhsappSectionHeading({
         headingText: "Other NHS services"

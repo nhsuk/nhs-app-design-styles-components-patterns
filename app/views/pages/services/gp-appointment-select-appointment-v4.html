@@ -331,7 +331,7 @@
       </ul>
 
       <!-- MORE APPOINTMENTS -->
-      <div id="moreAppointments" tabindex="0" style="display:none;">
+      <div id="moreAppointments" style="display:none;">
         <h2 class="nhsuk-heading-m nhsuk-u-padding-top-1">
           Monday 11 November 2024
         </h2>
@@ -349,7 +349,7 @@
               <input type="hidden" name="appointment-clinician" value="Dr Sarah Clarke (Female)">
               <div class="nhsapp-card__container">
                 <div class="nhsapp-card__content">
-                  <a href="javascript:{}" onclick="document.getElementById('appointmentForm19').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  <a id="loadMoreContent" href="javascript:{}" onclick="document.getElementById('appointmentForm19').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
                     8:00am <span class="nhsuk-u-visually-hidden">with Dr Sarah Clarke (Female) on Monday 11 November 2024</span>
                   </a>
                   <div class="nhsapp-card__below">
@@ -630,6 +630,7 @@
         document.getElementById('loadMoreBtn').addEventListener('click', function() {
           // Get a reference to the hidden div
           var hiddenDiv = document.getElementById('moreAppointments');
+          var loadMoreContent = document.getElementById('loadMoreContent');
 
           loader.style.display = 'block';
           loadMoreBtn.style.display = 'none';
@@ -640,7 +641,7 @@
           if (hiddenDiv.style.display === 'none') {
             // If hidden, show the div
             hiddenDiv.style.display = 'block';
-            hiddenDiv.focus()
+            loadMoreContent.focus()
             loadMore.style.display = 'none';
             loadMoreCount.style.display = 'block';
           } else {
@@ -653,3 +654,5 @@
     {% else %}
     {% endif %}
   {% endblock %}
+
+  

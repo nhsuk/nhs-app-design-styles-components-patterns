@@ -47,10 +47,64 @@
         ]
       })}}
 
-      <!-- LOGOUT LINK WITH VERSION -->
-      {% include "components/logout-link-with-version/include.html" %}
+      <button id="logoutButton" class="nhsuk-button app-button--secondary nhsapp-button" data-module="nhsuk-button" type="submit">
+        Log out
+      </button>
+
+      <p>Version: {{ data['version'] }}</p>
+
+      <div id="logoutActionSheet" tabindex="0" style="display:none">
+        <div class="action-sheet-mask"></div> 
+        <div class="action-sheet"> 
+          <div class="action-sheet-title"> 
+            <strong class="nhsuk-u-display-block">Are you sure you want to logout?</strong>
+            All progress will be reset once you log out
+          </div> 
+          <button onclick="document.getElementById('logoutForm').submit();" class="action-sheet-button action-sheet-button--destructive"> 
+            Log out
+          </button> 
+          <button id="cancelButton" class="action-sheet-button"> 
+            Cancel
+          </button> 
+        </div> 
+        <form id="logoutForm" action="/pages/logged-out"></form>
+      </div>
 
     </div>
   </div>
 
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    document.getElementById('logoutButton').addEventListener('click', function() {
+      // Get a reference to the hidden div
+      var hiddenDiv = document.getElementById('logoutActionSheet');
+
+      // Check if the div is currently hidden
+      if (hiddenDiv.style.display === 'none') {
+        // If hidden, show the div
+        hiddenDiv.style.display = 'block';
+        hiddenDiv.focus()
+      } else {
+        // If visible, hide the div
+        hiddenDiv.style.display = 'none';
+      }
+    });
+
+    document.getElementById('cancelButton').addEventListener('click', function() {
+      // Get a reference to the hidden div
+      var hiddenDiv = document.getElementById('logoutActionSheet');
+
+      // Check if the div is currently hidden
+      if (hiddenDiv.style.display === 'block') {
+        // If hidden, show the div
+        hiddenDiv.style.display = 'none';
+        hiddenDiv.focus()
+      } else {
+        // If visible, hide the div
+        hiddenDiv.style.display = 'block';
+      }
+    });
+  </script>
 {% endblock %}

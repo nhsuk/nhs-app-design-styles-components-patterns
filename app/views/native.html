@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% set pageHeading = "Native prototype" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <h1 class="nhsuk-heading-xl">
+        {{ pageHeading }}
+      </h1>
+
+      <script>
+        // Check if the app is running in standalone mode (added to home screen)
+        if (window.navigator.standalone) {
+          // Check if we're not already on the desired start page
+          if (window.location.pathname !== '/pages/login') {
+            // Redirect to the desired start page
+            window.location.replace('/pages/login');
+          }
+        }
+      </script>
+
+      <h2>Add to home screen</h2>
+
+      <p>Use the share icon to add this prototype to your home screen. This will make the prototype seem more realistic.</p>
+
+      <h3>To do this:</h3>
+
+      <ol>
+        <li>Select the share icon</li>
+        <li>Select Add to Home Screen</li>
+        <li>Select the added app icon to open the prototype</li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,9 +1,13 @@
 {% extends 'layout-app.html' %}
 
-{% set mainClasses = "nhsuk-main-wrapper red" %}
+{% set mainClasses = "nhsuk-main-wrapper" %}
 
 {% block pageTitle %}
   {{ pageHeading }} - NHS App redesign work
+{% endblock %}
+
+{% block customMetaData %}
+  <meta name="theme-color" content="#005eb8">
 {% endblock %}
 
 <!-- HEADER -->

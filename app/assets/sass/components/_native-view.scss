@@ -1,0 +1,48 @@
+// Native view
+.nhs-app-native {
+
+  // Full width buttons on mobile
+  @include mq($until: tablet) {
+    .nhsuk-button {
+      width: 100%;
+    }
+  }
+
+  // Fix for https://github.com/nhsuk/nhsuk-frontend/issues/1048
+  .nhsuk-card--care__heading-container {
+    &:has(.nhsuk-card--care__arrow){
+      transform: translateZ(0);
+    }
+  }
+
+  /* Main app container */
+  .app-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    /* Adjust for the status bar */
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* Scrollable content area */
+  .scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* For browsers that don't support env() */
+  @supports not (padding-top: env(safe-area-inset-top)) {
+    .app-container {
+      padding-top: 60px; /* Fallback value */
+    }
+  }
+
+}

@@ -40,6 +40,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
 
+    {% if data['web'] === "no" %}
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="apple-touch-icon" sizes="512x512" href="/images/nhs-icon-512.png">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="apple-touch-startup-image" href="/pages/login">
+    {% else %}
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endif %}
+
+    {% block customMetaData %}
+    {% endblock %}
+
     <title>{% block pageTitle %}NHS.UK prototype kit{% endblock %}</title>
 
     <link href="https://www.nhs.uk/" rel="preconnect">
@@ -59,7 +74,9 @@
 
     {% block headIcons %}
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+    {% if data['web'] === "yes" %}
+      <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+    {% endif %}
     <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
     <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
     <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
@@ -76,8 +93,12 @@
 
   <body class="{{ bodyClasses }}">
 
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-    {% block bodyStart %}{% endblock %}
+    {% if data['web'] === "no" %}
+      <div class="app-container">
+    {% endif %}
+
+      <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+      {% block bodyStart %}{% endblock %}
 
       {% block skipLink %}
         {{ skipLink({
@@ -93,12 +114,20 @@
       {% block beforeContent %}{% endblock %}
 
       {% block main %}
-        <div class="nhsuk-width-container {{ containerClasses }}">
-          {% block outerContent %}{% endblock %}
-          <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
-            {% block content %}{% endblock %}
-          </main>
-        </div>
+        {% if data['web'] === "no" %}
+          <div class="scrollable-content">
+        {% endif %}
+
+          <div class="nhsuk-width-container {{ containerClasses }}">
+            {% block outerContent %}{% endblock %}
+            <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
+              {% block content %}{% endblock %}
+            </main>
+          </div>
+
+        {% if data['web'] === "no" %}
+          </div>
+        {% endif %}
       {% endblock %}
 
       {% block afterContent %}{% endblock %}
@@ -106,6 +135,10 @@
       {% block footer %}
         {{ footer() }}
       {% endblock %}
+
+      {% if data['web'] === "no" %}
+      </div>
+    {% endif %}
 
     {% block bodyEnd %}{% endblock %}
 

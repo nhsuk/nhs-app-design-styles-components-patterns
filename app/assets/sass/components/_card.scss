@@ -159,22 +159,55 @@
   }
 }
 
+// Card overrides
+$card-border-width: 1px;
+
+.nhsapp-card__link {
+  @include nhsuk-typography-responsive(19);
+}
+
 // Secondary card link
 .app-cards--secondary .nhsapp-card,
 .app-card--secondary {
   background: transparent;
+  border-width: $card-border-width;
 
   &:first-of-type,
   &:last-of-type {
-    border-width: 1px;
-  }
-
-  .nhsapp-card__container {
-    padding-bottom: 16px;
-    padding-top: 16px;
+    border-width: $card-border-width;
   }
 
   .nhsapp-card__link {
     @include nhsuk-typography-responsive(19);
+  }
+}
+
+// Blue card
+// Used for account
+
+$card-blue-background: #D2E1EF;
+$card-blue-color: $nhsuk-link-active-color;
+
+.app-cards--blue .nhsapp-card {
+  background: $card-blue-background;
+  border-color: $card-blue-color;
+  color: $card-blue-color;
+
+  &:first-of-type,
+  &:last-of-type {
+    border-color: $card-blue-color;
+  }
+
+  .nhsapp-card__container {
+    border-color: $card-blue-color;
+  }
+
+  .nhsapp-card__link {
+    @include nhsuk-typography-responsive(19);
+    color: $card-blue-color;
+  }
+
+  .nhsapp-icon {
+    fill: $card-blue-color;
   }
 }

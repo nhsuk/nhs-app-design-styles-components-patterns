@@ -2,8 +2,7 @@
 
 {% set hub = "Account and settings" %}
 
-{% set pageHeading = "Account and settings" %}
-{% set pageDescription = "Change your NHS App settings and personal details" %}
+{% set pageHeading = "Account" %}
 
 {% block content %}
 
@@ -17,31 +16,105 @@
         description: pageDescription
       })}}
 
+      <ol class="nhsapp-cards nhsapp-cards--stacked app-cards--blue">
+        <li class="nhsapp-card ">
+          <div class="nhsapp-card__container">
+            <div class="nhsapp-card__content">
+              <h2 class="app-dynamic-page-title__name nhsuk-heading-l nhsuk-u-margin-bottom-1">{{ data['userFirstName'] }} {{ data['userLastName'] }}</h2>
+              <p>NHS Number: {{ data['nhsNumber'] }}</p>
+            </div>
+          </div>
+        </li>
+          <li class="nhsapp-card ">
+            <div class="nhsapp-card__container">
+              <div class="nhsapp-card__content">
+                <a href="/pages/account-and-settings/linked-profiles" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                  Manage health services for others
+                </a>
+              </div>
+              <svg class="nhsapp-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="2em" width="2em" viewBox="0 0 24 24">
+                <path d="M8.82 19.11a.97.97 0 0 1-.72-.31.996.996 0 0 1 .03-1.41l5.61-5.38-5.6-5.25c-.4-.38-.42-1.01-.05-1.41.38-.4 1.01-.42 1.41-.05l6.37 5.97c.2.19.31.45.32.72s-.11.54-.31.73l-6.37 6.11c-.19.19-.44.28-.69.28Z"></path>
+              </svg>
+            </div>
+          </li>
+        </ol>
+
+      {{ nhsappSectionHeading({
+        headingText: "Personal details"
+      }) }}
+
       {{ nhsappCardGroup({
         stacked: true,
         cards: [
           {
-            title: "Manage services for another person",
-            href: "/pages/account-and-settings/linked-profiles"
-          },
-          {
-            title: "Change your contact or login details",
+            title: "Update your contact details",
             href: "#"
           },
           {
-            title: "Turn on fingerprint, face or iris login",
+            title: "Your GP surgery details",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "Health choices"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Your organ donation decision",
             href: "#"
           },
           {
-            title: "Manage your notifications",
+            title: "Take part in health research",
             href: "#"
           },
           {
-            title: "Manage cookies and read legal information",
-            href: "/pages/account-and-settings/cookies-and-legal-agreement"
+            title: "Choose if date from your health records is shared for research",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "Settings"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Manage notifications",
+            href: "#"
           },
           {
-            title: "Update your GP surgery on changes to your personal details",
+            title: "Turn Face ID on or off",
+            href: "#"
+          },
+          {
+            title: "Change your login and password details",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "About the NHS App"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "Legal and cookies",
+            href: "#"
+          },
+          {
+            title: "Join the NHS App user research panel",
             href: "#"
           }
         ]
@@ -57,8 +130,7 @@
         <div class="action-sheet-mask"></div> 
         <div class="action-sheet"> 
           <div class="action-sheet-title"> 
-            <strong class="nhsuk-u-display-block">Are you sure you want to logout?</strong>
-            All progress will be reset once you log out
+            <strong>Are you sure you want to logout?</strong>
           </div> 
           <button onclick="document.getElementById('logoutForm').submit();" class="action-sheet-button action-sheet-button--destructive"> 
             Log out

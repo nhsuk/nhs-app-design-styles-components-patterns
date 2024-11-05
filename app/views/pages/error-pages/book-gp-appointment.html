@@ -20,10 +20,6 @@
 
       <p>If you need to book an appointment now, contact your GP surgery.</p>
 
-      {% include "pages/error-pages/medical-note.html" %}
-
-      {% include "pages/error-pages/error-code.html" %}
-
       <h2 class="nhsuk-heading-m">Other things you can do</h2>
 
       {{ nhsappCardGroup({
@@ -31,12 +27,14 @@
         classes: "app-cards--secondary",
         cards: [
           {
-            title: "Ask your GP for advice",
+            title: "Contact your GP about a health problem",
             description: "Answer questions online and get a response from your GP surgery",
             href: "#"
           }
         ]
       })}}
+
+      {% include "pages/error-pages/error-code.html" %}
 
     </div>
   </div>

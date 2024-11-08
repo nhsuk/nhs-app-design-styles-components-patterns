@@ -6,9 +6,7 @@
 {% set backLinkText = "Back" %}
 {% set backLinkURL = "/pages/services-p9" %}
 
-{% set errorCode = "3ezxja" %}
-
-{% set pageHeading = "Cannot show GP appointments" %}
+{% set pageHeading = "We could not connect to your GP system" %}
 
 {% block content %}
 
@@ -18,19 +16,17 @@
       <!--{% include "components/icons/warning.html" %}-->
       <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
 
-      <p>You can try loading GP appointments again.</p>
+      <p>You can try refreshing the page.</p>
 
       <form id="gpAppointment" method="post" action="/pages/error-pages/book-gp-appointment-next">
         <input type="hidden" name="gpAppointmentError" value="false">
 
         {{ button({
-          text: "Try again",
+          text: "Refresh page",
           classes: "nhsapp-button app-button--secondary"
         }) }}
 
       </form>
-
-      <p>You can contact your GP surgery directly if you need to book or change an upcoming appointment now.</p>
 
       {% include "pages/error-pages/medical-note.html" %}
 

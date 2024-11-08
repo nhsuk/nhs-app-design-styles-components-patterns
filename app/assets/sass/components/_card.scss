@@ -162,10 +162,6 @@
 // Card overrides
 $card-border-width: 1px;
 
-.nhsapp-card__link {
-  @include nhsuk-typography-responsive(19);
-}
-
 // Secondary card link
 .app-cards--secondary .nhsapp-card,
 .app-card--secondary {
@@ -175,10 +171,6 @@ $card-border-width: 1px;
   &:first-of-type,
   &:last-of-type {
     border-width: $card-border-width;
-  }
-
-  .nhsapp-card__link {
-    @include nhsuk-typography-responsive(19);
   }
 }
 
@@ -203,7 +195,6 @@ $card-blue-color: $nhsuk-link-active-color;
   }
 
   .nhsapp-card__link {
-    @include nhsuk-typography-responsive(19);
     color: $card-blue-color;
   }
 

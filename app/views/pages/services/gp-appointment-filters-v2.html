@@ -22,29 +22,6 @@
       <form id="form" method="post" action="/pages/services/gp-appointment-select-appointment-v4" novalidate="novalidate">
 
         {{ checkboxes({
-          idPrefix: "gp-appointment-clinician-sex",
-          name: "gp-appointment-clinician-sex",
-          fieldset: {
-            legend: {
-              text: "Sex of healthcare professional",
-              classes: "nhsuk-label--s"
-            }
-          },
-          "items": [
-            {
-              value: "Female",
-              text: "Female",
-              checked: checked("gp-appointment-clinician-sex", "Female")
-            },
-            {
-              value: "Male",
-              text: "Male",
-              checked: checked("gp-appointment-clinician-sex", "Male")
-            }
-          ]
-        }) }}
-
-        {{ checkboxes({
           idPrefix: "gp-appointment-clinician",
           name: "gp-appointment-clinician",
           fieldset: {

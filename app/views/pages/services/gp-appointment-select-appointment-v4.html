@@ -327,7 +327,11 @@
       </ul>
 
       <!-- MORE APPOINTMENTS -->
+      {% if data['gp-appointment-clinician'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] and "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] and "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] %}
       <div id="moreAppointments" style="display:none;">
+      {% else %}
+      <div id="moreAppointments">
+      {% endif %}
         <h2 class="nhsuk-heading-m nhsuk-u-padding-top-1">
           Monday 18 November 2024
         </h2>
@@ -595,7 +599,7 @@
           {% endif %}
         </ul>
       
-      {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+      {% if data['gp-appointment-clinician'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] and "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] and "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] %}
         <p id="loadMoreCount" style="display:none;">You have viewed 20 of 20 appointments</p>
       </div>
       <div id="loadMore">
@@ -619,7 +623,7 @@
   {% endblock %}
 
   {% block pageScripts %}
-    {% if data['gp-appointment-location'] == "" and data['gp-appointment-clinician-sex'] == "" and data['gp-appointment-clinician'] == "" %}
+    {% if data['gp-appointment-clinician'] == "" or "Dr Max Smith (Male)" in data['gp-appointment-clinician'] and "Dr Louise Williams (Female)" in data['gp-appointment-clinician'] and "Dr Sarah Clarke (Female)" in data['gp-appointment-clinician'] %}
       
       <!-- JAVASCRIPT TO SHOW THE HIDDEN CONTENT -->
       <script>

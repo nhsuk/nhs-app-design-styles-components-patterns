@@ -8,7 +8,7 @@
 
 {% set errorCode = "3ezxja" %}
 
-{% set pageHeading = "You are not currently able to book GP appointments online" %}
+{% set pageHeading = "Cannot show GP appointments" %}
 
 {% block content %}
 
@@ -18,23 +18,21 @@
       <!--{% include "components/icons/warning.html" %}-->
       <h1 class="nhsuk-u-margin-bottom-5">{{ pageHeading }}</h1>
 
-      <p>If you need to book an appointment now, contact your GP surgery.</p>
+      <p>You can try loading GP appointments again.</p>
 
-      <h2 class="nhsuk-heading-m">Other things you can do</h2>
+      <form id="gpAppointment" method="post" action="/pages/error-pages/book-gp-appointment-next">
+        <input type="hidden" name="gpAppointmentError" value="false">
 
-      {{ nhsappCardGroup({
-        stacked: true,
-        classes: "app-cards--secondary",
-        cards: [
-          {
-            title: "Contact your GP about a health problem",
-            description: "Answer questions online and get a response from your GP surgery",
-            href: "#"
-          }
-        ]
-      })}}
+        {{ button({
+          text: "Try again",
+          classes: "nhsapp-button app-button--secondary"
+        }) }}
 
-      {% include "pages/error-pages/error-code.html" %}
+      </form>
+
+      <p>You can contact your GP surgery directly if you need to book or change an upcoming appointment now.</p>
+
+      {% include "pages/error-pages/medical-note.html" %}
 
     </div>
   </div>

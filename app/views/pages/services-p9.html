@@ -43,15 +43,13 @@
           </div>
         </li>
         <li class="nhsapp-card">
-          {% if data['gpAppointmentError'] == "true"  %}
-          <form id="gpAppointment" method="post" action="/pages/error-pages/book-gp-appointment">
-          {% else %}
-          <form id="gpAppointment" method="post" action="/pages/services/gp-appointment-type">
-          {% endif %}
-            <input type="hidden" name="gpAppointmentError" value="false">
             <div class="nhsapp-card__container">
               <div class="nhsapp-card__content">
-                <a href="javascript:{}" onclick="document.getElementById('gpAppointment').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                {% if data['gpAppointmentError'] == "true"  %}
+                  <a href="/pages/error-pages/book-gp-appointment" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                {% else %}
+                  <a href="/pages/services/gp-appointment-type" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                {% endif %}
                   Check for available GP appointments
                 </a>
               </div>

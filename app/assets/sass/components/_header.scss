@@ -50,3 +50,16 @@
     }
   }
 }
+
+// Header - onboarding
+.app-header_logo--onboarding {
+  float: none;
+  margin: 0 auto;
+  max-width: 83px;
+
+  .nhsuk-header__link,
+  .nhsuk-logo {
+    height: 32px;
+    width: 83px;
+  }
+}

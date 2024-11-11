@@ -6,3 +6,11 @@
   border-bottom: 1px solid $color_nhsuk-grey-4;
   padding: nhsuk-spacing(2) 0 nhsuk-spacing(3);
 }
+
+// Remove border from ul within the list-border
+.nhsuk-list--border li {
+  ul > li {
+    border: 0;
+    padding: 0;
+  }
+}

@@ -42,6 +42,17 @@
 // Prototype specific styles
 @import 'prototype-specific/example';
 
+// apple ios dynamic text
+@supports (font: -apple-system-body) {
+  html {
+    font: -apple-system-body !important;
+  }
+}
+
+body {
+  font-family: Frutiger W01,Arial,Sans-serif;
+}
+
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////

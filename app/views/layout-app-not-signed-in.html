@@ -2,10 +2,6 @@
 
 {% set mainClasses = "nhsuk-main-wrapper" %}
 
-{% block pageTitle %}
-  {{ pageHeading }} - NHS App prototype
-{% endblock %}
-
 {% block customMetaData %}
   <meta name="theme-color" content="#005eb8">
 {% endblock %}
@@ -23,12 +19,18 @@
 {% endblock %}
 
 {% block main %}
+  {% if data['web'] === "no" %}
+    <div class="scrollable-content">
+  {% endif %}
   <div class="nhsuk-width-container">
     {% block outerContent %}{% endblock %}
     <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
       {% block content %}{% endblock %}
     </main>
   </div>
+  {% if data['web'] === "no" %}
+  </div>
+  {% endif %}
 {% endblock %}
 
 <!-- FOOTER -->

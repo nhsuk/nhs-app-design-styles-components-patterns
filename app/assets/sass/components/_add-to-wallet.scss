@@ -1,0 +1,17 @@
+// Apple add to wallet button
+.apple-add-to-wallet__button {
+  @include nhsuk-responsive-margin(5, "top");
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.apple-add-to-wallet__image {
+  max-height: nhsuk-spacing(7);
+  max-width: 100%;
+
+  @include mq($from: tablet) {
+    max-height: nhsuk-spacing(8);
+  }
+}

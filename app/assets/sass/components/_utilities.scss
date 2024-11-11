@@ -1,0 +1,15 @@
+// Utility class for center aligning an element
+@include mq($until: tablet) {
+  .app-u-align-center--mobile {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.app-u-gap-0 {
+  gap: 0 !important;
+}
+
+.app-u-text-capitalize {
+  text-transform: capitalize !important;
+}

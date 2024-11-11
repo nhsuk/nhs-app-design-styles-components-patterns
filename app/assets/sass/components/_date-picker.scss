@@ -117,3 +117,33 @@
     border: 1px solid $color_nhsuk-blue;
   }
 }
+
+// Custom CSS for appointment labels
+.app-label--flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+
+  @include mq($until: tablet) {
+    gap: 8px;
+  }
+}
+
+.app-label--full-width {
+  width: 100%;
+}
+
+// Pagination
+// nhsuk-list is overriding style and adding margin bottom 8px to li
+.nhsuk-pagination-item--previous,
+.nhsuk-pagination-item--next {
+  margin-bottom: 0 !important;
+}
+
+.app-pagination__title--small {
+  @include mq($until: tablet) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}

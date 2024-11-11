@@ -19,6 +19,7 @@
 @import 'components/app-bottom-navigation';
 @import 'components/bottom-sheet';
 @import 'components/action-sheet';
+@import 'components/add-to-wallet';
 @import 'components/buttons';
 @import 'components/card';
 @import 'components/confirmation';
@@ -36,176 +37,14 @@
 @import 'components/sticky-footer';
 @import 'components/summary-list';
 @import 'components/switch-profile-banner';
+@import 'components/utilities';
 
 @import 'components/nhsuk-frontend-extensions';
 
 // Prototype specific styles
 @import 'prototype-specific/example';
-
-// apple ios dynamic text
-@supports (font: -apple-system-body) {
-  html {
-    font: -apple-system-body !important;
-  }
-}
-
-body {
-  font-family: Frutiger W01,Arial,Sans-serif;
-}
+@import 'prototype-specific/ios-dynamic-text';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
-
-hr {
-  border-color: $color_nhsuk-grey-4;
-}
-
-.app-section-break--4 {
-  border-bottom-width: nhsuk-spacing(1);
-  border-color: $color_nhsuk-blue;
-}
-
-.app-section {
-  @include top-and-bottom();
-  @include nhsuk-responsive-padding(7, "bottom");
-  @include nhsuk-responsive-padding(7, "top");
-} 
-
-.app-section--grey-4 {
-  background-color: $color_nhsuk-grey-4;
-
-  hr {
-    border-color: $color_nhsuk-grey-3;
-  }
-}
-
-.app-section--with-border {
-  border-top: nhsuk-spacing(1) solid $color_nhsuk-blue;
-} 
-
-.app-name-format {
-  text-transform: capitalize;
-}
-
-.nhsuk-u-margin-top-12 {
-  margin-top: 12px !important;
-}
-
-// Header - onboarding
-.app-header_logo--onboarding {
-  float: none;
-  margin: 0 auto;
-  max-width: 83px;
-
-  .nhsuk-header__link,
-  .nhsuk-logo {
-    height: 32px;
-    width: 83px;
-  }
-}
-
-// Utility class for center aligning an element
-@include mq($until: tablet) {
-  .app-u-align-center--mobile {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.app-display-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-// Custom CSS for appointment labels
-.app-label--flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 80px;
-
-  @include mq($until: tablet) {
-    gap: 8px;
-  }
-}
-
-.app-label--full-width {
-  width: 100%;
-}
-
-// Form group
-.nhsuk-form-group {
-  @include nhsuk-responsive-margin(5, "bottom");
-}
-
-// Pagination
-// nhsuk-list is overriding style and adding margin bottom 8px to li
-.nhsuk-pagination-item--previous,
-.nhsuk-pagination-item--next {
-  margin-bottom: 0 !important;
-}
-
-.app-pagination__title--small {
-  @include mq($until: tablet) {
-    font-size: 16px;
-    line-height: 32px;
-  }
-}
-
-.app-u-gap-0 {
-  gap: 0 !important;
-}
-
-// Remove border from ul within the list-border
-.nhsuk-list--border li {
-  ul > li {
-    border: 0;
-    padding: 0;
-  }
-}
-
-// List spaced
-.app-list--spaced > li {
-  margin-bottom: nhsuk-spacing(3);
-
-  @include mq($from: tablet) {
-    margin-bottom: nhsuk-spacing(4);
-  }
-}
-
-// Apple add to wallet button
-.apple-add-to-wallet__button {
-  @include nhsuk-responsive-margin(5, "top");
-
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.apple-add-to-wallet__image {
-  max-height: nhsuk-spacing(7);
-  max-width: 100%;
-
-  @include mq($from: tablet) {
-    max-height: nhsuk-spacing(8);
-  }
-}
-
-// Card hotfix
-// Bug raised in nhsapp-frontend
-.nhsapp-cards + .nhsapp-section-heading,
-.nhsapp-card + .nhsapp-section-heading,
-.nhsapp-card + .nhsuk-heading-l {
-  @include nhsuk-responsive-padding(4, "top");
-}
-
-.nhsapp-card + .nhsuk-heading-m,
-.nhsapp-card + .nhsuk-heading-s {
-  padding-top: nhsuk-spacing(1);
-
-  @include mq($from: tablet) {
-    padding-top: nhsuk-spacing(2);
-  }
-}

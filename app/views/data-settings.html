@@ -80,6 +80,56 @@
 
         <hr>
 
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Errors</h2>
+
+        {{ radios({
+          "idPrefix": "loginError",
+          "name": "loginError",
+          "fieldset": {
+            "legend": {
+              "text": "Login error",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked("loginError", "yes")
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked("loginError", "no")
+            }
+          ]
+        }) }}
+
+        {{ radios({
+          "idPrefix": "gpAppointmentError",
+          "name": "gpAppointmentError",
+          "fieldset": {
+            "legend": {
+              "text": "Book a GP appointment error",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked("gpAppointmentError", "yes")
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked("gpAppointmentError", "no")
+            }
+          ]
+        }) }}
+
+        <hr>
+
         <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Messages</h2>
 
         {{ radios({

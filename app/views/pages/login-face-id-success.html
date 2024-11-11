@@ -26,7 +26,7 @@
 
   {% block pageScripts %}
 
-    {% if data['login'] === "true" %}
+    {% if data['loginError'] === "no" %}
       <script>
         $(document).ready(function () {
             // Handler for .ready() called.

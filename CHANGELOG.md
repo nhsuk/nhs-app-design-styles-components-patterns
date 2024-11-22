@@ -1,5 +1,59 @@
 # NHS.UK prototype kit Changelog
 
+## Unreleased
+
+- Remove guidance and tutorials - these can now be found online on the [NHS Prototype Kit website](https://prototype-kit.service-manual.nhs.uk) - ([PR 385](https://github.com/nhsuk/nhsuk-prototype-kit/pull/385))
+- Update NHS frontend to 9.1.0
+- Show errors when session data defaults crashes ([PR 402](https://github.com/nhsuk/nhsuk-prototype-kit/pull/402))
+
+## 5.0.0 - 15 October 2024
+
+:new: **New features**
+
+- Update to NHS.UK frontend v9.0.1 - see [version 9.0.0 release notes](https://github.com/nhsuk/nhsuk-frontend/releases/tag/v9.0.0) for details on the breaking changes
+- Drop `outerContent` block and use `beforeContent` block for both breadcrumbs and back links
+
+:wrench: **Fixes**
+
+- Updates to dependencies
+
+## 4.12.0 - 15 August 2024
+
+:wrench:
+
+- Enable console logging for nodemon
+- Replace basic auth with a custom authentication process
+- Update NHS.UK frontend to [v8.3.0](https://github.com/nhsuk/nhsuk-frontend/releases/tag/v8.3.0)
+- Fix setting PORT via the command line ([PR 347](https://github.com/nhsuk/nhsuk-prototype-kit/pull/347))
+
+## 4.11.0 - 27 June 2024
+
+:wrench: **Fixes**
+
+- Disable nunjucks caching so changes to templates show immediately
+- Stop watching .html and .scss files and restarting the server whenever they are changed
+- Ignore eslint warnings
+
+:pencil2: **Content**
+
+- Update README with start script
+- Fix a typo in setup docs
+- Update NHS website page template to be closer to live
+- Remove Covid banner from 'Health A-Z', 'Live Well', 'Mental Health' and 'Pregnancy' templates
+
+## 4.10.0 - 22 February 2024
+
+:wrench: Fixes
+
+- Add aria-labels to coronavirus hub page and mental health pagenavigation links
+- Removed the duplicate selector in '\_related-nav.scss'
+- Removed Covid banner from 'Social care and support guide' and 'NHS Services' templates
+- Use 'String#startsWith' method instead of getting the index of a substring in utils.js
+- Change unexpected var for const in gulpfile.js
+- Update 'Social care and support guide' template to use primary cards with chevrons
+- Upgrade node version to v20
+- Update NHS.UK frontend to [v8.1.0](https://github.com/nhsuk/nhsuk-frontend/releases/tag/v8.1.0), includes updates to header and footer components
+
 ## 4.9.0 - 1 June 2023
 
 :pencil2: **Content**

@@ -65,7 +65,7 @@ module.exports = {
   "appointments": 4,
 
   // Errors
-  "loginError": "yes",
-  "gpAppointmentError": "yes",
+  "loginError": "no",
+  "gpAppointmentError": "no",
 
 }

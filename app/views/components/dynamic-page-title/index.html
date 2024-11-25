@@ -1,12 +1,13 @@
 {% extends 'components/layout.html' %}
 
 {% set pageHeading = "Dynamic Page Title" %}
+{% set backlogID = "16" %}
 
 {% block innerContent %}
 
-  <h2 class="nhsuk-heading-m">Variants</h2>
+  <h2 class="nhsuk-heading-l">Variants</h2>
 
-  <h3 class="nhsuk-heading-xs">Homepage</h3>
+  <h3 class="nhsuk-heading-s">Homepage</h3>
 
   <div class="example">
     {{ dynamicPageTitle({
@@ -16,7 +17,7 @@
     })}}
   </div>
 
-  <h3 class="nhsuk-heading-xs">Homepage (web)</h3>
+  <h3 class="nhsuk-heading-s">Homepage (web)</h3>
 
   <div class="example">
     {{ dynamicPageTitle({
@@ -25,7 +26,7 @@
     })}}
   </div>
 
-  <h3 class="nhsuk-heading-xs">Homepage (linked profiles)</h3>
+  <h3 class="nhsuk-heading-s">Homepage (linked profiles)</h3>
 
   <div class="example">
     {{ dynamicPageTitle({
@@ -37,7 +38,7 @@
     })}}
   </div>
 
-  <h3 class="nhsuk-heading-xs">Homepage (linked profiles - web)</h3>
+  <h3 class="nhsuk-heading-s">Homepage (linked profiles - web)</h3>
 
   <div class="example">
     {{ dynamicPageTitle({
@@ -48,7 +49,7 @@
     })}}
   </div>
 
-  <h3 class="nhsuk-heading-xs">Secondary</h3>
+  <h3 class="nhsuk-heading-s">Secondary</h3>
 
   <div class="example">
     {{ dynamicPageTitle({
@@ -57,7 +58,7 @@
     })}}
   </div>
 
-  <h2 class="nhsuk-heading-m">Examples in context</h2>
+  <h2 class="nhsuk-heading-l">Examples in context</h2>
 
   <ul clas="nhsuk-list">
     <li>

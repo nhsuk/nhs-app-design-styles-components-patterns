@@ -4,7 +4,7 @@
 {% set backLinkURL = "/" %}
 
 {% set pageHeading = "Components" %}
-{% set pageDescription = "A list of design components that are not currently in the NHS App Frontend." %}
+{% set pageDescription = "A list of all the components available in the NHS App prototype." %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -14,16 +14,29 @@
 
       <h1>{{ pageHeading }}</h1>
 
-      <h2>Experimental components</h2>
+      <p>In the NHS App prototype you can use all components from the:</p>
+      <ul clas="nhsuk-list">
+        <li>
+          <a href="https://service-manual.nhs.uk/design-system">NHS design system</a>
+        </li>
+        <li>
+          <a href="https://design-system.nhsapp.service.nhs.uk/components/">NHS App design system</a>
+        </li>
+      </ul>
 
-      <p>Components that are not in the NHSUK or NHS App Frontend.</p>
+      <h2>V0 components</h2>
+
+      <p>Components that exist in old component library but will be either updated or deprecated soon.</p>
 
       <ul clas="nhsuk-list">
         <li>
           <a href="/components/cards/">Campaign card</a>
         </li>
         <li>
-          <a href="/components/confirmation-panel/">Confirmation panel</a>
+          <a href="/components/dynamic-page-title/">Dynamic page title</a>
+        </li>
+        <li>
+          <a href="/components/interruption-card/">Interruption card</a>
         </li>
         <li>
           <a href="/components/link-with-icon/">Link with an icon</a>
@@ -32,13 +45,29 @@
           <a href="/components/provider-banner/">Provider Banner</a>
         </li>
         <li>
+          <a href="/components/related-content-card/">Related content card</a>
+        </li>
+        <li>
+          <a href="/components/switch-profile-banner/">Switch profile banner</a>
+        </li>
+      </ul>
+
+      <h2>Experimental components</h2>
+
+      <p>New components being tested in the context of the NHS App.</p>
+
+      <ul clas="nhsuk-list">
+        <li>
+          <a href="/components/confirmation-panel/">Confirmation panel</a>
+        </li>
+        <li>
           <a href="/components/secondary-button/">Secondary button</a>
         </li>
       </ul>
 
       <h2>Native components</h2>
 
-      <p>Native components built in HTML for testing purposes.</p>
+      <p>Native components that have been built in HTML for testing purposes.</p>
 
       <ul clas="nhsuk-list">
         <li>

@@ -9,7 +9,7 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
   display: inline-flex;
   gap: nhsuk-spacing(2);
 
-  .app-icon {
+  .nhsapp-icon {
     fill: currentColor;
     height: $app-link-with-icon-size-mobile;
     width: $app-link-with-icon-size-mobile;
@@ -20,7 +20,7 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
     }
   }
 
-  .app-icon--no-fill {
+  .nhsapp-icon--no-fill {
     fill: none; // Removes fill colour
     stroke: currentColor;
   }

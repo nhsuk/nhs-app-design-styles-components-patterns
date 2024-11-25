@@ -5,9 +5,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/home-{{ data['accountType'] }}">
             {% if hub === "Home" %}
-              {% include "components/icons/home-active.html" %}
+              {{ nhsappIcon('homeFilled') }}
             {% else %}
-              {% include "components/icons/home.html" %}
+              {{ nhsappIcon('home') }}
             {% endif %}
             <span class="app-bottom-navigation__label {% if hub === 'Home' %}app-bottom-navigation__label--active{% endif %}">Home</span>
           </a>
@@ -15,9 +15,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/services-{{ data['accountType'] }}">
             {% if hub === "Services" %}
-              {% include "components/icons/services-active.html" %}
+              {{ nhsappIcon('crossFilled') }}
             {% else %}
-              {% include "components/icons/services.html" %}
+              {{ nhsappIcon('cross') }}
             {% endif %}        
             <span class="app-bottom-navigation__label {% if hub === 'Services' %}app-bottom-navigation__label--active{% endif %}">Services</span>
           </a>
@@ -25,9 +25,9 @@
         <li class="app-bottom-navigation__item">
           <a class="app-bottom-navigation__link" href="/pages/your-health-{{ data['accountType'] }}">
             {% if hub === "Your health" %}
-              {% include "components/icons/your-health-active.html" %}
+              {{ nhsappIcon('heartFilled') }}
             {% else %}
-              {% include "components/icons/your-health.html" %}
+              {{ nhsappIcon('heart') }}
             {% endif %} 
             <span class="app-bottom-navigation__label {% if hub === 'Your health' %}app-bottom-navigation__label--active{% endif %}">Your health</span>
           </a>
@@ -36,15 +36,15 @@
           <a class="app-bottom-navigation__link" href="/pages/messages-{{ data['accountType'] }}">
             {% if hub === "Messages" %}
               {% if data['messages'] > 0 %}
-                {% include "components/icons/messages-with-badge-active.html" %}
+                {{ nhsappIcon('messagesUnreadFilled') }}
               {% else %}
-                {% include "components/icons/messages-active.html" %}
+                {{ nhsappIcon('messagesFilled') }}
               {% endif %}
             {% else %}
               {% if data['messages'] > 0 %}
-                {% include "components/icons/messages-with-badge.html" %}
+                {{ nhsappIcon('messagesUnread') }}
               {% else %}
-                {% include "components/icons/messages.html" %}
+                {{ nhsappIcon('messages') }}
               {% endif %}
             {% endif %}
             <span class="app-bottom-navigation__label {% if hub === 'Messages' %}app-bottom-navigation__label--active{% endif %}">Messages</span>

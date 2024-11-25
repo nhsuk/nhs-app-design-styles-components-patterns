@@ -40,9 +40,11 @@
     height: 28px;
     width: 28px;
   }
-  
-  .app-icon--messages {
-    padding-top: nhsuk-spacing(1);;
+
+  .nhsapp-icon {
+    fill: $color_nhsuk-white;
+    height: 28px;
+    width: 28px;
   }
 
   &:focus {

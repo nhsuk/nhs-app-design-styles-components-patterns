@@ -1,17 +1,19 @@
+{% from "nhsapp/styles/icon/macro.njk" import nhsappIcon %}
+
 {% set headingLevel = params.headingLevel if params.headingLevel else 2 %}
 
 <div class="nhsuk-card app-card--no-border app-card--center-align app-u-full-width-tablet">
   <div class="nhsuk-card__content app-card__content">
     {%- if params.icon %}
       {%- if params.icon === "heart" %}
-        {% include "components/icons/heart.html" %}
+        {{ nhsappIcon('heart') }}
       {%- else %}
-        {% include "components/icons/cross.html" %}
+        {{ nhsappIcon('cross') }}
       {%- endif %}
     {%- endif %}
     <h{{ headingLevel }} class="nhsuk-card__heading nhsuk-heading-m nhsuk-u-margin-bottom-2">{{ params.title }}</h{{ headingLevel }}>
     <p class="nhsuk-card__description nhsuk-u-margin-bottom-5">{{ params.description }}</p>
-    <a class="nhsuk-button nhsuk-button--secondary app-button app-button--full-width" href="{{ params.URL }}">
+    <a class="nhsuk-button nhsuk-button--secondary nhsapp-button" href="{{ params.URL }}">
       {{ params.linkText }}
       {%- if params.linkTextHidden %}
       <span class="nhsuk-u-visually-hidden">{{ params.linkTextHidden }}</span>

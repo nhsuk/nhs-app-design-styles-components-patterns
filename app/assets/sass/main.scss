@@ -50,7 +50,11 @@
 
 .app-section {
   background-color: transparent;
-  padding: 32px 0;
+  padding: 56px 0;
+
+  @include mq($until: tablet) {
+    padding: 40px 0;
+  }
 
   .nhsapp-card {
     border-width: 0 !important;;
@@ -103,7 +107,11 @@
   }
 
   &--top {
-    padding: 58px 0 16px;
+    padding: 58px 0 32px;
+
+    @include mq($until: tablet) {
+      padding-bottom: 24px;
+    }
   }
 
   .nhsapp-button {

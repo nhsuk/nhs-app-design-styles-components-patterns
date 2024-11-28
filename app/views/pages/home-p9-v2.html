@@ -1,0 +1,153 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Home" %}
+
+{% set containerFullWidth = true %}
+
+{% set topSection = true %}
+
+{% set pageHeading = "Home" %}
+
+{% block content %}
+
+<section class="app-section app-section--top app-section--blue">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        logo: data['web'] !== "yes",
+        greetingName: data['userFirstName'] + " " + data['userLastName'],
+        nhsNumber: data['nhsNumber'],
+        classes: "nhsuk-u-margin-bottom-5"
+      })}}
+
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="app-section">
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- SECTION - SERVICES -->
+      {{ nhsappSectionHeading({
+        headingText: "Services",
+        linkText: "View all",
+        linkUrl: "/pages/services-p9",
+        linkAriaLabel: "View all services"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Request medicines",
+            href: "/pages/your-health/repeat-prescription/select-medicines"
+          },
+          {
+            title: "Check if you need urgent medical help using 111 online",
+            href: "#"
+          }
+        ]
+      }) }}
+
+      <!-- SECTION - YOUR HEALTH -->
+      {{ nhsappSectionHeading({
+        headingText: "Your health",
+        linkText: "View all",
+        linkUrl: "/pages/your-health-p9",
+        linkAriaLabel: "View all your health"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "GP health record",
+            href: "#"
+          },
+          {
+            title: "View and manage prescriptions",
+            href: "/pages/your-health/prescriptions-p9"
+          },
+          {
+            title: "Upcoming and past appointments",
+            href: "/pages/your-health/upcoming-and-past-appointments-p9"
+          }
+        ]
+      }) }}
+
+      <!-- SECTION - MESSAGES -->
+      {{ nhsappSectionHeading({
+        headingText: "Messages"
+      }) }}
+
+      {% if data['messages'] > 0 %}
+        {{ nhsappCardGroup({
+          stacked: true,
+          cards: [
+            {
+              title: 'View your messages',
+              href: '/pages/messages-p9',
+              prefixIcon: 'messagesUnread',
+              linkAriaLabel: 'Messages, you have ' + data['messages'] + ' unread messages',
+              badgeLarge: {
+                count: data['messages'],
+                label: 'unread messages',
+                ariaHidden: true
+              }
+            }
+          ]
+        }) }}
+      {% else %}
+        {{ nhsappCardGroup({
+          stacked: true,
+          cards: [
+            {
+              title: 'View your messages',
+              href: '/pages/messages-p9',
+              prefixIcon: 'messages'
+            }
+          ]
+        }) }}
+      {% endif %}
+
+      <!-- SECTION - SWITCH PROFILES -->
+      {{ nhsappSectionHeading({
+        headingText: "Account"
+      }) }}
+
+      {{ nhsappCard({
+        title: 'Manage services for another person',
+        href: '/pages/account-and-settings/linked-profiles',
+        prefixIcon: 'switchProfile'
+      }) }}
+
+      <!-- CAMPAIGN CARD -->
+      <div class="nhsapp-card app-card-link--dark-blue app-card-link--full-width nhsuk-u-margin-top-7">
+        <div class="app-card-link__media">
+          <img class="app-card-link__img" src="/images/campaigns/campaign-card-image-3.jpg" alt="">
+        </div>
+        <div class="nhsapp-card__container">
+          <div class="nhsapp-card__content">
+            <a href="#" class="nhsapp-card__link nhsuk-u-font-size-32">
+              Help change the NHS
+            </a>
+            <div class="nhsapp-card__below">
+              <p class="nhsuk-u-margin-top-2">Have your say on making the NHS fit for the future</p>
+            </div>
+          </div>
+          {{ nhsappIcon('chevronRight') }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+{% endblock %}

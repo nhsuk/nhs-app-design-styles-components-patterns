@@ -93,7 +93,7 @@
 
   <body class="{{ bodyClasses }}">
 
-    {% if data['web'] === "no" %}
+    {% if data['web'] === "no" and topSection != true %}
       <div class="app-container">
     {% endif %}
 
@@ -125,7 +125,7 @@
             </main>
           </div>
 
-        {% if data['web'] === "no" %}
+        {% if data['web'] === "no" and topSection != true %}
           </div>
         {% endif %}
       {% endblock %}

@@ -19,3 +19,10 @@ var thehours = new Date().getHours();
   }
 
   $('.app-greeting').append(themessage);
+
+  $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".app-global-navigation-native");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+  });

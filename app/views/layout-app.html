@@ -19,8 +19,13 @@
   {% set bodyClasses = "nhs-app-native" %}
 
   {% if containerFullWidth === true %}
-    {% set containerClasses = "app-width-container app-width-container--full" %}
-    {% set mainClasses = "app-main-wrapper app-main-wrapper--no-bottom-padding" %}
+    {% if topSection === true %}
+      {% set containerClasses = "app-width-container--full" %}
+      {% set mainClasses = "app-main-wrapper app-main-wrapper--no-bottom-padding" %}
+    {% else %}
+      {% set containerClasses = "app-width-container app-width-container--full" %}
+      {% set mainClasses = "app-main-wrapper app-main-wrapper--no-bottom-padding" %}
+    {% endif %}
   {% else %}
     {% set containerClasses = "app-width-container" %}
     {% set mainClasses = "app-main-wrapper" %}

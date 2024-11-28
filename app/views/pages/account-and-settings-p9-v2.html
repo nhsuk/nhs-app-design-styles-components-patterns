@@ -1,0 +1,209 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Account and settings" %}
+
+{% set containerFullWidth = true %}
+
+{% set topSection = true %}
+
+{% set pageHeading = "Account" %}
+
+{% block content %}
+
+
+  <section class="app-section app-section--top app-section--blue">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <!-- DYNAMIC PAGE TITLE -->
+          {{ dynamicPageTitle({
+            title: pageHeading,
+            titleSecondary: true,
+            description: pageDescription
+          })}}
+
+          <ol class="nhsapp-cards nhsapp-cards--stacked">
+            <li class="nhsapp-card ">
+              <div class="nhsapp-card__container">
+                <div class="nhsapp-card__content">
+                  <h2 class="app-dynamic-page-title__name nhsuk-heading-l nhsuk-u-margin-bottom-1">{{ data['userFirstName'] }} {{ data['userLastName'] }}</h2>
+                  <p>NHS Number: {{ data['nhsNumber'] }}</p>
+                </div>
+              </div>
+            </li>
+              <li class="nhsapp-card ">
+                <div class="nhsapp-card__container">
+                  <div class="nhsapp-card__content">
+                    <a href="/pages/account-and-settings/linked-profiles" class="nhsapp-card__link nhsuk-link--no-visited-state">
+                      Manage health services for others
+                    </a>
+                  </div>
+                  <svg class="nhsapp-icon nhsapp-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="2em" width="2em" viewBox="0 0 24 24">
+                    <path d="M8.82 19.11a.97.97 0 0 1-.72-.31.996.996 0 0 1 .03-1.41l5.61-5.38-5.6-5.25c-.4-.38-.42-1.01-.05-1.41.38-.4 1.01-.42 1.41-.05l6.37 5.97c.2.19.31.45.32.72s-.11.54-.31.73l-6.37 6.11c-.19.19-.44.28-.69.28Z"></path>
+                  </svg>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="app-section">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+
+      {{ nhsappSectionHeading({
+        headingText: "Personal details"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Contact details",
+            href: "#"
+          },
+          {
+            title: "View or change GP surgery",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "Health choices"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Organ donation decision",
+            href: "#"
+          },
+          {
+            title: "Health data sharing decision",
+            href: "#"
+          },
+          {
+            title: "Take part in health research",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "Settings"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        cards: [
+          {
+            title: "Login and security",
+            href: "#"
+          },
+          {
+            title: "Face ID",
+            href: "#"
+          },
+          {
+            title: "Notifications",
+            href: "#"
+          },
+          {
+            title: "Manage cookies",
+            href: "#"
+          }
+        ]
+      })}}
+
+      {{ nhsappSectionHeading({
+        headingText: "About the NHS App"
+      }) }}
+
+      {{ nhsappCardGroup({
+        stacked: true,
+        classes: "app-cards--secondary",
+        cards: [
+          {
+            title: "Privacy and legal policies",
+            href: "#"
+          },
+          {
+            title: "Join our user research panel",
+            href: "#"
+          }
+        ]
+      })}}
+
+      <button id="logoutButton" class="nhsuk-button app-button--secondary nhsapp-button" data-module="nhsuk-button" type="submit">
+        Log out
+      </button>
+
+      <p>Version: {{ data['version'] }}</p>
+
+      <div id="logoutActionSheet" tabindex="0" style="display:none">
+        <div class="action-sheet-mask"></div> 
+        <div class="action-sheet"> 
+          <div class="action-sheet-title"> 
+            <strong>Are you sure you want to log out?</strong>
+          </div> 
+          <button onclick="document.getElementById('logoutForm').submit();" class="action-sheet-button action-sheet-button--destructive"> 
+            Log out
+          </button> 
+          <button id="cancelButton" class="action-sheet-button"> 
+            Cancel
+          </button> 
+        </div> 
+        <form id="logoutForm" action="/log-out" method="post" novalidate="novalidate"></form>
+      </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    document.getElementById('logoutButton').addEventListener('click', function() {
+      // Get a reference to the hidden div
+      var hiddenDiv = document.getElementById('logoutActionSheet');
+      var bottomNav = document.getElementById('bottomNav');
+
+      // Check if the div is currently hidden
+      if (hiddenDiv.style.display === 'none') {
+        // If hidden, show the div
+        hiddenDiv.style.display = 'block';
+        bottomNav.style.display = 'none';
+        hiddenDiv.focus()
+      } else {
+        // If visible, hide the div
+        hiddenDiv.style.display = 'none';
+      }
+    });
+
+    document.getElementById('cancelButton').addEventListener('click', function() {
+      // Get a reference to the hidden div
+      var hiddenDiv = document.getElementById('logoutActionSheet');
+      var bottomNav = document.getElementById('bottomNav');
+
+      // Check if the div is currently hidden
+      if (hiddenDiv.style.display === 'block') {
+        // If hidden, show the div
+        hiddenDiv.style.display = 'none';
+        bottomNav.style.display = 'block';
+        hiddenDiv.focus()
+      } else {
+        // If visible, hide the div
+        hiddenDiv.style.display = 'block';
+      }
+    });
+
+  </script>
+{% endblock %}

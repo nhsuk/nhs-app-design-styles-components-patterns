@@ -47,3 +47,83 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+.app-section {
+  background-color: transparent;
+  padding: 32px 0;
+
+  .nhsapp-card {
+    border-width: 0;
+
+    .nhsapp-card__container {
+      margin: 0 0 0 20px;
+      padding: 20px 16px 20px 0;
+    }
+
+    .nhsapp-icon__chevron-right {
+      fill: $color_nhsuk-grey-2;
+    }
+  }
+
+  .app-cards--secondary .nhsapp-card {
+    border-width: 1px !important;
+    border-color: $color_nhsuk-grey-3;
+
+    .nhsapp-card__container {
+      border-color: $color_nhsuk-grey-3;
+    }
+  }
+
+  .nhsapp-card {
+    border-radius: 8px;
+  }
+
+  .nhsapp-cards--stacked {
+    .nhsapp-card {
+      border-radius: 0;
+    }
+  
+    .nhsapp-card:first-of-type {
+      border-radius: 8px 8px 0 0;
+    }
+
+    .nhsapp-cards--stacked .nhsapp-card:last-of-type {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  .nhsapp-card--transparent {
+    background: transparent;
+
+    .nhsapp-card__container {
+      border-top: 1px solid grey;
+      padding: 16px 0 0;
+      margin: 0;
+    }
+  }
+
+  &--top {
+    padding: 58px 0 16px;
+  }
+
+  .nhsapp-button {
+    border-radius: 8px;
+  }
+}
+
+.app-section--blue {
+  background-color: #D2E1EF;
+}
+
+.app-global-navigation-native {
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: #f0f4f5;
+    transition: background-color 200ms linear;
+  }
+}
+
+.app-width-container {
+  padding-top: 58px;
+}

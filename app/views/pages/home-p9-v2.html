@@ -10,7 +10,7 @@
 
 {% block content %}
 
-<section class="app-section app-section--top app-section--blue">
+<section class="app-section app-section--top app-section--blue-pale">
   <div class="nhsuk-width-container">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
@@ -20,25 +20,12 @@
         logo: data['web'] !== "yes",
         greetingName: data['userFirstName'] + " " + data['userLastName'],
         nhsNumber: data['nhsNumber'],
-        classes: "nhsuk-u-margin-bottom-5"
+        classes: "nhsuk-u-margin-bottom-7"
       })}}
-
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="app-section">
-<div class="nhsuk-width-container">
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
 
       <!-- SECTION - SERVICES -->
       {{ nhsappSectionHeading({
-        headingText: "Services",
-        linkText: "View all",
-        linkUrl: "/pages/services-p9",
-        linkAriaLabel: "View all services"
+        headingText: "Services"
       }) }}
 
       {{ nhsappCardGroup({
@@ -57,10 +44,7 @@
 
       <!-- SECTION - YOUR HEALTH -->
       {{ nhsappSectionHeading({
-        headingText: "Your health",
-        linkText: "View all",
-        linkUrl: "/pages/your-health-p9",
-        linkAriaLabel: "View all your health"
+        headingText: "Your health"
       }) }}
 
       {{ nhsappCardGroup({
@@ -88,7 +72,6 @@
 
       {% if data['messages'] > 0 %}
         {{ nhsappCardGroup({
-          stacked: true,
           cards: [
             {
               title: 'View your messages',
@@ -105,7 +88,6 @@
         }) }}
       {% else %}
         {{ nhsappCardGroup({
-          stacked: true,
           cards: [
             {
               title: 'View your messages',

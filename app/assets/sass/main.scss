@@ -57,11 +57,15 @@
   }
 
   .nhsapp-card {
-    border-width: 0 !important;;
+    border-width: 0 !important;
+
+    .nhsapp-card__link {
+      @include nhsuk-typography-responsive(19);
+    }
 
     .nhsapp-card__container {
       margin: 0 0 0 20px;
-      padding: 20px 16px 20px 0;
+      padding: 16px 16px 16px 0;
     }
 
     .nhsapp-icon__chevron-right {

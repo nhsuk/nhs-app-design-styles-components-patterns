@@ -49,7 +49,7 @@
 ///////////////////////////////////////////
 
 .app-section {
-  background-color: #e5eef6;
+  background-color: transparent;
   padding: 40px 0;
 
   @include mq($until: tablet) {
@@ -123,14 +123,10 @@
 }
 
 .app-section--blue {
-  background-color: #99bbdb;
+  background-color: #D2E1EF;
 }
 
-.app-section--blue-pale {
-  background-color: #e5eef6;
-}
-
-.app-global-navigation-native {
+.app-global-navigation-native--transparent {
   background-color: transparent;
 
   &.scrolled {

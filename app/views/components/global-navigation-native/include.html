@@ -1,4 +1,8 @@
-<header class="app-global-navigation-native">
+{% if topSection === true %}
+  <header class="app-global-navigation-native app-global-navigation-native--transparent">
+  {% else %}
+  <header class="app-global-navigation-native">
+{% endif %}
   <div class="nhsuk-width-container">
     <nav class="app-global-navigation-native__nav">
       <ul class="app-global-navigation-native__nav-list">

@@ -142,3 +142,66 @@
 .app-width-container {
   padding-top: 58px;
 }
+
+.nhsapp-card {
+  border-width: 0 !important;
+
+  .nhsapp-card__link {
+    @include nhsuk-typography-responsive(19);
+  }
+
+  .nhsapp-card__container {
+    border-color: #d2e1ef !important;
+    margin: 0 0 0 20px;
+    padding: 16px 16px 16px 0;
+  }
+
+  .nhsapp-icon__chevron-right {
+    fill: #87aed4;
+  }
+}
+
+.app-cards--secondary .nhsapp-card {
+  border-width: 1px !important;
+  border-color: #acc8e2 !important;
+
+  .nhsapp-card__container {
+    border-color: #acc8e2  !important;
+  }
+}
+
+.nhsapp-card {
+  border-radius: 8px;
+}
+
+.nhsapp-cards--stacked {
+  .nhsapp-card {
+    border-radius: 0;
+  }
+
+  .nhsapp-card:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .nhsapp-card:last-of-type {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.app-card-link__img {
+  border-radius: 8px 8px 0 0;
+
+  @include mq($until: tablet) {
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.nhsapp-button {
+  border-radius: 8px;
+}
+
+.app-cards--blue .nhsapp-card {
+  .nhsapp-card__container {
+    border-color: #acc8e2 !important;
+  }
+}

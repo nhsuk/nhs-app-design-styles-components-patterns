@@ -18,27 +18,26 @@
         <span class="nhsuk-u-visually-hidden">Time: </span>{{ data['appointment-time'] or '9:00am' }}</span>
       </p>
       <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
-      <p>
+      <p class="nhsuk-u-margin-bottom-5">
         <span class="nhsuk-u-visually-hidden">Location: </span>{{ data['appointment-location'] or 'York Road Practice' }} <br>
         <span class="nhsuk-u-visually-hidden">Clinician: </span>{{ data['appointment-clinician'] or 'Dr Max Smith (Male)' }} 
       </p>
-        
-      {{ button({
-        text: "Add to calendar",
-        classes: "nhsuk-u-margin-top-1 nhsapp-button app-button--secondary"
-      }) }}
 
-      <h2 class="nhsuk-heading-s">What you can do next</h2>
+      <div class="nhsapp-card app-card--secondary">
+        <div class="nhsapp-card__container">
+          {{ nhsappIcon('calendar') }}
+          <div class="nhsapp-card__content">
+            <a href="#" class="nhsapp-card__link nhsuk-link--no-visited-state">
+              Add to calendar
+            </a>
+          </div>
+        </div>
+      </div>
 
-      {{ nhsappCardGroup({
-        stacked: true,
-        classes: "app-cards--secondary",
-        cards: [
-          {
-            title: "View upcoming appointments",
-            href: "#"
-          }
-        ]
+      {{ nhsappCard({
+        classes: "app-card--secondary",
+        title: "View upcoming appointments",
+        href: "#"
       }) }}
 
 

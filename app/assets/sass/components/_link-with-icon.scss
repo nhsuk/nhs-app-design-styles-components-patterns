@@ -9,7 +9,8 @@ $app-link-with-icon-size-tablet: nhsuk-spacing(4) + 4px;
   display: inline-flex;
   gap: nhsuk-spacing(2);
 
-  .nhsapp-icon {
+  .nhsapp-icon,
+  .app-icon {
     fill: currentColor;
     height: $app-link-with-icon-size-mobile;
     width: $app-link-with-icon-size-mobile;

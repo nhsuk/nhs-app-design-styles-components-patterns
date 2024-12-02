@@ -57,14 +57,14 @@
   }
 
   .nhsapp-card {
-    border-width: 0 !important;
+    border-width: 0;
 
     .nhsapp-card__link {
       @include nhsuk-typography-responsive(19);
     }
 
     .nhsapp-card__container {
-      border-color: #d2e1ef !important;
+      border-color: #d2e1ef;
       margin: 0 0 0 20px;
       padding: 16px 16px 16px 0;
     }
@@ -75,11 +75,11 @@
   }
 
   .app-cards--secondary .nhsapp-card {
-    border-width: 1px !important;
-    border-color: #acc8e2 !important;
+    border-width: 1px;
+    border-color: #acc8e2;
 
     .nhsapp-card__container {
-      border-color: #acc8e2  !important;
+      border-color: #acc8e2;
     }
   }
 
@@ -93,10 +93,12 @@
     }
   
     .nhsapp-card:first-of-type {
+      border-top: 0;
       border-radius: 8px 8px 0 0;
     }
 
     .nhsapp-card:last-of-type {
+      border-bottom: 0;
       border-radius: 0 0 8px 8px;
     }
   }
@@ -139,31 +141,35 @@
   padding-top: 58px;
 }
 
-.nhsapp-card {
-  border-width: 0 !important;
+$card-border-color: #acc8e2;
+
+.nhsapp-cards--stacked .nhsapp-card,
+.nhsapp-card  {
+  border-width: 0;
 
   .nhsapp-card__link {
     @include nhsuk-typography-responsive(19);
   }
 
   .nhsapp-card__container {
-    border-color: #d2e1ef !important;
+    border-color: #d2e1ef;
     margin: 0 0 0 20px;
-    padding: 16px 16px 16px 0;
+    padding: 20px 20px 20px 0;
+
+    @include mq($until: tablet) {
+      padding: 16px 20px 16px 0;
+    }
   }
 
   .nhsapp-icon__chevron-right {
-    fill: #87aed4;
+    fill: rgba($color_nhsuk-blue, .66);
+    margin-right: -6px;
   }
-}
 
-.app-cards--secondary .nhsapp-card,
-.app-card--secondary {
-  border-width: 1px !important;
-  border-color: #acc8e2 !important;
-
-  .nhsapp-card__container {
-    border-color: #acc8e2  !important;
+  &.app-card-link--dark-blue {
+    .nhsapp-icon__chevron-right {
+      fill: rgba(white, .66);
+    }
   }
 }
 
@@ -177,10 +183,12 @@
   }
 
   .nhsapp-card:first-of-type {
+    border-top-width: 0;
     border-radius: 8px 8px 0 0;
   }
 
   .nhsapp-card:last-of-type {
+    border-bottom-width: 0;
     border-radius: 0 0 8px 8px;
   }
 }
@@ -197,8 +205,32 @@
   border-radius: 8px;
 }
 
+.app-cards--secondary .nhsapp-card,
+.app-card--secondary {
+  border-width: 1px;
+  border-color: $card-border-color;
+
+  &:first-of-type {
+    border-top-width: 1px;
+    border-color: $card-border-color;
+  }
+
+  &:last-of-type {
+    border-bottom-width: 1px;
+    border-color: $card-border-color;
+  }
+
+  .nhsapp-card__container {
+    border-color: $card-border-color;
+  }
+}
+
 .app-cards--blue .nhsapp-card {
   .nhsapp-card__container {
-    border-color: #acc8e2 !important;
+    border-color: $card-border-color;
+  }
+
+  .nhsapp-icon__chevron-right {
+    fill: rgba($card-blue-color, .66);
   }
 }

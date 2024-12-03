@@ -48,6 +48,7 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
+// SECTIONS
 .app-section {
   background-color: transparent;
   padding: 40px 0;
@@ -70,11 +71,12 @@
   background-color: #D2E1EF;
 }
 
+// TOP NAV
 .app-global-navigation-native--transparent {
   background-color: transparent;
 
   &.scrolled {
-    background-color: #e5eef6;
+    background-color: $color_nhsuk-grey-5;
     transition: background-color 200ms linear;
   }
 }
@@ -83,7 +85,9 @@
   padding-top: 58px;
 }
 
+// CARD LINK OVERRIDES
 $card-border-color: #acc8e2;
+$border-radius: 8px;
 
 .nhsapp-cards--stacked .nhsapp-card,
 .nhsapp-card  {
@@ -95,11 +99,12 @@ $card-border-color: #acc8e2;
 
   .nhsapp-card__container {
     border-color: #d2e1ef;
-    margin: 0 0 0 20px;
-    padding: 20px 20px 20px 0;
+    margin: 0 0 0 24px;
+    padding: 24px 24px 24px 0;
 
     @include mq($until: tablet) {
-      padding: 16px 20px 16px 0;
+      margin: 0 0 0 20px;
+      padding: 20px 20px 20px 0;
     }
   }
 
@@ -116,7 +121,7 @@ $card-border-color: #acc8e2;
 }
 
 .nhsapp-card {
-  border-radius: 8px;
+  border-radius: $border-radius;
 }
 
 .nhsapp-cards--stacked {
@@ -126,25 +131,21 @@ $card-border-color: #acc8e2;
 
   .nhsapp-card:first-of-type {
     border-top-width: 0;
-    border-radius: 8px 8px 0 0;
+    border-radius: $border-radius $border-radius 0 0;
   }
 
   .nhsapp-card:last-of-type {
     border-bottom-width: 0;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 $border-radius $border-radius;
   }
 }
 
 .app-card-link__img {
-  border-radius: 8px 8px 0 0;
+  border-radius: $border-radius $border-radius 0 0;
 
   @include mq($until: tablet) {
-    border-radius: 8px 8px 0 0;
+    border-radius: $border-radius $border-radius 0 0;
   }
-}
-
-.nhsapp-button {
-  border-radius: 8px;
 }
 
 .app-cards--secondary .nhsapp-card,
@@ -175,4 +176,9 @@ $card-border-color: #acc8e2;
   .nhsapp-icon__chevron-right {
     fill: rgba($card-blue-color, .66);
   }
+}
+
+// BUTTON RADIUS
+.nhsapp-button {
+  border-radius: $border-radius;
 }

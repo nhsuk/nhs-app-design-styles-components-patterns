@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+<!-- Edit the header -->
+<!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "NHS login",
+        "href": "#"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+<!-- Edit the footer -->
+<!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "#",
+        "label": "Terms of use"
+      },
+      {
+        "URL": "#",
+        "label": "Cookies"
+      },
+      {
+        "URL": "#",
+        "label": "Accessibility"
+      },
+      {
+        "URL": "#",
+        "label": "Help Centre"
+      }
+    ]
+  })}}
+{% endblock %}

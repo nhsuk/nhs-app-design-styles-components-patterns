@@ -83,6 +83,29 @@
         <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Errors</h2>
 
         {{ radios({
+          "idPrefix": "faceIDError",
+          "name": "faceIDError",
+          "fieldset": {
+            "legend": {
+              "text": "Face ID error",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked("faceIDError", "yes")
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked("faceIDError", "no")
+            }
+          ]
+        }) }}
+
+        {{ radios({
           "idPrefix": "loginError",
           "name": "loginError",
           "fieldset": {

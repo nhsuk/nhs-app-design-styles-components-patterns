@@ -67,5 +67,6 @@ module.exports = {
   // Errors
   "loginError": "no",
   "gpAppointmentError": "no",
+  "faceIDError": "yes",
 
 }

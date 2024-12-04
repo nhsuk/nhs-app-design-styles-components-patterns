@@ -80,7 +80,30 @@
 
         <hr>
 
-        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Errors</h2>
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Login</h2>
+
+        {{ radios({
+          "idPrefix": "faceIDOn",
+          "name": "faceIDOn",
+          "fieldset": {
+            "legend": {
+              "text": "Face ID turned on",
+              "classes": "nhsuk-label"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes",
+              checked: checked("faceIDOn", "yes")
+            },
+            {
+              "value": "no",
+              "text": "No",
+              checked: checked("faceIDOn", "no")
+            }
+          ]
+        }) }}
 
         {{ radios({
           "idPrefix": "faceIDError",
@@ -127,6 +150,10 @@
             }
           ]
         }) }}
+
+        <hr>
+
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-3">Errors</h2>
 
         {{ radios({
           "idPrefix": "gpAppointmentError",

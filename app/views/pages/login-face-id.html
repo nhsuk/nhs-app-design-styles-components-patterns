@@ -25,14 +25,25 @@
   {% endblock %}
 
   {% block pageScripts %}
-  <script>
-    $(document).ready(function () {
-        // Handler for .ready() called.
-        window.setTimeout(function () {
-            location.href = "/pages/login-face-id-success";
-        }, 1000);
-    });
-  </script>
-{% endblock %}
+    {% if data['faceIDError'] === "no" %}
+      <script>
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            window.setTimeout(function () {
+                location.href = "/pages/login-face-id-success";
+            }, 1000);
+        });
+      </script>
+    {% else %}
+      <script>
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            window.setTimeout(function () {
+                location.href = "/pages/login-face-id-error";
+            }, 1000);
+        });
+      </script>
+    {% endif %}
+  {% endblock %}
 
 

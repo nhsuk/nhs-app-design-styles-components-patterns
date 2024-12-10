@@ -1,0 +1,44 @@
+{% extends 'layout-nhs-login.html' %}
+
+{% set pageHeading = "Enter your email address" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">{{ pageHeading }}</h1>
+
+      <p>If you have used the NHS App or other websites, you should enter the email address you used to register for them.</p>
+
+      <p>We will check if you have an NHS login. If not, you can set one up.</p>
+
+      <form id="form" method="post" action="/pages/home-p9" novalidate="novalidate">
+
+        {{ input({
+          label: {
+            text: "Email address"
+          },
+          id: "nhs-login-email",
+          name: "nhs-login-email",
+          type: "email"
+        }) }}
+
+
+        {{ button({
+          text: "Continue",
+          classes: "nhsapp-button"
+        }) }}
+
+      </form>
+
+      {{ insetText({
+        html: "<h2 class='nhsuk-heading-m'>What is NHS login?</h2><p>NHS login allows you to securely access health websites and apps with just your email address and a password.</p>",
+        classes: "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
+

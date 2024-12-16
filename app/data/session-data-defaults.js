@@ -64,8 +64,12 @@ module.exports = {
   // Upcoming and past appointments
   "appointments": 4,
 
+  // Login
+  "faceIDOn": "yes",
+
   // Errors
   "loginError": "no",
   "gpAppointmentError": "no",
+  "faceIDError": "no",
 
 }

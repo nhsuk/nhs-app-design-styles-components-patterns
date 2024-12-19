@@ -182,12 +182,12 @@ $card-blue-color: $nhsuk-link-active-color;
 
 .app-cards--blue .nhsapp-card {
   background: $card-blue-background;
-  border-color: $card-blue-color;
+  border-color: $card-blue-background;
   color: $card-blue-color;
 
   &:first-of-type,
   &:last-of-type {
-    border-color: $card-blue-color;
+    border-color: $card-blue-background;
   }
 
   .nhsapp-card__container {

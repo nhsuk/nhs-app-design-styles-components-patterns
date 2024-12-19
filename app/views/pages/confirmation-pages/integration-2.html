@@ -9,9 +9,9 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <div class="app-confirmation">
-        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
-      </div>
+      {{ nhsappPanel({
+        titleText: pageHeading
+      }) }}
 
       <p>Thank you, Peter. Your request has been securely sent to NHS App Test Practice.</p>
 

@@ -9,9 +9,9 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <div class="app-confirmation">
-        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
-      </div>
+      {{ nhsappPanel({
+        titleText: pageHeading
+      }) }}
 
       <p class="nhsuk-u-font-size-24">
         <span class="nhsuk-u-visually-hidden">Date: </span>{{ data['appointment-date'] or 'Wednesday 29 May 2024' }}<br>
@@ -25,7 +25,7 @@
         
       {{ button({
         text: "Add to calendar",
-        classes: "nhsuk-u-margin-top-1 nhsapp-button app-button--secondary"
+        classes: "nhsuk-u-margin-top-1 nhsapp-button nhsapp-button--secondary"
       }) }}
 
       <h2 class="nhsuk-heading-s">What you can do next</h2>

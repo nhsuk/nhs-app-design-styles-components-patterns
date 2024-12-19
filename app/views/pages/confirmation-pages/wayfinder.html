@@ -17,9 +17,9 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <div class="app-confirmation">
-        <h1 class="app-confirmation__title">{{ pageHeading }}</h1>
-      </div>
+      {{ nhsappPanel({
+        titleText: pageHeading
+      }) }}
 
       <!--<ul class="nhsuk-list">
         <li class="nhsuk-u-font-size-22 nhsuk-u-font-weight-bold"><span class="nhsuk-u-visually-hidden">Appointment date </span> Friday 7 June 2024</li>
@@ -79,7 +79,7 @@
       <p>The cancelled appointment may remain visible until the date has passed</p>
 
       <div class="nhsapp-button-group nhsuk-u-margin-bottom-0">
-        <a class="nhsuk-button app-button--secondary nhsapp-button">
+        <a class="nhsuk-button nhsapp-button--secondary nhsapp-button">
           View this appointment
         </a>
         <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View all appointments</a>
